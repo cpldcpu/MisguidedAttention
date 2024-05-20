@@ -62,8 +62,8 @@ All tested llm will provide a complex solution for the original problem instead 
 
 ### Two door problem: Just use the exit door
 
-*"You are in a room with two doors. One is unlocked and leads to freedom, with a large "exist sign" above it, the other to certain doom and is therefore locked. There are two guards: one always tells the truth, and the other always lies. You don't know which is which. You can ask one guard one question or just leave. What do you do?"*
+*"You are in a room with two doors. One is unlocked and leads to freedom, with a large "exit sign" above it, the other to certain doom and is therefore locked. There are two guards: one always tells the truth, and the other always lies. You don't know which is which. You can ask one guard one question or just leave. What do you do?"*
 
-Almost all llms would strike up an unnessessary discussion instead of leaving quitly.
+Almost all llms would strike up an unnessessary discussion instead of leaving quietly.
 
  
