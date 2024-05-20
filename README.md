@@ -3,7 +3,7 @@
 
 This is a collection of prompts to challenge the reasoning abilities of large language models. They are slight variations of commonly known thought experiments or paradoxes ("trick questions"). 
 
-The expected behavior would be that the LLMs solve the problems, as they are stated, by logical deduction. However, many LLMs will mistakenly recognize the original problem due to frequent occurrence in their training data and respond with a pre-backed solution instead of going through the details step-by-step. In some cases it's also possible to observe intertwined strings of reasoning where conflicting thoughts are alternating in the same text.
+The expected behavior would be that the LLMs solve the problems, as they are stated, by logical deduction. However, many LLMs will mistakenly recognize the unmodified problem due to frequent occurrence in their training data and respond with a pre-backed solution instead of going through the details step-by-step. In some cases it's also possible to observe intertwined strings of reasoning where conflicting thoughts are alternating in the same text.
 
 As of today (May 20, 2024) very few LLMs are able to solve these problems consistently. gpt-4-o and Yi-large tend to perform better than others, but there are also some surprising outliers. 
 
