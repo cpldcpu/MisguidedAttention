@@ -16,7 +16,7 @@ For reference here are links to explanations of the original unmodified problems
 - Monty Hall problem: https://en.wikipedia.org/wiki/Monty_Hall_problem
 - Barber paradox: https://en.wikipedia.org/wiki/Barber_paradox
 - Schrödingers cat: https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat
-- Unexpected hanging Paradox: https://en.wikipedia.org/wiki/Unexpected_hanging_paradox
+- Unexpected hanging paradox: https://en.wikipedia.org/wiki/Unexpected_hanging_paradox
 
 ## Prompts
 
