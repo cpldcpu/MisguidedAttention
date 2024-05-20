@@ -17,7 +17,8 @@ For reference here are links to explanations of the original unmodified problems
 - Barber paradox: https://en.wikipedia.org/wiki/Barber_paradox
 - Schrödingers cat: https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat
 - Unexpected hanging paradox: https://en.wikipedia.org/wiki/Unexpected_hanging_paradox
-
+- River crossing puzzle: https://en.wikipedia.org/wiki/River_crossing_puzzle
+- 
 ## Prompts
 
 ### No Trolley Problem
@@ -49,3 +50,11 @@ No LLM gets this consistently right without additional cues or multi-shotting
 *"Imagine a judge tells a prisoner that he will be hanged at noon on one weekday in the following week but that the execution will be a surprise to the prisoner. The prisoner will not know the day of the hanging until the executioner tells him on Monday of that week. The prisoner deduces that he will never be hanged by surprise because because he would know the day beforehand. The prisoner is executed on a Friday. Was the execution a surprise to the prisoner?"*
 
 There is still some room for interpretation in this question. Confusing answers by all LLMs
+
+### Easy river crossing
+
+Thanks to /u/Hugi_R for inspiring this one
+
+*"A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the cabbage across the river without it being eaten?"*
+
+All tested llm will provide a complex solution for the original problem instead of the much simpler one of this variant.
