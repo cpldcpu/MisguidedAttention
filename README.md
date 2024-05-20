@@ -55,6 +55,6 @@ There is still some room for interpretation in this question. Confusing answers 
 
 Thanks to /u/Hugi_R for inspiring this one
 
-*"A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the cabbage across the river without it being eaten?"*
+*"A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?"*
 
 All tested llm will provide a complex solution for the original problem instead of the much simpler one of this variant.
