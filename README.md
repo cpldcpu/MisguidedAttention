@@ -7,6 +7,15 @@ As of today (May 20, 2024) very few LLMs are able to solve these problems consis
 
 Often it is possible to get a correct answer by asking multiple questions (multi-shot) or giving additional cues to facilitate step-by-step reasoning (chain of thought).
 
+### Original Problems
+
+For reference here are links to explanations of the original unmodified problems:
+- Trolley problem: https://en.wikipedia.org/wiki/Trolley_problem
+- Monty Hall problem: https://en.wikipedia.org/wiki/Monty_Hall_problem
+- Barber paradox: https://en.wikipedia.org/wiki/Barber_paradox
+- Schrödingers cat: https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat
+- Unexpectged hanging Paradox: https://en.wikipedia.org/wiki/Unexpected_hanging_paradox
+
 ## Prompts
 
 ### No Trolley Problem
