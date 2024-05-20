@@ -18,7 +18,8 @@ For reference here are links to explanations of the original unmodified problems
 - Schrödingers cat: https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat
 - Unexpected hanging paradox: https://en.wikipedia.org/wiki/Unexpected_hanging_paradox
 - River crossing puzzle: https://en.wikipedia.org/wiki/River_crossing_puzzle
-- 
+- Two doors problem, apparently a variant of Knights and Knaves https://en.wikipedia.org/wiki/Knights_and_Knaves from this movie https://en.wikipedia.org/wiki/Labyrinth_(1986_film)
+  
 ## Prompts
 
 ### No Trolley Problem
@@ -58,3 +59,11 @@ Thanks to /u/Hugi_R for inspiring this one
 *"A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?"*
 
 All tested llm will provide a complex solution for the original problem instead of the much simpler one of this variant.
+
+### Two door problem: Just use the exit door
+
+*"You are in a room with two doors. One is unlocked and leads to freedom, with a large "exist sign" above it, the other to certain doom and is therefore locked. There are two guards: one always tells the truth, and the other always lies. You don't know which is which. You can ask one guard one question or just leave. What do you do?"*
+
+Almost all llms would strike up an unnessessary discussion instead of leaving quitly.
+
+ 
