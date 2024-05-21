@@ -48,7 +48,7 @@ No LLM gets this consistently right without additional cues or multi-shotting
 
 ### No Paradox in an expected Hanging
 
-*"Imagine a judge tells a prisoner that he will be hanged at noon on one weekday in the following week but that the execution will be a surprise to the prisoner. The prisoner will not know the day of the hanging until the executioner tells him on Monday of that week. The prisoner deduces that he will never be hanged by surprise because because he would know the day beforehand. The prisoner is executed on a Friday. Was the execution a surprise to the prisoner?"*
+*"Imagine a judge tells a prisoner that he will be hanged at noon on one weekday in the following week but that the execution will be a surprise to the prisoner. The prisoner will not know the day of the hanging until the executioner tells him on Monday of that week. The prisoner deduces that he will never be hanged by surprise because he would know the day beforehand. The prisoner is executed on a Friday. Was the execution a surprise to the prisoner?"*
 
 There is still some room for interpretation in this question. Confusing answers by all LLMs
 
