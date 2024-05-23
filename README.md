@@ -90,4 +90,13 @@ Some LLMs will get this right, others come up with amazing way to make things co
 
 Almost all llms would strike up an unnessessary discussion instead of leaving quietly.
 
+### Feathers or steel?
+
+Thanks to /u/Avo-ka for this one!
+
+*"Which is heavier, 1 kilogram of feathers or 1 pound of steel?`"*
+
+The large LLMs seem to be able to solve this, but many smaller ones don't get the difference.
+
+
  
