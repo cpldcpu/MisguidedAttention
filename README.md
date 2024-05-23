@@ -34,6 +34,14 @@ Only gpt-4o and gpt-4t solved this.
 
 yi-large and gpt-4o solve this, gpt-4t fails. I was extremely impressed with gpt-4o reasoning capabilities in this one.
 
+### Inverse Monty Hall Problem
+
+Thanks to u/TheHoboJed for this one.
+
+*"You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do?"*
+
+Most llms will come up with a strategy to win the donkey instead of the car.
+
 ### The Normal Barber
 
 *"Imagine there's a small town with a very particular barber. This barber has a unique rule: he shaves all the men in town who visit him. Does the barber shave himself?"*
@@ -59,6 +67,22 @@ Thanks to /u/Hugi_R for inspiring this one
 *"A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?"*
 
 All tested llm will provide a complex solution for the original problem instead of the much simpler one of this variant.
+
+### Don't ever ask an LLM to help you cross a river
+
+An even simpler version of the prompt above, thanks to @DrChristophFH.
+
+*"There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?"*
+
+Most if not all LLMs will come up with overly complex scenarios.
+
+### Measuring 6 liters.
+
+Thank to /u/hvoecking for this one.
+
+*"I have a 6- and a 12-liter jug. I want to measure exactly 6 liters."*
+
+Some LLMs will get this right, others come up with amazing way to make things complicated.
 
 ### Two door problem: Just use the exit door
 
