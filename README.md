@@ -98,5 +98,8 @@ Thanks to /u/Avo-ka for this one!
 
 The large LLMs seem to be able to solve this, but many smaller ones don't get the difference.
 
+### That's not how digital scales work
 
- 
+*"I have 13 coins, one of them is fake. I also have a digital scale. How do I identify the fake coin?"*
+
+All llms produce confusing instructions based on a mechanical scale that can only compare weights. They also do not understand how to partition the 13 coins.
