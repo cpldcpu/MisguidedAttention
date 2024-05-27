@@ -27,6 +27,13 @@ A good answer would point out that the cat was dead to begin with and hence the 
 
 Output:
 
+<style>
+  code {
+    white-space : pre-wrap !important;
+    word-break: break-word;
+  }
+</style>
+
 
 ```
 ==baseline
