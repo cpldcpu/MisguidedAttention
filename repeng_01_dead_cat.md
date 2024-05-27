@@ -1,7 +1,7 @@
 # Representation Engineering: Dead Cat
 
 This is an attempt to use representation engineering to steer the attention of the model away from overfitted tropes and allow for "free thinking".
-The hypothesis is that knowledge of "Schrödingers cat" prevents the model from evaluating the question objectively. Removing the bias should allow for an answer based on learning reasoning.
+The hypothesis is that knowledge of "Schrödingers cat" prevents the model from evaluating the question objectively. Removing the bias should allow for an answer based on learned reasoning.
 
 I am using the excellent [repeng library](https://github.com/vgel/repeng) by Theia Vogel. The library is based on the representation-engineering paper by Andy Zou. 
 
