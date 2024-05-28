@@ -82,7 +82,7 @@ Further simplification of the prompt to ensure that there are even fewer opportu
 
 *"A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal.  How do both get to the other side of the river?"*
 
-Some LLMs get it, most will still come up with messy solutions. 
+Some LLMs get it, most will still come up with messy solutions. Most llms will hallicinate solutions that involve multiple combinations of back-and-forth trips. Also both subjects eating is a concern that is tried to be addressed, with sometimes hilarious results: e.g. the man needs to be prevented from eating the sheep, or the sheep shall not eat grass.
 
 ### Measuring 6 liters.
 
