@@ -76,6 +76,14 @@ An even simpler version of the prompt above, thanks to @DrChristophFH.
 
 Most if not all LLMs will come up with overly complex scenarios.
 
+### Even simpler river crossing
+
+Further simplification of the prompt to ensure that there are even fewer opportunities to misunderstand the objective.
+
+*"A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal.  How do both get to the other side of the river?"*
+
+Some LLMs get it, most will still come up with messy solutions. 
+
 ### Measuring 6 liters.
 
 Thank to /u/hvoecking for this one.
