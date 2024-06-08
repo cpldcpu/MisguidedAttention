@@ -92,11 +92,19 @@ Thank to /u/hvoecking for this one.
 
 Some LLMs will get this right, others come up with amazing way to make things complicated.
 
+### Measuring 4 liters.
+
+A variation of the prompt above.
+
+*"I have a 6- and a 12-liter jug. I want to measure exactly 4 liters."*
+
+**Zero** LLMs have been able to provide a proper response to this so far.
+
 ### Two door problem: Just use the exit door
 
 *"You are in a room with two doors. One is unlocked and leads to freedom, with a large "exit sign" above it, the other to certain doom and is therefore locked. There are two guards: one always tells the truth, and the other always lies. You don't know which is which. You can ask one guard one question or just leave. What do you do?"*
 
-Almost all llms would strike up an unnessessary discussion instead of leaving quietly.
+Almost all llms would strike up an unnecessary discussion instead of leaving quietly.
 
 ### Feathers or steel?
 
