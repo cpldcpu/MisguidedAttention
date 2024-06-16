@@ -100,6 +100,18 @@ A variation of the prompt above.
 
 **Zero** LLMs have been able to provide a proper response to this so far.
 
+### Measuring 3 liters.
+
+*"I have a 1- and a 2-liter jug. I want to measure exactly 3 liters."*
+
+Most LLMs will come up with overly complex nonsense, triggered by a need to write itemized lists.
+
+### Measuring 1 liters.
+
+*"I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liters."*
+
+A most basic version of the jug problem, that still triggers list writing in many smaller LLMs. 
+
 ### Two door problem: Just use the exit door
 
 *"You are in a room with two doors. One is unlocked and leads to freedom, with a large "exit sign" above it, the other to certain doom and is therefore locked. There are two guards: one always tells the truth, and the other always lies. You don't know which is which. You can ask one guard one question or just leave. What do you do?"*
