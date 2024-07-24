@@ -131,3 +131,9 @@ The large LLMs seem to be able to solve this, but many smaller ones don't get th
 *"I have 13 coins, one of them is fake. I also have a digital scale. How do I identify the fake coin?"*
 
 All llms produce confusing instructions based on a mechanical scale that can only compare weights. They also do not understand how to partition the 13 coins.
+
+### Version numbers? ###
+
+*"9.11 or 9.9 which number is larger?"*
+
+This has been making the rounds in July '24. The answer should be quite straightforward, but many frontier-LLMs get it wrong often (gpt-4o, Mistral Large 2, Claude-3.5-Sonnet, but not Phi-3!). Interestingly this is not the case when slightly altering the decimals, e.g. 9.12. There has been speculation that this is related to version numbering.
