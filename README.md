@@ -112,6 +112,10 @@ Most LLMs will come up with overly complex nonsense, triggered by a need to writ
 
 A most basic version of the jug problem, that still triggers list writing in many smaller LLMs. 
 
+### Roasting Nuts.
+
+*"i have a roasting-jug that can hold 300 nuts and a roasting jug that can hold 700 nuts. I also have a digital kitchen scale. i want to roast eactly 600 nuts. what do i do?"*
+
 ### Two door problem: Just use the exit door
 
 *"You are in a room with two doors. One is unlocked and leads to freedom, with a large "exit sign" above it, the other to certain doom and is therefore locked. There are two guards: one always tells the truth, and the other always lies. You don't know which is which. You can ask one guard one question or just leave. What do you do?"*
