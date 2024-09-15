@@ -42,7 +42,7 @@ yi-large and gpt-4o solve this, gpt-4t fails. I was extremely impressed with gpt
 
 Thanks to u/TheHoboJed for this one.
 
-*"You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do?"*
+*"You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?"*
 
 Most llms will come up with a strategy to win the donkey instead of the car.
 
@@ -116,6 +116,10 @@ Most LLMs will come up with overly complex nonsense, triggered by a need to writ
 
 A most basic version of the jug problem, that still triggers list writing in many smaller LLMs. 
 
+### Roasting Nuts.
+
+*"i have a roasting-jug that can hold 300 nuts and a roasting jug that can hold 700 nuts. I also have a digital kitchen scale. i want to roast eactly 600 nuts. what do i do?"*
+
 ### Two door problem: Just use the exit door
 
 *"You are in a room with two doors. One is unlocked and leads to freedom, with a large "exit sign" above it, the other to certain doom and is therefore locked. There are two guards: one always tells the truth, and the other always lies. You don't know which is which. You can ask one guard one question or just leave. What do you do?"*
@@ -135,6 +139,12 @@ The large LLMs seem to be able to solve this, but many smaller ones don't get th
 *"I have 13 coins, one of them is fake. I also have a digital scale. How do I identify the fake coin?"*
 
 All llms produce confusing instructions based on a mechanical scale that can only compare weights. They also do not understand how to partition the 13 coins.
+
+### Version numbers? ###
+
+*"9.11 or 9.9 which number is larger?"*
+
+This has been making the rounds in July '24. The answer should be quite straightforward, but many frontier-LLMs get it wrong often (gpt-4o, Mistral Large 2, Claude-3.5-Sonnet, but not Phi-3!). Interestingly this is not the case when slightly altering the decimals, e.g. 9.12. There has been speculation that this is related to version numbering.
 
 ### Rope burning puzzle made impossible
 
