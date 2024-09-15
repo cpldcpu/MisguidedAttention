@@ -1,11 +1,13 @@
 
 # Misguided Attention
 
-This is a collection of prompts to challenge the reasoning abilities of large language models in presence of misguiding information. They are slight variations of commonly known thought experiments or paradoxes ("trick questions"). 
+This is a collection of prompts to challenge the reasoning abilities of large language models in presence of misguiding information. They are slight variations of commonly known thought experiments, riddles or paradoxes ("trick questions"). 
 
 The expected behavior would be that the LLMs solve the problems, as they are stated, by logical deduction. However, many LLMs will mistakenly recognize the unmodified problem due to frequent occurrence in their training data. In consequence, they will respond with a solution to the unmodified problem instead of going through the details step-by-step to find a solution for the modified problem. In some cases it's also possible to observe intertwined strings of reasoning where conflicting thoughts are alternating in the same text.
 
-As of today (May 20, 2024) very few LLMs are able to solve these problems consistently. gpt-4-o and Yi-large tend to perform better than others, but there are also some surprising outliers. 
+Parallels to this can be drawn to human behavior, where recognition of familiar patterns leads to the execution of previously learned routines, even if they are not applicable to the current situation. This is known as the [Einstellungseffekt](https://en.wikipedia.org/wiki/Einstellung_effect). However, we would expect that a computerized reasoning system would not be subject to such a fallacy...
+
+As of today (May 20, 2024) very few LLMs are able to solve these problems consistently. Update (September 15,2024): OpenAIs new o1 model shows a dramatic improvement in solving these problems. Detailed evaluation to come.
 
 Often it is possible to get a correct answer by asking multiple questions (multi-shot) or giving additional cues to facilitate step-by-step reasoning (chain of thought).
 
@@ -19,8 +21,10 @@ For reference here are links to explanations of the original unmodified problems
 - Unexpected hanging paradox: https://en.wikipedia.org/wiki/Unexpected_hanging_paradox
 - River crossing puzzle: https://en.wikipedia.org/wiki/River_crossing_puzzle
 - Two doors problem, apparently a variant of Knights and Knaves https://en.wikipedia.org/wiki/Knights_and_Knaves from this movie https://en.wikipedia.org/wiki/Labyrinth_(1986_film)
+- Water pouring puzzle: https://en.wikipedia.org/wiki/Water_pouring_puzzle
+- Rope burning puzzle: https://en.wikipedia.org/wiki/Rope_burning_puzzle
   
-## Prompts
+## Prompts based on logic puzzles
 
 ### No Trolley Problem
 
@@ -122,7 +126,7 @@ Almost all llms would strike up an unnecessary discussion instead of leaving qui
 
 Thanks to /u/Avo-ka for this one!
 
-*"Which is heavier, 1 kilogram of feathers or 1 pound of steel?`"*
+*"Which is heavier, 1 kilogram of feathers or 1 pound of steel?"*
 
 The large LLMs seem to be able to solve this, but many smaller ones don't get the difference.
 
@@ -131,3 +135,36 @@ The large LLMs seem to be able to solve this, but many smaller ones don't get th
 *"I have 13 coins, one of them is fake. I also have a digital scale. How do I identify the fake coin?"*
 
 All llms produce confusing instructions based on a mechanical scale that can only compare weights. They also do not understand how to partition the 13 coins.
+
+### Rope burning puzzle made impossible
+
+*"You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?"*
+
+There is no clear solution to this problem, yet most LLMs will find one.
+
+### Rope burning puzzle made easy
+
+*"You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using these two ropes and matches to light them?"*
+
+There is a very simple solution to this problem, yet most LLMs will find a complex one or incorrect one.
+
+## Prompts based on riddles
+
+[As suggested](https://github.com/cpldcpu/MisguidedAttention/issues/4) by @av, also riddles can be used as a basis for prompts that challenge the reasoning abilities of LLMs.
+
+*"I'm tall when I'm young, and I'm taller when I'm old. What am I?"*
+
+Definitely not a candle
+
+*"What can't you break, even if you never pick it up or touch it?"*
+
+Definitely not a promise
+
+*"What goes up but never comes up again?"*
+
+Definitely not your age
+
+*"I never shave, but my beard stays the same. What am I?"*
+
+Definitely not a barber
+
