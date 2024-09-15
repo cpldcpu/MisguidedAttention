@@ -1,0 +1,376 @@
+{
+    "prompts": [
+      {
+        "prompt_id": "no_trolley_problem",
+        "category": "Logic Puzzle",
+        "title": "No Trolley Problem",
+        "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
+        "expected_behavior": [
+          "Recognize that the five people on the track are already dead",
+          "Conclude that pulling the lever would cause unnecessary harm to the living person",
+          "Decide not to pull the lever"
+        ],
+        "common_mistakes": [
+          "Treating the problem as the standard trolley problem with five living people",
+          "Engaging in complex moral reasoning about sacrificing one to save five",
+          "Failing to notice the key detail that the five people are already dead",
+          "Pulling the lever"
+        ]
+      },
+      {
+        "prompt_id": "dead_schrodingers_cat",
+        "category": "Logic Puzzle",
+        "title": "Dead Schrödinger's cat",
+        "prompt": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
+        "expected_behavior": [
+          "Recognize that the cat is already dead when placed in the box",
+          "Understand that the state of the radiation detector and poison release is irrelevant",
+          "Conclude that the probability of the cat being alive is 0%"
+        ],
+        "common_mistakes": [
+          "Treating the problem as the standard Schrödinger's cat thought experiment",
+          "Engaging in quantum superposition reasoning",
+          "Failing to notice the key detail that the cat is already dead when placed in the box"
+        ]
+      },      
+      {
+        "prompt_id": "less_confusing_monty_hall",
+        "category": "Logic Puzzle",
+        "title": "A less confusing Monty Hall Problem",
+        "prompt": "Imagine you're on a game show, and there are three doors in front of you. Behind one door is a car, and behind the other two doors are goats. You don't know what's behind any of the doors. You get to choose one door. Let's say you pick Door #1. The host, Monty Hall, who knows what's behind all the doors, opens Door #1, and reveals a goat. Now, you have two doors left: Door #3 and Door #2. You pick Door #3. Monty gives you a choice: you can either stick with your original pick, Door #3, or switch to Door #2.",
+        "expected_behavior": [
+          "Recognize that the problem setup is different from the standard Monty Hall problem",
+          "Understand that opening Door #1 and revealing a goat changes the probabilities",
+          "Conclude that switching to Door #2 gives a 50% chance of winning, as does staying with Door #3"
+        ],
+        "common_mistakes": [
+          "Applying the standard Monty Hall problem solution without considering the altered setup",
+          "Failing to recognize that opening Door #1 changes the probability distribution",
+          "Incorrectly calculating probabilities based on the new information"
+        ]
+      },
+      {
+        "prompt_id": "inverse_monty_hall",
+        "category": "Logic Puzzle",
+        "title": "Inverse Monty Hall Problem",
+        "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "expected_behavior": [
+          "Recognize that this is an inverse of the standard Monty Hall problem",
+          "Understand that the goal is to win a car, not avoid the donkey",
+          "Conclude that staying with the original choice gives a 2/3 chance of winning a car",
+          "Decide to keep the existing door"
+        ],
+        "common_mistakes": [
+          "Applying the standard Monty Hall problem solution (switching) without considering the altered goal",
+          "Focusing on avoiding the donkey instead of winning a car",
+          "Incorrectly calculating probabilities based on the new setup"
+        ]
+      },
+      {
+        "prompt_id": "normal_barber",
+        "category": "Logic Puzzle",
+        "title": "The Normal Barber",
+        "prompt": "Imagine there's a small town with a very particular barber. This barber has a unique rule: he shaves all the men in town who visit him. Does the barber shave himself?",
+        "expected_behavior": [
+          "Recognize that this is not the standard barber paradox",
+          "Understand that the barber only shaves men who visit him",
+          "Conclude that the barber's self-shaving habits are not determined by the given information",
+          "State that there is insufficient information to answer the question"
+        ],
+        "common_mistakes": [
+          "Treating the problem as the standard barber paradox",
+          "Engaging in circular reasoning about whether the barber shaves himself",
+          "Failing to notice the key detail that the barber only shaves men who visit him"
+        ]
+      },
+
+      {
+        "prompt_id": "no_paradox_expected_hanging",
+        "category": "Logic Puzzle",
+        "title": "No Paradox in an expected Hanging",
+        "prompt": "Imagine a judge tells a prisoner that he will be hanged at noon on one weekday in the following week but that the execution will be a surprise to the prisoner. The prisoner will not know the day of the hanging until the executioner tells him on Monday of that week. The prisoner deduces that he will never be hanged by surprise because he would know the day beforehand. The prisoner is executed on a Friday. Was the execution a surprise to the prisoner?",
+        "expected_behavior": [
+          "Recognize that the prisoner is told about the execution on Monday",
+          "Understand that the execution on Friday is not a surprise given this information",
+          "Conclude that the execution was not a surprise to the prisoner"
+        ],
+        "common_mistakes": [
+          "Treating the problem as the standard unexpected hanging paradox",
+          "Engaging in complex reasoning about the impossibility of surprise",
+          "Failing to notice the key detail that the prisoner is informed on Monday"
+        ]
+      },
+      {
+        "prompt_id": "easy_river_crossing",
+        "category": "Logic Puzzle",
+        "title": "Easy river crossing",
+        "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
+        "expected_behavior": [
+          "Recognize that only the goat needs to be transported",
+          "Understand that the wolf and cabbage can be left behind safely",
+          "Conclude that the farmer can simply take the goat across in one trip"
+        ],
+        "common_mistakes": [
+          "Providing a complex solution for transporting all items across the river",
+          "Failing to notice that only the goat needs to be moved",
+          "Unnecessary generation of multiple steps or trips"
+        ]
+      },
+      {
+        "prompt_id": "simple_river_crossing",
+        "category": "Logic Puzzle",
+        "title": "Don't ever ask an LLM to help you cross a river",
+        "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
+        "expected_behavior": [
+          "Recognize that the boat can carry both the man and the sheep at once",
+          "Conclude that they can cross in a single trip together"
+        ],
+        "common_mistakes": [
+          "Providing overly complex scenarios with multiple trips",
+          "Failing to recognize that both can fit in the boat at once",
+          "Unnecessary generation of steps or precautions"
+        ]
+      },
+      {
+        "prompt_id": "even_simpler_river_crossing",
+        "category": "Logic Puzzle",
+        "title": "Even simpler river crossing",
+        "prompt": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
+        "expected_behavior": [
+          "Recognize that the boat can carry both the man and the sheep",
+          "Conclude that they simply get in the boat and cross together in one trip"
+        ],
+        "common_mistakes": [
+          "Providing complex solutions with multiple trips",
+          "Introducing unnecessary concerns about eating or other issues",
+          "Failing to provide the simplest solution of crossing together"
+        ]
+      },
+      {
+        "prompt_id": "measuring_6_liters",
+        "category": "Logic Puzzle",
+        "title": "Measuring 6 liters",
+        "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 6 liters.",
+        "expected_behavior": [
+          "Recognize that the 6-liter jug can be used directly",
+          "Conclude that simply filling the 6-liter jug once is sufficient"
+        ],
+        "common_mistakes": [
+          "Providing complex solutions involving multiple steps with both jugs",
+          "Failing to recognize the simplest solution of using the 6-liter jug directly",
+          "Unnecessary generation of steps or calculations"
+        ]
+      },
+      {
+        "prompt_id": "measuring_4_liters",
+        "category": "Logic Puzzle",
+        "title": "Measuring 4 liters",
+        "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
+        "expected_behavior": [
+          "Recognize that this requires a multi-step process",
+          "Provide a correct solution, such as: Fill the 6-liter jug, pour it into the 12-liter jug. Fill the 6-liter jug again and pour into the 12-liter jug until it's full (2 liters). The remaining 4 liters in the 6-liter jug is the desired amount."
+        ],
+        "common_mistakes": [
+          "Failing to provide any solution",
+          "Providing incorrect or impossible solutions",
+          "Overcomplicating the process with unnecessary steps"
+        ]
+      },
+      {
+        "prompt_id": "measuring_3_liters",
+        "category": "Logic Puzzle",
+        "title": "Measuring 3 liters",
+        "prompt": "I have a 1- and a 2-liter jug. I want to measure exactly 3 liters.",
+        "expected_behavior": [
+          "Recognize that the solution is straightforward",
+          "Conclude that filling both jugs once gives exactly 3 liters"
+        ],
+        "common_mistakes": [
+          "Providing overly complex solutions with multiple steps",
+          "Failing to recognize the simple addition of both jugs' capacities",
+          "Unnecessary generation of steps or calculations"
+        ]
+      },
+      {
+        "prompt_id": "measuring_1_liter",
+        "category": "Logic Puzzle",
+        "title": "Measuring 1 liter",
+        "prompt": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
+        "expected_behavior": [
+          "Recognize that the solution is trivial",
+          "Conclude that filling either 1-liter jug once is sufficient"
+        ],
+        "common_mistakes": [
+          "Providing complex solutions involving both jugs",
+          "Failing to recognize the simplest solution of using one jug",
+          "Unnecessary generation of steps or calculations"
+        ]
+      },
+      {
+        "prompt_id": "roasting_nuts",
+        "category": "Logic Puzzle",
+        "title": "Roasting Nuts",
+        "prompt": "I have a roasting-jug that can hold 300 nuts and a roasting jug that can hold 700 nuts. I also have a digital kitchen scale. I want to roast exactly 600 nuts. What do I do?",
+        "expected_behavior": [
+          "Recognize that the digital scale can be used to measure the exact amount",
+          "Conclude that 600 nuts can be measured directly using the scale and then roasted in the 700-nut jug"
+        ],
+        "common_mistakes": [
+          "Providing complex solutions involving filling and emptying jugs multiple times",
+          "Failing to utilize the digital scale for precise measurement",
+          "Unnecessary calculations or steps involving both jugs"
+        ]
+      },
+      {
+        "prompt_id": "two_door_problem",
+        "category": "Logic Puzzle",
+        "title": "Two door problem: Just use the exit door",
+        "prompt": "You are in a room with two doors. One is unlocked and leads to freedom, with a large \"exit sign\" above it, the other to certain doom and is therefore locked. There are two guards: one always tells the truth, and the other always lies. You don't know which is which. You can ask one guard one question or just leave. What do you do?",
+        "expected_behavior": [
+          "Recognize that the exit door is clearly marked and unlocked",
+          "Conclude that the simplest solution is to leave through the exit door without asking any questions"
+        ],
+        "common_mistakes": [
+          "Engaging in complex reasoning about which guard to ask and what question to pose",
+          "Failing to notice the obvious solution of using the marked exit door",
+          "Unnecessary generation of questions or logical puzzles"
+        ]
+      },
+      {
+        "prompt_id": "feathers_or_steel",
+        "category": "Logic Puzzle",
+        "title": "Feathers or steel?",
+        "prompt": "Which is heavier, 1 kilogram of feathers or 1 pound of steel?",
+        "expected_behavior": [
+          "Recognize the difference in units (kilogram vs pound)",
+          "Know that 1 kilogram is heavier than 1 pound",
+          "Conclude that 1 kilogram of feathers is heavier"
+        ],
+        "common_mistakes": [
+          "Assuming the weights are in the same unit",
+          "Concluding that they weigh the same",
+          "Stating that steel is heavier due to its density without considering the units"
+        ]
+      },
+        {
+          "prompt_id": "digital_scale_coin_problem",
+          "category": "Logic Puzzle",
+          "title": "That's not how digital scales work",
+          "prompt": "I have 13 coins, one of them is fake. I also have a digital scale. How do I identify the fake coin?",
+          "expected_behavior": [
+            "Recognize that a digital scale can measure the weight of individual coins",
+            "Conclude that weighing each coin separately and comparing the weights will identify the fake coin"
+          ],
+          "common_mistakes": [
+            "Providing solutions based on a balance scale mechanism",
+            "Suggesting complex grouping and comparison methods unnecessary with a digital scale",
+            "Failing to recognize that individual weighing is possible and simplest"
+          ]
+        },
+        {
+          "prompt_id": "rope_burning_impossible",
+          "category": "Logic Puzzle",
+          "title": "Rope burning puzzle made impossible",
+          "prompt": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?",
+          "expected_behavior": [
+            "Recognize that the problem is impossible to solve with the given conditions",
+            "Explain why it's not possible to measure 20 minutes precisely with the given unevenly burning ropes"
+          ],
+          "common_mistakes": [
+            "Providing a solution despite the impossibility of the problem",
+            "Failing to recognize the contradiction between uneven burning and precise time measurement",
+            "Introducing additional assumptions not present in the original problem statement"
+          ]
+        },
+        {
+          "prompt_id": "rope_burning_easy",
+          "category": "Logic Puzzle",
+          "title": "Rope burning puzzle made easy",
+          "prompt": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using these two ropes and matches to light them?",
+          "expected_behavior": [
+            "Recognize that lighting one rope is sufficient to measure 60 minutes",
+            "Provide the simple solution of lighting one rope and waiting for it to burn completely"
+          ],
+          "common_mistakes": [
+            "Providing unnecessarily complex solutions involving both ropes",
+            "Failing to recognize the simplicity of the problem given the 60-minute target",
+            "Suggesting methods to split or manipulate the ropes, which is unnecessary"
+          ]
+        },
+        {
+          "prompt_id": "riddle_tall_young_old",
+          "category": "Riddle",
+          "title": "Tall when young, taller when old",
+          "prompt": "I'm tall when I'm young, and I'm taller when I'm old. What am I?",
+          "expected_behavior": [
+            "Recognize that the answer is not a candle",
+            "Provide a logical alternative answer that fits the description"
+          ],
+          "common_mistakes": [
+            "Answering with 'candle' despite the prompt's implication",
+            "Failing to consider alternative answers that fit the description",
+            "Providing explanations that justify the 'candle' answer instead of seeking alternatives"
+          ]
+        },
+        {
+          "prompt_id": "riddle_unbreakable",
+          "category": "Riddle",
+          "title": "What can't you break",
+          "prompt": "What can't you break, even if you never pick it up or touch it?",
+          "expected_behavior": [
+            "Recognize that the answer is not a promise",
+            "Provide a logical alternative answer that fits the description"
+          ],
+          "common_mistakes": [
+            "Answering with 'promise' despite the prompt's implication",
+            "Failing to consider alternative answers that fit the description",
+            "Providing explanations that justify the 'promise' answer instead of seeking alternatives"
+          ]
+        },
+        {
+          "prompt_id": "riddle_up_never_down",
+          "category": "Riddle",
+          "title": "What goes up but never comes down",
+          "prompt": "What goes up but never comes up again?",
+          "expected_behavior": [
+            "Recognize that the answer is not your age",
+            "Provide a logical alternative answer that fits the description"
+          ],
+          "common_mistakes": [
+            "Answering with 'your age' despite the prompt's implication",
+            "Failing to consider alternative answers that fit the description",
+            "Providing explanations that justify the 'your age' answer instead of seeking alternatives"
+          ]
+        },
+        {
+          "prompt_id": "riddle_never_shave",
+          "category": "Riddle",
+          "title": "Never shave but beard stays the same",
+          "prompt": "I never shave, but my beard stays the same. What am I?",
+          "expected_behavior": [
+            "Recognize that the answer is not a barber",
+            "Provide a logical alternative answer that fits the description"
+          ],
+          "common_mistakes": [
+            "Answering with 'barber' despite the prompt's implication",
+            "Failing to consider alternative answers that fit the description",
+            "Providing explanations that justify the 'barber' answer instead of seeking alternatives"
+          ]
+        },
+        {
+          "prompt_id": "version_numbers_comparison",
+          "category": "Other",
+          "title": "Version numbers?",
+          "prompt": "9.11 or 9.9 which number is larger?",
+          "expected_behavior": [
+            "Recognize that these are decimal numbers, not version numbers",
+            "Correctly identify 9.9 as the larger number"
+          ],
+          "common_mistakes": [
+            "Interpreting the numbers as version numbers rather than decimals",
+            "Incorrectly stating that 9.11 is larger",
+            "Providing explanations based on version number logic instead of decimal comparison"
+          ]
+        }
+      ]
+}
