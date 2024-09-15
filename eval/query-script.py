@@ -29,7 +29,7 @@ def query_llm(prompt, llm_config, temperature_override):
 
     data = {
         "model": llm_config["model"],
-        "messages": [{"role": "user", "content": f"Please answer the following question, be concise: {prompt}\nAnswer:"}],
+        "messages": [{"role": "user", "content": f"Please answer the following question: {prompt}\nAnswer:"}],
         "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 0.7),
         "max_tokens": llm_config.get("max_tokens", 1000),
         "top_p": llm_config.get("top_p", 1),
@@ -80,7 +80,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate LLMs on a dataset of prompts")
     parser.add_argument("--dataset", default="misguided_attention.json", help="Path to the dataset JSON file")
     parser.add_argument("--output", default="output_queries.json", help="Path to the output JSON file")
-    parser.add_argument("--config", default="eval_config.json", help="Path to the configuration JSON file")
+    parser.add_argument("--config", default="query_config.json", help="Path to the configuration JSON file")
     parser.add_argument("--samples", type=int, default=1, help="Number of repetitions for each question and LLM")
     parser.add_argument("--limit", type=int, default=0, help="Limit the number of prompts to evaluate (0 for no limit)")
     parser.add_argument("--temp", type=float, default=-1, help="Override temperature setting for LLMs (-1 to use config values)")
