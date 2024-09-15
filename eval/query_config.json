@@ -1,9 +1,8 @@
 {
   "llms": [
-
     {
       "name": "Llama-3.1-8B",
-      "model": "meta-llama/llama-3.1-8b-instruct:free",
+      "model": "meta-llama/llama-3.1-8b-instruct",
       "temperature": 0.9,
       "top_p": 1,
       "frequency_penalty": 0,
@@ -15,20 +14,6 @@
       "name": "hermes-3-llama-3.1-405",
       "model": "nousresearch/hermes-3-llama-3.1-405b",
       "temperature": 1.0,
-      "top_p": 1,
-      "repetition_penalty": 1
-    },
-    {
-      "name": "phi-3-medium-128k-instruct",
-      "model": "microsoft/phi-3-medium-128k-instruct:free",
-      "temperature": 0.7,
-      "top_p": 1,
-      "repetition_penalty": 1
-    },
-    {
-      "name": "mistral-7b-instruct",
-      "model": "mistralai/mistral-7b-instruct:free",
-      "temperature": 0.88,
       "top_p": 1,
       "repetition_penalty": 1
     },
