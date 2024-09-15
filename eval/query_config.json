@@ -1,7 +1,7 @@
 {
   "llms": [
     {
-      "name": "Llama-3.1-8B",
+      "name": "llama-3.1-8B",
       "model": "meta-llama/llama-3.1-8b-instruct",
       "temperature": 0.9,
       "top_p": 1,

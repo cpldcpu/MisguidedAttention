@@ -3,6 +3,7 @@ import requests
 import argparse
 from collections import defaultdict
 from tqdm import tqdm
+import os
 
 def load_json(file_path):
     with open(file_path, 'r') as f:
@@ -22,23 +23,41 @@ def run_inference(prompt, sys_prompt, max_depth=5):
         if depth >= max_depth:
             print(f"Maximum recursion depth reached ({max_depth}). Stopping recursion.")
             return None
+        # OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")    
+        OPENROUTER_API_KEY = os.environ.get("Path")
+        if not OPENROUTER_API_KEY:
+            print("Using OPENAI_API_KEY instead of OPENROUTER_API_KEY")
+            OPENROUTER_API_KEY = os.environ.get("OPENAI_API_KEY")
+            if not OPENROUTER_API_KEY:
+                raise ValueError("OPENROUTER_API_KEY and OPENAI_API_KEY environment variable not set")
 
         response = requests.post(
-            "http://localhost:1234/v1/chat/completions",
-            headers={"Content-Type": "application/json"},
+            # "http://localhost:1234/v1/chat/completions",
+            "https://openrouter.ai/api/v1/chat/completions",
+
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+                "HTTP-Referer": "",  # Replace with your site URL
+                "X-Title": "MA_Eval"  # Replace with your app name
+            },
             json={
+                "model": "meta-llama/llama-3.1-70b-instruct",
                 "messages": messages,
-                "temperature": 0.7,
+                "temperature": 0.0,
                 "max_tokens": 1000
             }
         )
 
         if response.status_code == 200:
             content = response.json()['choices'][0]['message']['content']
+            # content = '{' + content.partition('{')[2]  
+            content = '{' + content.partition('{')[2].rpartition('}')[0] + '}' # llama 3.1 tends to attach text before and after the JSON response
             try:
                 json_response = json.loads(content)
                 return json_response
             except json.JSONDecodeError:
+                print(f"depth:{depth}\n{content}")
                 messages.append({"role": "assistant", "content": content})
                 messages.append({"role": "user", "content": "The response was not in valid JSON format. Please provide a valid JSON response."})
                 return recursive_loop(messages, depth + 1)
@@ -50,7 +69,9 @@ def run_inference(prompt, sys_prompt, max_depth=5):
 
 def generate_evaluation_prompt(output, prompt, expected_behavior, common_mistakes):
     return f"""
-Evaluate the following output based on the given prompt, expected behavior, and common mistakes. Provide your evaluation in JSON format.
+You are a critical judge the evaluates the output of another LLM. Evaluate the following output based on the given prompt, expected behavior, and common mistakes. Do only judge the outcome, not the discussion itself.
+
+Provide your evaluation in JSON format.
 
 Prompt: {prompt}
 

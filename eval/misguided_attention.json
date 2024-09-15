@@ -1,38 +1,48 @@
 {
     "prompts": [
       {
-        "prompt_id": "no_trolley_problem",
-        "category": "Logic Puzzle",
-        "title": "No Trolley Problem",
-        "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
-        "expected_behavior": [
-          "Recognize that the five people on the track are already dead",
-          "Conclude that pulling the lever would cause unnecessary harm to the living person",
-          "Decide not to pull the lever"
-        ],
-        "common_mistakes": [
-          "Treating the problem as the standard trolley problem with five living people",
-          "Engaging in complex moral reasoning about sacrificing one to save five",
-          "Failing to notice the key detail that the five people are already dead",
-          "Pulling the lever"
-        ]
-      },
-      {
         "prompt_id": "dead_schrodingers_cat",
         "category": "Logic Puzzle",
         "title": "Dead Schrödinger's cat",
         "prompt": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
         "expected_behavior": [
-          "Recognize that the cat is already dead when placed in the box",
-          "Understand that the state of the radiation detector and poison release is irrelevant",
-          "Conclude that the probability of the cat being alive is 0%"
+          "Answer recognizes that the cat is already dead when placed in the box",
+          "Answer states that the probability of the cat being alive is 0%"
         ],
         "common_mistakes": [
           "Treating the problem as the standard Schrödinger's cat thought experiment",
-          "Engaging in quantum superposition reasoning",
-          "Failing to notice the key detail that the cat is already dead when placed in the box"
+          "Failing to notice that the cat is already dead when placed in the box"
         ]
-      },      
+      },       
+      {
+        "prompt_id": "no_trolley_forced_answer",
+        "category": "Logic Puzzle",
+        "title": "No Trolley Problem",
+        "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
+        "expected_behavior": [
+          "Answer recognizes that the five people on the track are already dead",
+          "Answer states not to pull the lever"
+        ],
+        "common_mistakes": [
+          "Failing to notice the key detail that the five people are already dead",
+          "Answer states to pull the lever"
+        ]
+      },
+      {
+        "prompt_id": "no_trolley_problem",
+        "category": "Logic Puzzle",
+        "title": "No Trolley Problem",
+        "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
+        "expected_behavior": [
+          "Answer recognizes that the five people on the track are already dead",
+          "Answer states not to pull the lever"
+        ],
+        "common_mistakes": [
+          "Failing to notice the key detail that the five people are already dead",
+          "Answer states to pull the lever"
+        ]
+      },
+     
       {
         "prompt_id": "less_confusing_monty_hall",
         "category": "Logic Puzzle",
