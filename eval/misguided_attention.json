@@ -1,5 +1,36 @@
 {
-    "prompts": [     
+    "prompts": [
+      {
+        "prompt_id": "simple_river_crossing",
+        "category": "Logic Puzzle",
+        "title": "Don't ever ask an LLM to help you cross a river",
+        "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
+        "expected_behavior": [
+          "Answer concludes that they simply get in the boat and cross together in one trip",
+          "Answer notes that the boat can carry both the man and the sheep at the same time"
+        ],
+        "common_mistakes": [
+          "Answer provides solution to full river crossing problem with multiple trips",
+          "Answer provides complex solutions with multiple trips",
+          "Answer is provided as itemized list"
+        ]
+      },   
+      {
+        "prompt_id": "easy_river_crossing",
+        "category": "Logic Puzzle",
+        "title": "Easy river crossing",
+        "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
+        "expected_behavior": [
+          "Answer concludes that they simply get in the boat and cross together in one trip",
+          "Answer notes that the boat can carry both the man and the sheep at the same time"
+        ],
+        "common_mistakes": [
+          "Answer provides solution to full river crossing problem with multiple trips",
+          "Answer provides complex solutions with multiple trips",
+          "Answer is provided as itemized list"
+        ]
+      },
+  
       {
         "prompt_id": "even_simpler_river_crossing",
         "category": "Logic Puzzle",
@@ -122,37 +153,6 @@
           "Treating the problem as the standard unexpected hanging paradox",
           "Engaging in complex reasoning about the impossibility of surprise",
           "Failing to notice the key detail that the prisoner is informed on Monday"
-        ]
-      },
-      {
-        "prompt_id": "easy_river_crossing",
-        "category": "Logic Puzzle",
-        "title": "Easy river crossing",
-        "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
-        "expected_behavior": [
-          "Recognize that only the goat needs to be transported",
-          "Understand that the wolf and cabbage can be left behind safely",
-          "Conclude that the farmer can simply take the goat across in one trip"
-        ],
-        "common_mistakes": [
-          "Providing a complex solution for transporting all items across the river",
-          "Failing to notice that only the goat needs to be moved",
-          "Unnecessary generation of multiple steps or trips"
-        ]
-      },
-      {
-        "prompt_id": "simple_river_crossing",
-        "category": "Logic Puzzle",
-        "title": "Don't ever ask an LLM to help you cross a river",
-        "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
-        "expected_behavior": [
-          "Recognize that the boat can carry both the man and the sheep at once",
-          "Conclude that they can cross in a single trip together"
-        ],
-        "common_mistakes": [
-          "Providing overly complex scenarios with multiple trips",
-          "Failing to recognize that both can fit in the boat at once",
-          "Unnecessary generation of steps or precautions"
         ]
       },
       {
