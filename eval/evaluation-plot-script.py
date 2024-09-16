@@ -35,7 +35,8 @@ def plot_prompt(ax, prompt_data, prompt_id):
         all_behaviors.update(prompt_data[llm]['expected_behavior_stats'].keys())
         all_mistakes.update(prompt_data[llm]['common_mistakes_stats'].keys())
     all_behaviors = sorted(all_behaviors)
-    all_mistakes = sorted(all_mistakes, reverse=True)
+    # all_mistakes = sorted(all_mistakes, reverse=True)
+    all_mistakes = sorted(all_mistakes)
     
     total_bars = max(len(all_behaviors), len(all_mistakes))
     bar_width = 0.8 / total_bars
