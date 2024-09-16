@@ -1,6 +1,6 @@
 {
   "no_trolley_forced_answer": {
-    "Llama-3.1-8B": {
+    "llama-3.1-8B": {
       "average_score": 1.6666666666666667,
       "num_evaluations": 3,
       "expected_behavior_stats": {
@@ -97,6 +97,24 @@
         "Failing to notice the key detail that the five people are already dead": 1.0,
         "Answer states to pull the lever": 1.0
       }
+    },
+    "o1-mini": {
+      "average_score": 1.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 1.0,
+        "Answer states to pull the lever": 1.0
+      }
+    },
+    "o1-preview-2024-09-12": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 1.0,
+        "Answer states not to pull the lever": 1.0
+      },
+      "common_mistakes_stats": {}
     }
   }
 }
