@@ -73,7 +73,7 @@ def main(args):
             output["results"].append(result)
 
     save_json(output, args.output)
-    print(f"Evaluation complete. Results saved to {args.output}")
+    print(f"Query complete. Results saved to {args.output}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate LLMs on a dataset of prompts")

@@ -1,6 +1,21 @@
 {
     "prompts": [     
       {
+        "prompt_id": "even_simpler_river_crossing",
+        "category": "Logic Puzzle",
+        "title": "Even simpler river crossing",
+        "prompt": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
+        "expected_behavior": [
+          "Answer concludes that they simply get in the boat and cross together in one trip",
+          "Answer notes that the boat can carry both the man and the sheep at the same time"
+        ],
+        "common_mistakes": [
+          "Answer provides solution to full river crossing problem with multiple trips",
+          "Answer provides complex solutions with multiple trips",
+          "Answer is provided as itemized list"
+        ]
+      },
+      {
         "prompt_id": "dead_schrodingers_cat",
         "category": "Logic Puzzle",
         "title": "Dead Schrödinger's cat",
@@ -138,21 +153,6 @@
           "Providing overly complex scenarios with multiple trips",
           "Failing to recognize that both can fit in the boat at once",
           "Unnecessary generation of steps or precautions"
-        ]
-      },
-      {
-        "prompt_id": "even_simpler_river_crossing",
-        "category": "Logic Puzzle",
-        "title": "Even simpler river crossing",
-        "prompt": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
-        "expected_behavior": [
-          "Recognize that the boat can carry both the man and the sheep",
-          "Conclude that they simply get in the boat and cross together in one trip"
-        ],
-        "common_mistakes": [
-          "Providing complex solutions with multiple trips",
-          "Introducing unnecessary concerns about eating or other issues",
-          "Failing to provide the simplest solution of crossing together"
         ]
       },
       {

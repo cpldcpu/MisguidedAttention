@@ -1,0 +1,134 @@
+{
+  "even_simpler_river_crossing": {
+    "llama-3.1-8B": {
+      "average_score": 1.6666666666666667,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer notes that the boat can carry both the man and the sheep at the same time": 0.3333333333333333
+      },
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 0.6666666666666666,
+        "Answer provides complex solutions with multiple trips": 0.6666666666666666
+      }
+    },
+    "hermes-3-llama-3.1-405": {
+      "average_score": 4.333333333333333,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0,
+        "Answer notes that the boat can carry both the man and the sheep at the same time": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 0.6666666666666666
+      }
+    },
+    "claude-3.5-sonnet": {
+      "average_score": 4.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0,
+        "Answer notes that the boat can carry both the man and the sheep at the same time": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "gpt-4o-mini": {
+      "average_score": 4.666666666666667,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0,
+        "Answer notes that the boat can carry both the man and the sheep at the same time": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "gpt-4o": {
+      "average_score": 4.333333333333333,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0,
+        "Answer notes that the boat can carry both the man and the sheep at the same time": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "gemini-flash-1.5-exp": {
+      "average_score": 2.3333333333333335,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 0.3333333333333333,
+        "Answer notes that the boat can carry both the man and the sheep at the same time": 0.3333333333333333
+      },
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 0.6666666666666666,
+        "Answer provides complex solutions with multiple trips": 0.6666666666666666,
+        "Answer is provided as itemized list": 0.6666666666666666
+      }
+    },
+    "gemini-pro-1.5-exp": {
+      "average_score": 1.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "o1-mini": {
+      "average_score": 4.666666666666667,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0,
+        "Answer notes that the boat can carry both the man and the sheep at the same time": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 0.3333333333333333
+      }
+    },
+    "o1-preview-2024-09-12": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0,
+        "Answer notes that the boat can carry both the man and the sheep at the same time": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "phi-3-medium-128k-instruct": {
+      "average_score": 1.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0
+      }
+    },
+    "mistral-7b-instruct": {
+      "average_score": 1.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 0.3333333333333333
+      }
+    },
+    "llama-3.1-405b-instruct": {
+      "average_score": 3.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 0.6666666666666666,
+        "Answer notes that the boat can carry both the man and the sheep at the same time": 0.6666666666666666
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 1.0,
+        "Answer provides solution to full river crossing problem with multiple trips": 0.3333333333333333,
+        "Answer provides complex solutions with multiple trips": 0.3333333333333333
+      }
+    }
+  }
+}
