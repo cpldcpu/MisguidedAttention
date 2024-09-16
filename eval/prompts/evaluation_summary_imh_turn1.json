@@ -1,0 +1,34 @@
+{
+  "inverse_monty_hall": {
+    "o1-preview": {
+      "average_score": 1.3333333333333333,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer explains that the initial choice has a 2/3 chance of winning a car": 0.6666666666666666,
+        "Answer suggest to keep the existing door": 0.3333333333333333
+      },
+      "common_mistakes_stats": {
+        "Answer explains the standard Monty Hall problem solution": 0.3333333333333333
+      }
+    },
+    "claude-3.5-sonnet": {
+      "average_score": 3.6666666666666665,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0,
+        "Answer explains the standard Monty Hall problem solution": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a donkey": 0.3333333333333333
+      }
+    },
+    "llama-3.1-8B": {
+      "average_score": 1.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0,
+        "Answer explains the standard Monty Hall problem solution": 1.0
+      }
+    }
+  }
+}

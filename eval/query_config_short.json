@@ -17,6 +17,14 @@
       "presence_penalty": 0,
       "repetition_penalty": 1,
       "top_k": 0
-    }
+    },
+    {
+      "name": "o1-preview",
+      "model": "openai/o1-preview",
+      "max_tokens": 4000,
+      "temperature": 1,
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
   ]
 }

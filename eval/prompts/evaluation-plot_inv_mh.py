@@ -35,8 +35,8 @@ def plot_prompt(ax, prompt_data, prompt_id):
         all_behaviors.update(prompt_data[llm]['expected_behavior_stats'].keys())
         all_mistakes.update(prompt_data[llm]['common_mistakes_stats'].keys())
     all_behaviors = sorted(all_behaviors)
-    all_mistakes = sorted(all_mistakes, reverse=True)
-    # all_mistakes = sorted(all_mistakes)
+    # all_mistakes = sorted(all_mistakes, reverse=True)
+    all_mistakes = sorted(all_mistakes)
     
     total_bars = max(len(all_behaviors), len(all_mistakes))
     bar_width = 0.8 / total_bars
@@ -46,12 +46,9 @@ def plot_prompt(ax, prompt_data, prompt_id):
     # Create color maps for behaviors (green) and mistakes (red)
     green_cmap = plt.cm.Greens
     red_cmap = plt.cm.Reds
-
-    # behavior_colors = [green_cmap(0.3 + 0.7 * i / (len(all_behaviors) - 1)) for i in range(len(all_behaviors))]
-    # mistake_colors = [red_cmap(0.3 + 0.7 * i / (len(all_mistakes) - 1)) for i in range(len(all_mistakes))]
-    behavior_colors = [green_cmap(0.3 + 0.7 * i / (len(all_behaviors) - 0)) for i in range(len(all_behaviors))]
-    mistake_colors = [red_cmap(0.3 + 0.7 * i / (len(all_mistakes) - 0)) for i in range(len(all_mistakes))]
-
+    behavior_colors = [green_cmap(0.3 + 0.7 * i / (len(all_behaviors) - 1)) for i in range(len(all_behaviors))]
+    mistake_colors = [red_cmap(0.3 + 0.7 * i / (len(all_mistakes) - 1)) for i in range(len(all_mistakes))]
+    
     legend_handles = []
     legend_labels = []
     max_n = 0
@@ -80,7 +77,7 @@ def plot_prompt(ax, prompt_data, prompt_id):
                     legend_handles.append(bar)
                     legend_labels.append(mistake)
         
-        ax2.scatter(llm_index, prompt_data[llm]['average_score'], color='black', zorder=3)
+        # ax2.scatter(llm_index, prompt_data[llm]['average_score'], color='black', zorder=3)
         max_n = max(max_n, prompt_data[llm]['num_evaluations'])
 
     ax.set_title(prompt_id, fontsize=16, fontweight='bold')
@@ -92,9 +89,9 @@ def plot_prompt(ax, prompt_data, prompt_id):
     ax.set_ylim(-1.3, 1.3)  # Adjusted to show both positive and negative values
     ax.grid(axis='y', linestyle='--', alpha=0.7)
     
-    ax2.set_ylabel('Quality Eval (1-5)', fontsize=14)
-    ax2.tick_params(axis='y', labelsize=12)
-    ax2.set_ylim(0, 6)
+    # ax2.set_ylabel('Quality Eval (1-5)', fontsize=14)
+    # ax2.tick_params(axis='y', labelsize=12)
+    # ax2.set_ylim(0, 6)
 
     # Add legend to top-left corner
     # legend_labels = all_behaviors + all_mistakes

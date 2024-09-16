@@ -68,6 +68,9 @@ def main(args):
                     print(f"Querying {llm['name']} with prompt: {prompt['prompt']}")
                 
                 answer = query_llm(prompt["prompt"], llm, args.temp)
+                if args.debug:
+                    print(f"Answer: {answer}")
+
                 result["output"].append(answer)
             
             output["results"].append(result)

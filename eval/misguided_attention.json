@@ -1,6 +1,59 @@
 {
     "prompts": [
       {
+        "prompt_id": "measuring_1_liter",
+        "category": "Logic Puzzle",
+        "title": "Measuring 1 liter",
+        "prompt": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
+        "expected_behavior": [
+          "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter"
+        ],
+        "common_mistakes": [
+          "Answer with instructions to pour water between the jugs multiple times",
+          "Answer is formatted as itemized list with more than 3 entries"
+        ]
+      },
+      {
+        "prompt_id": "measuring_4_liters",
+        "category": "Logic Puzzle",
+        "title": "Measuring 4 liters",
+        "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
+        "expected_behavior": [
+          "Answer concludes it is impossible to measure exactly 4 liters with the given jugs"
+        ],
+        "common_mistakes": [
+          "Answer with instructions to pour water between the jugs multiple times",
+          "Answer is formatted as itemized list with more than 3 entries"
+        ]
+      },
+      {
+        "prompt_id": "measuring_3_liters",
+        "category": "Logic Puzzle",
+        "title": "Measuring 3 liters",
+        "prompt": "I have a 1- and a 2-liter jug. I want to measure exactly 3 liters.",
+        "expected_behavior": [
+          "Answer concludes that filling both jugs once gives exactly 3 liters"
+        ],
+        "common_mistakes": [
+          "Answer requires pouring water between the jugs multiple times",
+          "Answer is formatted as itemized list with more than 3 entries"
+        ]
+      },
+      {
+        "prompt_id": "inverse_monty_hall",
+        "category": "Logic Puzzle",
+        "title": "Inverse Monty Hall Problem",
+        "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "expected_behavior": [
+          "Answer suggests to keep the existing door",
+          "Answer explains that the initial choice has a 2/3 chance of winning a car"
+        ],
+        "common_mistakes": [
+          "Answer suggests to switch the door",
+          "Answer explains that the initial choice has a 2/3 chance of choosing a donkey"
+        ]
+      },
+      {
         "prompt_id": "simple_river_crossing",
         "category": "Logic Puzzle",
         "title": "Don't ever ask an LLM to help you cross a river",
@@ -29,8 +82,7 @@
           "Answer provides complex solutions with multiple trips",
           "Answer is provided as itemized list"
         ]
-      },
-  
+      },  
       {
         "prompt_id": "even_simpler_river_crossing",
         "category": "Logic Puzzle",
@@ -105,23 +157,6 @@
         ]
       },
       {
-        "prompt_id": "inverse_monty_hall",
-        "category": "Logic Puzzle",
-        "title": "Inverse Monty Hall Problem",
-        "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
-        "expected_behavior": [
-          "Recognize that this is an inverse of the standard Monty Hall problem",
-          "Understand that the goal is to win a car, not avoid the donkey",
-          "Conclude that staying with the original choice gives a 2/3 chance of winning a car",
-          "Decide to keep the existing door"
-        ],
-        "common_mistakes": [
-          "Applying the standard Monty Hall problem solution (switching) without considering the altered goal",
-          "Focusing on avoiding the donkey instead of winning a car",
-          "Incorrectly calculating probabilities based on the new setup"
-        ]
-      },
-      {
         "prompt_id": "normal_barber",
         "category": "Logic Puzzle",
         "title": "The Normal Barber",
@@ -170,51 +205,8 @@
           "Unnecessary generation of steps or calculations"
         ]
       },
-      {
-        "prompt_id": "measuring_4_liters",
-        "category": "Logic Puzzle",
-        "title": "Measuring 4 liters",
-        "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
-        "expected_behavior": [
-          "Recognize that this requires a multi-step process",
-          "Provide a correct solution, such as: Fill the 6-liter jug, pour it into the 12-liter jug. Fill the 6-liter jug again and pour into the 12-liter jug until it's full (2 liters). The remaining 4 liters in the 6-liter jug is the desired amount."
-        ],
-        "common_mistakes": [
-          "Failing to provide any solution",
-          "Providing incorrect or impossible solutions",
-          "Overcomplicating the process with unnecessary steps"
-        ]
-      },
-      {
-        "prompt_id": "measuring_3_liters",
-        "category": "Logic Puzzle",
-        "title": "Measuring 3 liters",
-        "prompt": "I have a 1- and a 2-liter jug. I want to measure exactly 3 liters.",
-        "expected_behavior": [
-          "Recognize that the solution is straightforward",
-          "Conclude that filling both jugs once gives exactly 3 liters"
-        ],
-        "common_mistakes": [
-          "Providing overly complex solutions with multiple steps",
-          "Failing to recognize the simple addition of both jugs' capacities",
-          "Unnecessary generation of steps or calculations"
-        ]
-      },
-      {
-        "prompt_id": "measuring_1_liter",
-        "category": "Logic Puzzle",
-        "title": "Measuring 1 liter",
-        "prompt": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
-        "expected_behavior": [
-          "Recognize that the solution is trivial",
-          "Conclude that filling either 1-liter jug once is sufficient"
-        ],
-        "common_mistakes": [
-          "Providing complex solutions involving both jugs",
-          "Failing to recognize the simplest solution of using one jug",
-          "Unnecessary generation of steps or calculations"
-        ]
-      },
+
+
       {
         "prompt_id": "roasting_nuts",
         "category": "Logic Puzzle",
