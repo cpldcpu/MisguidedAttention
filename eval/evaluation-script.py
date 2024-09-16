@@ -23,8 +23,8 @@ def run_inference(prompt, sys_prompt, max_depth=5):
         if depth >= max_depth:
             print(f"Maximum recursion depth reached ({max_depth}). Stopping recursion.")
             return None
-        # OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")    
-        OPENROUTER_API_KEY = os.environ.get("Path")
+        OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")    
+        # OPENROUTER_API_KEY = os.environ.get("Path")
         if not OPENROUTER_API_KEY:
             print("Using OPENAI_API_KEY instead of OPENROUTER_API_KEY")
             OPENROUTER_API_KEY = os.environ.get("OPENAI_API_KEY")

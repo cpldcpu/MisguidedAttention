@@ -13,8 +13,7 @@ def save_json(data, file_path):
         json.dump(data, f, indent=2)
 
 def query_llm(prompt, llm_config, temperature_override):
-    # OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
-    OPENROUTER_API_KEY = os.environ.get("Path")
+    OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
     if not OPENROUTER_API_KEY:
         print("Using OPENAI_API_KEY instead of OPENROUTER_API_KEY")
         OPENROUTER_API_KEY = os.environ.get("OPENAI_API_KEY")

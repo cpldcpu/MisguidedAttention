@@ -50,6 +50,7 @@ def plot_prompt(ax, prompt_data, prompt_id):
     
     legend_handles = []
     legend_labels = []
+    max_n = 0
     
     for llm_index, llm in enumerate(llms):
         expected_behaviors = prompt_data[llm]['expected_behavior_stats']
@@ -76,11 +77,12 @@ def plot_prompt(ax, prompt_data, prompt_id):
                     legend_labels.append(mistake)
         
         ax2.scatter(llm_index, prompt_data[llm]['average_score'], color='black', zorder=3)
+        max_n = max(max_n, prompt_data[llm]['num_evaluations'])
 
     ax.set_title(prompt_id, fontsize=16, fontweight='bold')
     ax.set_xticks(range(len(llms)))
     ax.set_xticklabels(llms, rotation=45, ha='right', fontsize=14)
-    ax.set_ylabel('Positive/negative behavior Score [n=3]', fontsize=14)
+    ax.set_ylabel(f'Positive/negative behavior Score [n={max_n}]', fontsize=14)
     ax.tick_params(axis='y', labelsize=12)
     ax.axhline(y=0, color='k', linestyle='-', linewidth=0.5)
     ax.set_ylim(-1.3, 1.3)  # Adjusted to show both positive and negative values
