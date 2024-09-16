@@ -1,6 +1,20 @@
 {
     "prompts": [     
       {
+        "prompt_id": "dead_schrodingers_cat",
+        "category": "Logic Puzzle",
+        "title": "Dead Schrödinger's cat",
+        "prompt": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
+        "expected_behavior": [
+          "Answer recognizes that the cat is already dead when placed in the box",
+          "Answer states that the probability of the cat being alive is 0%"
+        ],
+        "common_mistakes": [
+          "Answer fails to mention that the cat is already dead when placed in the box",
+          "Treating the problem as the standard Schrodinger's cat thought experiment"
+        ]
+      },     
+      {
         "prompt_id": "no_trolley_problem",
         "category": "Logic Puzzle",
         "title": "No Trolley Problem",
@@ -28,20 +42,6 @@
           "Answer states to pull the lever"
         ]
       },
-      {
-        "prompt_id": "dead_schrodingers_cat",
-        "category": "Logic Puzzle",
-        "title": "Dead Schrödinger's cat",
-        "prompt": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
-        "expected_behavior": [
-          "Answer recognizes that the cat is already dead when placed in the box",
-          "Answer states that the probability of the cat being alive is 0%"
-        ],
-        "common_mistakes": [
-          "Treating the problem as the standard Schrödinger's cat thought experiment",
-          "Failing to notice that the cat is already dead when placed in the box"
-        ]
-      },     
       {
         "prompt_id": "less_confusing_monty_hall",
         "category": "Logic Puzzle",

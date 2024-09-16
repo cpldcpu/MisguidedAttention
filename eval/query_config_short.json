@@ -1,0 +1,22 @@
+{
+  "llms": [
+  
+    {
+      "name": "claude-3.5-sonnet",
+      "model": "anthropic/claude-3.5-sonnet",
+      "temperature": 0.9,
+      "top_p": 0.9,
+      "repetition_penalty": 1
+    },
+    {
+      "name": "llama-3.1-8B",
+      "model": "meta-llama/llama-3.1-8b-instruct",
+      "temperature": 0.9,
+      "top_p": 1,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "repetition_penalty": 1,
+      "top_k": 0
+    }
+  ]
+}

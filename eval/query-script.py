@@ -15,7 +15,7 @@ def save_json(data, file_path):
 def query_llm(prompt, llm_config, temperature_override):
     OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
     if not OPENROUTER_API_KEY:
-        print("Using OPENAI_API_KEY instead of OPENROUTER_API_KEY")
+        # print("Using OPENAI_API_KEY instead of OPENROUTER_API_KEY")
         OPENROUTER_API_KEY = os.environ.get("OPENAI_API_KEY")
         if not OPENROUTER_API_KEY:
             raise ValueError("OPENROUTER_API_KEY and OPENAI_API_KEY environment variable not set")
@@ -54,7 +54,7 @@ def main(args):
     output = {"results": []}
 
     for llm in config["llms"]:
-        print(f"Evaluating {llm['name']}...")
+        print(f"Querying {llm['name']}...")
         for prompt in tqdm(dataset["prompts"][:args.limit] if args.limit > 0 else dataset["prompts"]):
             result = {
                 "prompt_id": prompt["prompt_id"],
