@@ -1,0 +1,13 @@
+{
+  "jugs_4_liters": {
+    "gemini-pro-1.5": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer with instructions to pour water between the jugs multiple times": 1.0,
+        "Answer is formatted as itemized list with more than 3 entries": 1.0
+      }
+    }
+  }
+}

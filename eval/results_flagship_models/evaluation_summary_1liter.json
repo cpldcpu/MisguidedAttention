@@ -1,0 +1,108 @@
+{
+  "jugs_1_liter": {
+    "llama-3.1-8B": {
+      "average_score": 1.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer with instructions to pour water between the jugs multiple times": 1.0,
+        "Answer is formatted as itemized list with more than 3 entries": 1.0
+      }
+    },
+    "hermes-3-llama-3.1-405": {
+      "average_score": 4.333333333333333,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer with instructions to pour water between the jugs multiple times": 0.3333333333333333,
+        "Answer is formatted as itemized list with more than 3 entries": 0.3333333333333333
+      }
+    },
+    "claude-3.5-sonnet": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "gpt-4o-mini": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "gpt-4o": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "gemini-flash-1.5": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "gemini-pro-1.5": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "o1-mini": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "o1-preview": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "phi-3-medium-128k-instruct": {
+      "average_score": 4.333333333333333,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer with instructions to pour water between the jugs multiple times": 0.3333333333333333,
+        "Answer is formatted as itemized list with more than 3 entries": 0.3333333333333333
+      }
+    },
+    "mistral-7b-instruct": {
+      "average_score": 1.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer with instructions to pour water between the jugs multiple times": 1.0,
+        "Answer is formatted as itemized list with more than 3 entries": 0.6666666666666666
+      }
+    },
+    "llama-3.1-405b-instruct": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
+      },
+      "common_mistakes_stats": {}
+    }
+  }
+}
