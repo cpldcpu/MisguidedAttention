@@ -1,5 +1,13 @@
 {
-  "llms": [
+  "llms": [    
+    {
+      "name": "llama-3.1-405b-instruct",
+      "model": "meta-llama/llama-3.1-405b-instruct",
+      "max_tokens": 2000,
+      "temperature": 0.9,
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
     {
       "name": "hermes-3-llama-3.1-405",
       "model": "nousresearch/hermes-3-llama-3.1-405b",
@@ -35,6 +43,14 @@
         "top_p": 0.95,
         "repetition_penalty": 1
     },  
+
+    {
+      "name": "mistral-large",
+      "model": "mistralai/mistral-large",
+      "temperature": 0.95,
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
     {
       "name": "o1-preview",
       "model": "openai/o1-preview",
@@ -42,14 +58,6 @@
       "temperature": 1,
       "top_p": 1.0,
       "repetition_penalty": 1
-    },
-    {
-      "name": "llama-3.1-405b-instruct",
-      "model": "meta-llama/llama-3.1-405b-instruct",
-      "max_tokens": 2000,
-      "temperature": 0.9,
-      "top_p": 1.0,
-      "repetition_penalty": 1
-    }               
+    }                     
   ]
 }

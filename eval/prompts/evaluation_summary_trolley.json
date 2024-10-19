@@ -1,5 +1,5 @@
 {
-  "no_trolley_problem": {
+  "trolley_problem_easy": {
     "llama-3.1-8B": {
       "average_score": 1.25,
       "num_evaluations": 8,

@@ -1,7 +1,7 @@
 {
   "results": [
     {
-      "prompt_id": "no_trolley_problem",
+      "prompt_id": "trolley_problem_easy",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
       "llm": "Llama-3.1-8B",
       "output": [
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_problem",
+      "prompt_id": "trolley_problem_easy",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
       "llm": "hermes-3-llama-3.1-405",
       "output": [
@@ -35,7 +35,7 @@
       ]
     }, 
     {
-      "prompt_id": "no_trolley_problem",
+      "prompt_id": "trolley_problem_easy",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
       "llm": "claude-3.5-sonnet",
       "output": [
@@ -52,7 +52,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_problem",
+      "prompt_id": "trolley_problem_easy",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
       "llm": "gpt-4o-mini",
       "output": [
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_problem",
+      "prompt_id": "trolley_problem_easy",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
       "llm": "gpt-4o",
       "output": [
@@ -86,7 +86,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_problem",
+      "prompt_id": "trolley_problem_easy",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
       "llm": "gemini-flash-1.5",
       "output": [
@@ -103,7 +103,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_problem",
+      "prompt_id": "trolley_problem_easy",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
       "llm": "gemini-pro-1.5",
       "output": [
@@ -120,7 +120,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_problem",
+      "prompt_id": "trolley_problem_easy",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
       "llm": "phi-3-medium-128k-instruct",
       "output": [
@@ -137,7 +137,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_problem",
+      "prompt_id": "trolley_problem_easy",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
       "llm": "mistral-7b-instruct",
       "output": [
@@ -154,7 +154,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_problem",
+      "prompt_id": "trolley_problem_easy",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
       "llm": "llama-3.1-405b-instruct",
       "output": [
@@ -171,7 +171,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_problem",
+      "prompt_id": "trolley_problem_easy",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
       "llm": "phi-3-medium-128k-instruct",
       "output": [
@@ -188,7 +188,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_problem",
+      "prompt_id": "trolley_problem_easy",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
       "llm": "mistral-7b-instruct",
       "output": [
@@ -205,7 +205,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_problem",
+      "prompt_id": "trolley_problem_easy",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
       "llm": "llama-3.1-405b-instruct",
       "output": [
@@ -222,7 +222,7 @@
       ]
     },
     {
-    "prompt_id": "no_trolley_problem",
+    "prompt_id": "trolley_problem_easy",
     "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
     "llm": "o1-mini",
     "output": [
@@ -234,7 +234,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_problem",
+      "prompt_id": "trolley_problem_easy",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
       "llm": "o1-preview",
       "output": [

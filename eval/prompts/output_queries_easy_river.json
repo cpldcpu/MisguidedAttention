@@ -1,7 +1,7 @@
 {
   "results": [
     {
-      "prompt_id": "easy_river_crossing",
+      "prompt_id": "river_crossing_easy",
       "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
       "llm": "llama-3.1-8B",
       "output": [
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "prompt_id": "easy_river_crossing",
+      "prompt_id": "river_crossing_easy",
       "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
       "llm": "hermes-3-llama-3.1-405",
       "output": [
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "prompt_id": "easy_river_crossing",
+      "prompt_id": "river_crossing_easy",
       "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
       "llm": "claude-3.5-sonnet",
       "output": [
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "prompt_id": "easy_river_crossing",
+      "prompt_id": "river_crossing_easy",
       "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
       "llm": "gpt-4o-mini",
       "output": [
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "prompt_id": "easy_river_crossing",
+      "prompt_id": "river_crossing_easy",
       "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
       "llm": "gpt-4o",
       "output": [
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "prompt_id": "easy_river_crossing",
+      "prompt_id": "river_crossing_easy",
       "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
       "llm": "gemini-flash-1.5",
       "output": [
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "prompt_id": "easy_river_crossing",
+      "prompt_id": "river_crossing_easy",
       "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
       "llm": "gemini-pro-1.5",
       "output": [
@@ -85,7 +85,7 @@
       ]
     },
     {
-      "prompt_id": "easy_river_crossing",
+      "prompt_id": "river_crossing_easy",
       "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
       "llm": "o1-mini",
       "output": [
@@ -97,7 +97,7 @@
       ]
     },
     {
-      "prompt_id": "easy_river_crossing",
+      "prompt_id": "river_crossing_easy",
       "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
       "llm": "o1-preview",
       "output": [
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "prompt_id": "easy_river_crossing",
+      "prompt_id": "river_crossing_easy",
       "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
       "llm": "phi-3-medium-128k-instruct",
       "output": [
@@ -121,7 +121,7 @@
       ]
     },
     {
-      "prompt_id": "easy_river_crossing",
+      "prompt_id": "river_crossing_easy",
       "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
       "llm": "mistral-7b-instruct",
       "output": [
@@ -133,7 +133,7 @@
       ]
     },
     {
-      "prompt_id": "easy_river_crossing",
+      "prompt_id": "river_crossing_easy",
       "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
       "llm": "llama-3.1-405b-instruct",
       "output": [

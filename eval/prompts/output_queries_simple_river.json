@@ -1,7 +1,7 @@
 {
   "results": [
     {
-      "prompt_id": "simple_river_crossing",
+      "prompt_id": "river_crossing_simple",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
       "llm": "llama-3.1-8B",
       "output": [
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "prompt_id": "simple_river_crossing",
+      "prompt_id": "river_crossing_simple",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
       "llm": "hermes-3-llama-3.1-405",
       "output": [
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "prompt_id": "simple_river_crossing",
+      "prompt_id": "river_crossing_simple",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
       "llm": "claude-3.5-sonnet",
       "output": [
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "prompt_id": "simple_river_crossing",
+      "prompt_id": "river_crossing_simple",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
       "llm": "gpt-4o-mini",
       "output": [
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "prompt_id": "simple_river_crossing",
+      "prompt_id": "river_crossing_simple",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
       "llm": "gpt-4o",
       "output": [
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "prompt_id": "simple_river_crossing",
+      "prompt_id": "river_crossing_simple",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
       "llm": "gemini-flash-1.5",
       "output": [
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "prompt_id": "simple_river_crossing",
+      "prompt_id": "river_crossing_simple",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
       "llm": "gemini-pro-1.5",
       "output": [
@@ -85,7 +85,7 @@
       ]
     },
     {
-      "prompt_id": "simple_river_crossing",
+      "prompt_id": "river_crossing_simple",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
       "llm": "o1-mini",
       "output": [
@@ -97,7 +97,7 @@
       ]
     },
     {
-      "prompt_id": "simple_river_crossing",
+      "prompt_id": "river_crossing_simple",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
       "llm": "o1-preview",
       "output": [
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "prompt_id": "simple_river_crossing",
+      "prompt_id": "river_crossing_simple",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
       "llm": "phi-3-medium-128k-instruct",
       "output": [
@@ -121,7 +121,7 @@
       ]
     },
     {
-      "prompt_id": "simple_river_crossing",
+      "prompt_id": "river_crossing_simple",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
       "llm": "mistral-7b-instruct",
       "output": [
@@ -133,7 +133,7 @@
       ]
     },
     {
-      "prompt_id": "simple_river_crossing",
+      "prompt_id": "river_crossing_simple",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
       "llm": "llama-3.1-405b-instruct",
       "output": [

@@ -1,5 +1,5 @@
 {
-  "inverse_monty_hall": {
+  "monty_hall_inverse": {
     "llama-3.1-8B": [
       {
         "expected_behavior": [

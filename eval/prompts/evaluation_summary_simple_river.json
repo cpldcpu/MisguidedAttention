@@ -1,5 +1,5 @@
 {
-  "simple_river_crossing": {
+  "river_crossing_simple": {
     "llama-3.1-8B": {
       "average_score": 1.0,
       "num_evaluations": 5,

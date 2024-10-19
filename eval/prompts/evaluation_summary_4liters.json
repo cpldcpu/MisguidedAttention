@@ -1,5 +1,5 @@
 {
-  "measuring_4_liters": {
+  "jugs_4_liters": {
     "llama-3.1-8B": {
       "average_score": 1.0,
       "num_evaluations": 3,

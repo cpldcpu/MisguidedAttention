@@ -1,5 +1,5 @@
 {
-  "inverse_monty_hall": {
+  "monty_hall_inverse": {
     "o1-preview": {
       "average_score": 1.3333333333333333,
       "num_evaluations": 3,

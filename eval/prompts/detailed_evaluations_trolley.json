@@ -1,5 +1,5 @@
 {
-  "no_trolley_problem": {
+  "trolley_problem_easy": {
     "Llama-3.1-8B": [
       {
         "expected_behavior": [

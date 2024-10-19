@@ -1,0 +1,53 @@
+{
+  "llms": [
+    {
+      "name": "mistral-7b-instruct-v0.3",
+      "model": "mistralai/mistral-7b-instruct-v0.3",
+      "temperature": 1.0,
+      "top_p": 1,
+      "repetition_penalty": 1
+    },
+    {
+        "name": "ministral-8b",
+        "model": "mistralai/ministral-8b",
+        "temperature": 1.0,
+        "top_p": 1,
+        "repetition_penalty": 1
+    },
+    {
+        "name": "ministral-3b",
+        "model": "mistralai/ministral-3b",
+        "temperature": 1.0,
+        "top_p": 1,
+        "repetition_penalty": 1
+    },
+    {
+        "name": "llama-3.1-8b-instruct",
+        "model": "meta-llama/llama-3.1-8b-instruct",
+        "temperature": 1.0,
+        "top_p": 1,
+        "repetition_penalty": 1
+    },
+    {
+        "name": "llama-3.2-3b-instruct",
+        "model": "meta-llama/llama-3.2-3b-instruct",
+        "temperature": 1.0,
+        "top_p": 1,
+        "repetition_penalty": 1
+    },
+    {
+        "name": "llama-3.2-1b-instruct",
+        "model": "meta-llama/llama-3.2-1b-instruct",
+        "temperature": 1.0,
+        "top_p": 1,
+        "repetition_penalty": 1
+    },
+    {
+        "name": "qwen-2.5-7b-instruct",
+        "model": "qwen/qwen-2.5-7b-instruct",
+        "temperature": 1.0,
+        "top_p": 1,
+        "repetition_penalty": 1
+    }
+   ]
+}

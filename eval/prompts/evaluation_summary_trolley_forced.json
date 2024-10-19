@@ -1,5 +1,5 @@
 {
-  "no_trolley_forced_answer": {
+  "trolley_easy_forced": {
     "llama-3.1-8B": {
       "average_score": 1.6666666666666667,
       "num_evaluations": 3,

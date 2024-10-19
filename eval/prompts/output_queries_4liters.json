@@ -1,7 +1,7 @@
 {
   "results": [
     {
-      "prompt_id": "measuring_4_liters",
+      "prompt_id": "jugs_4_liters",
       "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
       "llm": "llama-3.1-8B",
       "output": [
@@ -11,7 +11,7 @@
       ]
     },
     {
-      "prompt_id": "measuring_4_liters",
+      "prompt_id": "jugs_4_liters",
       "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
       "llm": "hermes-3-llama-3.1-405",
       "output": [
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "prompt_id": "measuring_4_liters",
+      "prompt_id": "jugs_4_liters",
       "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
       "llm": "claude-3.5-sonnet",
       "output": [
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "prompt_id": "measuring_4_liters",
+      "prompt_id": "jugs_4_liters",
       "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
       "llm": "gpt-4o-mini",
       "output": [
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "prompt_id": "measuring_4_liters",
+      "prompt_id": "jugs_4_liters",
       "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
       "llm": "gpt-4o",
       "output": [
@@ -51,7 +51,7 @@
       ]
     },
     {
-      "prompt_id": "measuring_4_liters",
+      "prompt_id": "jugs_4_liters",
       "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
       "llm": "gemini-flash-1.5",
       "output": [
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "prompt_id": "measuring_4_liters",
+      "prompt_id": "jugs_4_liters",
       "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
       "llm": "gemini-pro-1.5",
       "output": [
@@ -71,7 +71,7 @@
       ]
     },
     {
-      "prompt_id": "measuring_4_liters",
+      "prompt_id": "jugs_4_liters",
       "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
       "llm": "o1-mini-",
       "output": [
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "prompt_id": "measuring_4_liters",
+      "prompt_id": "jugs_4_liters",
       "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
       "llm": "o1-preview",
       "output": [
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "prompt_id": "measuring_4_liters",
+      "prompt_id": "jugs_4_liters",
       "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
       "llm": "phi-3-medium-128k-instruct",
       "output": [
@@ -101,7 +101,7 @@
       ]
     },
     {
-      "prompt_id": "measuring_4_liters",
+      "prompt_id": "jugs_4_liters",
       "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
       "llm": "mistral-7b-instruct",
       "output": [
@@ -111,7 +111,7 @@
       ]
     },
     {
-      "prompt_id": "measuring_4_liters",
+      "prompt_id": "jugs_4_liters",
       "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
       "llm": "llama-3.1-405b-instruct",
       "output": [

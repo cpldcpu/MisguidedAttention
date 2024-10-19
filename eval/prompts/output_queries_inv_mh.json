@@ -1,7 +1,7 @@
 {
   "results": [
     {
-      "prompt_id": "inverse_monty_hall",
+      "prompt_id": "monty_hall_inverse",
       "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
       "llm": "llama-3.1-8B",
       "output": [
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "prompt_id": "inverse_monty_hall",
+      "prompt_id": "monty_hall_inverse",
       "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
       "llm": "hermes-3-llama-3.1-405",
       "output": [
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "prompt_id": "inverse_monty_hall",
+      "prompt_id": "monty_hall_inverse",
       "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
       "llm": "claude-3.5-sonnet",
       "output": [
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "prompt_id": "inverse_monty_hall",
+      "prompt_id": "monty_hall_inverse",
       "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
       "llm": "gpt-4o-mini",
       "output": [
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "prompt_id": "inverse_monty_hall",
+      "prompt_id": "monty_hall_inverse",
       "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
       "llm": "gpt-4o",
       "output": [
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "prompt_id": "inverse_monty_hall",
+      "prompt_id": "monty_hall_inverse",
       "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
       "llm": "gemini-flash-1.5",
       "output": [
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "prompt_id": "inverse_monty_hall",
+      "prompt_id": "monty_hall_inverse",
       "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
       "llm": "gemini-pro-1.5",
       "output": [
@@ -86,7 +86,7 @@
     },
  
     {
-      "prompt_id": "inverse_monty_hall",
+      "prompt_id": "monty_hall_inverse",
       "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
       "llm": "o1-preview",
       "output": [
@@ -98,7 +98,7 @@
       ]
     },
     {
-      "prompt_id": "inverse_monty_hall",
+      "prompt_id": "monty_hall_inverse",
       "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
       "llm": "phi-3-medium-128k-instruct",
       "output": [
@@ -110,7 +110,7 @@
       ]
     },
     {
-      "prompt_id": "inverse_monty_hall",
+      "prompt_id": "monty_hall_inverse",
       "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
       "llm": "mistral-7b-instruct",
       "output": [
@@ -122,7 +122,7 @@
       ]
     },
     {
-      "prompt_id": "inverse_monty_hall",
+      "prompt_id": "monty_hall_inverse",
       "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
       "llm": "llama-3.1-405b-instruct",
       "output": [
@@ -134,7 +134,7 @@
       ]
     },
     {
-      "prompt_id": "inverse_monty_hall",
+      "prompt_id": "monty_hall_inverse",
       "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
       "llm": "o1-mini-",
       "output": [
@@ -146,7 +146,7 @@
       ]
     },
     {
-      "prompt_id": "inverse_monty_hall",
+      "prompt_id": "monty_hall_inverse",
       "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
       "llm": "o1-mini-",
       "output": [

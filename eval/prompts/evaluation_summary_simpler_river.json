@@ -1,5 +1,5 @@
 {
-  "even_simpler_river_crossing": {
+  "river_crossing_even_simpler": {
     "llama-3.1-8B": {
       "average_score": 1.6666666666666667,
       "num_evaluations": 3,

@@ -1,7 +1,7 @@
 {
   "results": [
     {
-      "prompt_id": "no_trolley_forced_answer",
+      "prompt_id": "trolley_easy_forced",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
       "llm": "Llama-3.1-8B",
       "output": [
@@ -11,7 +11,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_forced_answer",
+      "prompt_id": "trolley_easy_forced",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
       "llm": "hermes-3-llama-3.1-405",
       "output": [
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_forced_answer",
+      "prompt_id": "trolley_easy_forced",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
       "llm": "claude-3.5-sonnet",
       "output": [
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_forced_answer",
+      "prompt_id": "trolley_easy_forced",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
       "llm": "gpt-4o-mini",
       "output": [
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_forced_answer",
+      "prompt_id": "trolley_easy_forced",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
       "llm": "gpt-4o",
       "output": [
@@ -51,7 +51,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_forced_answer",
+      "prompt_id": "trolley_easy_forced",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
       "llm": "gemini-flash-1.5",
       "output": [
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_forced_answer",
+      "prompt_id": "trolley_easy_forced",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
       "llm": "gemini-pro-1.5",
       "output": [
@@ -72,7 +72,7 @@
     },
 
     {
-      "prompt_id": "no_trolley_forced_answer",
+      "prompt_id": "trolley_easy_forced",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
       "llm": "phi-3-medium-128k-instruct",
       "output": [
@@ -82,7 +82,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_forced_answer",
+      "prompt_id": "trolley_easy_forced",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
       "llm": "mistral-7b-instruct",
       "output": [
@@ -92,7 +92,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_forced_answer",
+      "prompt_id": "trolley_easy_forced",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
       "llm": "llama-3.1-405b-instruct",
       "output": [
@@ -102,7 +102,7 @@
       ]
     },
     {
-      "prompt_id": "no_trolley_forced_answer",
+      "prompt_id": "trolley_easy_forced",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
       "llm": "o1-preview",
       "output": [
