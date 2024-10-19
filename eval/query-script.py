@@ -29,23 +29,36 @@ def query_llm(prompt, llm_config, temperature_override):
     data = {
         "model": llm_config["model"],
         "messages": [{"role": "user", "content": f"Please answer the following question: {prompt}\nAnswer:"}],
-        "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 0.7),
-        "max_tokens": llm_config.get("max_tokens", 1000),
+        "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
+        "max_tokens": llm_config.get("max_tokens", 2000),
         "top_p": llm_config.get("top_p", 1),
         "frequency_penalty": llm_config.get("frequency_penalty", 0),
         "presence_penalty": llm_config.get("presence_penalty", 0)
     }
 
-    response = requests.post(
-        "https://openrouter.ai/api/v1/chat/completions",
-        headers=headers,
-        json=data
-    )
+    # response = requests.post(
+    #     "https://openrouter.ai/api/v1/chat/completions",
+    #     headers=headers,
+    #     json=data
+    # )
+    try:
+        response = requests.post(
+            "https://openrouter.ai/api/v1/chat/completions",
+            headers=headers,
+            json=data
+        )
+        response.raise_for_status()  # Raise an HTTPError for bad responses
+        if response.status_code == 200:
+            return response.json()["choices"][0]["message"]["content"]
+        else:
+            print(f"Error: {response.status_code}, {response.text}")
+    except requests.exceptions.ChunkedEncodingError as e:
+        print(f"ChunkedEncodingError: {e}")
+        # Handle the error or retry the request
+    except requests.exceptions.RequestException as e:
+        print(f"Request failed: {e}")
+        # Handle other possible exceptions
 
-    if response.status_code == 200:
-        return response.json()["choices"][0]["message"]["content"]
-    else:
-        print(f"Error: {response.status_code}, {response.text}")
         return None
 
 def main(args):

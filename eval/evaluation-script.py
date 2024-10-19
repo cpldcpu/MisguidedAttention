@@ -43,6 +43,7 @@ def run_inference(prompt, sys_prompt, max_depth=5):
             },
             json={
                 "model": "meta-llama/llama-3.1-70b-instruct",
+                # "model": "anthropic/claude-3.5-sonnet",  # careful, if model keyword missing, openrouter defaults to 4o
                 "messages": messages,
                 "temperature": 0.0,
                 "max_tokens": 1000
