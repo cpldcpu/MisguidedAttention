@@ -49,7 +49,7 @@
         "Failing to notice the key detail that the five people are already dead": 0.5555555555555556
       }
     },
-    "gemini-flash-1.5-exp": {
+    "gemini-flash-1.5": {
       "average_score": 1.5,
       "num_evaluations": 10,
       "expected_behavior_stats": {},
@@ -57,7 +57,7 @@
         "Failing to notice the key detail that the five people are already dead": 1.0
       }
     },
-    "gemini-pro-1.5-exp": {
+    "gemini-pro-1.5": {
       "average_score": 1.4,
       "num_evaluations": 10,
       "expected_behavior_stats": {},
@@ -101,7 +101,7 @@
         "Failing to notice the key detail that the five people are already dead": 1.0
       }
     },
-    "o1-preview-2024-09-12": {
+    "o1-preview": {
       "average_score": 5.0,
       "num_evaluations": 5,
       "expected_behavior_stats": {

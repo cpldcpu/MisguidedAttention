@@ -885,7 +885,7 @@
         "original_response": "To safely transport the goat across the river without it being eaten by the wolf or eating the cabbage, the farmer needs to follow a specific sequence of trips. Here\u2019s how the farmer can do it:\n\n1. **First Trip:** Take the goat across the river and leave it on the other side.\n2. **Second Trip:** Return to the original side alone.\n3. **Third Trip:** Take the wolf across the river.\n4. **Fourth Trip:** Leave the wolf on the other side, but take the goat back with you to the original side.\n5. **Fifth Trip:** Take the cabbage across the river.\n6. **Sixth Trip:** Return to the original side alone.\n7. **Seventh Trip:** Finally, take the goat across the river again.\n\nBy following these steps, the farmer ensures that at no point are the goat and the cabbage left alone together, nor are the wolf and the goat left alone together. This way, all three items\u2014the goat, the wolf, and the cabbage\u2014are safely transported across the river."
       }
     ],
-    "gemini-flash-1.5-exp": [
+    "gemini-flash-1.5": [
       {
         "expected_behavior": [
           {
@@ -1062,7 +1062,7 @@
         "original_response": "This is a classic riddle! Here's how the farmer can solve this problem:\n\n1. **Take the goat across the river.** Leave the wolf and cabbage behind.\n2. **Return alone.** \n3. **Take the wolf across the river.**  Leave the goat on the other side.\n4. **Bring the goat back.** Leave the wolf on the far side with the cabbage.\n5. **Take the cabbage across the river.** Leave it with the wolf.\n6. **Return alone.**\n7. **Take the goat across the river.**\n\nNow the farmer, the wolf, the goat, and the cabbage are all safely on the other side of the river! \n"
       }
     ],
-    "gemini-pro-1.5-exp": [
+    "gemini-pro-1.5": [
       {
         "expected_behavior": [
           {
@@ -1416,7 +1416,7 @@
         "original_response": "To safely transport the goat across the river without it being eaten, the farmer can follow these steps:\n\n1. **Take the Goat Across First:**\n   - **Farmer's Action:** The farmer takes the goat in the boat and crosses to the far side of the river.\n   - **Result:** \n     - **Far Side:** Goat\n     - **Near Side:** Wolf and Cabbage\n\n   *Explanation:* Leaving the wolf and cabbage alone is safe because the wolf does not eat cabbage.\n\n2. **Return Alone to the Near Side:**\n   - **Farmer's Action:** The farmer returns alone to the near side without taking anything.\n   - **Result:**\n     - **Far Side:** Goat\n     - **Near Side:** Wolf and Cabbage\n\n3. **Take the Wolf Across the River:**\n   - **Farmer's Action:** The farmer takes the wolf in the boat and crosses to the far side.\n   - **Result:**\n     - **Far Side:** Wolf and Goat\n     - **Near Side:** Cabbage\n\n   *Issue:* The wolf cannot be left alone with the goat, as the wolf will eat the goat.\n\n4. **Bring the Goat Back to the Near Side:**\n   - **Farmer's Action:** To prevent the wolf from eating the goat, the farmer takes the goat back to the near side.\n   - **Result:**\n     - **Far Side:** Wolf\n     - **Near Side:** Goat and Cabbage\n\n5. **Take the Cabbage Across the River:**\n   - **Farmer's Action:** The farmer takes the cabbage in the boat and crosses to the far side.\n   - **Result:**\n     - **Far Side:** Wolf and Cabbage\n     - **Near Side:** Goat\n\n   *Explanation:* Leaving the wolf and cabbage together is safe because the wolf does not eat cabbage.\n\n6. **Return Alone to the Near Side:**\n   - **Farmer's Action:** The farmer returns alone to the near side to get the goat.\n   - **Result:**\n     - **Far Side:** Wolf and Cabbage\n     - **Near Side:** Goat\n\n7. **Take the Goat Across Finally:**\n   - **Farmer's Action:** The farmer takes the goat in the boat and crosses to the far side.\n   - **Final Result:**\n     - **Far Side:** Wolf, Goat, and Cabbage\n     - **Near Side:** None\n\n**Summary of Steps:**\n1. Farmer takes Goat \u2192 Far Side: Goat | Near Side: Wolf, Cabbage\n2. Farmer returns alone \u2192 Far Side: Goat | Near Side: Wolf, Cabbage\n3. Farmer takes Wolf \u2192 Far Side: Wolf, Goat | Near Side: Cabbage\n4. Farmer brings Goat back \u2192 Far Side: Wolf | Near Side: Goat, Cabbage\n5. Farmer takes Cabbage \u2192 Far Side: Wolf, Cabbage | Near Side: Goat\n6. Farmer returns alone \u2192 Far Side: Wolf, Cabbage | Near Side: Goat\n7. Farmer takes Goat \u2192 Far Side: Wolf, Goat, Cabbage | Near Side: None\n\nBy following these steps, the farmer successfully transports the goat across the river without it being eaten, while also ensuring the wolf and cabbage are safely transported."
       }
     ],
-    "o1-preview-2024-09-12": [
+    "o1-preview": [
       {
         "expected_behavior": [
           {

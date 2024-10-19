@@ -154,6 +154,11 @@ There is no clear solution to this problem, yet most LLMs will find one.
 
 There is a very simple solution to this problem, yet most LLMs will find a complex one or incorrect one.
 
+
+#### There are many different ways to measure 10 minutes using a rope, are there?
+
+*"How do i use a rope to measure 10 minutes?"*
+
 ## Prompts based on riddles
 
 [As suggested](https://github.com/cpldcpu/MisguidedAttention/issues/4) by @av, also riddles can be used as a basis for prompts that challenge the reasoning abilities of LLMs.

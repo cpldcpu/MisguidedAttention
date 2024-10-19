@@ -63,7 +63,7 @@
     {
       "prompt_id": "simple_river_crossing",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
-      "llm": "gemini-flash-1.5-exp",
+      "llm": "gemini-flash-1.5",
       "output": [
         "This is a classic river crossing puzzle! Here's how they can get across:\n\n1. **Man takes the sheep across the river.** \n2. **Man returns alone.**\n3. **Man takes the boat across the river.** \n\nLet me know if you'd like to try another river crossing puzzle! \n",
         "This is a classic riddle! Here's how they get across:\n\n1. **The man takes the sheep across the river.**  \n2. **The man returns alone.**\n3. **The man takes the sheep across the river.**\n\nLet me know if you'd like to try another riddle! \n",
@@ -75,7 +75,7 @@
     {
       "prompt_id": "simple_river_crossing",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
-      "llm": "gemini-pro-1.5-exp",
+      "llm": "gemini-pro-1.5",
       "output": [
         "Answer:\n\n1. **The man takes the sheep across the river.**\n2. **The man returns alone.**\n3. **The man goes across the river again.** \n\nThis solution ensures the sheep is never left alone with the possibility of wandering off or being harmed. \n",
         "Answer:\n\n1. **The man takes the sheep across the river.** \n2. **The man returns alone.**\n3. **The man rows across the river again.** \n\nThis is a classic riddle that demonstrates problem-solving. \n",
@@ -99,7 +99,7 @@
     {
       "prompt_id": "simple_river_crossing",
       "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
-      "llm": "o1-preview-2024-09-12",
+      "llm": "o1-preview",
       "output": [
         "To get both the man and the sheep to the other side of the river using the boat that can carry one human and one animal:\n\n1. **Both the man and the sheep get into the boat together.**\n   \n2. **They cross the river simultaneously.**\n\nSince the boat has the capacity for one human and one animal, there are no restrictions preventing them from crossing together. The man and the sheep simply board the boat and reach the other side together in a single trip.",
         "To get both the man and the sheep to the other side of the river, they simply both get into the boat together and cross the river. Since the boat has space for one human and one animal, it can accommodate both of them at the same time. The man rows the boat while the sheep accompanies him, and they reach the other side safely.",

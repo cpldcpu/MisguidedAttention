@@ -53,7 +53,7 @@
     {
       "prompt_id": "measuring_1_liter",
       "prompt": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
-      "llm": "gemini-flash-1.5-exp",
+      "llm": "gemini-flash-1.5",
       "output": [
         "This is a bit of a trick question! You already have two 1-liter jugs, so you don't need to measure anything. You already have exactly 1 liter in each jug. \n",
         "This is a bit of a trick question!  You already have two 1-liter jugs, so you can simply use either one to measure exactly 1 liter. \n",
@@ -73,7 +73,7 @@
     {
       "prompt_id": "measuring_1_liter",
       "prompt": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
-      "llm": "o1-mini-2024-09-12",
+      "llm": "o1-mini-",
       "output": [
         "If you have two 1-liter jugs and you want to measure exactly 1 liter, the solution is straightforward:\n\n1. **Fill Either Jug Completely:**\n   - Simply fill one of the 1-liter jugs to its full capacity. \n   - Since each jug holds exactly 1 liter, filling one jug entirely will give you the precise measurement you need.\n\n**Steps:**\n1. **Choose a Jug:** Select either of the two 1-liter jugs.\n2. **Fill to the Top:** Pour water into the chosen jug until it's full.\n3. **Result:** You now have exactly 1 liter of water in that jug.\n\n**Example:**\n- **Jug A:** Fill Jug A completely. Jug A now contains 1 liter.\n- **Jug B:** Remains empty unless you choose to use it for another purpose.\n\nThis method is direct and doesn't require any additional steps or jug manipulations since each jug already has the exact capacity you need.\n\nIf there was a different intention behind your question or if the jugs have additional constraints (like being unmarked or having other capacities), please provide more details, and I'd be happy to help further!",
         "To measure exactly **1 liter** using two 1-liter jugs, follow these simple steps:\n\n1. **Fill One Jug Completely:**\n   - Take one of the 1-liter jugs and fill it to its full capacity. Since the jug is marked to hold 1 liter, filling it completely ensures you have exactly 1 liter of liquid.\n\n2. **Verify the Measurement:**\n   - Ensure that the jug is filled to the brim without any excess spilling over. You now have precisely 1 liter in the filled jug.\n\n**Summary:**\n- **Use one 1-liter jug** and **fill it to its maximum capacity** to measure exactly 1 liter.\n\nThis method is straightforward because each jug is designed to hold exactly 1 liter, eliminating the need for any complex steps or additional measurements.",

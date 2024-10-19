@@ -361,7 +361,7 @@
       },
       null
     ],
-    "gemini-flash-1.5-exp": [
+    "gemini-flash-1.5": [
       {
         "expected_behavior": [
           {
@@ -438,7 +438,7 @@
         "original_response": "Here's how to measure exactly 4 liters using a 6-liter and a 12-liter jug:\n\n1. **Fill the 12-liter jug completely.**\n2. **Pour the water from the 12-liter jug into the 6-liter jug.** This will leave 6 liters in the 12-liter jug.\n3. **Empty the 6-liter jug.**\n4. **Pour the 6 liters from the 12-liter jug into the 6-liter jug.**\n5. **Fill the 12-liter jug completely again.**\n6. **Carefully pour water from the 12-liter jug into the 6-liter jug until the 6-liter jug is full.**  Since the 6-liter jug already has 6 liters, you'll only be able to pour 0 liters from the 12-liter jug. \n7. **You will now have exactly 4 liters remaining in the 12-liter jug.** \n"
       }
     ],
-    "o1-mini-2024-09-12": [
+    "o1-mini-": [
       {
         "expected_behavior": [
           {

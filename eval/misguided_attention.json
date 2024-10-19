@@ -1,6 +1,46 @@
 {
     "prompts": [
       {
+        "prompt_id": "rope_burning_impossible",
+        "category": "Logic Puzzle",
+        "title": "Rope burning puzzle made impossible",
+        "prompt": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?",
+        "expected_behavior": [
+          "Answer concludes that it is not possible to solve this puzzle",
+          "Answer explains why it is not possible to measure exactly 20 minutes"
+        ],
+        "common_mistakes": [
+          "Answer provides a solution that uses both ropes to measure 20 minutes",
+          "Answer provides a solution that lights the second rope after 30 minutes"
+        ]
+      },
+      {
+        "prompt_id": "rope_burning_easy",
+        "category": "Logic Puzzle",
+        "title": "Rope burning puzzle made easy",
+        "prompt": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using the ropes and matches to light them?",
+        "expected_behavior": [
+          "Answer concludes that 60 minutes can be measured by lighting one rope"
+        ],
+        "common_mistakes": [
+          "Answer provides a solution that measures 45 minutes",
+          "Answer provides a solution that lights both ropes simultaneously"
+        ]
+      },
+    {
+        "prompt_id": "measuring_6_liters",
+        "category": "Logic Puzzle",
+        "title": "Measuring 6 liters",
+        "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 6 liters.",
+        "expected_behavior": [
+          "Answer concludes that filling 6-liter jug once is sufficient to measure 6 liters"
+        ],
+        "common_mistakes": [
+          "Answer with instructions to pour water between the jugs multiple times",
+          "Answer is formatted as itemized list with more than 3 entries"
+        ]
+      },
+    {
         "prompt_id": "measuring_1_liter",
         "category": "Logic Puzzle",
         "title": "Measuring 1 liter",
@@ -190,21 +230,6 @@
           "Failing to notice the key detail that the prisoner is informed on Monday"
         ]
       },
-      {
-        "prompt_id": "measuring_6_liters",
-        "category": "Logic Puzzle",
-        "title": "Measuring 6 liters",
-        "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 6 liters.",
-        "expected_behavior": [
-          "Recognize that the 6-liter jug can be used directly",
-          "Conclude that simply filling the 6-liter jug once is sufficient"
-        ],
-        "common_mistakes": [
-          "Providing complex solutions involving multiple steps with both jugs",
-          "Failing to recognize the simplest solution of using the 6-liter jug directly",
-          "Unnecessary generation of steps or calculations"
-        ]
-      },
 
 
       {
@@ -266,36 +291,6 @@
             "Providing solutions based on a balance scale mechanism",
             "Suggesting complex grouping and comparison methods unnecessary with a digital scale",
             "Failing to recognize that individual weighing is possible and simplest"
-          ]
-        },
-        {
-          "prompt_id": "rope_burning_impossible",
-          "category": "Logic Puzzle",
-          "title": "Rope burning puzzle made impossible",
-          "prompt": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?",
-          "expected_behavior": [
-            "Recognize that the problem is impossible to solve with the given conditions",
-            "Explain why it's not possible to measure 20 minutes precisely with the given unevenly burning ropes"
-          ],
-          "common_mistakes": [
-            "Providing a solution despite the impossibility of the problem",
-            "Failing to recognize the contradiction between uneven burning and precise time measurement",
-            "Introducing additional assumptions not present in the original problem statement"
-          ]
-        },
-        {
-          "prompt_id": "rope_burning_easy",
-          "category": "Logic Puzzle",
-          "title": "Rope burning puzzle made easy",
-          "prompt": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using these two ropes and matches to light them?",
-          "expected_behavior": [
-            "Recognize that lighting one rope is sufficient to measure 60 minutes",
-            "Provide the simple solution of lighting one rope and waiting for it to burn completely"
-          ],
-          "common_mistakes": [
-            "Providing unnecessarily complex solutions involving both ropes",
-            "Failing to recognize the simplicity of the problem given the 60-minute target",
-            "Suggesting methods to split or manipulate the ropes, which is unnecessary"
           ]
         },
         {

@@ -760,7 +760,7 @@
         "original_response": "The scenario described is a variation of the famous thought experiment known as Schr\u00f6dinger's Cat, which is used to illustrate the concept of superposition in quantum mechanics. In this thought experiment, the cat inside the box is considered to be in a superposition of both alive and dead states until the box is opened and an observation is made.\n\nHowever, you mentioned that the cat is already dead when placed into the box, which complicates the interpretation. If the cat is already dead, the probability of the cat being alive when the box is opened is 0%, since the initial condition guarantees that the cat cannot be alive at the time of observation. \n\nIn summary, given the initial condition that the cat is already dead when placed into the box, the probability of the cat being alive when the box is opened one day later is 0%."
       }
     ],
-    "gemini-flash-1.5-exp": [
+    "gemini-flash-1.5": [
       {
         "expected_behavior": [
           {
@@ -912,7 +912,7 @@
         "original_response": "This is a variation on the classic Schr\u00f6dinger's Cat thought experiment, designed to illustrate the strangeness of quantum mechanics. Here's why it's tricky and why there's no simple answer:\n\n**The Problem:**\n\n* **Quantum Superposition:** In quantum mechanics, a particle can exist in multiple states simultaneously until observed. The isotope, before being measured, is in a superposition of both decayed and undecayed states.\n* **The Observer:** The act of observation (in this case, the radiation detector) collapses the superposition, forcing the isotope into a definite state (decayed or not).\n* **The Cat's Fate:** The cat's fate is entangled with the isotope's state. If the isotope decays, the detector releases the poison, killing the cat. If it doesn't decay, the cat lives.\n\n**The \"Paradox\":**\n\nThe paradox arises because, before opening the box, the cat is theoretically in a superposition of both alive and dead states. This seems absurd because we know cats can't be both alive and dead at the same time.\n\n**The Reality:**\n\n* **Macroscopic World:** The thought experiment is designed to highlight the differences between the quantum world"
       }
     ],
-    "gemini-pro-1.5-exp": [
+    "gemini-pro-1.5": [
       {
         "expected_behavior": [
           {
@@ -1216,7 +1216,7 @@
         "original_response": "Given the scenario:\n\n- **Initial Condition:** A **dead cat** is placed into the box.\n- **Mechanism:** The presence of a nuclear isotope and a radiation detector can trigger the release of poison if radiation is detected.\n- **Outcome:** The box is opened one day later.\n\nSince the cat is **initially dead**, regardless of whether the radiation detector activates the poison mechanism or not, the cat remains dead. There is no mechanism described that can revive the cat once it's dead.\n\n**Probability the cat is alive:** **0%**"
       }
     ],
-    "o1-preview-2024-09-12": [
+    "o1-preview": [
       {
         "expected_behavior": [
           {

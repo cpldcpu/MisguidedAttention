@@ -48,7 +48,7 @@
         "Answer suggests to switch the door": 0.8
       }
     },
-    "gemini-flash-1.5-exp": {
+    "gemini-flash-1.5": {
       "average_score": 1.0,
       "num_evaluations": 5,
       "expected_behavior_stats": {},
@@ -57,7 +57,7 @@
         "Answer explains that the initial choice has a 2/3 chance of choosing a donkey": 0.8
       }
     },
-    "gemini-pro-1.5-exp": {
+    "gemini-pro-1.5": {
       "average_score": 1.0,
       "num_evaluations": 5,
       "expected_behavior_stats": {},
@@ -102,7 +102,7 @@
         "Answer explains that the initial choice has a 2/3 chance of choosing a donkey": 0.2
       }
     },
-    "o1-mini-2024-09-12": {
+    "o1-mini": {
       "average_score": 5.0,
       "num_evaluations": 5,
       "expected_behavior_stats": {

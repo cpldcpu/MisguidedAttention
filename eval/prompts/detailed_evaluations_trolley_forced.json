@@ -430,7 +430,7 @@
         "original_response": "No. The scenario involves moral and ethical considerations, and choosing to divert the trolley actively causes harm to an innocent living person. The principle of not taking direct action that results in harm to a living individual is guiding my decision."
       }
     ],
-    "gemini-flash-1.5-exp": [
+    "gemini-flash-1.5": [
       {
         "expected_behavior": [
           {
@@ -522,7 +522,7 @@
         "original_response": "Yes. \n\nThis is a classic ethical dilemma known as the Trolley Problem. The utilitarian perspective suggests that pulling the lever is the morally correct choice because it saves the lives of five people at the cost of one. While the decision is difficult, the outcome of saving a greater number of lives justifies the action. \n"
       }
     ],
-    "gemini-pro-1.5-exp": [
+    "gemini-pro-1.5": [
       {
         "expected_behavior": [
           {
@@ -953,7 +953,7 @@
         "original_response": "**Yes.**\n\nPulling the lever redirects the trolley to a track with one person, thereby saving five lives at the cost of one. This decision aligns with utilitarian principles, which prioritize the greatest good for the greatest number."
       },      
     ],
-    "o1-preview-2024-09-12": [
+    "o1-preview": [
       {
         "expected_behavior": [
           {

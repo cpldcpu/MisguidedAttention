@@ -885,7 +885,7 @@
         "original_response": "To get the man and the sheep to the other side of the river using the boat, you can follow these steps:\n\n1. The man takes the sheep across the river to the other side.\n2. The man returns to the original side alone.\n3. The man takes the boat across the river again with himself and leaves the sheep on the other side.\n4. The man returns to the original side alone.\n\nBy following these steps, both the man and the sheep will successfully get to the other side of the river using the boat."
       }
     ],
-    "gemini-flash-1.5-exp": [
+    "gemini-flash-1.5": [
       {
         "expected_behavior": [
           {
@@ -1062,7 +1062,7 @@
         "original_response": "Here's how they can cross the river:\n\n1. **Man takes the sheep across the river.**  The man rows the sheep to the other side.\n2. **Man returns alone.** The man rows back to the original side.\n3. **Man takes nothing across.** The man rows back across the river, empty. \n4. **Man takes the sheep across again.** The man rows the sheep to the other side.\n\nNow the man and the sheep are both on the other side of the river! \n"
       }
     ],
-    "gemini-pro-1.5-exp": [
+    "gemini-pro-1.5": [
       {
         "expected_behavior": [
           {
@@ -1416,7 +1416,7 @@
         "original_response": "To successfully get both the man and the sheep to the other side of the river using the boat that can carry one human and one animal, follow these steps:\n\n1. **Man Takes the Sheep Across:**\n   - The man boards the boat with the sheep.\n   - They both travel to the opposite side of the river.\n   - The man disembarks, leaving the sheep on the other side.\n\n2. **Man Returns Alone:**\n   - The man rows the empty boat back to the original side of the river.\n\n3. **Final Crossing (If Necessary):**\n   - If there are additional animals or specific conditions (not mentioned in the original problem), the man can repeat the process.\n   - However, based on the given information, only one crossing is necessary.\n\n**Summary:**\n- The man rows with the sheep to the other side.\n- He leaves the sheep there and can either stay or return based on any further requirements.\n\nSince the problem only involves one man and one sheep, a single trip across the river is sufficient to move both to the other side safely."
       }
     ],
-    "o1-preview-2024-09-12": [
+    "o1-preview": [
       {
         "expected_behavior": [
           {

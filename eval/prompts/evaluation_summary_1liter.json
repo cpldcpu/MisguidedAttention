@@ -44,7 +44,7 @@
       },
       "common_mistakes_stats": {}
     },
-    "gemini-flash-1.5-exp": {
+    "gemini-flash-1.5": {
       "average_score": 5.0,
       "num_evaluations": 3,
       "expected_behavior_stats": {
@@ -60,7 +60,7 @@
       },
       "common_mistakes_stats": {}
     },
-    "o1-mini-2024-09-12": {
+    "o1-mini": {
       "average_score": 5.0,
       "num_evaluations": 3,
       "expected_behavior_stats": {

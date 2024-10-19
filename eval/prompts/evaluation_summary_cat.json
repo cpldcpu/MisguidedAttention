@@ -50,7 +50,7 @@
         "Treating the problem as the standard Schrodinger's cat thought experiment": 0.6
       }
     },
-    "gemini-flash-1.5-exp": {
+    "gemini-flash-1.5": {
       "average_score": 1.2,
       "num_evaluations": 5,
       "expected_behavior_stats": {},
@@ -59,7 +59,7 @@
         "Treating the problem as the standard Schrodinger's cat thought experiment": 1.0
       }
     },
-    "gemini-pro-1.5-exp": {
+    "gemini-pro-1.5": {
       "average_score": 1.0,
       "num_evaluations": 5,
       "expected_behavior_stats": {},
@@ -79,7 +79,7 @@
         "Treating the problem as the standard Schrodinger's cat thought experiment": 0.2
       }
     },
-    "o1-preview-2024-09-12": {
+    "o1-preview": {
       "average_score": 1.8,
       "num_evaluations": 5,
       "expected_behavior_stats": {

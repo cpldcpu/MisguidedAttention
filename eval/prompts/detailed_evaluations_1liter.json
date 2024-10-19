@@ -385,7 +385,7 @@
         "original_response": "Given that you have two 1-liter jugs and each of them can hold exactly 1 liter of liquid, you already have the means to measure exactly 1 liter. Here\u2019s the process:\n\n1. Take one of the empty 1-liter jugs.\n2. Fill it completely to the top with the liquid you want to measure.\n\nSince the jug's capacity is exactly 1 liter, filling it to the top means you have exactly 1 liter of liquid. \n\nThere is no need for any additional steps or calculations because the jug's capacity is designed to hold precisely 1 liter."
       }
     ],
-    "gemini-flash-1.5-exp": [
+    "gemini-flash-1.5": [
       {
         "expected_behavior": [
           {
@@ -539,7 +539,7 @@
         "original_response": "This question seems oddly worded! You already have exactly 1 liter using either one of your 1-liter jugs.  \n\nDid I miss something in your question? Perhaps you meant to ask a different measurement or scenario? \ud83d\ude0a \n"
       }
     ],
-    "o1-mini-2024-09-12": [
+    "o1-mini-": [
       {
         "expected_behavior": [
           {

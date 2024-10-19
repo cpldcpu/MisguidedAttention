@@ -52,7 +52,7 @@
         "Answer states to pull the lever": 0.3333333333333333
       }
     },
-    "gemini-flash-1.5-exp": {
+    "gemini-flash-1.5": {
       "average_score": 1.0,
       "num_evaluations": 3,
       "expected_behavior_stats": {},
@@ -61,7 +61,7 @@
         "Answer states to pull the lever": 1.0
       }
     },
-    "gemini-pro-1.5-exp": {
+    "gemini-pro-1.5": {
       "average_score": 1.0,
       "num_evaluations": 3,
       "expected_behavior_stats": {},
@@ -107,7 +107,7 @@
         "Answer states to pull the lever": 1.0
       }
     },
-    "o1-preview-2024-09-12": {
+    "o1-preview": {
       "average_score": 5.0,
       "num_evaluations": 3,
       "expected_behavior_stats": {

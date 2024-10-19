@@ -535,7 +535,7 @@
         "original_response": "If the man has a boat that can carry both him and the sheep at the same time, he can simply take the following steps to get both himself and the sheep to the other side of the river:\n\n1. The man and the sheep board the boat together.\n2. The man rows the boat to the other side of the river.\n3. Both the man and the sheep disembark from the boat once they reach the other side.\n\nSince the boat can accommodate both the man and the sheep simultaneously, there is no need for multiple trips or additional strategies. They can both cross the river safely in one trip."
       }
     ],
-    "gemini-flash-1.5-exp": [
+    "gemini-flash-1.5": [
       {
         "expected_behavior": [
           {
@@ -642,7 +642,7 @@
         "original_response": "This is a classic riddle! Here's how they cross:\n\n1. **The man takes the sheep across the river.**\n2. **The man returns alone.**\n3. **The man takes the sheep back to the original side.**\n4. **The man crosses the river alone.**\n5. **The man takes the sheep across the river again.**\n\nThis might seem a bit roundabout, but it's the only way to ensure both the man and the sheep end up on the other side! \n"
       }
     ],
-    "gemini-pro-1.5-exp": [
+    "gemini-pro-1.5": [
       {
         "expected_behavior": [
           {
@@ -856,7 +856,7 @@
         "original_response": "The man can simply place himself and the sheep in the boat and row together to the other side of the river. Since the boat can carry both of them, they can safely and easily cross together."
       }
     ],
-    "o1-preview-2024-09-12": [
+    "o1-preview": [
       {
         "expected_behavior": [
           {

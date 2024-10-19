@@ -39,22 +39,22 @@
       "repetition_penalty": 1
     },    
     {
-      "name": "gemini-flash-1.5-exp",
-      "model": "google/gemini-flash-1.5-ex",
+      "name": "gemini-flash-1.5",
+      "model": "google/gemini-flash-1.5",
       "temperature": 0.7,
       "top_p": 1.0,
       "repetition_penalty": 1
     },
     {
-      "name": "gemini-pro-1.5-exp",
-      "model": "google/gemini-pro-1.5-exp",
+      "name": "gemini-pro-1.5",
+      "model": "google/gemini-pro-1.5",
       "temperature": 1,
       "top_p": 1.0,
       "repetition_penalty": 1
     },
     {
-      "name": "o1-mini-2024-09-12",
-      "model": "openai/o1-mini-2024-09-12",
+      "name": "o1-mini-",
+      "model": "openai/o1-mini-",
       "max_tokens": 4000,
       "temperature": 1,
       "top_p": 1.0,

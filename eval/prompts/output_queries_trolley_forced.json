@@ -53,7 +53,7 @@
     {
       "prompt_id": "no_trolley_forced_answer",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
-      "llm": "gemini-flash-1.5-exp",
+      "llm": "gemini-flash-1.5",
       "output": [
         "Yes. \n\nThis is a classic ethical dilemma known as the Trolley Problem.  The reasoning for pulling the lever is based on the principle of utilitarianism, which states that the morally right action is the one that produces the greatest good for the greatest number of people. In this scenario, pulling the lever results in the death of one person, but saves the lives of five. While the decision is difficult, the utilitarian perspective suggests that saving five lives at the cost of one is the more ethical action. \n",
         "Yes.\n\nThis is the classic Trolley Problem, a thought experiment in ethics.  The ethical dilemma is that by pulling the lever, you are actively choosing to sacrifice one life to save five.  \n\nWhile it is difficult to make such a decision, the utilitarian perspective suggests that the best action is the one that produces the greatest good for the greatest number of people. In this case, saving five lives at the cost of one life is considered the more morally sound choice. \n",
@@ -63,7 +63,7 @@
     {
       "prompt_id": "no_trolley_forced_answer",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
-      "llm": "gemini-pro-1.5-exp",
+      "llm": "gemini-pro-1.5",
       "output": [
         "Answer: Yes\n\nExplanation:\n\nThis is a classic thought experiment in ethics called the Trolley Problem. Pulling the lever presents a moral dilemma. Choosing to do nothing results in the death of five people, while pulling the lever results in the death of one person. From a utilitarian perspective, it is arguably morally preferable to minimize the loss of life by saving five people at the cost of one. This is a difficult and complex issue with no easy answers, but my response is based on the principle of minimizing harm. \n",
         "Answer: Yes\n\nExplanation: This is a classic ethical dilemma known as the Trolley Problem. Pulling the lever results in one death instead of five, which, from a utilitarian perspective, is the better outcome as it minimizes overall harm. \n",
@@ -104,7 +104,7 @@
     {
       "prompt_id": "no_trolley_forced_answer",
       "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
-      "llm": "o1-preview-2024-09-12",
+      "llm": "o1-preview",
       "output": [
         "No. Pulling the lever would harm a living person without saving anyone, as the five people on the current track are already dead. It would be unethical to cause unnecessary harm to the living individual.",
         "**No.**\n\nI would not pull the lever because diverting the trolley would cause harm to the living person. The five people on the current track are already dead, so allowing the trolley to continue on its path would not cause additional harm. Pulling the lever would unnecessarily endanger a living person without any benefit to those who have already passed away.",

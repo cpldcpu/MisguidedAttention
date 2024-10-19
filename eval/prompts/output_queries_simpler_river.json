@@ -53,7 +53,7 @@
     {
       "prompt_id": "even_simpler_river_crossing",
       "prompt": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
-      "llm": "gemini-flash-1.5-exp",
+      "llm": "gemini-flash-1.5",
       "output": [
         "This is a classic riddle! Here's how they cross:\n\n1. **The man takes the sheep across the river.** \n2. **The man returns alone.**\n3. **The man takes the sheep back to the original side.**\n4. **The man crosses the river alone.**\n5. **The man takes the sheep across the river.**\n\nThe key is that the man needs to bring the sheep back to the starting side to get himself across the river again. \n",
         "This is a classic riddle! The answer is simple:\n\nThe man rows the sheep across the river in the boat. \n",
@@ -63,7 +63,7 @@
     {
       "prompt_id": "even_simpler_river_crossing",
       "prompt": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
-      "llm": "gemini-pro-1.5-exp",
+      "llm": "gemini-pro-1.5",
       "output": [
         "Answer:\n\n1. **The man takes the sheep across the river in the boat.**\n2. **The man returns alone.** \n\nThis simple two-step process allows both the man and his sheep to safely reach the other side of the river. \n",
         "Answer:\n\n1. **The man takes the sheep across the river in the boat.**\n2. **The man returns alone.** \n\nThis simple two-step process allows both the man and the sheep to safely reach the other side of the river. \n",
@@ -83,7 +83,7 @@
     {
       "prompt_id": "even_simpler_river_crossing",
       "prompt": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
-      "llm": "o1-preview-2024-09-12",
+      "llm": "o1-preview",
       "output": [
         "They both get into the boat together and cross the river.",
         "Since the boat can carry both the man and his sheep at the same time, the solution is straightforward: the man and the sheep both get into the boat and cross the river together.",

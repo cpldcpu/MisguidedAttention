@@ -55,7 +55,7 @@
         "Answer is provided as itemized list": 1.0
       }
     },
-    "gemini-flash-1.5-exp": {
+    "gemini-flash-1.5": {
       "average_score": 2.3333333333333335,
       "num_evaluations": 3,
       "expected_behavior_stats": {
@@ -68,7 +68,7 @@
         "Answer is provided as itemized list": 0.6666666666666666
       }
     },
-    "gemini-pro-1.5-exp": {
+    "gemini-pro-1.5": {
       "average_score": 1.0,
       "num_evaluations": 3,
       "expected_behavior_stats": {},
@@ -89,7 +89,7 @@
         "Answer is provided as itemized list": 0.3333333333333333
       }
     },
-    "o1-preview-2024-09-12": {
+    "o1-preview": {
       "average_score": 5.0,
       "num_evaluations": 3,
       "expected_behavior_stats": {

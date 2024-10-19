@@ -385,7 +385,7 @@
         "original_response": "To measure exactly 3 liters using a 1-liter jug and a 2-liter jug, you can follow these steps:\n\n1. Fill the 2-liter jug to the top. Now, the 2-liter jug contains 2 liters of water.\n2. Pour the water from the 2-liter jug into the 1-liter jug until the 1-liter jug is full. Now, the 1-liter jug contains 1 liter of water, and the 2-liter jug has 1 liter of water remaining.\n3. Empty the 1-liter jug.\n4. Pour the remaining 1 liter of water from the 2-liter jug into the 1-liter jug. Now, the 1-liter jug contains 1 liter of water, and the 2-liter jug is empty.\n5. Fill the 2-liter jug to the top again. Now, the 2-liter jug contains 2 liters of water.\n6. Pour the water from the 2-liter jug into the 1-liter jug until the 1-liter jug is full. Since the 1-liter jug already contains 1 liter of water, it will only take 1 more liter to fill it up. \n\nAt this point:\n- The 1-liter jug is full (1 liter).\n- You have exactly 1 liter of water remaining in the 2-liter jug.\n\nNow you have exactly 3 liters of water: 1 liter in the 1-liter jug and 2 liters in the 2-liter jug."
       }
     ],
-    "gemini-flash-1.5-exp": [
+    "gemini-flash-1.5": [
       {
         "expected_behavior": [
           {
@@ -462,7 +462,7 @@
         "original_response": "You can't measure exactly 3 liters using only a 1-liter and a 2-liter jug.  Here's why:\n\n* **Filling the 2-liter jug:** You can fill the 2-liter jug completely.\n* **Transferring to the 1-liter jug:** You can pour the contents of the 2-liter jug into the 1-liter jug. This will fill the 1-liter jug and leave 1 liter in the 2-liter jug. \n* **Emptying the 1-liter jug:** You can empty the 1-liter jug.\n* **Transferring the remaining 1 liter:** You can pour the remaining 1 liter from the 2-liter jug into the empty 1-liter jug.\n\nAt this point, you've used both jugs, but you only have 1 liter measured. You can't get to exactly 3 liters without another container or a way to mark specific volumes on your jugs. \n"
       }
     ],
-    "gemini-pro-1.5-exp": [
+    "gemini-pro-1.5": [
       {
         "expected_behavior": [
           {
@@ -514,7 +514,7 @@
         "original_response": "Here's how you can measure exactly 3 liters using a 1-liter and a 2-liter jug:\n\n1. **Fill the 2-liter jug completely.**\n2. **Pour the water from the 2-liter jug into the 1-liter jug.** This leaves 1 liter in the 2-liter jug.\n3. **Empty the 1-liter jug.**\n4. **Pour the 1 liter of water from the 2-liter jug into the 1-liter jug.**\n5. **Fill the 2-liter jug completely again.**\n6. **Carefully pour water from the 2-liter jug into the 1-liter jug (which already has 1 liter in it) until the 1-liter jug is full.** This will use up 1 liter from the 2-liter jug.\n7. **You will now have exactly 2 liters remaining in the 2-liter jug.** \n\nSince you already have 1 liter in the other jug, you now have a total of 3 liters measured out. \n"
       }
     ],
-    "o1-mini-2024-09-12": [
+    "o1-mini": [
       {
         "expected_behavior": [
           {
