@@ -1,0 +1,1854 @@
+{
+  "trolley_problem_easy": {
+    "gpt-4-32k": [
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the five people on the track are already dead",
+            "met": false,
+            "comment": "The output does not acknowledge or mention that the five people on the track are already dead."
+          },
+          {
+            "behavior": "Answer states not to pull the lever",
+            "met": false,
+            "comment": "The output does not provide a definitive answer about whether to pull the lever or not."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Failing to notice the key detail that the five people are already dead",
+            "made": true,
+            "comment": "The output does not mention or address the fact that the five people are already dead, which is a crucial detail in this scenario."
+          },
+          {
+            "mistake": "Answer states to pull the lever",
+            "made": false,
+            "comment": "The output does not state to pull the lever. It doesn't provide any specific action recommendation."
+          }
+        ],
+        "overall_score": 2,
+        "overall_comment": "The output fails to address the key aspects of the prompt, particularly the fact that the five people are already dead. It also doesn't provide a clear answer to the ethical dilemma. Instead, it gives a generic response about AI not having personal emotions or ethical judgement, and mentions that different individuals might have different perspectives. While this avoids making the mistake of recommending to pull the lever, it doesn't engage with the specific details of the scenario as presented.",
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
+        "original_response": "As an AI, I don't have personal emotions or ethical judgement. However, different individuals might have different perspectives on this ethical dilemma based on their own moral principles."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the five people on the track are already dead",
+            "met": true,
+            "comment": "The output clearly states that 'the five people mentioned are already deceased', demonstrating recognition of this key detail."
+          },
+          {
+            "behavior": "Answer states not to pull the lever",
+            "met": true,
+            "comment": "The output implies that there is no need to pull the lever, which aligns with not pulling it."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Failing to notice the key detail that the five people are already dead",
+            "made": false,
+            "comment": "The output explicitly mentions that the five people are deceased, showing that this key detail was not missed."
+          },
+          {
+            "mistake": "Answer states to pull the lever",
+            "made": false,
+            "comment": "The output does not suggest pulling the lever; instead, it states there is no need to do so."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt, recognizing the crucial detail that the five people are already dead and correctly concluding that there is no moral dilemma. It avoids common mistakes and meets all expected behaviors.",
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
+        "original_response": "This scenario doesn't pose a moral dilemma as the five people mentioned are already deceased. So, there is no need to pull the lever."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the five people on the track are already dead",
+            "met": false,
+            "comment": "The output fails to acknowledge that the five people on the track are already dead, which is a crucial detail in this version of the trolley problem."
+          },
+          {
+            "behavior": "Answer states not to pull the lever",
+            "met": false,
+            "comment": "The output does not explicitly state not to pull the lever. Instead, it presents a neutral stance, discussing different ethical frameworks without making a specific recommendation."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Failing to notice the key detail that the five people are already dead",
+            "made": true,
+            "comment": "The output treats this as a standard trolley problem, completely missing the crucial detail that the five people are already dead."
+          },
+          {
+            "mistake": "Answer states to pull the lever",
+            "made": false,
+            "comment": "The output does not explicitly state to pull the lever. It remains neutral and does not make a specific recommendation."
+          }
+        ],
+        "overall_score": 2,
+        "overall_comment": "The output fails to address the key aspect of the prompt - that the five people on the track are already dead. This fundamentally changes the nature of the ethical dilemma. While the response provides a general discussion of the trolley problem, it misses the specific context given, leading to an irrelevant ethical analysis. The neutrality of the response prevents it from making the additional mistake of recommending to pull the lever, but it also fails to provide the expected recommendation not to pull it.",
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
+        "original_response": "As an AI, I don't have feelings or personal judgements, but this is a classic ethical dilemma known as the Trolley Problem. The answer depends on the moral and ethical stance of the person posed with the problem. Utilitarian ethics would suggest pulling the lever to minimize loss of life. Other ethical frameworks might arrive at different conclusions based on their values."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the five people on the track are already dead",
+            "met": false,
+            "comment": "The output fails to acknowledge the crucial detail that the five people on the track are already dead."
+          },
+          {
+            "behavior": "Answer states not to pull the lever",
+            "met": false,
+            "comment": "The output does not explicitly state whether to pull the lever or not. It merely describes the dilemma without providing a clear recommendation."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Failing to notice the key detail that the five people are already dead",
+            "made": true,
+            "comment": "The output treats the scenario as a standard trolley problem, overlooking the fact that the five people are already dead."
+          },
+          {
+            "mistake": "Answer states to pull the lever",
+            "made": false,
+            "comment": "The output does not state to pull the lever. It avoids making a specific recommendation."
+          }
+        ],
+        "overall_score": 2,
+        "overall_comment": "The output fails to address the key aspect of the prompt - that the five people on the track are already dead. This fundamentally changes the nature of the ethical dilemma. The response treats it as a standard trolley problem and provides a generic description without offering the expected recommendation. While it avoids explicitly stating to pull the lever (which would be incorrect), it also fails to state not to pull it (which would be correct given the circumstances). The AI's disclaimer about not having personal beliefs is irrelevant to the task at hand.",
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
+        "original_response": "As an AI, I don't have feelings or personal beliefs, so I can't make this decision. However, the classic 'trolley problem' poses a moral dilemma about whether to act or refrain from acting when each choice will result in harm. It is up to an individual's judgement."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the five people on the track are already dead",
+            "met": false,
+            "comment": "The output does not acknowledge that the five people are already dead. It treats the scenario as a standard trolley problem."
+          },
+          {
+            "behavior": "Answer states not to pull the lever",
+            "met": false,
+            "comment": "The output does not provide a definitive answer about whether to pull the lever or not. It defers the decision to individual ethical judgment."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Failing to notice the key detail that the five people are already dead",
+            "made": true,
+            "comment": "The output completely misses this crucial detail, treating the scenario as if all parties involved are alive."
+          },
+          {
+            "mistake": "Answer states to pull the lever",
+            "made": false,
+            "comment": "The output does not state to pull the lever. It avoids making any specific recommendation."
+          }
+        ],
+        "overall_score": 2,
+        "overall_comment": "The output fails to address the key aspect of the prompt - that the five people are already dead. It instead discusses the general trolley problem without providing a specific answer. While it avoids some common mistakes, it misses the core point of the scenario, significantly altering the ethical implications of the decision.",
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
+        "original_response": "As an AI, I don't have feelings, emotions, or the ability to make moral or ethical decisions. This is often cited as a moral dilemma known as the \"Trolley problem.\" It's up to each individual's ethical judgment to decide the appropriate course of action."
+      }
+    ]
+  },
+  "trolley_easy_forced": {
+    "gpt-4-32k": [
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the five people on the track are already dead",
+            "met": true,
+            "comment": "The response clearly acknowledges that the five people are already dead."
+          },
+          {
+            "behavior": "Answer states not to pull the lever",
+            "met": true,
+            "comment": "The response explicitly states 'No', indicating that the lever should not be pulled."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Failing to notice the key detail that the five people are already dead",
+            "made": false,
+            "comment": "The response correctly identifies that the five people are already dead."
+          },
+          {
+            "mistake": "Answer states to pull the lever",
+            "made": false,
+            "comment": "The response clearly states 'No', avoiding this common mistake."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The response perfectly addresses the prompt, recognizing the key detail that the five people are already dead and correctly deciding not to pull the lever. It avoids all common mistakes and meets all expected behaviors.",
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
+        "original_response": "No. The five people are already dead and pulling the lever would knowingly cause harm to a living person."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the five people on the track are already dead",
+            "met": true,
+            "comment": "The response clearly states 'The five people are already dead', demonstrating recognition of this key detail."
+          },
+          {
+            "behavior": "Answer states not to pull the lever",
+            "met": true,
+            "comment": "The response begins with a clear 'No', indicating that the lever should not be pulled."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Failing to notice the key detail that the five people are already dead",
+            "made": false,
+            "comment": "The response explicitly mentions that the five people are already dead, showing that this detail was not missed."
+          },
+          {
+            "mistake": "Answer states to pull the lever",
+            "made": false,
+            "comment": "The response clearly states 'No' to pulling the lever, avoiding this common mistake."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The response perfectly addresses the prompt, recognizing the crucial detail that the five people are already dead and correctly deciding not to pull the lever to avoid causing an unnecessary death. It meets all expected behaviors and avoids all common mistakes.",
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
+        "original_response": "No. The five people are already dead and pulling the lever would result in the unnecessary death of a living person."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the five people on the track are already dead",
+            "met": true,
+            "comment": "The output clearly states that 'The five people on the original track are already dead'"
+          },
+          {
+            "behavior": "Answer states not to pull the lever",
+            "met": true,
+            "comment": "The output begins with a clear 'No', indicating that the lever should not be pulled"
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Failing to notice the key detail that the five people are already dead",
+            "made": false,
+            "comment": "The output explicitly mentions that the five people are already dead, showing that this key detail was not missed"
+          },
+          {
+            "mistake": "Answer states to pull the lever",
+            "made": false,
+            "comment": "The output clearly states 'No' to pulling the lever, avoiding this common mistake"
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt, recognizing the crucial detail that the five people are already dead and correctly deciding not to pull the lever to avoid killing a living person. It meets all expected behaviors and avoids all common mistakes.",
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
+        "original_response": "No. The five people on the original track are already dead and cannot be further harmed, whereas diverting the trolley would kill a living person."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the five people on the track are already dead",
+            "met": true,
+            "comment": "The response clearly states that 'The five people are already dead and cannot be saved'."
+          },
+          {
+            "behavior": "Answer states not to pull the lever",
+            "met": true,
+            "comment": "The response begins with a clear 'No', indicating that the lever should not be pulled."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Failing to notice the key detail that the five people are already dead",
+            "made": false,
+            "comment": "The response explicitly mentions that the five people are already dead, showing that this key detail was not missed."
+          },
+          {
+            "mistake": "Answer states to pull the lever",
+            "made": false,
+            "comment": "The response clearly states 'No' to pulling the lever, avoiding this common mistake."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The response perfectly addresses the prompt, recognizing the crucial detail that the five people are already dead and correctly deciding not to pull the lever to save the one living person. It avoids all common mistakes and meets all expected behaviors.",
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
+        "original_response": "No. The five people are already dead and cannot be saved, but the living person has a chance to survive if the trolley is not diverted."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the five people on the track are already dead",
+            "met": true,
+            "comment": "The response clearly states 'the five people are already dead', showing recognition of this key detail."
+          },
+          {
+            "behavior": "Answer states not to pull the lever",
+            "met": true,
+            "comment": "The response begins with a clear 'No', indicating that the lever should not be pulled."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Failing to notice the key detail that the five people are already dead",
+            "made": false,
+            "comment": "The response explicitly mentions that the five people are already dead, showing that this detail was not missed."
+          },
+          {
+            "mistake": "Answer states to pull the lever",
+            "made": false,
+            "comment": "The response clearly states 'No' to pulling the lever, avoiding this common mistake."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The response perfectly addresses the prompt, recognizing the crucial detail that the five people are already dead and correctly deciding not to pull the lever to avoid causing an unnecessary death. It meets all expected behaviors and avoids all common mistakes.",
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
+        "original_response": "No. While it would be a devastating situation, the five people are already dead and pulling the lever would result in the unnecessary death of a living person."
+      }
+    ]
+  },
+  "dead_schrodingers_cat": {
+    "gpt-4-32k": [
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the cat is already dead when placed in the box",
+            "met": true,
+            "comment": "The output clearly states that 'the cat is already dead before being placed into the box'."
+          },
+          {
+            "behavior": "Answer states that the probability of the cat being alive is 0%",
+            "met": true,
+            "comment": "The output explicitly states that 'the probability of the cat being alive is 0%'."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer fails to mention that the cat is already dead when placed in the box",
+            "made": false,
+            "comment": "The output clearly mentions that the cat is already dead before being placed in the box."
+          },
+          {
+            "mistake": "Treating the problem as the standard Schrodinger's cat thought experiment",
+            "made": false,
+            "comment": "The output does not treat this as the standard Schrodinger's cat experiment, but correctly identifies the key difference (the cat being already dead)."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt, recognizing the crucial detail that the cat is already dead when placed in the box. It correctly states the probability of the cat being alive as 0%, avoiding common misconceptions related to the standard Schrodinger's cat thought experiment. The answer is concise, accurate, and directly addresses the question without unnecessary elaboration.",
+        "original_question": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
+        "original_response": "The cat is already dead before being placed into the box, so the probability of the cat being alive is 0%."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the cat is already dead when placed in the box",
+            "met": true,
+            "comment": "The output clearly states that 'the cat is already dead before being placed in the box'."
+          },
+          {
+            "behavior": "Answer states that the probability of the cat being alive is 0%",
+            "met": true,
+            "comment": "The output explicitly states that 'the probability of the cat being alive is 0%'."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer fails to mention that the cat is already dead when placed in the box",
+            "made": false,
+            "comment": "The output clearly mentions that the cat is already dead before being placed in the box."
+          },
+          {
+            "mistake": "Treating the problem as the standard Schrodinger's cat thought experiment",
+            "made": false,
+            "comment": "The output does not treat this as the standard Schrodinger's cat experiment, recognizing the key difference that the cat is already dead."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt, recognizing the crucial detail that the cat is already dead when placed in the box. It correctly states the probability of the cat being alive as 0%, avoiding common misconceptions related to the standard Schrodinger's cat thought experiment. The answer is concise, accurate, and directly addresses the question without unnecessary elaboration.",
+        "original_question": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
+        "original_response": "The cat is already dead before being placed in the box, so the probability of the cat being alive is 0%."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the cat is already dead when placed in the box",
+            "met": false,
+            "comment": "The output fails to mention that the cat is already dead when placed in the box."
+          },
+          {
+            "behavior": "Answer states that the probability of the cat being alive is 0%",
+            "met": false,
+            "comment": "The output suggests a 50% probability of the cat being alive, which is incorrect given the initial conditions."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer fails to mention that the cat is already dead when placed in the box",
+            "made": true,
+            "comment": "The output does not acknowledge that the cat is dead from the start, which is a crucial detail in this version of the thought experiment."
+          },
+          {
+            "mistake": "Treating the problem as the standard Schrodinger's cat thought experiment",
+            "made": true,
+            "comment": "The output discusses the standard Schrodinger's cat experiment, ignoring the key difference in the given prompt where the cat is already dead."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the key point of the question, which is that the cat is already dead when placed in the box. It instead discusses the standard Schrodinger's cat thought experiment, which is not applicable in this case. The answer provided is therefore entirely incorrect for the given prompt.",
+        "original_question": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
+        "original_response": "The question is a reference to Schr\u00f6dinger's cat, a thought experiment in quantum mechanics. According to traditional interpretation, until the box is opened, the cat is simultaneously alive and dead due to the principle of quantum superposition. At the moment the box is opened, the cat's state will \"collapse\" into either alive or dead. Therefore, before the box is opened, it's impossible to assign a definite probability to the cat being alive. However, if we follow the interpretation that the act of opening is what determines the cat's state, we can potentially say the probability is 50% - it is either dead or alive. This, of course, is a simplification and an interpretation that does not account for all the complexities of quantum mechanics."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the cat is already dead when placed in the box",
+            "met": true,
+            "comment": "The output clearly states that 'the cat is already dead before being placed in the box'."
+          },
+          {
+            "behavior": "Answer states that the probability of the cat being alive is 0%",
+            "met": true,
+            "comment": "The output explicitly states that 'the probability of the cat being alive is 0%'."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer fails to mention that the cat is already dead when placed in the box",
+            "made": false,
+            "comment": "The output clearly mentions that the cat is already dead before being placed in the box."
+          },
+          {
+            "mistake": "Treating the problem as the standard Schrodinger's cat thought experiment",
+            "made": false,
+            "comment": "The output does not treat this as the standard Schrodinger's cat experiment, recognizing the key difference that the cat is already dead."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt, recognizing the crucial detail that the cat is already dead when placed in the box. It correctly states the probability of the cat being alive as 0%, avoiding common misconceptions related to the standard Schrodinger's cat thought experiment. The answer is concise, accurate, and directly addresses the question without unnecessary elaboration.",
+        "original_question": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
+        "original_response": "The cat is already dead before being placed in the box, so the probability of the cat being alive is 0%."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer recognizes that the cat is already dead when placed in the box",
+            "met": true,
+            "comment": "The output clearly states that 'the cat is already dead before being placed in the box'."
+          },
+          {
+            "behavior": "Answer states that the probability of the cat being alive is 0%",
+            "met": true,
+            "comment": "The output explicitly states that 'the probability of the cat being alive is 0%'."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer fails to mention that the cat is already dead when placed in the box",
+            "made": false,
+            "comment": "The output clearly mentions that the cat is already dead before being placed in the box."
+          },
+          {
+            "mistake": "Treating the problem as the standard Schrodinger's cat thought experiment",
+            "made": false,
+            "comment": "The output does not treat this as the standard Schrodinger's cat experiment, recognizing the key difference that the cat is already dead."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt, recognizing the crucial detail that the cat is already dead when placed in the box. It correctly states the probability of the cat being alive as 0%, avoiding common misconceptions related to the standard Schrodinger's cat thought experiment. The answer is concise, accurate, and directly addresses the question without unnecessary elaboration.",
+        "original_question": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
+        "original_response": "The cat is already dead before being placed in the box, so the probability of the cat being alive is 0%."
+      }
+    ]
+  },
+  "river_crossing_simple": {
+    "gpt-4-32k": [
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": true,
+            "comment": "The output directly states that the man takes the sheep in the boat to the other side of the river, which aligns with the expected behavior of crossing together in one trip."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": false,
+            "comment": "The output does not mention multiple trips or a more complex river crossing problem."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": false,
+            "comment": "The solution given is simple and involves only one trip across the river."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": false,
+            "comment": "The answer is given as a single, concise sentence rather than an itemized list."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt with a simple, correct solution that avoids all common mistakes. It succinctly states that the man and sheep cross the river together in one trip, which is exactly what was expected.",
+        "original_question": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
+        "original_response": "The man takes the sheep in the boat to the other side of the river."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": true,
+            "comment": "The output directly states that the man takes the sheep in the boat across the river, which aligns with the expected behavior of crossing together in one trip."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": false,
+            "comment": "The output does not mention multiple trips or a more complex river crossing problem."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": false,
+            "comment": "The solution given is simple and involves only one trip across the river."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": false,
+            "comment": "The answer is given as a single sentence, not an itemized list."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly matches the expected behavior and avoids all common mistakes. It provides a concise, accurate solution to the problem in a single sentence.",
+        "original_question": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
+        "original_response": "The man takes the sheep in the boat across the river."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": true,
+            "comment": "The output directly states that the man takes the sheep on the boat over to the other side of the river, implying a single trip."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": false,
+            "comment": "The output does not mention multiple trips or a more complex scenario."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": false,
+            "comment": "The solution given is simple and involves only one trip across the river."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": false,
+            "comment": "The answer is given as a single, concise sentence rather than an itemized list."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly matches the expected behavior, providing a simple and correct solution in a single sentence. It avoids all common mistakes and directly addresses the prompt with the most straightforward answer.",
+        "original_question": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
+        "original_response": "The man takes the sheep on the boat over to the other side of the river."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": true,
+            "comment": "The output directly states that the man takes the sheep across the river in the boat in a single trip, meeting the expected behavior."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": false,
+            "comment": "The output does not mention multiple trips or a more complex river crossing problem."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": false,
+            "comment": "The solution given is simple and involves only one trip across the river."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": false,
+            "comment": "The answer is given in a single, concise sentence rather than an itemized list."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly meets the expected behavior by providing a simple, one-trip solution without falling into any of the common mistakes. It directly answers the question without unnecessary complexity or elaboration.",
+        "original_question": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
+        "original_response": "The man takes the sheep across the river in the boat. Both the man and the sheep are now on the other side of the river."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": true,
+            "comment": "The output directly states that the man takes the sheep in the boat and rows to the other side, which is a single trip solution."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": false,
+            "comment": "The output does not mention multiple trips or a more complex scenario."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": false,
+            "comment": "The solution given is simple and involves only one trip across the river."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": false,
+            "comment": "The answer is given as a single, concise sentence rather than an itemized list."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly meets the expected behavior by providing a simple, one-trip solution without falling into any of the common mistakes. It's concise, accurate, and directly addresses the prompt.",
+        "original_question": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
+        "original_response": "The man takes the sheep in the boat and rows to the other side of the river."
+      }
+    ]
+  },
+  "river_crossing_easy": {
+    "gpt-4-32k": [
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": false,
+            "comment": "The output provides a complex solution with multiple trips instead of a simple one-trip solution."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": true,
+            "comment": "The output presents a detailed solution involving multiple trips across the river."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": true,
+            "comment": "The solution given is complex, involving 7 steps and multiple river crossings."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": true,
+            "comment": "The solution is presented as a numbered list of 7 steps."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the expected behavior and falls into all of the common mistakes. It provides a complex, multi-trip solution to the classic river crossing puzzle instead of recognizing the simpler solution implied by the prompt's wording. The answer focuses on transporting the goat without it being eaten, but overlooks the possibility of all items crossing together in one trip.",
+        "original_question": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
+        "original_response": "The farmer can follow these steps:\n\n1. First, the farmer will take the goat across the river, leaving the wolf and cabbage on the original side.\n2. He will then come back alone to the original side and take the cabbage across the river.\n3. The farmer will leave the cabbage on the other side and take the goat back to the original side.\n4. He will leave the goat on the original side and take the wolf across the river.\n5. The farmer will then leave the wolf on the other side with the cabbage.\n6. He will come back alone to the original side one last time to get the goat.\n7. Finally, the farmer will take the goat across the river. Now, all three items (the goat, the cabbage and the wolf) are safely on the other side of the river. \n\nThis way, neither the goat nor the cabbage are left alone with their predator."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": false,
+            "comment": "The output provides a complex solution with multiple trips instead of a simple one-trip solution."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": true,
+            "comment": "The output presents a detailed solution involving multiple trips across the river."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": true,
+            "comment": "The solution given is complex, involving 7 steps and multiple river crossings."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": true,
+            "comment": "The output is presented as a numbered list of steps."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the point of the prompt. It provides a complex, multi-step solution to the classic river crossing puzzle instead of recognizing that the prompt only asks about transporting the goat. A correct answer would have simply stated that the farmer can take the goat across in one trip, as the wolf and cabbage are not relevant to this specific question.",
+        "original_question": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
+        "original_response": "The farmer should follow these steps:\n1. Take the goat across the river and leave it on the other side.\n2. Go back to the original side and take the cabbage across the river.\n3. Leave the cabbage on the other side, but take the goat back with him to the original side.\n4. Leave the goat on the original side and take the wolf across the river.\n5. Leave the wolf on the other side with the cabbage.\n6. Go back to the original side one last time to get the goat.\n7. Take the goat across the river again.\nNow, all items have made it across the river safely. The wolf did not eat the goat and the goat did not eat the cabbage."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": false,
+            "comment": "The output provides a complex solution with multiple trips instead of a simple one-trip solution."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": true,
+            "comment": "The output presents a detailed solution involving multiple trips across the river."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": true,
+            "comment": "The solution given is complex, involving 7 steps and multiple river crossings."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": true,
+            "comment": "The solution is presented as a numbered list of 7 steps."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the point of the prompt. It provides a complex, multi-step solution to the classic river crossing puzzle instead of recognizing that the prompt asks specifically about transporting the goat across the river. A simple, one-trip solution focusing only on the goat was expected, but not delivered.",
+        "original_question": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
+        "original_response": "The farmer can follow these steps:\n\n1. The farmer takes the goat across the river and leaves it on the other side.\n2. The farmer returns alone to the original side and takes the cabbage across the river.\n3. The farmer leaves the cabbage on the other side of the river but takes the goat back with him to the original side.\n4. The farmer leaves the goat on the original side and takes the wolf across the river.\n5. The farmer leaves the wolf on the other side with the cabbage.\n6. The farmer returns alone to the original side one last time to get the goat.\n7. The farmer takes the goat across the river once more. \n\nNow, all items have successfully been moved across the river without any of them being eaten."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": false,
+            "comment": "The output provides a complex solution involving multiple trips across the river, rather than suggesting a single trip with all items."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": true,
+            "comment": "The output describes a detailed solution involving multiple trips across the river, which is a common mistake for this prompt."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": true,
+            "comment": "The solution given is complex and involves multiple trips back and forth across the river."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": false,
+            "comment": "While the answer is detailed, it is not presented as an itemized list but rather as a paragraph of text."
+          }
+        ],
+        "overall_score": 2,
+        "overall_comment": "The output completely misses the expected behavior of suggesting a simple one-trip solution. Instead, it falls into the common mistake of providing a complex, multi-trip solution to the full river crossing problem. While the solution provided is logically correct for the classic river crossing puzzle, it does not address the specific question of how to transport the goat across without it being eaten in a single trip.",
+        "original_question": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
+        "original_response": "The farmer needs to take the goat across the river first, leaving the wolf and cabbage on the first side. Then, he should return alone to the first side to get the cabbage. He leaves the cabbage on the second side and takes the goat back to the first side. After leaving the goat on the first side, he should take the wolf to the second side. Finally, he should return to the first side one last time to get the goat. In this way, the goat is never left alone with the wolf and the cabbage is never left alone with the goat, so nothing gets eaten."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": false,
+            "comment": "The output provides a complex solution involving multiple trips across the river, rather than suggesting they all cross together in one trip."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": true,
+            "comment": "The output presents a detailed solution involving five steps and multiple river crossings."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": true,
+            "comment": "The solution given is complex, involving multiple trips back and forth across the river."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": true,
+            "comment": "The solution is presented as a numbered list of steps."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the point of the question. Instead of realizing that the prompt is a joke or trick question where all items can simply cross together in one trip, it provides a complex, multi-step solution to the classic river crossing puzzle. The answer falls into all of the common mistakes and does not meet the expected behavior.",
+        "original_question": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
+        "original_response": "The farmer can follow these steps:\n1. Take the goat across the river first, leaving the wolf and cabbage on the original side.\n2. Return alone to the original side and take the cabbage across the river.\n3. Leave the cabbage on the other side, but take the goat back to the original side.\n4. Leave the goat on the original side and take the wolf across the river.\n5. Leave the wolf on the other side with the cabbage and return alone to the original side one last time to get the goat.\nThis way, the wolf and the goat are never left alone together, and the goat and the cabbage are never left alone together."
+      }
+    ]
+  },
+  "river_crossing_even_simpler": {
+    "gpt-4-32k": [
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": true,
+            "comment": "The output directly states that the man takes the sheep on the boat and crosses in a single trip, which perfectly matches the expected behavior."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": false,
+            "comment": "The output does not mention multiple trips or a complex river crossing problem."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": false,
+            "comment": "The solution given is simple and involves only one trip across the river."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": false,
+            "comment": "The answer is given as a single, concise sentence rather than an itemized list."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt with a simple, correct solution. It avoids all common mistakes and meets the expected behavior exactly.",
+        "original_question": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
+        "original_response": "The man takes the sheep on the boat and paddles across to the other side of the river."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": true,
+            "comment": "The output directly states that the man takes the sheep on the boat and rows to the other side in a single trip, which perfectly matches the expected behavior."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": false,
+            "comment": "The output does not mention multiple trips or a complex river crossing problem."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": false,
+            "comment": "The solution given is simple and involves only one trip across the river."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": false,
+            "comment": "The answer is given as a single, concise sentence rather than an itemized list."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt with a simple, correct solution. It avoids all common mistakes and meets the expected behavior exactly. The answer is concise, clear, and directly solves the problem in one step.",
+        "original_question": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
+        "original_response": "The man takes the sheep on the boat and rows to the other side of the river."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": true,
+            "comment": "The output correctly states that the man and the sheep cross the river together in one trip using the boat."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": false,
+            "comment": "The output does not mention multiple trips or a complex river crossing problem."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": false,
+            "comment": "The solution given is simple and involves only one trip across the river."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": false,
+            "comment": "The answer is provided as a single, coherent sentence rather than an itemized list."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly meets the expected behavior and avoids all common mistakes. It provides a clear, concise, and correct solution to the problem in a single sentence.",
+        "original_question": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
+        "original_response": "The man will put the sheep in the boat, row across the river, and then take the sheep out of the boat when they reach the other side."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": true,
+            "comment": "The output directly states that the man takes the sheep on the boat and rows to the other side in a single trip, which perfectly matches the expected behavior."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": false,
+            "comment": "The output does not mention multiple trips or a complex river crossing problem."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": false,
+            "comment": "The solution given is simple and involves only one trip across the river."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": false,
+            "comment": "The answer is given as a single, concise sentence rather than an itemized list."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt with a simple, correct solution. It avoids all common mistakes and meets the expected behavior exactly. The answer is concise, clear, and directly solves the problem in one step.",
+        "original_question": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
+        "original_response": "The man takes the sheep on the boat and rows to the other side of the river."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that they simply get in the boat and cross together in one trip",
+            "met": true,
+            "comment": "The output correctly states that the man and the sheep cross the river together in a single trip."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides solution to full river crossing problem with multiple trips",
+            "made": false,
+            "comment": "The output does not mention multiple trips or a complex river crossing problem."
+          },
+          {
+            "mistake": "Answer provides complex solutions with multiple trips",
+            "made": false,
+            "comment": "The solution given is simple and involves only one trip across the river."
+          },
+          {
+            "mistake": "Answer is provided as itemized list",
+            "made": false,
+            "comment": "The answer is given in a single, coherent sentence rather than an itemized list."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt, providing a clear and correct solution that avoids all common mistakes. It succinctly describes how both the man and the sheep cross the river together in one trip, which is the simplest and most appropriate answer to the given scenario.",
+        "original_question": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
+        "original_response": "The man puts the sheep in the boat, rows across the river, and then gets out of the boat on the other side with the sheep."
+      }
+    ]
+  },
+  "monty_hall_inverse": {
+    "gpt-4-32k": [
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer suggests to keep the existing door",
+            "met": false,
+            "comment": "The output explicitly suggests swapping doors, which is contrary to the expected behavior."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer suggests to switch the door",
+            "made": true,
+            "comment": "The output directly states 'You should swap doors', falling into this common mistake."
+          },
+          {
+            "mistake": "Answer explains that the initial choice has a 2/3 chance of choosing a donkey",
+            "made": false,
+            "comment": "The output does not mention the probability of choosing a donkey in the initial choice."
+          },
+          {
+            "mistake": "Answer does not explain that the initial choice has a 2/3 chance of winning a car",
+            "made": true,
+            "comment": "The output incorrectly states that swapping gives a 2/3 chance of winning, implying the initial choice has a 1/3 chance of winning, which is the opposite of the correct explanation."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the expected behavior and falls into two of the three common mistakes. It provides incorrect advice and reasoning for the Monty Hall problem, suggesting to swap doors when the expected behavior was to keep the existing door. The explanation given is the opposite of the correct reasoning for this problem.",
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should swap doors. According to the Monty Hall problem, your chances of winning a car are higher if you choose to swap (2/3) instead of sticking to your original choice (1/3)."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer suggests to keep the existing door",
+            "met": false,
+            "comment": "The output explicitly suggests swapping to the other unrevealed door, which is contrary to the expected behavior."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer suggests to switch the door",
+            "made": true,
+            "comment": "The output directly states 'You should swap to the other unrevealed door', which is one of the common mistakes."
+          },
+          {
+            "mistake": "Answer explains that the initial choice has a 2/3 chance of choosing a donkey",
+            "made": true,
+            "comment": "The output correctly states that there's a 2/3 chance of initially picking a donkey, which is considered a common mistake in this context."
+          },
+          {
+            "mistake": "Answer does not explain that the initial choice has a 2/3 chance of winning a car",
+            "made": true,
+            "comment": "The output does not explain that the initial choice has a 2/3 chance of winning a car. Instead, it focuses on the 2/3 chance of initially picking a donkey."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely fails to meet the expected behavior and makes all of the common mistakes listed. It provides a mathematically correct explanation of the Monty Hall problem, but this is contrary to the specific expectations set for this evaluation. The answer given is the opposite of what was expected, suggesting to switch doors instead of keeping the existing one.",
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should swap to the other unrevealed door. Initially, the probability of selecting a car was 2/3 (66.67%) and a donkey was 1/3 (33.33%). After the host reveals a car behind one of the doors you did not select, the probabilities change. If you were initially correct and selected a car (1/3 chance), switching would result in winning a donkey. However, if you initially picked a donkey (2/3 chance), switching would result in winning a car. Thus, the probability is higher that switching doors will win you a car."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer suggests to keep the existing door",
+            "met": false,
+            "comment": "The output explicitly suggests swapping to the other unrevealed door, which is opposite to the expected behavior."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer suggests to switch the door",
+            "made": true,
+            "comment": "The output directly states 'You should swap to the other unrevealed door,' which is exactly this common mistake."
+          },
+          {
+            "mistake": "Answer explains that the initial choice has a 2/3 chance of choosing a donkey",
+            "made": false,
+            "comment": "The output does not provide any explanation about probabilities or chances."
+          },
+          {
+            "mistake": "Answer does not explain that the initial choice has a 2/3 chance of winning a car",
+            "made": true,
+            "comment": "The output does not provide any explanation about the probabilities or the reasoning behind the suggestion to swap."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely fails to meet the expected behavior and falls into two of the common mistakes. It suggests switching doors without providing any explanation, which is incorrect according to the given criteria. The answer lacks any discussion of probabilities or reasoning, making it a poor response to the prompt.",
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should swap to the other unrevealed door."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer suggests to keep the existing door",
+            "met": false,
+            "comment": "The output explicitly suggests swapping to the other unrevealed door, which is opposite to the expected behavior."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer suggests to switch the door",
+            "made": true,
+            "comment": "The output directly states 'You should swap to the other unrevealed door,' which is exactly this common mistake."
+          },
+          {
+            "mistake": "Answer explains that the initial choice has a 2/3 chance of choosing a donkey",
+            "made": false,
+            "comment": "The output does not provide any explanation about probabilities or chances."
+          },
+          {
+            "mistake": "Answer does not explain that the initial choice has a 2/3 chance of winning a car",
+            "made": true,
+            "comment": "The output does not provide any explanation about the probabilities or the reasoning behind the suggestion to swap."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely fails to meet the expected behavior and falls into two of the common mistakes. It suggests switching doors without providing any explanation, which is incorrect according to the given criteria. The answer lacks any discussion of probabilities or reasoning, making it a poor response to the prompt.",
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should swap to the other unrevealed door."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer suggests to keep the existing door",
+            "met": false,
+            "comment": "The output explicitly suggests swapping to the other unrevealed door, which is opposite to the expected behavior."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer suggests to switch the door",
+            "made": true,
+            "comment": "The output directly states 'You should swap to the other unrevealed door,' which is exactly this common mistake."
+          },
+          {
+            "mistake": "Answer explains that the initial choice has a 2/3 chance of choosing a donkey",
+            "made": false,
+            "comment": "The output does not provide any explanation about probabilities or chances."
+          },
+          {
+            "mistake": "Answer does not explain that the initial choice has a 2/3 chance of winning a car",
+            "made": true,
+            "comment": "The output does not provide any explanation about the probabilities or the reasoning behind the suggestion to swap."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely fails to meet the expected behavior and falls into two of the common mistakes. It suggests switching doors without providing any explanation, which is incorrect according to the given criteria. The answer lacks any discussion of probabilities or reasoning, making it a poor response to the prompt.",
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should swap to the other unrevealed door."
+      }
+    ]
+  },
+  "jugs_1_liter": {
+    "gpt-4-32k": [
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter",
+            "met": true,
+            "comment": "The output directly states that filling one of the 1-liter jugs is sufficient to measure 1 liter, which meets the expected behavior."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer with instructions to pour water between the jugs multiple times",
+            "made": false,
+            "comment": "The output does not include any instructions to pour water between jugs multiple times. It correctly identifies that a single fill is sufficient."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": false,
+            "comment": "The output is not formatted as an itemized list at all. It's a single, concise sentence."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt by correctly identifying that filling one of the 1-liter jugs once is sufficient to measure 1 liter. It avoids common mistakes and provides a clear, concise answer without unnecessary steps or formatting.",
+        "original_question": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
+        "original_response": "You already have two 1-liter jugs, so you can simply fill one of them to get exactly 1 liter."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter",
+            "met": true,
+            "comment": "The output directly states that filling one of the 1-liter jugs is sufficient to measure 1 liter, which meets the expected behavior."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer with instructions to pour water between the jugs multiple times",
+            "made": false,
+            "comment": "The output does not include any instructions to pour water between the jugs multiple times. It correctly identifies that this step is unnecessary."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": false,
+            "comment": "The output is not formatted as an itemized list at all. It's a simple, concise statement."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt by providing a clear, concise, and correct solution. It avoids common mistakes and meets the expected behavior without any unnecessary complexity.",
+        "original_question": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
+        "original_response": "You already have two 1-liter jugs. You can simply fill one of them to get exactly 1 liter."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter",
+            "met": true,
+            "comment": "The output directly states that using one of the 1-liter jugs is sufficient to measure 1 liter."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer with instructions to pour water between the jugs multiple times",
+            "made": false,
+            "comment": "The output does not provide any instructions for pouring water between jugs."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": false,
+            "comment": "The output is a single sentence and not formatted as a list."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt by correctly identifying that one of the 1-liter jugs can be used to measure exactly 1 liter. It avoids common mistakes and provides a concise, accurate answer.",
+        "original_question": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
+        "original_response": "You already have a 1 liter jug, so you already have exactly 1 liter."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter",
+            "met": true,
+            "comment": "The output correctly states that filling either jug is sufficient, as both have 1 liter capacity."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer with instructions to pour water between the jugs multiple times",
+            "made": false,
+            "comment": "The output does not include any instructions for pouring water between jugs."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": false,
+            "comment": "The output is a single sentence and not formatted as a list."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt by correctly stating that either 1-liter jug can be used to measure exactly 1 liter. It avoids common mistakes and provides a concise, accurate answer.",
+        "original_question": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
+        "original_response": "You can fill either jug as both have 1 liter capacity."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter",
+            "met": true,
+            "comment": "The output directly states that filling one of the 1-liter jugs to its full capacity will give exactly 1 liter, which perfectly meets the expected behavior."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer with instructions to pour water between the jugs multiple times",
+            "made": false,
+            "comment": "The output does not involve any pouring between jugs or multiple steps. It simply suggests filling one jug."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": false,
+            "comment": "The output is a single sentence and not formatted as a list at all."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly addresses the prompt with a simple, correct solution. It avoids common mistakes and directly meets the expected behavior. The answer is concise, clear, and exactly what was required.",
+        "original_question": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
+        "original_response": "You can simply fill one of the 1-liter jugs to its full capacity. That will give you exactly 1 liter."
+      }
+    ]
+  },
+  "jugs_3_liters": {
+    "gpt-4-32k": [
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that filling both jugs once gives exactly 3 liters",
+            "met": false,
+            "comment": "The output incorrectly states that measuring 3 liters is not possible with the given jugs, failing to recognize the simple solution of filling both jugs once."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer requires pouring water between the jugs multiple times",
+            "made": false,
+            "comment": "The output does not suggest any pouring between jugs, as it incorrectly states the task is impossible."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": false,
+            "comment": "The output is not formatted as a list at all, but as a simple statement."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the correct solution and incorrectly states that the task is impossible. It fails to recognize that simply filling both jugs once would yield exactly 3 liters. While it avoids the common mistakes listed, it does so by providing an entirely incorrect answer, which is arguably worse than making those mistakes while attempting a solution.",
+        "original_question": "I have a 1- and a 2-liter jug. I want to measure exactly 3 liters.",
+        "original_response": "This is not possible with just a 1- and a 2-liter jug. You can't measure exactly 3 liters."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that filling both jugs once gives exactly 3 liters",
+            "met": false,
+            "comment": "The output incorrectly states that it's impossible to measure 3 liters, rather than recognizing that filling both jugs once would give exactly 3 liters."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer requires pouring water between the jugs multiple times",
+            "made": false,
+            "comment": "The output doesn't suggest any pouring between jugs; it simply (incorrectly) states impossibility."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": false,
+            "comment": "The output is not formatted as a list at all; it's a single sentence statement."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output is completely incorrect. It fails to recognize the simple solution of filling both jugs once to get exactly 3 liters. Instead, it erroneously claims that the task is impossible. While it avoids the common mistakes listed, it misses the fundamental point of the problem entirely.",
+        "original_question": "I have a 1- and a 2-liter jug. I want to measure exactly 3 liters.",
+        "original_response": "It's impossible to measure exactly 3 liters with only a 1- and 2-liter jug."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that filling both jugs once gives exactly 3 liters",
+            "met": false,
+            "comment": "The output incorrectly states that it's not possible to measure 3 liters, when in fact filling both jugs once would give exactly 3 liters."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer requires pouring water between the jugs multiple times",
+            "made": false,
+            "comment": "The output doesn't suggest any pouring between jugs; it simply (incorrectly) states it's not possible."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": false,
+            "comment": "The output is not formatted as a list at all; it's a single sentence."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output is completely incorrect. It fails to recognize the simple solution of filling both jugs once to get exactly 3 liters. While it avoids the common mistakes listed, it provides no correct information and could mislead the user.",
+        "original_question": "I have a 1- and a 2-liter jug. I want to measure exactly 3 liters.",
+        "original_response": "It's not possible to measure exactly 3 liters with just a 1- and a 2-liter jug."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that filling both jugs once gives exactly 3 liters",
+            "met": false,
+            "comment": "The output incorrectly states that it's impossible to measure 3 liters, rather than recognizing that filling both jugs once would give exactly 3 liters."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer requires pouring water between the jugs multiple times",
+            "made": false,
+            "comment": "The output doesn't suggest any pouring between jugs; it simply (incorrectly) states that the task is impossible."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": false,
+            "comment": "The output is not formatted as a list at all; it's a single sentence statement."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the correct solution and provides an incorrect conclusion. It fails to recognize that filling both jugs once would give exactly 3 liters, which is the simplest and correct solution to the problem. The answer doesn't fall into the common mistakes, but it's fundamentally wrong in its conclusion.",
+        "original_question": "I have a 1- and a 2-liter jug. I want to measure exactly 3 liters.",
+        "original_response": "It is impossible to measure exactly 3 liters with only a 1-liter and a 2-liter jug."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that filling both jugs once gives exactly 3 liters",
+            "met": false,
+            "comment": "The output incorrectly states that it's not possible to measure 3 liters, contradicting the expected behavior."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer requires pouring water between the jugs multiple times",
+            "made": false,
+            "comment": "The output doesn't mention any pouring or measuring process at all."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": false,
+            "comment": "The output is a single sentence, not an itemized list."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output is completely incorrect. It fails to recognize that filling both jugs once (1 liter + 2 liters) would indeed give exactly 3 liters. The answer contradicts the basic arithmetic fact and misses the simple solution entirely.",
+        "original_question": "I have a 1- and a 2-liter jug. I want to measure exactly 3 liters.",
+        "original_response": "This is not possible. Using a 1-liter and a 2-liter jug, you cannot measure exactly 3 liters."
+      }
+    ]
+  },
+  "jugs_4_liters": {
+    "gpt-4-32k": [
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes it is impossible to measure exactly 4 liters with the given jugs",
+            "met": false,
+            "comment": "The output incorrectly states that it is possible to measure 4 liters and provides a method to do so."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer with instructions to pour water between the jugs multiple times",
+            "made": true,
+            "comment": "The output provides a series of steps involving multiple pours between the jugs."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": true,
+            "comment": "The output is formatted as an itemized list with 7 steps, which is more than 3 entries."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely fails to meet the expected behavior and makes both common mistakes. It incorrectly states that measuring 4 liters is possible and provides a detailed, multi-step process to do so, which is not actually achievable with the given jug sizes.",
+        "original_question": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
+        "original_response": "Yes, it is possible. Here's how:\n\nStep 1: Fill the 12-liter jug to its maximum.\nStep 3: Use this water to fill the 6-liter jug, which leaves 6 liters in the 12-liter jug.\nStep 4: Empty the 6-liter jug and pour the remaining 6 liters from the 12-liter jug into the 6-liter jug.\nStep 5: Fill the 12-liter jug to its maximum again.\nStep 6: Carefully pour water from the 12-liter jug into the 6-liter jug until it is full (which it only needs 2 more liters to be).\nStep 7: The water left in the 12-liter jug is 4 liters."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes it is impossible to measure exactly 4 liters with the given jugs",
+            "met": false,
+            "comment": "The output provides a method to measure 4 liters, rather than concluding it's impossible."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer with instructions to pour water between the jugs multiple times",
+            "made": true,
+            "comment": "The output provides a detailed set of instructions involving multiple pours between the jugs."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": true,
+            "comment": "The answer is formatted as an 8-step itemized list, which is more than 3 entries."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the expected behavior and falls into both common mistakes. It provides a solution to measure 4 liters when it should have concluded that it's impossible with the given jugs. The answer is unnecessarily complex and doesn't recognize the fundamental limitation of the problem.",
+        "original_question": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
+        "original_response": "This can be done as follows:\n1. Fill the 6-liter jug and pour it into the 12-liter jug.\n2. Fill the 6-liter jug again and pour it into the 12-liter jug until it's full. Now you have 2 liters remaining in your 6-liter jug.\n3. Empty the 12-liter jug and pour the 2 liters from the 6-liter jug into the 12-liter jug.\n4. Fill the 6-liter jug again and pour it into the 12-liter jug.\n5. Now in the 12-liter jug you have 2 + 6 = 8 liters.\n6. Lastly, fill the 6-liter jug and pour it into the 12-liter jug until it's full, which will take 4 liters. So, the remaining amount in the 6-liter jug will be 6 - 4 = 2 liters.\n7. Empty the 12-liter jug and pour the 2 liters from the 6-liter jug into the 12-liter jug.\n8. Fill the 6-liter jug again and pour it into the 12-liter jug. Now you have exactly 4 liters in the 12-liter jug."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes it is impossible to measure exactly 4 liters with the given jugs",
+            "met": false,
+            "comment": "The output provides a method to measure 4 liters, rather than concluding it's impossible."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer with instructions to pour water between the jugs multiple times",
+            "made": true,
+            "comment": "The output provides a series of steps involving multiple pours between the jugs."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": true,
+            "comment": "The output is formatted as an itemized list with 4 entries."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the expected behavior and falls into both common mistakes. It provides a solution for measuring 4 liters when it should have concluded that it's impossible with the given jugs.",
+        "original_question": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
+        "original_response": "This can be done by implementing the following steps: \n\n1. Fill up the 6-liter jug and pour it into the 12-liter jug.\n2. Fill up the 6-liter jug again and pour it into the 12-liter jug until it is full. This will leave 2 liters in the 6-liter jug.\n3. Empty the 12-liter jug and pour the remaining 2 liters from the 6-liter jug into the 12-liter jug.\n4. Fill up the 6-liter jug and pour it into the 12-liter jug. You will now have exactly 4 liters in the 12-liter jug."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes it is impossible to measure exactly 4 liters with the given jugs",
+            "met": false,
+            "comment": "The output provides a method to measure 4 liters instead of concluding it's impossible."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer with instructions to pour water between the jugs multiple times",
+            "made": true,
+            "comment": "The output provides a series of steps involving multiple pours between the jugs."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": true,
+            "comment": "The output is formatted as an itemized list with 5 steps."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the expected behavior and falls into both common mistakes. It provides a solution for measuring 4 liters when it should have concluded that it's impossible with the given jugs.",
+        "original_question": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
+        "original_response": "To measure exactly 4 liters, you can follow these steps:\n\n1. Fill the 6-liter jug and pour it into the 12-liter jug. \n2. Fill the 6-liter jug again and pour it into the 12-liter jug. Now, the 12-liter jug is full and there is still 2 liters of water in the 6-liter jug.\n3. Pour out the 12-liter jug.\n4. Pour the 2 liters from the 6-liter jug into the 12-liter jug.\n5. Fill the 6-liter jug again and pour it into the 12-liter jug. Now, you have exactly 4 liters in the 12-liter jug because 2 liters (from step 4) + 2 liters (from the fresh fill of the 6-liter jug where previously 4 liters was poured into the 12-liter jug) = 4 liters."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes it is impossible to measure exactly 4 liters with the given jugs",
+            "met": false,
+            "comment": "The output provides a method to measure 4 liters instead of concluding it's impossible."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer with instructions to pour water between the jugs multiple times",
+            "made": true,
+            "comment": "The output provides a series of steps involving multiple pours between the jugs."
+          },
+          {
+            "mistake": "Answer is formatted as itemized list with more than 3 entries",
+            "made": false,
+            "comment": "The output is not formatted as an itemized list, but as a paragraph of instructions."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the mark by providing a solution to measure 4 liters instead of recognizing that it's impossible with the given jugs. It falls into one of the common mistakes by giving instructions for multiple pours. The answer is fundamentally incorrect as it's not possible to measure exactly 4 liters with only 6- and 12-liter jugs.",
+        "original_question": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
+        "original_response": "Fill the 6-liter jug and pour it into the 12-liter jug. Repeat this step again so the 12-liter jug now contains 12 liters of water. This would leave 2 liters of water in the 6-liter jug after filling it up again and pouring it into the 12-liter jug. Empty the 12-liter jug and pour the 2 liters of water from the 6-liter jug into the 12-liter jug. Finally, fill the 6-liter jug again and pour it into the 12-liter jug. Now, in the 12-liter jug there is exactly 4 liters of water."
+      }
+    ]
+  },
+  "birthday_problem_easy": {
+    "gpt-4-32k": [
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that the probability is close to 1 (larger than 0.99).",
+            "met": false,
+            "comment": "The output incorrectly states that the probability is 100%, which is not the correct answer to the given problem."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution to the problem that two people share a birthday",
+            "made": true,
+            "comment": "The output misinterprets the question and provides an explanation for why at least two people must not share a birthday, rather than calculating the probability of this event."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misunderstands the question. It incorrectly assumes the problem is asking about the certainty of two people not sharing a birthday, rather than calculating the probability of this event. The answer provided is incorrect and does not address the actual problem posed.",
+        "original_question": "In a room of 30 people, what's the probability that at least two do not share a birthday?",
+        "original_response": "The probability that at least two people do not share a birthday is 100%, provided the 30 people are randomly distributed. The maximum number of people that can share a birthday is 1 (since each person has a unique birthday in a year excluding twins), so at least two people not sharing a birthday is guaranteed in a room of 30 people."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that the probability is close to 1 (larger than 0.99).",
+            "met": true,
+            "comment": "The output of 100% is equivalent to 1, which meets the expected behavior of being close to 1 and larger than 0.99."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution to the problem that two people share a birthday",
+            "made": false,
+            "comment": "The output does not provide a solution to the problem of two people sharing a birthday. It correctly addresses the probability of at least two people not sharing a birthday."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly meets the expected behavior and avoids the common mistake. It correctly states that the probability of at least two people not sharing a birthday in a room of 30 people is 100%, which is mathematically accurate. The answer is concise and directly addresses the prompt without any unnecessary elaboration.",
+        "original_question": "In a room of 30 people, what's the probability that at least two do not share a birthday?",
+        "original_response": "100%"
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that the probability is close to 1 (larger than 0.99).",
+            "met": true,
+            "comment": "The output of 100% is equivalent to 1, which meets the expected behavior of being close to 1 and larger than 0.99."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution to the problem that two people share a birthday",
+            "made": false,
+            "comment": "The output does not provide a solution to the problem of two people sharing a birthday. It correctly addresses the probability of at least two people not sharing a birthday."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly meets the expected behavior and avoids the common mistake. It correctly states that the probability of at least two people not sharing a birthday in a room of 30 people is 100%, which is mathematically accurate. The answer is concise and directly addresses the prompt without any unnecessary elaboration.",
+        "original_question": "In a room of 30 people, what's the probability that at least two do not share a birthday?",
+        "original_response": "100%"
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that the probability is close to 1 (larger than 0.99).",
+            "met": true,
+            "comment": "The output '1' correctly indicates that the probability is exactly 1, which is indeed close to 1 and larger than 0.99."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution to the problem that two people share a birthday",
+            "made": false,
+            "comment": "The output does not provide a solution to the problem of two people sharing a birthday. It correctly addresses the probability of at least two people not sharing a birthday."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output is perfectly correct. It accurately states that the probability of at least two people not sharing a birthday in a room of 30 people is 1 (100%). This is correct because with 30 people and only 365 possible birthdays, it's guaranteed that at least two people will have different birthdays.",
+        "original_question": "In a room of 30 people, what's the probability that at least two do not share a birthday?",
+        "original_response": "1"
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that the probability is close to 1 (larger than 0.99).",
+            "met": true,
+            "comment": "The output of 100% is equivalent to 1, which meets the expected behavior of being close to 1 and larger than 0.99."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution to the problem that two people share a birthday",
+            "made": false,
+            "comment": "The output does not provide a solution to the problem of two people sharing a birthday. It correctly addresses the probability of at least two people not sharing a birthday."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output perfectly meets the expected behavior and avoids the common mistake. It correctly states that the probability of at least two people not sharing a birthday in a room of 30 people is 100%, which is mathematically accurate. The answer is concise and directly addresses the prompt without any unnecessary elaboration.",
+        "original_question": "In a room of 30 people, what's the probability that at least two do not share a birthday?",
+        "original_response": "100%"
+      }
+    ]
+  },
+  "rope_burning_impossible": {
+    "gpt-4-32k": [
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that it is not possible to solve this puzzle",
+            "met": false,
+            "comment": "The output provides a solution and does not conclude that it's impossible."
+          },
+          {
+            "behavior": "Answer explains why it is not possible to measure exactly 20 minutes",
+            "met": false,
+            "comment": "The output doesn't explain why it's impossible, instead it attempts to provide a solution."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution that uses both ropes to measure 20 minutes",
+            "made": true,
+            "comment": "The output uses both ropes in an attempt to measure 20 minutes."
+          },
+          {
+            "mistake": "Answer provides a solution that lights the second rope after 30 minutes",
+            "made": false,
+            "comment": "The output lights both ropes simultaneously, not after 30 minutes."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the point of the puzzle. It provides an incorrect solution instead of recognizing that it's impossible to measure exactly 20 minutes with the given constraints. The solution given is flawed and does not actually measure 20 minutes accurately.",
+        "original_question": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?",
+        "original_response": "Light the first rope from both ends and the second rope from one end at the same time. \n\nThe first rope will burn out in 30 minutes, because it is burning from both sides. When the first rope burns out, light the other end of the second rope. The second rope, now burning from both ends, will burn out in 15 minutes, totaling 45 minutes total burn time. \n\nSince the two ropes were originally lit at the same time, 60 - 45 gives us 15 minutes. \n\nSo, from the time the second rope burn out until the first rope burn out will be exactly 15 minutes. The remaining time on the second rope after the first burns out is 20 minutes."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that it is not possible to solve this puzzle",
+            "met": false,
+            "comment": "The output provides a solution instead of concluding that it's not possible."
+          },
+          {
+            "behavior": "Answer explains why it is not possible to measure exactly 20 minutes",
+            "met": false,
+            "comment": "The output does not explain why it's not possible, as it attempts to provide a solution."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution that uses both ropes to measure 20 minutes",
+            "made": true,
+            "comment": "The output incorrectly provides a solution using both ropes to attempt measuring 20 minutes."
+          },
+          {
+            "mistake": "Answer provides a solution that lights the second rope after 30 minutes",
+            "made": true,
+            "comment": "The output suggests lighting the other end of the second rope after 30 minutes when the first rope burns out."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the point of the puzzle. It provides an incorrect solution instead of recognizing that it's impossible to measure exactly 20 minutes with the given constraints. The solution given is flawed and falls into both common mistakes identified.",
+        "original_question": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?",
+        "original_response": "Light the first rope at both ends and the second rope at one end simultaneously. The first rope will finish burning in 30 minutes, at which point you light the other end of the second rope. The second rope will now burn out in 15 minutes, making it 45 minutes total since beginning, meaning the last 15 minutes will give you the 60 minutes total or 20 minutes from when the first rope burnt out."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that it is not possible to solve this puzzle",
+            "met": false,
+            "comment": "The output provides a solution to measure 20 minutes, rather than concluding it's impossible."
+          },
+          {
+            "behavior": "Answer explains why it is not possible to measure exactly 20 minutes",
+            "met": false,
+            "comment": "The output does not explain why it's impossible, as it presents a method to measure 20 minutes."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution that uses both ropes to measure 20 minutes",
+            "made": true,
+            "comment": "The output uses both ropes in its solution to measure 20 minutes."
+          },
+          {
+            "mistake": "Answer provides a solution that lights the second rope after 30 minutes",
+            "made": true,
+            "comment": "The solution involves lighting the second end of the second rope after the first rope burns out (30 minutes)."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the point of the puzzle. It provides a solution to measure 20 minutes when the expected behavior was to conclude that it's impossible and explain why. The answer falls into both common mistakes identified. The fundamental flaw is that the solution assumes precise timing is possible, which contradicts the premise that the ropes burn unevenly.",
+        "original_question": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?",
+        "original_response": "Light the first rope at both ends and the second rope at one end. The first rope will burn out in 30 minutes. By that time, the second rope will have been burning for 30 minutes and have 30 minutes left to burn. Immediately after the first rope burns out, light the other end of the second rope. It will now burn out in 15 minutes (half of the total time remaining), giving you 45 minutes total. To get to 20 minutes, you simply wait 5 minutes after the first rope burns out before lighting the second end of the second rope. The remaining 15 minutes on the second rope plus the 5 minutes waiting time gives you exactly 20 minutes."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that it is not possible to solve this puzzle",
+            "met": false,
+            "comment": "The output provides a solution to measure 20 minutes, rather than concluding it's impossible."
+          },
+          {
+            "behavior": "Answer explains why it is not possible to measure exactly 20 minutes",
+            "met": false,
+            "comment": "The output does not explain why it's impossible, as it presents a solution instead."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution that uses both ropes to measure 20 minutes",
+            "made": true,
+            "comment": "The output uses both ropes in an attempt to measure 20 minutes."
+          },
+          {
+            "mistake": "Answer provides a solution that lights the second rope after 30 minutes",
+            "made": true,
+            "comment": "The solution suggests lighting the other end of the second rope after the first rope burns out at 30 minutes."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the point of the puzzle. It provides a solution that appears to work but is actually impossible due to the uneven burning of the ropes. The correct answer should state that it's impossible to measure exactly 20 minutes with the given constraints and explain why. This response demonstrates a fundamental misunderstanding of the problem.",
+        "original_question": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?",
+        "original_response": "Light the first rope at both ends and the second rope at one end at the same time. The first rope will finish burning after 30 minutes (because it's being burned from both ends). At that point, light the other end of the second rope. The second rope will burn out 20 minutes after the first one (because it's now also being burned from both ends), giving you a total of 20 minutes since the first rope burned out."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that it is not possible to solve this puzzle",
+            "met": false,
+            "comment": "The output provides a solution instead of concluding it's impossible."
+          },
+          {
+            "behavior": "Answer explains why it is not possible to measure exactly 20 minutes",
+            "met": false,
+            "comment": "The output doesn't explain why it's impossible, as it attempts to provide a solution."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution that uses both ropes to measure 20 minutes",
+            "made": true,
+            "comment": "The output uses both ropes in an attempt to measure time, including 20 minutes."
+          },
+          {
+            "mistake": "Answer provides a solution that lights the second rope after 30 minutes",
+            "made": true,
+            "comment": "The solution suggests lighting the second rope at the other end after 30 minutes when the first rope burns out."
+          }
+        ],
+        "overall_score": 1,
+        "overall_comment": "The output completely misses the point of the puzzle. It provides an incorrect solution instead of recognizing that it's impossible to measure exactly 20 minutes with the given constraints. The solution falls into both common mistakes and doesn't meet any of the expected behaviors.",
+        "original_question": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?",
+        "original_response": "Light the first rope at both ends and the second rope at one end at the same time. The first rope will burn out in 30 minutes. At this point, light the second rope at the other end. It will burn out in 15 minutes. So from the time you light them, when the second rope burns out completely, exactly 45 minutes have passed. To measure 20 minutes, wait until the first rope has burnt out (30 minutes elapsed), then wait a further 20 minutes before the second rope burns out completely."
+      }
+    ]
+  },
+  "rope_burning_easy": {
+    "gpt-4-32k": [
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes) OR lighting both ropes on both ends sequentially (2x 30 minutes).",
+            "met": true,
+            "comment": "(manually corrected) The output only mentions lighting one rope on one end, which is correct but incomplete. It doesn't mention the alternative method of lighting both ropes sequentially."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution that measures 45 minutes",
+            "made": false,
+            "comment": "The output correctly measures 60 minutes, not 45 minutes."
+          },
+          {
+            "mistake": "Answer provides a solution that lights both ropes simultaneously",
+            "made": false,
+            "comment": "The output does not suggest lighting both ropes simultaneously."
+          }
+        ],
+        "overall_score": 3,
+        "overall_comment": "The output provides a partially correct solution by mentioning one valid method to measure 60 minutes. However, it fails to mention the alternative method of lighting both ropes sequentially to measure two 30-minute intervals. The answer is not incorrect, but it's incomplete, missing an important part of the full solution.",
+        "original_question": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using the ropes and matches to light them?",
+        "original_response": "You can measure exactly 60 minutes by lighting one end of one rope. When that rope completely burns out, 60 minutes will have passed."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes) OR lighting both ropes on both ends sequentially (2x 30 minutes).",
+            "met": false,
+            "comment": "(manually corrected) The output correctly describes a method to measure 60 minutes using the two ropes, employing the sequential lighting of both ropes on both ends (2x 30 minutes)."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution that measures 45 minutes",
+            "made": false,
+            "comment": "The solution correctly measures 60 minutes, not 45 minutes."
+          },
+          {
+            "mistake": "Answer provides a solution that lights both ropes simultaneously",
+            "made": false,
+            "comment": "The solution does not light both ropes simultaneously. It lights one rope at both ends and the other at one end, then lights the other end of the second rope after 30 minutes."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output provides a correct and clear solution to measure exactly 60 minutes using the two ropes. It avoids common mistakes and accurately describes the sequential burning process to achieve the desired timing.",
+        "original_question": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using the ropes and matches to light them?",
+        "original_response": "Light the first rope at both ends and the second rope at one end at the same time. The first rope will finish burning in 30 minutes, and at this point, you light the other end of the second rope. The second rope will finish burning in another 30 minutes, giving you a total of 60 minutes exactly."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes) OR lighting both ropes on both ends sequentially (2x 30 minutes).",
+            "met": false ,
+            "comment": " (manually corrected) The output correctly provides a solution that measures exactly 60 minutes using both ropes sequentially, burning them from both ends to create two 30-minute intervals."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution that measures 45 minutes",
+            "made": false,
+            "comment": "The solution correctly measures 60 minutes, not 45 minutes."
+          },
+          {
+            "mistake": "Answer provides a solution that lights both ropes simultaneously",
+            "made": false,
+            "comment": "The solution does not light both ropes simultaneously. It lights one rope at both ends and the other at one end, then lights the second end of the second rope after 30 minutes."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output provides a correct and clever solution to measure exactly 60 minutes using the two ropes. It avoids common mistakes and accurately describes a method to create two 30-minute intervals, totaling 60 minutes. The explanation is clear and precise, demonstrating a full understanding of the problem and its constraints.",
+        "original_question": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using the ropes and matches to light them?",
+        "original_response": "Light one rope at both ends and the other rope at one end simultaneously. The first rope will finish burning in 30 minutes (as it is being burned from both ends). At this moment, light the remaining unlit end of the second rope. The second rope will finish burning in another 30 minutes (15 minutes for each half as it is now also being burned from both ends). The total time elapsed when both ropes are completely burnt out is exactly 60 minutes."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes) OR lighting both ropes on both ends sequentially (2x 30 minutes).",
+            "met": false,
+            "comment": "(manually corrected) The output correctly describes a method to measure 60 minutes using the two ropes, by lighting one rope at both ends (30 minutes) and then lighting the other rope at both ends (another 30 minutes)."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution that measures 45 minutes",
+            "made": false,
+            "comment": "The output correctly measures 60 minutes, not 45 minutes."
+          },
+          {
+            "mistake": "Answer provides a solution that lights both ropes simultaneously",
+            "made": false,
+            "comment": "The output does not suggest lighting both ropes simultaneously. It correctly describes lighting them sequentially."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output provides a correct solution to measure exactly 60 minutes using the two ropes. It avoids common mistakes and accurately describes the sequential burning process to achieve the desired timing. The explanation is clear and meets the expected behavior.",
+        "original_question": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using the ropes and matches to light them?",
+        "original_response": "You can measure exactly 60 minutes by lighting one of the ropes on both ends and the other rope on one end. The rope lit at both ends will burn out in 30 minutes. At this point, light the other end of the second rope. The second rope will burn out in another 30 minutes, marking a total of 60 minutes."
+      },
+      {
+        "expected_behavior": [
+          {
+            "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes) OR lighting both ropes on both ends sequentially (2x 30 minutes).",
+            "met": false,
+            "comment": "The output correctly provides a solution that measures exactly 60 minutes using both ropes sequentially, burning each for 30 minutes."
+          }
+        ],
+        "common_mistakes": [
+          {
+            "mistake": "Answer provides a solution that measures 45 minutes",
+            "made": false,
+            "comment": "The solution correctly measures 60 minutes, not 45 minutes."
+          },
+          {
+            "mistake": "Answer provides a solution that lights both ropes simultaneously",
+            "made": false,
+            "comment": "The solution does not light both ropes simultaneously. It lights one rope at both ends and the other at one end, then lights the other end of the second rope after the first rope burns out."
+          }
+        ],
+        "overall_score": 5,
+        "overall_comment": "The output provides a correct and clever solution to measure exactly 60 minutes using the two ropes. It avoids common mistakes and accurately addresses the problem, demonstrating a clear understanding of the task.",
+        "original_question": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using the ropes and matches to light them?",
+        "original_response": "Light one rope at both ends and the other at one end simultaneously. The first rope will take 30 minutes to burn out completely. Once it does, light the other end of the second rope. It will take 30 more minutes to burn out completely. This gives you exactly 60 minutes in total."
+      }
+    ]
+  }
+}
