@@ -1,12 +1,11 @@
 {
   "llms": [
     {
-      "name": "gpt-4o-mini",
-      "model": "openai/gpt-4o-mini",
-      "temperature": 1.0,
+      "name": "gpt-4o",
+      "model": "openai/gpt-4o",
+      "temperature": 0.7,
       "top_p": 1.0,
       "repetition_penalty": 1
-    },
-
+    }
   ]
 }

@@ -161,3 +161,8 @@
 #### gpt-4t
         "original_question": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
         "original_response": "To have both the man and his sheep safely cross the river, the man should follow these steps:\n\n1. The man places the sheep in the boat.\n2. He then rows the boat to the opposite bank of the river with the sheep onboard.\n3. Upon reaching the other side, the man unloads the sheep.\n4. The man returns alone to the original side to secure the boat if needed.\n\nThis process ensures that both the man and his sheep get to the other side of the river safely using the boat."
+
+### opus with slight tendency to list writing
+
+             "original_question": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
+        "original_response": "The man and the sheep can cross the river using the following steps:\n\n1. The man gets into the boat and takes the sheep with him to the other side of the river.\n2. The man leaves the sheep on the other side and returns alone in the boat.\n3. The man gets out of the boat on the original side of the river.\n\nNow, both the man and the sheep are on the other side of the river, and the problem is solved. The key point is that the boat has space for one human and one animal, so the man and the sheep can cross the river together in a single trip."
