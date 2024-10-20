@@ -54,8 +54,12 @@ def create_heatmap(data, value_col, output_file, cmap, vmin, vmax):
 
     # Calculate row averages
     row_averages = pivot_table.mean(axis=1)
+    column_averages = pivot_table.mean(axis=0)
 
-    plt.figure(figsize=(14, 8))
+    plt.figure(figsize=(14, 9))
+
+    # plt.subplots_adjust(bottom=0.2)
+
     # ax = sns.heatmap(pivot_table, cmap=cmap, annot=True, fmt='.1f', 
     #                  cbar_kws={'label': value_col.replace('_', ' ').title()},
     #                  vmin=vmin, vmax=vmax)
@@ -80,7 +84,14 @@ def create_heatmap(data, value_col, output_file, cmap, vmin, vmax):
 
     plt.text(pivot_table.shape[1] + 0.5, -0.3, '⌀', 
             ha='left', va='center', fontsize=20, fontweight='bold')
-        
+    
+
+    # for idx, average in enumerate(column_averages):
+    #     plt.text(idx + 0.5, pivot_table.shape[0] + 0.1, f'{average:.2f}', 
+    #             ha='center', va='top', fontsize=12)    
+
+    # ax.tick_params(axis='x', which='major', pad=10)
+    
     # cbar = ax.collections[0].colorbar
     # cbar.ax.tick_params(labelsize=12)
     

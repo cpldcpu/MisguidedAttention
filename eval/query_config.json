@@ -1,11 +1,12 @@
 {
   "llms": [
     {
-      "name": "gemini-pro-1.5",
-      "model": "google/gemini-pro-1.5",
-      "temperature": 1,
+      "name": "gpt-4o-mini",
+      "model": "openai/gpt-4o-mini",
+      "temperature": 1.0,
       "top_p": 1.0,
       "repetition_penalty": 1
-    }
+    },
+
   ]
 }

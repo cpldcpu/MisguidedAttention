@@ -49,6 +49,7 @@ def query_llm(prompt, llm_config, temperature_override):
         )
         response.raise_for_status()  # Raise an HTTPError for bad responses
         if response.status_code == 200:
+            # print(f"Success: {response.status_code} {response.json()}")
             return response.json()["choices"][0]["message"]["content"]
         else:
             print(f"Error: {response.status_code}, {response.text}")

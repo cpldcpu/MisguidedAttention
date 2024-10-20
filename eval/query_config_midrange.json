@@ -22,7 +22,7 @@
       "repetition_penalty": 1
     },    
     {
-      "name": "gemini-pro-1.5",
+      "name": "gemini-flash-1.5",
       "model": "google/gemini-flash-1.5",
       "temperature": 0.7,
       "top_p": 1.0,
@@ -55,6 +55,7 @@
     {
         "name": "mixtral-8x22b-instruct",
         "model": "mistralai/mixtral-8x22b-instruct",
+        "max_tokens": 4000,
         "temperature": 1.0,
         "top_p": 1.0,
         "repetition_penalty": 1
