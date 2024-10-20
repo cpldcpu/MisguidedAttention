@@ -41,9 +41,9 @@ def run_inference(prompt, sys_prompt, max_depth=5):
                 "HTTP-Referer": "",  # Replace with your site URL
                 "X-Title": "MA_Eval"  # Replace with your app name
             },
-            json={
+            json={ # careful, if model keyword missing, openrouter defaults to 4o
                 # "model": "meta-llama/llama-3.1-70b-instruct",
-                # "model": "anthropic/claude-3.5-sonnet",  # careful, if model keyword missing, openrouter defaults to 4o
+                # "model": "anthropic/claude-3.5-sonnet",  
                 # "model": "anthropic/claude-3-haiku",  
                 "model": "google/gemini-flash-1.5",  
                 # "model": "google/gemini-pro-1.5",  
