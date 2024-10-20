@@ -1,0 +1,101 @@
+{
+  "birthday_problem_easy": {
+    "hermes-3-llama-3.1-70b": {
+      "average_score": 2.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 0.8
+      }
+    },
+    "claude-3-haiku": {
+      "average_score": 2.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 1.0
+      }
+    },
+    "gpt-4o-mini": {
+      "average_score": 2.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that the probability is close to 1 (larger than 0.99).": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 1.0
+      }
+    },
+    "gemini-flash-1.5": {
+      "average_score": 3.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that the probability is close to 1 (larger than 0.99).": 0.8
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 0.4
+      }
+    },
+    "llama-3.1-70b-instruct": {
+      "average_score": 1.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 0.6
+      }
+    },
+    "qwen-2.5-72b-instruct": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 1.0
+      }
+    },
+    "llama-3.1-nemotron-70b-instruct": {
+      "average_score": 3.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 0.4
+      }
+    },
+    "mixtral-8x22b-instruct": {
+      "average_score": 3.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 0.4
+      }
+    },
+    "dolphin-mixtral-8x22b": {
+      "average_score": 2.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 0.8
+      }
+    },
+    "wizardlm-2-8x22b": {
+      "average_score": 2.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 1.0
+      }
+    },
+    "o1-mini": {
+      "average_score": 4.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that the probability is close to 1 (larger than 0.99).": 0.6
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 1.0
+      }
+    }
+  }
+}

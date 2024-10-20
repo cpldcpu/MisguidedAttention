@@ -1,0 +1,211 @@
+{
+  "trolley_problem_easy": {
+    "hermes-3-llama-3.1-70b": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 1.0,
+        "Answer states to pull the lever": 1.0
+      }
+    },
+    "claude-3-haiku": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 1.0
+      }
+    },
+    "gpt-4o-mini": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 1.0
+      }
+    },
+    "gemini-flash-1.5": {
+      "average_score": 2.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 0.8
+      }
+    },
+    "llama-3.1-70b-instruct": {
+      "average_score": 1.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 0.2
+      },
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 0.8,
+        "Answer states to pull the lever": 1.0
+      }
+    },
+    "qwen-2.5-72b-instruct": {
+      "average_score": 1.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 1.0
+      }
+    },
+    "llama-3.1-nemotron-70b-instruct": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 0.2,
+        "Answer states not to pull the lever": 0.2
+      },
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 0.8,
+        "Answer states to pull the lever": 0.6
+      }
+    },
+    "mixtral-8x22b-instruct": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 1.0,
+        "Answer states not to pull the lever": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "dolphin-mixtral-8x22b": {
+      "average_score": 4.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 1.0,
+        "Answer states not to pull the lever": 0.8
+      },
+      "common_mistakes_stats": {}
+    },
+    "wizardlm-2-8x22b": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 1.0,
+        "Answer states not to pull the lever": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "o1-mini": {
+      "average_score": 2.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 0.0
+      },
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 0.6
+      }
+    }
+  },
+  "trolley_easy_forced": {
+    "hermes-3-llama-3.1-70b": {
+      "average_score": 1.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 0.2
+      },
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 0.8,
+        "Answer states to pull the lever": 1.0
+      }
+    },
+    "claude-3-haiku": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 1.0,
+        "Answer states to pull the lever": 1.0
+      }
+    },
+    "gpt-4o-mini": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 1.0,
+        "Answer states to pull the lever": 1.0
+      }
+    },
+    "gemini-flash-1.5": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 1.0,
+        "Answer states to pull the lever": 1.0
+      }
+    },
+    "llama-3.1-70b-instruct": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 1.0,
+        "Answer states to pull the lever": 1.0
+      }
+    },
+    "qwen-2.5-72b-instruct": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 1.0,
+        "Answer states to pull the lever": 1.0
+      }
+    },
+    "llama-3.1-nemotron-70b-instruct": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 1.0,
+        "Answer states to pull the lever": 1.0
+      }
+    },
+    "mixtral-8x22b-instruct": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 1.0,
+        "Answer states not to pull the lever": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "dolphin-mixtral-8x22b": {
+      "average_score": 4.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 0.8,
+        "Answer states not to pull the lever": 0.8
+      },
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 0.2,
+        "Answer states to pull the lever": 0.2
+      }
+    },
+    "wizardlm-2-8x22b": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 1.0,
+        "Answer states not to pull the lever": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "o1-mini": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 1.0,
+        "Answer states to pull the lever": 1.0
+      }
+    }
+  }
+}

@@ -81,7 +81,7 @@
       "average_score": 4.0,
       "num_evaluations": 4,
       "expected_behavior_stats": {
-        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.75
+        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.5
       },
       "common_mistakes_stats": {
         "Answer provides a solution that measures 45 minutes": 0.25,
@@ -92,7 +92,7 @@
       "average_score": 4.6,
       "num_evaluations": 5,
       "expected_behavior_stats": {
-        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.8
+        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.0
       },
       "common_mistakes_stats": {
         "Answer provides a solution that lights both ropes simultaneously": 0.4
@@ -111,7 +111,7 @@
       "average_score": 3.6,
       "num_evaluations": 5,
       "expected_behavior_stats": {
-        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.4
+        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.2
       },
       "common_mistakes_stats": {
         "Answer provides a solution that measures 45 minutes": 0.2,
@@ -139,7 +139,7 @@
       "average_score": 4.2,
       "num_evaluations": 5,
       "expected_behavior_stats": {
-        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.6
+        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.0
       },
       "common_mistakes_stats": {
         "Answer provides a solution that lights both ropes simultaneously": 0.4
@@ -149,7 +149,7 @@
       "average_score": 2.2,
       "num_evaluations": 5,
       "expected_behavior_stats": {
-        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.4
+        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.2
       },
       "common_mistakes_stats": {
         "Answer provides a solution that measures 45 minutes": 0.8,

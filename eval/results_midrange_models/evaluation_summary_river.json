@@ -1,0 +1,356 @@
+{
+  "river_crossing_simple": {
+    "hermes-3-llama-3.1-70b": {
+      "average_score": 4.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 0.8
+      },
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 0.2,
+        "Answer provides complex solutions with multiple trips": 0.2,
+        "Answer is provided as itemized list": 0.2
+      }
+    },
+    "claude-3-haiku": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "gpt-4o-mini": {
+      "average_score": 2.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 0.4
+      },
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 0.6,
+        "Answer provides complex solutions with multiple trips": 0.6,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "gemini-flash-1.5": {
+      "average_score": 4.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "llama-3.1-70b-instruct": {
+      "average_score": 2.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 0.8,
+        "Answer provides complex solutions with multiple trips": 0.8,
+        "Answer is provided as itemized list": 0.8
+      }
+    },
+    "qwen-2.5-72b-instruct": {
+      "average_score": 2.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 0.4
+      },
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 0.6,
+        "Answer provides complex solutions with multiple trips": 0.6,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "llama-3.1-nemotron-70b-instruct": {
+      "average_score": 2.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 0.8,
+        "Answer provides complex solutions with multiple trips": 0.8,
+        "Answer is provided as itemized list": 0.8
+      }
+    },
+    "mixtral-8x22b-instruct": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 0.6
+      }
+    },
+    "dolphin-mixtral-8x22b": {
+      "average_score": 3.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 0.6
+      },
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 0.4,
+        "Answer provides complex solutions with multiple trips": 0.4,
+        "Answer is provided as itemized list": 0.8
+      }
+    },
+    "wizardlm-2-8x22b": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "o1-mini": {
+      "average_score": 4.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 0.8
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 0.6,
+        "Answer provides solution to full river crossing problem with multiple trips": 0.2,
+        "Answer provides complex solutions with multiple trips": 0.2
+      }
+    }
+  },
+  "river_crossing_easy": {
+    "hermes-3-llama-3.1-70b": {
+      "average_score": 3.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "claude-3-haiku": {
+      "average_score": 2.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "gpt-4o-mini": {
+      "average_score": 2.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "gemini-flash-1.5": {
+      "average_score": 3.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "llama-3.1-70b-instruct": {
+      "average_score": 2.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "qwen-2.5-72b-instruct": {
+      "average_score": 3.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "llama-3.1-nemotron-70b-instruct": {
+      "average_score": 2.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "mixtral-8x22b-instruct": {
+      "average_score": 3.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 0.8
+      }
+    },
+    "dolphin-mixtral-8x22b": {
+      "average_score": 2.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 0.6
+      }
+    },
+    "wizardlm-2-8x22b": {
+      "average_score": 3.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "o1-mini": {
+      "average_score": 3.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    }
+  },
+  "river_crossing_even_simpler": {
+    "hermes-3-llama-3.1-70b": {
+      "average_score": 4.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 0.4
+      }
+    },
+    "claude-3-haiku": {
+      "average_score": 2.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "gpt-4o-mini": {
+      "average_score": 4.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 0.8
+      }
+    },
+    "gemini-flash-1.5": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "llama-3.1-70b-instruct": {
+      "average_score": 4.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 0.6
+      }
+    },
+    "qwen-2.5-72b-instruct": {
+      "average_score": 4.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 0.2
+      }
+    },
+    "llama-3.1-nemotron-70b-instruct": {
+      "average_score": 3.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 0.8
+      },
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 0.2,
+        "Answer provides complex solutions with multiple trips": 0.2,
+        "Answer is provided as itemized list": 1.0
+      }
+    },
+    "mixtral-8x22b-instruct": {
+      "average_score": 4.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 0.2
+      }
+    },
+    "dolphin-mixtral-8x22b": {
+      "average_score": 4.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 0.8
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 0.6,
+        "Answer provides solution to full river crossing problem with multiple trips": 0.2,
+        "Answer provides complex solutions with multiple trips": 0.2
+      }
+    },
+    "wizardlm-2-8x22b": {
+      "average_score": 3.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 0.8
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 1.0,
+        "Answer provides solution to full river crossing problem with multiple trips": 0.2,
+        "Answer provides complex solutions with multiple trips": 0.2
+      }
+    },
+    "o1-mini": {
+      "average_score": 4.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 0.2
+      }
+    }
+  }
+}

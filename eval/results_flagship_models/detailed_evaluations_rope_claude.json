@@ -1136,8 +1136,8 @@
         "expected_behavior": [
           {
             "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope",
-            "met": true,
-            "comment": "The answer correctly concludes that 60 minutes can be measured using the two ropes, although it involves lighting both ropes in a specific sequence."
+            "met": false,
+            "comment": "corrected manually"
           }
         ],
         "common_mistakes": [
@@ -1238,8 +1238,8 @@
         "expected_behavior": [
           {
             "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope",
-            "met": true,
-            "comment": "The answer correctly concludes that 60 minutes can be measured by lighting one rope at one end and the other rope at both ends."
+            "met": false,
+            "comment": "corrected manually"
           }
         ],
         "common_mistakes": [
@@ -1288,8 +1288,8 @@
         "expected_behavior": [
           {
             "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope",
-            "met": true,
-            "comment": "The answer correctly concludes that 60 minutes can be measured by lighting one rope (the first rope) at the beginning and then lighting its other end after 30 minutes."
+            "met": false,
+            "comment": "corrected manually"
           }
         ],
         "common_mistakes": [
@@ -1313,8 +1313,8 @@
         "expected_behavior": [
           {
             "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope",
-            "met": true,
-            "comment": "The answer correctly concludes that 60 minutes can be measured by lighting one rope at one end and the other rope at both ends."
+            "met": false,
+            "comment": "corrected manually"
           }
         ],
         "common_mistakes": [
@@ -1338,8 +1338,8 @@
         "expected_behavior": [
           {
             "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope",
-            "met": true,
-            "comment": "The answer correctly concludes that 60 minutes can be measured by lighting one rope at the beginning and then lighting its other end after 30 minutes."
+            "met": false,
+            "comment": "corrected manually"
           }
         ],
         "common_mistakes": [
@@ -1592,8 +1592,8 @@
         "expected_behavior": [
           {
             "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope",
-            "met": true,
-            "comment": "The answer correctly concludes that 60 minutes can be measured using the two ropes, although it involves lighting both ropes at different times."
+            "met": false,
+            "comment": "corrected manually"
           }
         ],
         "common_mistakes": [
@@ -1873,8 +1873,8 @@
         "expected_behavior": [
           {
             "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope",
-            "met": true,
-            "comment": "The answer correctly uses one rope to measure the full 60 minutes, while the second rope is used to mark the 30-minute point."
+            "met": false,
+            "comment": "corrected manually"
           }
         ],
         "common_mistakes": [
@@ -1898,8 +1898,8 @@
         "expected_behavior": [
           {
             "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope",
-            "met": true,
-            "comment": "The answer correctly concludes that 60 minutes can be measured by lighting one rope at one end, while using the second rope as a 30-minute marker."
+            "met": false,
+            "comment": "corrected manually"
           }
         ],
         "common_mistakes": [
@@ -1923,8 +1923,8 @@
         "expected_behavior": [
           {
             "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope",
-            "met": true,
-            "comment": "The answer correctly concludes that 60 minutes can be measured using the two ropes, though it uses both ropes in the solution."
+            "met": false,
+            "comment": "corrected manually"
           }
         ],
         "common_mistakes": [
@@ -2075,8 +2075,8 @@
         "expected_behavior": [
           {
             "behavior": "Answer concludes that 60 minutes can be measured by lighting one rope",
-            "met": true,
-            "comment": "The output correctly states that 60 minutes can be measured by lighting one rope at one end and letting it burn completely."
+            "met": false,
+            "comment": "corrected manually"
           }
         ],
         "common_mistakes": [
