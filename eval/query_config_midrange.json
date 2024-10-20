@@ -81,6 +81,13 @@
       "temperature": 1,
       "top_p": 1.0,
       "repetition_penalty": 1
+    },
+    {
+      "name": "gpt-4-turbo",
+      "model": "openai/gpt-4-turbo",
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "repetition_penalty": 1
     }
   ]
 }
