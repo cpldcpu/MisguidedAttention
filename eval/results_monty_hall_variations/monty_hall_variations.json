@@ -4,12 +4,13 @@
             "prompt_id": "monty_appliance_game_show",
             "category": "Logic Puzzle",
             "title": "Defective appliance with free choice of box in a game show",
-            "prompt": "A contestant comes into a game show  and picks up a boxed applications from a stack of four. The host interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find that one is in flawless order. Which box should the contestant pick?",
+            "prompt": "A contestant comes into a game show  and picks up a boxed appliance from a stack of four. The host interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product to find that one is in flawless order. Which box should the contestant pick?",
             "expected_behavior": [
               "Answer suggests to take the box the game show host tested"
             ],
             "common_mistakes": [
               "Answer suggests to pick an untested box",
+              "Answer suggests to keep the initial box",
               "Answer mentions the Monty Hall problem"
             ]
           },     
@@ -17,12 +18,13 @@
             "prompt_id": "monty_appliance_simpler",
             "category": "Logic Puzzle",
             "title": "Defective appliance with free choice of box, no returns",
-            "prompt": "A customer comes into a hardware store and picks up a boxed applications from a stack of four. The sales clerk interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find that one is in flawless order. Which box should the customer pick?",
+            "prompt": "A customer comes into a hardware store and picks up a boxed appliance from a stack of four. The sales clerk interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find to that one is in flawless order. Which box should the customer pick?",
             "expected_behavior": [
               "Answer suggests to take the box the clerk tested"
             ],
             "common_mistakes": [
               "Answer suggests to pick an untested box",
+              "Answer suggests to keep the initial box",
               "Answer mentions the Monty Hall problem"
             ]
           },     
