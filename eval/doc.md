@@ -166,3 +166,9 @@
 
              "original_question": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
         "original_response": "The man and the sheep can cross the river using the following steps:\n\n1. The man gets into the boat and takes the sheep with him to the other side of the river.\n2. The man leaves the sheep on the other side and returns alone in the boat.\n3. The man gets out of the boat on the original side of the river.\n\nNow, both the man and the sheep are on the other side of the river, and the problem is solved. The key point is that the boat has space for one human and one animal, so the man and the sheep can cross the river together in a single trip."
+
+
+### 
+
+My friend wants to gift a computer to me. He has four identically looking ones, but told me that one of them is defective while the other three work perfectly. I picked one.  My friends turned one of the three remaining ones on and it turned out to be a working one. Should I keep the computer I picked or switch to another one?
+

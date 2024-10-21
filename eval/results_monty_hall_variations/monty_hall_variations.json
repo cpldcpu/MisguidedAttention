@@ -1,0 +1,98 @@
+{
+    "prompts": [
+        {
+            "prompt_id": "monty_appliance_game_show",
+            "category": "Logic Puzzle",
+            "title": "Defective appliance with free choice of box in a game show",
+            "prompt": "A contestant comes into a game show  and picks up a boxed applications from a stack of four. The host interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find that one is in flawless order. Which box should the contestant pick?",
+            "expected_behavior": [
+              "Answer suggests to take the box the game show host tested"
+            ],
+            "common_mistakes": [
+              "Answer suggests to pick an untested box",
+              "Answer mentions the Monty Hall problem"
+            ]
+          },     
+        {
+            "prompt_id": "monty_appliance_simpler",
+            "category": "Logic Puzzle",
+            "title": "Defective appliance with free choice of box, no returns",
+            "prompt": "A customer comes into a hardware store and picks up a boxed applications from a stack of four. The sales clerk interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find that one is in flawless order. Which box should the customer pick?",
+            "expected_behavior": [
+              "Answer suggests to take the box the clerk tested"
+            ],
+            "common_mistakes": [
+              "Answer suggests to pick an untested box",
+              "Answer mentions the Monty Hall problem"
+            ]
+          },     
+        {
+            "prompt_id": "monty_appliance_free_choice",
+            "category": "Logic Puzzle",
+            "title": "Defective appliance with free choice of box",
+            "prompt": "A customer in a hardware store returned a defective appliance in original packaging. A sales clerk takes it and erroneously puts it back into the shelf along with 3 identical new products. Another customer comes in and wants to buy the product. The sales clerk interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find that one is in flawless order. Which box should the customer pick?",
+            "expected_behavior": [
+              "Answer suggests to take the box the clerk tested"
+            ],
+            "common_mistakes": [
+              "Answer suggests to pick an untested box",
+              "Answer mentions the Monty Hall problem"
+            ]
+          },     
+          {
+            "prompt_id": "monty_defective_appliance",
+            "category": "Logic Puzzle",
+            "title": "Inverse Monty Hall Problem with defective appliance",
+            "prompt": "A customer in a hardware store returned a defective appliance in original packaging. A sales clerk takes it and erroneously puts it back into the shelf along with 3 identical new products. Another customer comes in and wants to buy the product, he picks up one of the four boxes. The sales clerk interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find that one is in flawless order. Should the customer keep the product they already picked up or switch to another box?",
+            "expected_behavior": [
+              "Answer suggests to keep the initial box",
+              "Answer suggests to take the box the clerk tested"
+            ],
+            "common_mistakes": [
+              "Answer suggests to switch the box",
+              "Answer mentions the Monty Hall problem",
+              "Answer mentions the probability of picking a defective appliance is 1/3"
+            ]
+          },             
+          {
+        "prompt_id": "monty_three_computers",
+        "category": "Logic Puzzle",
+        "title": "Inverse Monty Hall Problem with Computers",
+        "prompt": "Your friend wants to gift a computer to you. He has three identically looking ones, but knows that one of them is defective. You pick one. Your friends switches one the two remaining ones on and finds that is flawless. Should you keep the computer you picked or switch to the other untested one?",
+        "expected_behavior": [
+          "Answer suggests to keep the initial computer"
+        ],
+        "common_mistakes": [
+          "Answer suggests to switch the computer",
+          "Answer explains that the initial choice has a 2/3 chance of choosing a working computer"
+        ]
+      },
+      {
+        "prompt_id": "monty_four_computers",
+        "category": "Logic Puzzle",
+        "title": "Inverse Monty Hall Problem with four Computers",
+        "prompt": "Your friend wants to gift a computer to you. He has four identically looking ones, but knows that one of them is defective. You pick one. Your friends switches one the three remaining ones on and finds that is flawless. Should you keep the computer you picked or switch to another one?",
+        "expected_behavior": [
+          "Answer suggests to keep the initial computer"
+        ],
+        "common_mistakes": [
+          "Answer suggests to switch the computer",
+          "Answer explains that the initial choice has a 2/3 chance of choosing a working computer"
+        ]
+      },            
+      {
+        "prompt_id": "monty_hall_inverse",
+        "category": "Logic Puzzle",
+        "title": "Inverse Monty Hall Problem",
+        "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "expected_behavior": [
+          "Answer suggests to keep the existing door"
+        ],
+        "common_mistakes": [
+          "Answer suggests to switch the door",
+          "Answer explains that the initial choice has a 2/3 chance of choosing a donkey",
+          "Answer does not explain that the initial choice has a 2/3 chance of winning a car"
+        ]
+      }  
+    ]
+}

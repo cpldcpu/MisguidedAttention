@@ -43,7 +43,6 @@
         "top_p": 0.95,
         "repetition_penalty": 1
     },  
-
     {
       "name": "mistral-large",
       "model": "mistralai/mistral-large",
@@ -58,6 +57,14 @@
       "top_p": 1.0,
       "repetition_penalty": 1
     },
+
+    {
+      "name": "claude-3-opus",
+      "model": "anthropic/claude-3-opus",
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
     {
       "name": "o1-preview",
       "model": "openai/o1-preview",
@@ -65,13 +72,6 @@
       "temperature": 1,
       "top_p": 1.0,
       "repetition_penalty": 1
-    },
-    {
-      "name": "claude-3-opus",
-      "model": "anthropic/claude-3-opus",
-      "temperature": 1.0,
-      "top_p": 1.0,
-      "repetition_penalty": 1
-    }    
+    }          
   ]
 }

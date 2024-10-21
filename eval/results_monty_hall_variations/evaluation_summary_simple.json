@@ -1,0 +1,170 @@
+{
+  "monty_appliance_game_show": {
+    "llama-3.1-405b-instruct": {
+      "average_score": 2.0,
+      "num_evaluations": 4,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 1.0,
+        "Answer mentions the Monty Hall problem": 0.5,
+        "Answer mentions the Monty Hall problem": 0.25
+      }
+    },
+    "hermes-3-llama-3.1-405": {
+      "average_score": 4.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the game show host tested": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer mentions the Monty Hall problem": 0.2
+      }
+    },
+    "claude-3.5-sonnet": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 1.0,
+        "Answer mentions the Monty Hall problem": 0.8,
+        "Answer mentions the Monty Hall problem": 0.2
+      }
+    },
+    "gpt-4o": {
+      "average_score": 1.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 1.0,
+        "Answer mentions the Monty Hall problem": 0.6,
+        "Answer mentions the Monty Hall problem": 0.4
+      }
+    },
+    "gemini-pro-1.5": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 1.0,
+        "Answer mentions the Monty Hall problem": 0.2
+      }
+    },
+    "grok-2": {
+      "average_score": 3.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 1.0,
+        "Answer mentions the Monty Hall problem": 0.4
+      }
+    },
+    "mistral-large": {
+      "average_score": 1.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 1.0,
+        "Answer mentions the Monty Hall problem": 0.2
+      }
+    },
+    "gpt-4-32k": {
+      "average_score": 1.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 1.0
+      }
+    },
+    "claude-3-opus": {
+      "average_score": 1.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 0.8,
+        "Answer mentions the Monty Hall problem": 0.6
+      }
+    }
+  },
+  "monty_appliance_simpler": {
+    "llama-3.1-405b-instruct": {
+      "average_score": 4.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 0.6666666666666666
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 0.3333333333333333
+      }
+    },
+    "hermes-3-llama-3.1-405": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "claude-3.5-sonnet": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "gpt-4o": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 1.0
+      }
+    },
+    "gemini-pro-1.5": {
+      "average_score": 1.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 1.0
+      }
+    },
+    "grok-2": {
+      "average_score": 2.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 0.8
+      }
+    },
+    "mistral-large": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "gpt-4-32k": {
+      "average_score": 3.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 0.6
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 0.6
+      }
+    },
+    "claude-3-opus": {
+      "average_score": 4.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 0.8
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 0.2
+      }
+    }
+  }
+}
