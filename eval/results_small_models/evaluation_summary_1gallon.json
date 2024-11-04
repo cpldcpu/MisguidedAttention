@@ -1,0 +1,71 @@
+{
+  "jugs_1_gallon": {
+    "mistral-7b-instruct-v0.3": {
+      "average_score": 1.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer with instructions to pour water between the jugs multiple times": 1.0,
+        "Answer is formatted as itemized list with more than 3 entries": 1.0
+      }
+    },
+    "ministral-8b": {
+      "average_score": 3.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-gallon jugs once is sufficient to measure 1 gallon": 0.4
+      },
+      "common_mistakes_stats": {
+        "Answer with instructions to pour water between the jugs multiple times": 0.6,
+        "Answer is formatted as itemized list with more than 3 entries": 0.4
+      }
+    },
+    "ministral-3b": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-gallon jugs once is sufficient to measure 1 gallon": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer with instructions to pour water between the jugs multiple times": 0.6,
+        "Answer is formatted as itemized list with more than 3 entries": 0.8
+      }
+    },
+    "llama-3.1-8b-instruct": {
+      "average_score": 1.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer with instructions to pour water between the jugs multiple times": 1.0,
+        "Answer is formatted as itemized list with more than 3 entries": 1.0
+      }
+    },
+    "llama-3.2-3b-instruct": {
+      "average_score": 3.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-gallon jugs once is sufficient to measure 1 gallon": 0.4
+      },
+      "common_mistakes_stats": {
+        "Answer with instructions to pour water between the jugs multiple times": 0.6,
+        "Answer is formatted as itemized list with more than 3 entries": 0.4
+      }
+    },
+    "llama-3.2-1b-instruct": {
+      "average_score": 2.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-gallon jugs once is sufficient to measure 1 gallon": 0.2
+      },
+      "common_mistakes_stats": {}
+    },
+    "qwen-2.5-7b-instruct": {
+      "average_score": 4.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-gallon jugs once is sufficient to measure 1 gallon": 0.8
+      },
+      "common_mistakes_stats": {}
+    }
+  }
+}
