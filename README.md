@@ -1,19 +1,18 @@
-
 # Misguided Attention
 
 *Version 0.2 (November 2024)*
 
-This is a collection of prompts designed to challenge the reasoning abilities of large language models when presented with misguiding information. These prompts are slight variations of commonly known thought experiments, riddles, or paradoxes ("trick questions").
+This is a collection of prompts to challenge the reasoning abilities of large language models in presence of misguiding information. They are slight variations of commonly known thought experiments, riddles or paradoxes ("trick questions"). 
 
-Ideally, LLMs should solve these problems as stated through logical deduction. However, many LLMs mistakenly recognize the unmodified versions due to their frequent occurrence in training data. As a result, they respond with solutions to the original problems instead of analyzing the modified versions step-by-step. In some cases, one can observe intertwined reasoning where conflicting thoughts alternate within the same response.
+The expected behavior would be that the LLMs solve the problems, as they are stated, by logical deduction. However, many LLMs will mistakenly recognize the unmodified problem due to frequent occurrence in their training data. In consequence, they will respond with a solution to the unmodified problem instead of going through the details step-by-step to find a solution for the modified problem. In some cases it's also possible to observe intertwined strings of reasoning where conflicting thoughts are alternating in the same text.
 
-This behavior parallels human cognition, where recognition of familiar patterns leads to the execution of previously learned routines, even when they don't apply to the current situation. This phenomenon is known as the [Einstellungseffekt](https://en.wikipedia.org/wiki/Einstellung_effect). However, one would expect that a computerized reasoning system would not be subject to such a fallacy...
+Parallels to this can be drawn to human behavior, where recognition of familiar patterns leads to the execution of previously learned routines, even if they are not applicable to the current situation. This is known as the [Einstellungseffekt](https://en.wikipedia.org/wiki/Einstellung_effect). However, we would expect that a computerized reasoning system would not be subject to such a fallacy...
 
 ## Evaluation
 
-The ability of LLMs to solve these problems has consistently improved over time, especially with the introduction of internal chain-of-thought reasoning in OpenAI's o1 models that enables self-correction during response generation.
+The ability of LLMs to solve these problems has consistently improved over time, especially with the introduction of internal chain-of-though reasoning in OpenAIs o1 models that allows to correct for earlier mistakes in the response. 
 
-To better track these improvements, I have started to set up an evaluation benchmark using a subset of these problems. You can find the current results in the [evaluation folder](eval/). Additionally, I will tag releases of this dataset to document progress over time.
+To track these changes better, I started to set up an evaluation benchmark of a subset. You can find the current status in the [evaluation folder](eval/). In addition, I will tag releases of this dataset to track the progress over time.
 
 ### Original Problems
 
@@ -24,7 +23,7 @@ For reference here are links to explanations of some of the original unmodified 
 - Schrödingers cat: https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat
 - Unexpected hanging paradox: https://en.wikipedia.org/wiki/Unexpected_hanging_paradox
 - River crossing puzzle: https://en.wikipedia.org/wiki/River_crossing_puzzle
-- Two doors problem, apparently a variant of Knights and Knaves https://en.wikipedia.org/wiki/Knights_and_Knaves from this movie https://en.wikipedia.org/wiki/Labyrinth_(1986_film)
+- Two doors problem, apparently a variant of Knights and Knaves: https://en.wikipedia.org/wiki/Knights_and_Knaves from this movie: https://en.wikipedia.org/wiki/Labyrinth_(1986_film)
 - Water pouring puzzle: https://en.wikipedia.org/wiki/Water_pouring_puzzle
 - Rope burning puzzle: https://en.wikipedia.org/wiki/Rope_burning_puzzle
   
@@ -122,7 +121,7 @@ A most basic version of the jug problem, that still triggers list writing in man
 
 #### Roasting Nuts.
 
-*"i have a roasting-jug that can hold 300 nuts and a roasting jug that can hold 700 nuts. I also have a digital kitchen scale. i want to roast eactly 600 nuts. what do i do?"*
+*"i have a roasting-jug that can hold 300 nuts and a roasting jug that can hold 700 nuts. I also have a digital kitchen scale. i want to roast exactly 600 nuts. what do i do?"*
 
 #### Two door problem: Just use the exit door
 
@@ -142,7 +141,7 @@ The large LLMs seem to be able to solve this, but many smaller ones don't get th
 
 *"I have 13 coins, one of them is fake. I also have a digital scale. How do I identify the fake coin?"*
 
-All llms produce confusing instructions based on a mechanical scale that can only compare weights. They also do not understand how to partition the 13 coins.
+All LLMs will produce confusing instructions based on a mechanical scale that can only compare weights. They also do not understand how to partition the 13 coins.
 
 #### Rope burning puzzle made impossible
 
