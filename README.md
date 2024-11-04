@@ -1,19 +1,23 @@
 
 # Misguided Attention
 
-This is a collection of prompts to challenge the reasoning abilities of large language models in presence of misguiding information. They are slight variations of commonly known thought experiments, riddles or paradoxes ("trick questions"). 
+*Version 0.2 (November 2024)*
 
-The expected behavior would be that the LLMs solve the problems, as they are stated, by logical deduction. However, many LLMs will mistakenly recognize the unmodified problem due to frequent occurrence in their training data. In consequence, they will respond with a solution to the unmodified problem instead of going through the details step-by-step to find a solution for the modified problem. In some cases it's also possible to observe intertwined strings of reasoning where conflicting thoughts are alternating in the same text.
+This is a collection of prompts designed to challenge the reasoning abilities of large language models when presented with misguiding information. These prompts are slight variations of commonly known thought experiments, riddles, or paradoxes ("trick questions").
 
-Parallels to this can be drawn to human behavior, where recognition of familiar patterns leads to the execution of previously learned routines, even if they are not applicable to the current situation. This is known as the [Einstellungseffekt](https://en.wikipedia.org/wiki/Einstellung_effect). However, we would expect that a computerized reasoning system would not be subject to such a fallacy...
+Ideally, LLMs should solve these problems as stated through logical deduction. However, many LLMs mistakenly recognize the unmodified versions due to their frequent occurrence in training data. As a result, they respond with solutions to the original problems instead of analyzing the modified versions step-by-step. In some cases, one can observe intertwined reasoning where conflicting thoughts alternate within the same response.
 
-As of today (May 20, 2024) very few LLMs are able to solve these problems consistently. Update (September 15,2024): OpenAIs new o1 model shows a dramatic improvement in solving these problems. Detailed evaluation to come.
+This behavior parallels human cognition, where recognition of familiar patterns leads to the execution of previously learned routines, even when they don't apply to the current situation. This phenomenon is known as the [Einstellungseffekt](https://en.wikipedia.org/wiki/Einstellung_effect). However, one would expect that a computerized reasoning system would not be subject to such a fallacy...
 
-Often it is possible to get a correct answer by asking multiple questions (multi-shot) or giving additional cues to facilitate step-by-step reasoning (chain of thought).
+## Evaluation
+
+The ability of LLMs to solve these problems has consistently improved over time, especially with the introduction of internal chain-of-thought reasoning in OpenAI's o1 models that enables self-correction during response generation.
+
+To better track these improvements, I have started to set up an evaluation benchmark using a subset of these problems. You can find the current results in the [evaluation folder](eval/). Additionally, I will tag releases of this dataset to document progress over time.
 
 ### Original Problems
 
-For reference here are links to explanations of the original unmodified problems:
+For reference here are links to explanations of some of the original unmodified problems:
 - Trolley problem: https://en.wikipedia.org/wiki/Trolley_problem
 - Monty Hall problem: https://en.wikipedia.org/wiki/Monty_Hall_problem
 - Barber paradox: https://en.wikipedia.org/wiki/Barber_paradox
@@ -26,19 +30,19 @@ For reference here are links to explanations of the original unmodified problems
   
 ## Prompts based on logic puzzles
 
-### No Trolley Problem
+#### No Trolley Problem
 
 *"Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?"*
 
 Only gpt-4o and gpt-4t solved this.
 
-### A less confusing Monty Hall Problem
+#### A less confusing Monty Hall Problem
 
 *"Imagine you're on a game show, and there are three doors in front of you. Behind one door is a car, and behind the other two doors are goats. You don't know what's behind any of the doors. You get to choose one door. Let's say you pick Door #1. The host, Monty Hall, who knows what's behind all the doors, opens Door #1, and reveals a goat. Now, you have two doors left: Door #3 and Door #2. You pick Door #3. Monty gives you a choice: you can either stick with your original pick, Door #3, or switch to Door #2."*
 
 yi-large and gpt-4o solve this, gpt-4t fails. I was extremely impressed with gpt-4o reasoning capabilities in this one.
 
-### Inverse Monty Hall Problem
+#### Inverse Monty Hall Problem
 
 Thanks to u/TheHoboJed for this one.
 
@@ -52,19 +56,19 @@ Most llms will come up with a strategy to win the donkey instead of the car.
 
 None get this consistently right, gemini-pro-tuned and yi-large did once
 
-### Dead Schrödinger's cat
+#### Dead Schrödinger's cat
 
 *"A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?"*
 
 No LLM gets this consistently right without additional cues or multi-shotting
 
-### No Paradox in an expected Hanging
+#### No Paradox in an expected Hanging
 
 *"Imagine a judge tells a prisoner that he will be hanged at noon on one weekday in the following week but that the execution will be a surprise to the prisoner. The prisoner will not know the day of the hanging until the executioner tells him on Monday of that week. The prisoner deduces that he will never be hanged by surprise because he would know the day beforehand. The prisoner is executed on a Friday. Was the execution a surprise to the prisoner?"*
 
 There is still some room for interpretation in this question. Confusing answers by all LLMs
 
-### Easy river crossing
+#### Easy river crossing
 
 Thanks to /u/Hugi_R for inspiring this one
 
@@ -72,7 +76,7 @@ Thanks to /u/Hugi_R for inspiring this one
 
 All tested llm will provide a complex solution for the original problem instead of the much simpler one of this variant.
 
-### Don't ever ask an LLM to help you cross a river
+#### Don't ever ask an LLM to help you cross a river
 
 An even simpler version of the prompt above, thanks to @DrChristophFH.
 
@@ -80,7 +84,7 @@ An even simpler version of the prompt above, thanks to @DrChristophFH.
 
 Most if not all LLMs will come up with overly complex scenarios.
 
-### Even simpler river crossing
+#### Even simpler river crossing
 
 Further simplification of the prompt to ensure that there are even fewer opportunities to misunderstand the objective.
 
@@ -88,7 +92,7 @@ Further simplification of the prompt to ensure that there are even fewer opportu
 
 Some LLMs get it, most will still come up with messy solutions. Most llms will hallicinate solutions that involve multiple combinations of back-and-forth trips. Also both subjects eating is a concern that is tried to be addressed, with sometimes hilarious results: e.g. the man needs to be prevented from eating the sheep, or the sheep shall not eat grass.
 
-### Measuring 6 liters.
+#### Measuring 6 liters.
 
 Thank to /u/hvoecking for this one.
 
@@ -96,7 +100,7 @@ Thank to /u/hvoecking for this one.
 
 Some LLMs will get this right, others come up with amazing way to make things complicated.
 
-### Measuring 4 liters.
+#### Measuring 4 liters.
 
 A variation of the prompt above.
 
@@ -104,29 +108,29 @@ A variation of the prompt above.
 
 **Zero** LLMs have been able to provide a proper response to this so far.
 
-### Measuring 3 liters.
+#### Measuring 3 liters.
 
 *"I have a 1- and a 2-liter jug. I want to measure exactly 3 liters."*
 
 Most LLMs will come up with overly complex nonsense, triggered by a need to write itemized lists.
 
-### Measuring 1 liters.
+#### Measuring 1 liters.
 
 *"I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liters."*
 
 A most basic version of the jug problem, that still triggers list writing in many smaller LLMs. 
 
-### Roasting Nuts.
+#### Roasting Nuts.
 
 *"i have a roasting-jug that can hold 300 nuts and a roasting jug that can hold 700 nuts. I also have a digital kitchen scale. i want to roast eactly 600 nuts. what do i do?"*
 
-### Two door problem: Just use the exit door
+#### Two door problem: Just use the exit door
 
 *"You are in a room with two doors. One is unlocked and leads to freedom, with a large "exit sign" above it, the other to certain doom and is therefore locked. There are two guards: one always tells the truth, and the other always lies. You don't know which is which. You can ask one guard one question or just leave. What do you do?"*
 
 Almost all llms would strike up an unnecessary discussion instead of leaving quietly.
 
-### Feathers or steel?
+#### Feathers or steel?
 
 Thanks to /u/Avo-ka for this one!
 
@@ -134,30 +138,43 @@ Thanks to /u/Avo-ka for this one!
 
 The large LLMs seem to be able to solve this, but many smaller ones don't get the difference.
 
-### That's not how digital scales work
+#### That's not how digital scales work
 
 *"I have 13 coins, one of them is fake. I also have a digital scale. How do I identify the fake coin?"*
 
 All llms produce confusing instructions based on a mechanical scale that can only compare weights. They also do not understand how to partition the 13 coins.
 
-
-
-### Rope burning puzzle made impossible
+#### Rope burning puzzle made impossible
 
 *"You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?"*
 
 There is no clear solution to this problem, yet most LLMs will find one.
 
-### Rope burning puzzle made easy
+#### Rope burning puzzle made easy
 
 *"You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using these two ropes and matches to light them?"*
 
 There is a very simple solution to this problem, yet most LLMs will find a complex one or incorrect one.
 
-
 #### There are many different ways to measure 10 minutes using a rope, are there?
 
 *"How do i use a rope to measure 10 minutes?"*
+
+Valid solutions do not involve using a rope with a burn time of 60 minutes
+
+### Additions October 2024
+
+Most of these were contributed by [@av](https://github.com/av). Thanks a lot!
+
+### Easier birthday problem
+
+*"In a room of 30 people, what's the probability that at least two do not share a birthday?"*
+
+Most LLMs will provide a solution to the original birthday problem instead. 
+
+#### Parallelism
+
+*"If it takes 50 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?"*
 
 ## Prompts based on riddles
 
@@ -179,10 +196,32 @@ Definitely not your age
 
 Definitely not a barber
 
+### Update October 2024
+
+*"What has two banks and money?"*
+
+Definitely not a river
+
+*"What walks on four legs in the morning, four in the afternoon, and four in the evening?"*
+
+Definitely not a human
+
+*"What occurs once in a second, twice in a moment, but never in a thousand years?"*
+ 
+ The answer is not "letter M"
+
+Variant 1: *"What happens when a stoppable force meets an immovable object?"*
+Variant 2: *"What happens when a unstoppable force meets a movable object?"*
+
+The first variant seems to throw off more llms.
+
 ## Other Prompts
 
-### Version numbers? ###
+#### Version numbers? 
 
 *"9.11 or 9.9 which number is larger?"*
 
 This has been making the rounds in July '24. The answer should be quite straightforward, but many frontier-LLMs get it wrong often (gpt-4o, Mistral Large 2, Claude-3.5-Sonnet, but not Phi-3!). Interestingly this is not the case when slightly altering the decimals, e.g. 9.12. There has been speculation that this is related to version numbering.
+
+
+
