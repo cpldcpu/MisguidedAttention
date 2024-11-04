@@ -1,6 +1,6 @@
 # Misguided Attention
 
-*Version 0.2 (November 2024)*
+*Version 0.2 (November 2024)* - **[Evaluation](eval/)**
 
 This is a collection of prompts to challenge the reasoning abilities of large language models in presence of misguiding information. They are slight variations of commonly known thought experiments, riddles or paradoxes ("trick questions"). 
 
