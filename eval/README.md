@@ -22,8 +22,10 @@ Also surprising is the good performance of Gemini-Flash, especially considering 
 
 ## How to run the evaluation
 
-.. to be added
+The evaluation scripts can be found in the [`harness`](./harness) folder. 
+
+... more usage information to be added.
 
 ## Findings and issues encountered
 
-.. to be added
+...  to be added
