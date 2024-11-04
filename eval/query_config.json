@@ -1,10 +1,10 @@
 {
   "llms": [
     {
-      "name": "gpt-4o",
-      "model": "openai/gpt-4o",
-      "temperature": 0.7,
-      "top_p": 1.0,
+      "name": "claude-3.5-sonnet-new",
+      "model": "anthropic/claude-3.5-sonnet",
+      "temperature": 0.9,
+      "top_p": 0.9,
       "repetition_penalty": 1
     }  
   ]
