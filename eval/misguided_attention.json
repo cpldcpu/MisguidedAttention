@@ -1,0 +1,182 @@
+{
+    "prompts": [
+      {
+        "prompt_id": "trolley_problem_easy",
+        "category": "Logic Puzzle",
+        "title": "No Trolley Problem",
+        "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
+        "expected_behavior": [
+          "Answer recognizes that the five people on the track are already dead",
+          "Answer states not to pull the lever"
+        ],
+        "common_mistakes": [
+          "Failing to notice the key detail that the five people are already dead",
+          "Answer states to pull the lever"
+        ]
+      },
+      {
+        "prompt_id": "trolley_easy_forced",
+        "category": "Logic Puzzle",
+        "title": "No Trolley Problem, answer forced",
+        "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
+        "expected_behavior": [
+          "Answer recognizes that the five people on the track are already dead",
+          "Answer states not to pull the lever"
+        ],
+        "common_mistakes": [
+          "Failing to notice the key detail that the five people are already dead",
+          "Answer states to pull the lever"
+        ]
+      },
+      {
+        "prompt_id": "dead_schrodingers_cat",
+        "category": "Logic Puzzle",
+        "title": "Dead Schrödinger's cat",
+        "prompt": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
+        "expected_behavior": [
+          "Answer recognizes that the cat is already dead when placed in the box",
+          "Answer states that the probability of the cat being alive is 0%"
+        ],
+        "common_mistakes": [
+          "Answer fails to mention that the cat is already dead when placed in the box",
+          "Treating the problem as the standard Schrodinger's cat thought experiment"
+        ]
+      },     
+      {
+        "prompt_id": "river_crossing_simple",
+        "category": "Logic Puzzle",
+        "title": "Don't ever ask an LLM to help you cross a river",
+        "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
+        "expected_behavior": [
+          "Answer concludes that they simply get in the boat and cross together in one trip"
+        ],
+        "common_mistakes": [
+          "Answer provides solution to full river crossing problem with multiple trips",
+          "Answer provides complex solutions with multiple trips",
+          "Answer is provided as itemized list"
+        ]
+      },   
+      {
+        "prompt_id": "river_crossing_easy",
+        "category": "Logic Puzzle",
+        "title": "Easy river crossing",
+        "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
+        "expected_behavior": [
+          "Answer concludes that they simply get in the boat and cross together in one trip"
+        ],
+        "common_mistakes": [
+          "Answer provides solution to full river crossing problem with multiple trips",
+          "Answer provides complex solutions with multiple trips",
+          "Answer is provided as itemized list"
+        ]
+      },  
+      {
+        "prompt_id": "river_crossing_even_simpler",
+        "category": "Logic Puzzle",
+        "title": "Even simpler river crossing",
+        "prompt": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
+        "expected_behavior": [
+          "Answer concludes that they simply get in the boat and cross together in one trip"
+        ],
+        "common_mistakes": [
+          "Answer provides solution to full river crossing problem with multiple trips",
+          "Answer provides complex solutions with multiple trips",
+          "Answer is provided as itemized list"
+        ]
+      },
+      {
+        "prompt_id": "monty_hall_inverse",
+        "category": "Logic Puzzle",
+        "title": "Inverse Monty Hall Problem",
+        "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "expected_behavior": [
+          "Answer suggests to keep the existing door"
+        ],
+        "common_mistakes": [
+          "Answer suggests to switch the door",
+          "Answer explains that the initial choice has a 2/3 chance of choosing a donkey",
+          "Answer does not explain that the initial choice has a 2/3 chance of winning a car"
+        ]
+      },
+      {
+        "prompt_id": "jugs_1_liter",
+        "category": "Logic Puzzle",
+        "title": "Measuring 1 liter",
+        "prompt": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
+        "expected_behavior": [
+          "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter"
+        ],
+        "common_mistakes": [
+          "Answer with instructions to pour water between the jugs multiple times",
+          "Answer is formatted as itemized list with more than 3 entries"
+        ]
+      },
+   
+      {
+        "prompt_id": "jugs_3_liters",
+        "category": "Logic Puzzle",
+        "title": "Measuring 3 liters",
+        "prompt": "I have a 1- and a 2-liter jug. I want to measure exactly 3 liters.",
+        "expected_behavior": [
+          "Answer concludes that filling both jugs once gives exactly 3 liters"
+        ],
+        "common_mistakes": [
+          "Answer requires pouring water between the jugs multiple times",
+          "Answer is formatted as itemized list with more than 3 entries"
+        ]
+      },
+      {
+        "prompt_id": "jugs_4_liters",
+        "category": "Logic Puzzle",
+        "title": "Measuring 4 liters",
+        "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
+        "expected_behavior": [
+          "Answer concludes it is impossible to measure exactly 4 liters with the given jugs"
+        ],
+        "common_mistakes": [
+          "Answer with instructions to pour water between the jugs multiple times",
+          "Answer is formatted as itemized list with more than 3 entries"
+        ]
+      },
+      {
+        "prompt_id": "birthday_problem_easy",
+        "category": "Logic Puzzle",
+        "title": "Birthday problem made easy",
+        "prompt": "In a room of 30 people, what's the probability that at least two do not share a birthday?",
+        "expected_behavior": [
+          "Answer concludes that the probability is close to 1 (larger than 0.99)."
+        ],
+        "common_mistakes": [
+          "Answer provides a solution to the problem that two people share a birthday"
+        ]
+      },      
+      {
+        "prompt_id": "rope_burning_impossible",
+        "category": "Logic Puzzle",
+        "title": "Rope burning puzzle made impossible",
+        "prompt": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?",
+        "expected_behavior": [
+          "Answer concludes that it is not possible to solve this puzzle",
+          "Answer explains why it is not possible to measure exactly 20 minutes"
+        ],
+        "common_mistakes": [
+          "Answer provides a solution that uses both ropes to measure 20 minutes",
+          "Answer provides a solution that lights the second rope after 30 minutes"
+        ]
+      },
+      {
+        "prompt_id": "rope_burning_easy",
+        "category": "Logic Puzzle",
+        "title": "Rope burning puzzle made easy",
+        "prompt": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using the ropes and matches to light them?",
+        "expected_behavior": [
+          "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes) OR lighting both ropes on both ends sequentially (2x 30 minutes)."
+        ],
+        "common_mistakes": [
+          "Answer provides a solution that measures 45 minutes",
+          "Answer provides a solution that lights both ropes simultaneously"
+        ]
+      }
+  
+    ]
+}

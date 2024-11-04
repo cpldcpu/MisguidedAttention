@@ -1,0 +1,362 @@
+{
+  "monty_three_computers": {
+    "llama-3.1-405b-instruct": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial computer": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 0.6,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a working computer": 0.4
+      }
+    },
+    "hermes-3-llama-3.1-405": {
+      "average_score": 1.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a working computer": 0.8
+      }
+    },
+    "claude-3.5-sonnet": {
+      "average_score": 2.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial computer": 0.8
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 0.2,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a working computer": 0.6
+      }
+    },
+    "gpt-4o": {
+      "average_score": 1.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a working computer": 0.4
+      }
+    },
+    "gemini-pro-1.5": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a working computer": 0.8
+      }
+    },
+    "grok-2": {
+      "average_score": 3.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial computer": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 0.8,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a working computer": 0.4
+      }
+    },
+    "mistral-large": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a working computer": 0.4
+      }
+    },
+    "gpt-4-32k": {
+      "average_score": 1.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a working computer": 0.4
+      }
+    },
+    "claude-3-opus": {
+      "average_score": 2.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial computer": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer explains that the initial choice has a 2/3 chance of choosing a working computer": 1.0
+      }
+    }
+  },
+  "monty_four_computers": {
+    "llama-3.1-405b-instruct": {
+      "average_score": 2.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial computer": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 0.4,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a working computer": 0.2
+      }
+    },
+    "hermes-3-llama-3.1-405": {
+      "average_score": 1.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial computer": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 0.8
+      }
+    },
+    "claude-3.5-sonnet": {
+      "average_score": 3.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial computer": 0.6
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 0.4
+      }
+    },
+    "gpt-4o": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 1.0
+      }
+    },
+    "gemini-pro-1.5": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a working computer": 0.6
+      }
+    },
+    "grok-2": {
+      "average_score": 2.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial computer": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 0.8,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a working computer": 0.4
+      }
+    },
+    "mistral-large": {
+      "average_score": 1.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a working computer": 0.2
+      }
+    },
+    "gpt-4-32k": {
+      "average_score": 1.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 1.0
+      }
+    },
+    "claude-3-opus": {
+      "average_score": 2.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial computer": 0.6
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to switch the computer": 0.4,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a working computer": 0.2
+      }
+    }
+  },
+  "monty_defective_appliance": {
+    "llama-3.1-405b-instruct": {
+      "average_score": 3.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial box": 0.6
+      },
+      "common_mistakes_stats": {
+        "Answer mentions the probability of picking a defective appliance is 1/3": 0.4,
+        "Answer mentions the monty hall problems": 0.2
+      }
+    },
+    "hermes-3-llama-3.1-405": {
+      "average_score": 2.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial box": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer mentions the probability of picking a defective appliance is 1/3": 0.4,
+        "Answer mentions the monty hall problems": 0.6
+      }
+    },
+    "claude-3.5-sonnet": {
+      "average_score": 2.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial box": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer mentions the monty hall problems": 1.0
+      }
+    },
+    "gpt-4o": {
+      "average_score": 2.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial box": 0.2,
+        "Answer suggests to take the box the clerk tested": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer mentions the monty hall problems": 1.0
+      }
+    },
+    "gemini-pro-1.5": {
+      "average_score": 3.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer mentions the probability of picking a defective appliance is 1/3": 0.2
+      }
+    },
+    "grok-2": {
+      "average_score": 3.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer mentions the probability of picking a defective appliance is 1/3": 0.4,
+        "Answer mentions the monty hall problems": 0.4
+      }
+    },
+    "mistral-large": {
+      "average_score": 2.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer mentions the probability of picking a defective appliance is 1/3": 0.2,
+        "Answer mentions the monty hall problems": 0.8
+      }
+    },
+    "gpt-4-32k": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial box": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer mentions the monty hall problems": 0.8,
+        "Answer mentions the probability of picking a defective appliance is 1/3": 0.6
+      }
+    },
+    "claude-3-opus": {
+      "average_score": 3.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the initial box": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer mentions the monty hall problems": 0.6,
+        "Answer mentions the probability of picking a defective appliance is 1/3": 0.2
+      }
+    }
+  },
+  "monty_appliance_free_choice": {
+    "llama-3.1-405b-instruct": {
+      "average_score": 2.5,
+      "num_evaluations": 4,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 0.25
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 0.75
+      }
+    },
+    "hermes-3-llama-3.1-405": {
+      "average_score": 4.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer mentions the monty hall problem": 0.2
+      }
+    },
+    "claude-3.5-sonnet": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 0.8,
+        "Answer mentions the monty hall problem": 0.2
+      }
+    },
+    "gpt-4o": {
+      "average_score": 2.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 1.0
+      }
+    },
+    "gemini-pro-1.5": {
+      "average_score": 1.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 1.0
+      }
+    },
+    "grok-2": {
+      "average_score": 4.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 0.8
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 0.2
+      }
+    },
+    "mistral-large": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "gpt-4-32k": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "claude-3-opus": {
+      "average_score": 3.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to take the box the clerk tested": 0.6
+      },
+      "common_mistakes_stats": {
+        "Answer suggests to pick an untested box": 0.4
+      }
+    }
+  }
+
+}

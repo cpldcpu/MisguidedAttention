@@ -1,0 +1,93 @@
+{
+  "llms": [
+    {
+      "name": "hermes-3-llama-3.1-70b",
+      "model": "nousresearch/hermes-3-llama-3.1-70b",
+      "temperature": 0.98,
+      "top_p": 1,
+      "repetition_penalty": 1
+    },
+    {
+      "name": "claude-3-haiku",
+      "model": "anthropic/claude-3-haiku",
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
+    {
+      "name": "gpt-4o-mini",
+      "model": "openai/gpt-4o-mini",
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },    
+    {
+      "name": "gemini-flash-1.5",
+      "model": "google/gemini-flash-1.5",
+      "temperature": 0.7,
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
+ 
+    {
+      "name": "llama-3.1-70b-instruct",
+      "model": "meta-llama/llama-3.1-70b-instruct",
+      "max_tokens": 2000,
+      "temperature": 0.8,
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
+    {
+      "name": "qwen-2.5-72b-instruct",
+      "model": "qwen/qwen-2.5-72b-instruct",
+      "max_tokens": 2000,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
+    {
+        "name": "llama-3.1-nemotron-70b-instruct",
+        "model": "nvidia/llama-3.1-nemotron-70b-instruct",
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+    },
+    {
+        "name": "mixtral-8x22b-instruct",
+        "model": "mistralai/mixtral-8x22b-instruct",
+        "max_tokens": 4000,
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+    },
+    {
+        "name": "dolphin-mixtral-8x22b",
+        "model": "cognitivecomputations/dolphin-mixtral-8x22b",
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+    },
+    {
+        "name": "wizardlm-2-8x22b",
+        "model": "microsoft/wizardlm-2-8x22b",
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+    },
+    {
+      "name": "o1-mini",
+      "model": "openai/o1-mini",
+      "max_tokens": 4000,
+      "temperature": 1,
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
+    {
+      "name": "gpt-4-turbo",
+      "model": "openai/gpt-4-turbo",
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    }
+  ]
+}

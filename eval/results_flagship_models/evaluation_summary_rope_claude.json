@@ -1,0 +1,160 @@
+{
+  "rope_burning_impossible": {
+    "llama-3.1-405b-instruct": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that it is not possible to solve this puzzle": 0.4,
+        "Answer explains why it is not possible to measure exactly 20 minutes": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution that uses both ropes to measure 20 minutes": 1.0,
+        "Answer provides a solution that lights the second rope after 30 minutes": 0.4
+      }
+    },
+    "hermes-3-llama-3.1-405": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution that uses both ropes to measure 20 minutes": 1.0,
+        "Answer provides a solution that lights the second rope after 30 minutes": 0.2
+      }
+    },
+    "claude-3.5-sonnet": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution that uses both ropes to measure 20 minutes": 1.0,
+        "Answer provides a solution that lights the second rope after 30 minutes": 1.0
+      }
+    },
+    "gpt-4o": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution that uses both ropes to measure 20 minutes": 1.0,
+        "Answer provides a solution that lights the second rope after 30 minutes": 0.8
+      }
+    },
+    "gemini-pro-1.5": {
+      "average_score": 3.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that it is not possible to solve this puzzle": 0.8,
+        "Answer explains why it is not possible to measure exactly 20 minutes": 0.6
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution that lights the second rope after 30 minutes": 1.0,
+        "Answer provides a solution that uses both ropes to measure 20 minutes": 0.4
+      }
+    },
+    "grok-2": {
+      "average_score": 1.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution that uses both ropes to measure 20 minutes": 1.0,
+        "Answer provides a solution that lights the second rope after 30 minutes": 1.0
+      }
+    },
+    "mistral-large": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution that uses both ropes to measure 20 minutes": 1.0,
+        "Answer provides a solution that lights the second rope after 30 minutes": 0.4
+      }
+    },
+    "o1-preview": {
+      "average_score": 1.0,
+      "num_evaluations": 2,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {}
+    }
+  },
+  "rope_burning_easy": {
+    "llama-3.1-405b-instruct": {
+      "average_score": 4.0,
+      "num_evaluations": 4,
+      "expected_behavior_stats": {
+        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.5
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution that measures 45 minutes": 0.25,
+        "Answer provides a solution that lights both ropes simultaneously": 0.25
+      }
+    },
+    "hermes-3-llama-3.1-405": {
+      "average_score": 4.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.0
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution that lights both ropes simultaneously": 0.4
+      }
+    },
+    "claude-3.5-sonnet": {
+      "average_score": 3.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution that lights both ropes simultaneously": 1.0,
+        "Answer provides a solution that measures 45 minutes": 0.2
+      }
+    },
+    "gpt-4o": {
+      "average_score": 3.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution that measures 45 minutes": 0.2,
+        "Answer provides a solution that lights both ropes simultaneously": 0.8
+      }
+    },
+    "gemini-pro-1.5": {
+      "average_score": 1.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution that measures 45 minutes": 0.8,
+        "Answer provides a solution that lights both ropes simultaneously": 1.0
+      }
+    },
+    "grok-2": {
+      "average_score": 3.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution that lights both ropes simultaneously": 1.0
+      }
+    },
+    "mistral-large": {
+      "average_score": 4.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.0
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution that lights both ropes simultaneously": 0.4
+      }
+    },
+    "o1-preview": {
+      "average_score": 2.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution that measures 45 minutes": 0.8,
+        "Answer provides a solution that lights both ropes simultaneously": 0.8
+      }
+    }
+  }
+}

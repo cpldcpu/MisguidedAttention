@@ -1,0 +1,82 @@
+{
+  "birthday_problem_easy": {
+    "llama-3.1-405b-instruct": {
+      "average_score": 2.25,
+      "num_evaluations": 4,
+      "expected_behavior_stats": {
+        "Answer concludes that the probability is close to 1.": 0.25
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 0.5
+      }
+    },
+    "hermes-3-llama-3.1-405": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 1.0
+      }
+    },
+    "claude-3.5-sonnet": {
+      "average_score": 1.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 1.0
+      }
+    },
+    "gpt-4o": {
+      "average_score": 2.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that the probability is close to 1.": 0.4,
+        "Answer is derived as 1-(1/365)^29.": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 0.6
+      }
+    },
+    "gemini-pro-1.5": {
+      "average_score": 4.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that the probability is close to 1.": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "grok-2": {
+      "average_score": 3.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that the probability is close to 1.": 0.6,
+        "Answer is derived as 1-(1/365)^29.": 0.4
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 0.6
+      }
+    },
+    "mistral-large": {
+      "average_score": 4.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that the probability is close to 1.": 0.8,
+        "Answer is derived as 1-(1/365)^29.": 0.6
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 0.2
+      }
+    },
+    "o1-preview": {
+      "average_score": 2.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that the probability is close to 1.": 0.2,
+        "Answer is derived as 1-(1/365)^29.": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 0.8
+      }
+    }
+  }
+}

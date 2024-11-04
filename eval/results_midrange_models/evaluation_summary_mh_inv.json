@@ -1,0 +1,104 @@
+{
+  "monty_hall_inverse": {
+    "hermes-3-llama-3.1-70b": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0,
+        "Answer does not explain that the initial choice has a 2/3 chance of winning a car": 0.4
+      }
+    },
+    "claude-3-haiku": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0,
+        "Answer does not explain that the initial choice has a 2/3 chance of winning a car": 1.0
+      }
+    },
+    "gpt-4o-mini": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0
+      }
+    },
+    "gemini-flash-1.5": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0,
+        "Answer does not explain that the initial choice has a 2/3 chance of winning a car": 0.2
+      }
+    },
+    "llama-3.1-70b-instruct": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0,
+        "Answer does not explain that the initial choice has a 2/3 chance of winning a car": 0.8
+      }
+    },
+    "qwen-2.5-72b-instruct": {
+      "average_score": 1.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0
+      }
+    },
+    "llama-3.1-nemotron-70b-instruct": {
+      "average_score": 1.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0,
+        "Answer does not explain that the initial choice has a 2/3 chance of winning a car": 0.8
+      }
+    },
+    "mixtral-8x22b-instruct": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0,
+        "Answer does not explain that the initial choice has a 2/3 chance of winning a car": 0.6
+      }
+    },
+    "dolphin-mixtral-8x22b": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0,
+        "Answer does not explain that the initial choice has a 2/3 chance of winning a car": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a donkey": 0.2
+      }
+    },
+    "wizardlm-2-8x22b": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a donkey": 0.2,
+        "Answer does not explain that the initial choice has a 2/3 chance of winning a car": 0.2
+      }
+    },
+    "o1-mini": {
+      "average_score": 1.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the existing door": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer does not explain that the initial choice has a 2/3 chance of winning a car": 0.2
+      }
+    }
+  }
+}

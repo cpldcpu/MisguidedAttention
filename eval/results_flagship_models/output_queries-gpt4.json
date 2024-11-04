@@ -1,0 +1,160 @@
+{
+  "results": [
+    {
+      "prompt_id": "trolley_problem_easy",
+      "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
+      "llm": "gpt-4-32k",
+      "output": [
+        "As an AI, I don't have personal emotions or ethical judgement. However, different individuals might have different perspectives on this ethical dilemma based on their own moral principles.",
+        "This scenario doesn't pose a moral dilemma as the five people mentioned are already deceased. So, there is no need to pull the lever.",
+        "As an AI, I don't have feelings or personal judgements, but this is a classic ethical dilemma known as the Trolley Problem. The answer depends on the moral and ethical stance of the person posed with the problem. Utilitarian ethics would suggest pulling the lever to minimize loss of life. Other ethical frameworks might arrive at different conclusions based on their values.",
+        "As an AI, I don't have feelings or personal beliefs, so I can't make this decision. However, the classic 'trolley problem' poses a moral dilemma about whether to act or refrain from acting when each choice will result in harm. It is up to an individual's judgement.",
+        "As an AI, I don't have feelings, emotions, or the ability to make moral or ethical decisions. This is often cited as a moral dilemma known as the \"Trolley problem.\" It's up to each individual's ethical judgment to decide the appropriate course of action."
+      ]
+    },
+    {
+      "prompt_id": "trolley_easy_forced",
+      "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
+      "llm": "gpt-4-32k",
+      "output": [
+        "No. The five people are already dead and pulling the lever would knowingly cause harm to a living person.",
+        "No. The five people are already dead and pulling the lever would result in the unnecessary death of a living person.",
+        "No. The five people on the original track are already dead and cannot be further harmed, whereas diverting the trolley would kill a living person.",
+        "No. The five people are already dead and cannot be saved, but the living person has a chance to survive if the trolley is not diverted.",
+        "No. While it would be a devastating situation, the five people are already dead and pulling the lever would result in the unnecessary death of a living person."
+      ]
+    },
+    {
+      "prompt_id": "dead_schrodingers_cat",
+      "prompt": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
+      "llm": "gpt-4-32k",
+      "output": [
+        "The cat is already dead before being placed into the box, so the probability of the cat being alive is 0%.",
+        "The cat is already dead before being placed in the box, so the probability of the cat being alive is 0%.",
+        "The question is a reference to Schr\u00f6dinger's cat, a thought experiment in quantum mechanics. According to traditional interpretation, until the box is opened, the cat is simultaneously alive and dead due to the principle of quantum superposition. At the moment the box is opened, the cat's state will \"collapse\" into either alive or dead. Therefore, before the box is opened, it's impossible to assign a definite probability to the cat being alive. However, if we follow the interpretation that the act of opening is what determines the cat's state, we can potentially say the probability is 50% - it is either dead or alive. This, of course, is a simplification and an interpretation that does not account for all the complexities of quantum mechanics.",
+        "The cat is already dead before being placed in the box, so the probability of the cat being alive is 0%.",
+        "The cat is already dead before being placed in the box, so the probability of the cat being alive is 0%."
+      ]
+    },
+    {
+      "prompt_id": "river_crossing_simple",
+      "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
+      "llm": "gpt-4-32k",
+      "output": [
+        "The man takes the sheep in the boat to the other side of the river.",
+        "The man takes the sheep in the boat across the river.",
+        "The man takes the sheep on the boat over to the other side of the river.",
+        "The man takes the sheep across the river in the boat. Both the man and the sheep are now on the other side of the river.",
+        "The man takes the sheep in the boat and rows to the other side of the river."
+      ]
+    },
+    {
+      "prompt_id": "river_crossing_easy",
+      "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
+      "llm": "gpt-4-32k",
+      "output": [
+        "The farmer can follow these steps:\n\n1. First, the farmer will take the goat across the river, leaving the wolf and cabbage on the original side.\n2. He will then come back alone to the original side and take the cabbage across the river.\n3. The farmer will leave the cabbage on the other side and take the goat back to the original side.\n4. He will leave the goat on the original side and take the wolf across the river.\n5. The farmer will then leave the wolf on the other side with the cabbage.\n6. He will come back alone to the original side one last time to get the goat.\n7. Finally, the farmer will take the goat across the river. Now, all three items (the goat, the cabbage and the wolf) are safely on the other side of the river. \n\nThis way, neither the goat nor the cabbage are left alone with their predator.",
+        "The farmer should follow these steps:\n1. Take the goat across the river and leave it on the other side.\n2. Go back to the original side and take the cabbage across the river.\n3. Leave the cabbage on the other side, but take the goat back with him to the original side.\n4. Leave the goat on the original side and take the wolf across the river.\n5. Leave the wolf on the other side with the cabbage.\n6. Go back to the original side one last time to get the goat.\n7. Take the goat across the river again.\nNow, all items have made it across the river safely. The wolf did not eat the goat and the goat did not eat the cabbage.",
+        "The farmer can follow these steps:\n\n1. The farmer takes the goat across the river and leaves it on the other side.\n2. The farmer returns alone to the original side and takes the cabbage across the river.\n3. The farmer leaves the cabbage on the other side of the river but takes the goat back with him to the original side.\n4. The farmer leaves the goat on the original side and takes the wolf across the river.\n5. The farmer leaves the wolf on the other side with the cabbage.\n6. The farmer returns alone to the original side one last time to get the goat.\n7. The farmer takes the goat across the river once more. \n\nNow, all items have successfully been moved across the river without any of them being eaten.",
+        "The farmer needs to take the goat across the river first, leaving the wolf and cabbage on the first side. Then, he should return alone to the first side to get the cabbage. He leaves the cabbage on the second side and takes the goat back to the first side. After leaving the goat on the first side, he should take the wolf to the second side. Finally, he should return to the first side one last time to get the goat. In this way, the goat is never left alone with the wolf and the cabbage is never left alone with the goat, so nothing gets eaten.",
+        "The farmer can follow these steps:\n1. Take the goat across the river first, leaving the wolf and cabbage on the original side.\n2. Return alone to the original side and take the cabbage across the river.\n3. Leave the cabbage on the other side, but take the goat back to the original side.\n4. Leave the goat on the original side and take the wolf across the river.\n5. Leave the wolf on the other side with the cabbage and return alone to the original side one last time to get the goat.\nThis way, the wolf and the goat are never left alone together, and the goat and the cabbage are never left alone together."
+      ]
+    },
+    {
+      "prompt_id": "river_crossing_even_simpler",
+      "prompt": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
+      "llm": "gpt-4-32k",
+      "output": [
+        "The man takes the sheep on the boat and paddles across to the other side of the river.",
+        "The man takes the sheep on the boat and rows to the other side of the river.",
+        "The man will put the sheep in the boat, row across the river, and then take the sheep out of the boat when they reach the other side.",
+        "The man takes the sheep on the boat and rows to the other side of the river.",
+        "The man puts the sheep in the boat, rows across the river, and then gets out of the boat on the other side with the sheep."
+      ]
+    },
+    {
+      "prompt_id": "monty_hall_inverse",
+      "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+      "llm": "gpt-4-32k",
+      "output": [
+        "You should swap doors. According to the Monty Hall problem, your chances of winning a car are higher if you choose to swap (2/3) instead of sticking to your original choice (1/3).",
+        "You should swap to the other unrevealed door. Initially, the probability of selecting a car was 2/3 (66.67%) and a donkey was 1/3 (33.33%). After the host reveals a car behind one of the doors you did not select, the probabilities change. If you were initially correct and selected a car (1/3 chance), switching would result in winning a donkey. However, if you initially picked a donkey (2/3 chance), switching would result in winning a car. Thus, the probability is higher that switching doors will win you a car.",
+        "You should swap to the other unrevealed door.",
+        "You should swap to the other unrevealed door.",
+        "You should swap to the other unrevealed door."
+      ]
+    },
+    {
+      "prompt_id": "jugs_1_liter",
+      "prompt": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
+      "llm": "gpt-4-32k",
+      "output": [
+        "You already have two 1-liter jugs, so you can simply fill one of them to get exactly 1 liter.",
+        "You already have two 1-liter jugs. You can simply fill one of them to get exactly 1 liter.",
+        "You already have a 1 liter jug, so you already have exactly 1 liter.",
+        "You can fill either jug as both have 1 liter capacity.",
+        "You can simply fill one of the 1-liter jugs to its full capacity. That will give you exactly 1 liter."
+      ]
+    },
+    {
+      "prompt_id": "jugs_3_liters",
+      "prompt": "I have a 1- and a 2-liter jug. I want to measure exactly 3 liters.",
+      "llm": "gpt-4-32k",
+      "output": [
+        "This is not possible with just a 1- and a 2-liter jug. You can't measure exactly 3 liters.",
+        "It's impossible to measure exactly 3 liters with only a 1- and 2-liter jug.",
+        "It's not possible to measure exactly 3 liters with just a 1- and a 2-liter jug.",
+        "It is impossible to measure exactly 3 liters with only a 1-liter and a 2-liter jug.",
+        "This is not possible. Using a 1-liter and a 2-liter jug, you cannot measure exactly 3 liters."
+      ]
+    },
+    {
+      "prompt_id": "jugs_4_liters",
+      "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
+      "llm": "gpt-4-32k",
+      "output": [
+        "Yes, it is possible. Here's how:\n\nStep 1: Fill the 12-liter jug to its maximum.\nStep 3: Use this water to fill the 6-liter jug, which leaves 6 liters in the 12-liter jug.\nStep 4: Empty the 6-liter jug and pour the remaining 6 liters from the 12-liter jug into the 6-liter jug.\nStep 5: Fill the 12-liter jug to its maximum again.\nStep 6: Carefully pour water from the 12-liter jug into the 6-liter jug until it is full (which it only needs 2 more liters to be).\nStep 7: The water left in the 12-liter jug is 4 liters.",
+        "This can be done as follows:\n1. Fill the 6-liter jug and pour it into the 12-liter jug.\n2. Fill the 6-liter jug again and pour it into the 12-liter jug until it's full. Now you have 2 liters remaining in your 6-liter jug.\n3. Empty the 12-liter jug and pour the 2 liters from the 6-liter jug into the 12-liter jug.\n4. Fill the 6-liter jug again and pour it into the 12-liter jug.\n5. Now in the 12-liter jug you have 2 + 6 = 8 liters.\n6. Lastly, fill the 6-liter jug and pour it into the 12-liter jug until it's full, which will take 4 liters. So, the remaining amount in the 6-liter jug will be 6 - 4 = 2 liters.\n7. Empty the 12-liter jug and pour the 2 liters from the 6-liter jug into the 12-liter jug.\n8. Fill the 6-liter jug again and pour it into the 12-liter jug. Now you have exactly 4 liters in the 12-liter jug.",
+        "This can be done by implementing the following steps: \n\n1. Fill up the 6-liter jug and pour it into the 12-liter jug.\n2. Fill up the 6-liter jug again and pour it into the 12-liter jug until it is full. This will leave 2 liters in the 6-liter jug.\n3. Empty the 12-liter jug and pour the remaining 2 liters from the 6-liter jug into the 12-liter jug.\n4. Fill up the 6-liter jug and pour it into the 12-liter jug. You will now have exactly 4 liters in the 12-liter jug.",
+        "To measure exactly 4 liters, you can follow these steps:\n\n1. Fill the 6-liter jug and pour it into the 12-liter jug. \n2. Fill the 6-liter jug again and pour it into the 12-liter jug. Now, the 12-liter jug is full and there is still 2 liters of water in the 6-liter jug.\n3. Pour out the 12-liter jug.\n4. Pour the 2 liters from the 6-liter jug into the 12-liter jug.\n5. Fill the 6-liter jug again and pour it into the 12-liter jug. Now, you have exactly 4 liters in the 12-liter jug because 2 liters (from step 4) + 2 liters (from the fresh fill of the 6-liter jug where previously 4 liters was poured into the 12-liter jug) = 4 liters.",
+        "Fill the 6-liter jug and pour it into the 12-liter jug. Repeat this step again so the 12-liter jug now contains 12 liters of water. This would leave 2 liters of water in the 6-liter jug after filling it up again and pouring it into the 12-liter jug. Empty the 12-liter jug and pour the 2 liters of water from the 6-liter jug into the 12-liter jug. Finally, fill the 6-liter jug again and pour it into the 12-liter jug. Now, in the 12-liter jug there is exactly 4 liters of water."
+      ]
+    },
+    {
+      "prompt_id": "birthday_problem_easy",
+      "prompt": "In a room of 30 people, what's the probability that at least two do not share a birthday?",
+      "llm": "gpt-4-32k",
+      "output": [
+        "The probability that at least two people do not share a birthday is 100%, provided the 30 people are randomly distributed. The maximum number of people that can share a birthday is 1 (since each person has a unique birthday in a year excluding twins), so at least two people not sharing a birthday is guaranteed in a room of 30 people.",
+        "100%",
+        "100%",
+        "1",
+        "100%"
+      ]
+    },
+    {
+      "prompt_id": "rope_burning_impossible",
+      "prompt": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?",
+      "llm": "gpt-4-32k",
+      "output": [
+        "Light the first rope from both ends and the second rope from one end at the same time. \n\nThe first rope will burn out in 30 minutes, because it is burning from both sides. When the first rope burns out, light the other end of the second rope. The second rope, now burning from both ends, will burn out in 15 minutes, totaling 45 minutes total burn time. \n\nSince the two ropes were originally lit at the same time, 60 - 45 gives us 15 minutes. \n\nSo, from the time the second rope burn out until the first rope burn out will be exactly 15 minutes. The remaining time on the second rope after the first burns out is 20 minutes.",
+        "Light the first rope at both ends and the second rope at one end simultaneously. The first rope will finish burning in 30 minutes, at which point you light the other end of the second rope. The second rope will now burn out in 15 minutes, making it 45 minutes total since beginning, meaning the last 15 minutes will give you the 60 minutes total or 20 minutes from when the first rope burnt out.",
+        "Light the first rope at both ends and the second rope at one end. The first rope will burn out in 30 minutes. By that time, the second rope will have been burning for 30 minutes and have 30 minutes left to burn. Immediately after the first rope burns out, light the other end of the second rope. It will now burn out in 15 minutes (half of the total time remaining), giving you 45 minutes total. To get to 20 minutes, you simply wait 5 minutes after the first rope burns out before lighting the second end of the second rope. The remaining 15 minutes on the second rope plus the 5 minutes waiting time gives you exactly 20 minutes.",
+        "Light the first rope at both ends and the second rope at one end at the same time. The first rope will finish burning after 30 minutes (because it's being burned from both ends). At that point, light the other end of the second rope. The second rope will burn out 20 minutes after the first one (because it's now also being burned from both ends), giving you a total of 20 minutes since the first rope burned out.",
+        "Light the first rope at both ends and the second rope at one end at the same time. The first rope will burn out in 30 minutes. At this point, light the second rope at the other end. It will burn out in 15 minutes. So from the time you light them, when the second rope burns out completely, exactly 45 minutes have passed. To measure 20 minutes, wait until the first rope has burnt out (30 minutes elapsed), then wait a further 20 minutes before the second rope burns out completely."
+      ]
+    },
+    {
+      "prompt_id": "rope_burning_easy",
+      "prompt": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using the ropes and matches to light them?",
+      "llm": "gpt-4-32k",
+      "output": [
+        "You can measure exactly 60 minutes by lighting one end of one rope. When that rope completely burns out, 60 minutes will have passed.",
+        "Light the first rope at both ends and the second rope at one end at the same time. The first rope will finish burning in 30 minutes, and at this point, you light the other end of the second rope. The second rope will finish burning in another 30 minutes, giving you a total of 60 minutes exactly.",
+        "Light one rope at both ends and the other rope at one end simultaneously. The first rope will finish burning in 30 minutes (as it is being burned from both ends). At this moment, light the remaining unlit end of the second rope. The second rope will finish burning in another 30 minutes (15 minutes for each half as it is now also being burned from both ends). The total time elapsed when both ropes are completely burnt out is exactly 60 minutes.",
+        "You can measure exactly 60 minutes by lighting one of the ropes on both ends and the other rope on one end. The rope lit at both ends will burn out in 30 minutes. At this point, light the other end of the second rope. The second rope will burn out in another 30 minutes, marking a total of 60 minutes.",
+        "Light one rope at both ends and the other at one end simultaneously. The first rope will take 30 minutes to burn out completely. Once it does, light the other end of the second rope. It will take 30 more minutes to burn out completely. This gives you exactly 60 minutes in total."
+      ]
+    }
+  ]
+}

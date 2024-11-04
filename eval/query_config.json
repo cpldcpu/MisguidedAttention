@@ -1,0 +1,11 @@
+{
+  "llms": [
+    {
+      "name": "claude-3.5-sonnet-new",
+      "model": "anthropic/claude-3.5-sonnet",
+      "temperature": 0.9,
+      "top_p": 0.9,
+      "repetition_penalty": 1
+    }  
+  ]
+}

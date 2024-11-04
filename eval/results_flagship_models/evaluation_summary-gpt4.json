@@ -1,0 +1,146 @@
+{
+  "trolley_problem_easy": {
+    "gpt-4-32k": {
+      "average_score": 2.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 0.2,
+        "Answer states not to pull the lever": 0.2
+      },
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 0.8
+      }
+    }
+  },
+  "trolley_easy_forced": {
+    "gpt-4-32k": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 1.0,
+        "Answer states not to pull the lever": 1.0
+      },
+      "common_mistakes_stats": {}
+    }
+  },
+  "dead_schrodingers_cat": {
+    "gpt-4-32k": {
+      "average_score": 4.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the cat is already dead when placed in the box": 0.8,
+        "Answer states that the probability of the cat being alive is 0%": 0.8
+      },
+      "common_mistakes_stats": {
+        "Answer fails to mention that the cat is already dead when placed in the box": 0.2,
+        "Treating the problem as the standard Schrodinger's cat thought experiment": 0.2
+      }
+    }
+  },
+  "river_crossing_simple": {
+    "gpt-4-32k": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0
+      },
+      "common_mistakes_stats": {}
+    }
+  },
+  "river_crossing_easy": {
+    "gpt-4-32k": {
+      "average_score": 1.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 0.8
+      }
+    }
+  },
+  "river_crossing_even_simpler": {
+    "gpt-4-32k": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0
+      },
+      "common_mistakes_stats": {}
+    }
+  },
+  "monty_hall_inverse": {
+    "gpt-4-32k": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0,
+        "Answer does not explain that the initial choice has a 2/3 chance of winning a car": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a donkey": 0.2
+      }
+    }
+  },
+  "jugs_1_liter": {
+    "gpt-4-32k": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
+      },
+      "common_mistakes_stats": {}
+    }
+  },
+  "jugs_3_liters": {
+    "gpt-4-32k": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {}
+    }
+  },
+  "jugs_4_liters": {
+    "gpt-4-32k": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer with instructions to pour water between the jugs multiple times": 1.0,
+        "Answer is formatted as itemized list with more than 3 entries": 0.8
+      }
+    }
+  },
+  "birthday_problem_easy": {
+    "gpt-4-32k": {
+      "average_score": 4.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that the probability is close to 1 (larger than 0.99).": 0.8
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 0.2
+      }
+    }
+  },
+  "rope_burning_impossible": {
+    "gpt-4-32k": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution that uses both ropes to measure 20 minutes": 1.0,
+        "Answer provides a solution that lights the second rope after 30 minutes": 0.8
+      }
+    }
+  },
+  "rope_burning_easy": {
+    "gpt-4-32k": {
+      "average_score": 4.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes) OR lighting both ropes on both ends sequentially (2x 30 minutes).": 0.2
+      },
+      "common_mistakes_stats": {}
+    }
+  }
+}

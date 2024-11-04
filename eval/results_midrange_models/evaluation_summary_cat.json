@@ -1,0 +1,117 @@
+{
+  "dead_schrodingers_cat": {
+    "hermes-3-llama-3.1-70b": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the cat is already dead when placed in the box": 1.0,
+        "Answer states that the probability of the cat being alive is 0%": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "claude-3-haiku": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer fails to mention that the cat is already dead when placed in the box": 1.0,
+        "Treating the problem as the standard Schrodinger's cat thought experiment": 1.0
+      }
+    },
+    "gpt-4o-mini": {
+      "average_score": 1.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the cat is already dead when placed in the box": 0.2,
+        "Answer states that the probability of the cat being alive is 0%": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer fails to mention that the cat is already dead when placed in the box": 0.8,
+        "Treating the problem as the standard Schrodinger's cat thought experiment": 0.8
+      }
+    },
+    "gemini-flash-1.5": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the cat is already dead when placed in the box": 1.0,
+        "Answer states that the probability of the cat being alive is 0%": 1.0
+      },
+      "common_mistakes_stats": {}
+    },
+    "llama-3.1-70b-instruct": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer fails to mention that the cat is already dead when placed in the box": 1.0,
+        "Treating the problem as the standard Schrodinger's cat thought experiment": 1.0
+      }
+    },
+    "qwen-2.5-72b-instruct": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer fails to mention that the cat is already dead when placed in the box": 1.0,
+        "Treating the problem as the standard Schrodinger's cat thought experiment": 1.0
+      }
+    },
+    "llama-3.1-nemotron-70b-instruct": {
+      "average_score": 3.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the cat is already dead when placed in the box": 0.6,
+        "Answer states that the probability of the cat being alive is 0%": 0.6
+      },
+      "common_mistakes_stats": {
+        "Treating the problem as the standard Schrodinger's cat thought experiment": 0.6,
+        "Answer fails to mention that the cat is already dead when placed in the box": 0.4
+      }
+    },
+    "mixtral-8x22b-instruct": {
+      "average_score": 1.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer states that the probability of the cat being alive is 0%": 0.4
+      },
+      "common_mistakes_stats": {
+        "Answer fails to mention that the cat is already dead when placed in the box": 1.0,
+        "Treating the problem as the standard Schrodinger's cat thought experiment": 1.0
+      }
+    },
+    "dolphin-mixtral-8x22b": {
+      "average_score": 4.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the cat is already dead when placed in the box": 0.8,
+        "Answer states that the probability of the cat being alive is 0%": 0.8
+      },
+      "common_mistakes_stats": {
+        "Answer fails to mention that the cat is already dead when placed in the box": 0.2,
+        "Treating the problem as the standard Schrodinger's cat thought experiment": 0.2
+      }
+    },
+    "wizardlm-2-8x22b": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer fails to mention that the cat is already dead when placed in the box": 1.0,
+        "Treating the problem as the standard Schrodinger's cat thought experiment": 1.0
+      }
+    },
+    "o1-mini": {
+      "average_score": 1.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the cat is already dead when placed in the box": 0.2,
+        "Answer states that the probability of the cat being alive is 0%": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer fails to mention that the cat is already dead when placed in the box": 0.8,
+        "Treating the problem as the standard Schrodinger's cat thought experiment": 0.8
+      }
+    }
+  }
+}
