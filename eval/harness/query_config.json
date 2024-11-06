@@ -1,11 +1,11 @@
 {
   "llms": [
     {
-      "name": "claude-3.5-sonnet-new",
-      "model": "anthropic/claude-3.5-sonnet",
-      "temperature": 0.9,
-      "top_p": 0.9,
+      "name": "claude-3-5-haiku",
+      "model": "anthropic/claude-3-5-haiku",
+      "temperature": 1.0,
+      "top_p": 1.0,
       "repetition_penalty": 1
-    }  
+    }
   ]
 }
