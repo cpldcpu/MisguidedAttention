@@ -16,6 +16,13 @@
       "repetition_penalty": 1
     },
     {
+      "name": "claude-3-sonnet",
+      "model": "anthropic/claude-3-sonnet",
+      "temperature": 0.9,
+      "top_p": 0.9,
+      "repetition_penalty": 1
+    },    
+    {
       "name": "claude-3.5-sonnet",
       "model": "anthropic/claude-3.5-sonnet-20240620",
       "temperature": 0.9,
