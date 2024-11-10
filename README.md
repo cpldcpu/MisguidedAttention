@@ -8,6 +8,8 @@ The expected behavior would be that the LLMs solve the problems, as they are sta
 
 Parallels to this can be drawn to human behavior, where recognition of familiar patterns leads to the execution of previously learned routines, even if they are not applicable to the current situation. This is known as the [Einstellungseffekt](https://en.wikipedia.org/wiki/Einstellung_effect). However, we would expect that a computerized reasoning system would not be subject to such a fallacy...
 
+*Feel free to contribute more prompts or suggest improvements! Open an issue or start a discussion.*
+
 ## Evaluation
 
 The ability of LLMs to solve these problems has consistently improved over time, especially with the introduction of internal chain-of-though reasoning in OpenAIs o1 models that allows to correct for earlier mistakes in the response. 
