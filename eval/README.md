@@ -14,7 +14,9 @@ Below you can find a summary of current flagship models, midrange models, and sm
 ![Small models](./results_small_models/heatmap_expected_behavior.png)
 
 
-Recent flagship models generally demonstrate superior performance, with O1-preview standing out as the only model capable of both identifying and correctly solving variations of known problems, as evidenced in the inverse Monty Hall problem. However, also o1-preview cannot solve all problems correctly.
+Recent flagship models generally demonstrate superior performance, with O1-preview standing out as the only model capable of both identifying and correctly solving variations of known problems, as evidenced in the inverse Monty Hall problem. 
+
+However, also o1-preview cannot solve all problems correctly. One particularly challenging prompt is "rope burning impossible". "Convincing" o1 that there is no solution to this problem required many turns. You can find the log of my attempt [here](https://chatgpt.com/share/66e951e2-d7a8-8010-8a3d-041fa1b1eabe).
 
 Interestingly, GPT-4 and GPT-4-turbo outperform their more recent counterparts, GPT-4o and GPT-4o mini. We can speculate that this is due to more aggressive distillation of the 4o models, which may have removed the ability to attend to more subtle details.
 
@@ -22,7 +24,7 @@ Also surprising is the good performance of Gemini-Flash, especially considering 
 
 ## How to run the evaluation
 
-Due to limited availability of evaluation frameworks and some issues specific to this dataset (see below), I had to come up with my own simple framework.
+Due to limited availability of evaluation frameworks with llm-as-a-judge and some issues specific to this dataset (see below), I came up with my own simple framework.
 
 The evaluation scripts can be found in the [`harness`](./harness) folder. Check out the [readme](./harness/README.md) for more information.
   
