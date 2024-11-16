@@ -13,7 +13,6 @@ Below you can find a summary of current flagship models, midrange models, and sm
 ![Midrange models](./results_midrange_models/heatmap_expected_behavior.png)
 ![Small models](./results_small_models/heatmap_expected_behavior.png)
 
-
 Recent flagship models generally demonstrate superior performance, with O1-preview standing out as the only model capable of both identifying and correctly solving variations of known problems, as evidenced in the inverse Monty Hall problem. 
 
 However, also o1-preview cannot solve all problems correctly. One particularly challenging prompt is "rope burning impossible". "Convincing" o1 that there is no solution to this problem required many turns. You can find the log of my attempt [here](https://chatgpt.com/share/66e951e2-d7a8-8010-8a3d-041fa1b1eabe).
@@ -21,6 +20,8 @@ However, also o1-preview cannot solve all problems correctly. One particularly c
 Interestingly, GPT-4 and GPT-4-turbo outperform their more recent counterparts, GPT-4o and GPT-4o mini. We can speculate that this is due to more aggressive distillation of the 4o models, which may have removed the ability to attend to more subtle details.
 
 Also surprising is the good performance of Gemini-Flash, especially considering the unimpressive performance of Gemini-Pro. Subjectively, it seems that Flash is more "self critical" in its responses.
+
+**Update 2024-11-16**: I reran the evaluation for Qwen-2.5-72b after noticing that it suddenly was able to solved the inverse monty hall problem, which is pretty remarkable as only o1 and o1-mini were able to solve it consistently before. The new results are included in the heatmap above and show a considerable improvement compare to the first eval of Qwen-2.5-72b  from mid of October '24. What did change? Not sure. Possibly some settings on the provider side were modified? FP8 vs FP16?
 
 ## How to run the evaluation
 
