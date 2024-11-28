@@ -52,6 +52,9 @@ def create_heatmap(data, value_col, output_file, cmap, vmin, vmax):
     
     pivot_table = grouped_data.pivot(index='llm', columns='prompt_id', values=value_col)
 
+    # Sort LLM names case-insensitively
+    pivot_table = pivot_table.reindex(sorted(pivot_table.index, key=lambda s: s.casefold()))
+
     # Calculate row averages
     row_averages = pivot_table.mean(axis=1)
     column_averages = pivot_table.mean(axis=0)
@@ -116,6 +119,6 @@ if __name__ == "__main__":
     parser.add_argument('--valid_llms', type=str, help='Path to JSON file containing valid LLMs. Usually this is query_config.json')
     args = parser.parse_args()
     
-    main(args.folder_path, args.valid_llms)    
+    main(args.folder_path, args.valid_llms)
 
 
