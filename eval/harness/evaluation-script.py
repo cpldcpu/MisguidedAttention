@@ -114,6 +114,14 @@ The overall_score should be on a scale of 1 to 5, where 1 is completely incorrec
 Evaluation:
 """
 
+def get_final_answer_QwQ(output):
+    final_answer_marker = "**Final Answer"
+    idx = output.rfind(final_answer_marker)
+    if idx != -1:
+        return output[idx:].strip()
+    else:
+        return output
+
 def evaluate_output(output, prompt, expected_behavior, common_mistakes):
     evaluation_prompt = generate_evaluation_prompt(output, prompt, expected_behavior, common_mistakes)
     sys_prompt = "You are an AI assistant tasked with evaluating the output of language models based on specific criteria. You must return your evaluation in JSON format."
@@ -150,6 +158,9 @@ def main(args):
                 print(f"Output: {output[:100] if output else 'None'}...")  # Print first 100 characters of output or 'None'
 
             if output is not None:
+                if args.QwQ:
+                    output = get_final_answer_QwQ(output)
+                
                 evaluation = evaluate_output(output, prompt_data['prompt'], expected_behavior, common_mistakes)
                 if evaluation:
                     evaluation['original_question'] = prompt_data['prompt']
@@ -207,6 +218,7 @@ if __name__ == "__main__":
     parser.add_argument("--output_queries", default="output_queries.json", help="Path to the output queries JSON file")
     parser.add_argument("--limit", type=int, default=0, help="Limit the number of prompt_ids to process (0 for no limit)")
     parser.add_argument("--debug", action="store_true", help="Enable debug output")
+    parser.add_argument("--QwQ", action="store_true", help="Activate final answer extraction")
 
     args = parser.parse_args()
     main(args)
