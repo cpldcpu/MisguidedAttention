@@ -30,7 +30,7 @@ def query_llm(prompt, llm_config, temperature_override):
         "model": llm_config["model"],
         "messages": [{"role": "user", "content": f"Please answer the following question: {prompt}\nAnswer:"}],
         "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
-        "max_tokens": llm_config.get("max_tokens", 2000),
+        "max_tokens": llm_config.get("max_tokens", 4000),
         "top_p": llm_config.get("top_p", 1),
         "frequency_penalty": llm_config.get("frequency_penalty", 0),
         "presence_penalty": llm_config.get("presence_penalty", 0)
@@ -43,7 +43,8 @@ def query_llm(prompt, llm_config, temperature_override):
     # )
     try:
         response = requests.post(
-            "https://openrouter.ai/api/v1/chat/completions",
+            "http://localhost:1234/v1/chat/completions",
+            # "https://openrouter.ai/api/v1/chat/completions",
             headers=headers,
             json=data
         )
