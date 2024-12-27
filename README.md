@@ -35,13 +35,9 @@ For reference here are links to explanations of some of the original unmodified 
 
 *"Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?"*
 
-Only gpt-4o and gpt-4t solved this.
-
 #### A less confusing Monty Hall Problem
 
 *"Imagine you're on a game show, and there are three doors in front of you. Behind one door is a car, and behind the other two doors are goats. You don't know what's behind any of the doors. You get to choose one door. Let's say you pick Door #1. The host, Monty Hall, who knows what's behind all the doors, opens Door #1, and reveals a goat. Now, you have two doors left: Door #3 and Door #2. You pick Door #3. Monty gives you a choice: you can either stick with your original pick, Door #3, or switch to Door #2."*
-
-yi-large and gpt-4o solve this, gpt-4t fails. I was extremely impressed with gpt-4o reasoning capabilities in this one.
 
 #### Inverse Monty Hall Problem
 
@@ -55,13 +51,9 @@ Most llms will come up with a strategy to win the donkey instead of the car.
 
 *"Imagine there's a small town with a very particular barber. This barber has a unique rule: he shaves all the men in town who visit him. Does the barber shave himself?"*
 
-None get this consistently right, gemini-pro-tuned and yi-large did once
-
 #### Dead Schrödinger's cat
 
 *"A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?"*
-
-No LLM gets this consistently right without additional cues or multi-shotting
 
 #### No Paradox in an expected Hanging
 
@@ -99,7 +91,7 @@ Thank to /u/hvoecking for this one.
 
 *"I have a 6- and a 12-liter jug. I want to measure exactly 6 liters."*
 
-Some LLMs will get this right, others come up with amazing way to make things complicated.
+Some LLMs will get this right, others come up with amazing ways to make things complicated.
 
 #### Measuring 4 liters.
 
@@ -107,7 +99,7 @@ A variation of the prompt above.
 
 *"I have a 6- and a 12-liter jug. I want to measure exactly 4 liters."*
 
-**Zero** LLMs have been able to provide a proper response to this so far.
+Most LLMs will try various combinations of filling and emptying the jugs, instead of trying to figure out of this is possible at all.
 
 #### Measuring 3 liters.
 
@@ -215,14 +207,6 @@ Variant 1: *"What happens when a stoppable force meets an immovable object?"*
 Variant 2: *"What happens when a unstoppable force meets a movable object?"*
 
 The first variant seems to throw off more llms.
-
-## Other Prompts
-
-#### Version numbers? 
-
-*"9.11 or 9.9 which number is larger?"*
-
-This has been making the rounds in July '24. The answer should be quite straightforward, but many frontier-LLMs get it wrong often (gpt-4o, Mistral Large 2, Claude-3.5-Sonnet, but not Phi-3!). Interestingly this is not the case when slightly altering the decimals, e.g. 9.12. There has been speculation that this is related to version numbering.
 
 
 
