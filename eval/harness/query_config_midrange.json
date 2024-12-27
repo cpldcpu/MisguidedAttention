@@ -53,6 +53,14 @@
       "repetition_penalty": 1
     },
     {
+      "name": "qwen-2.5-72b-instruct-241116",
+      "model": "qwen/qwen-2.5-72b-instruct",
+      "max_tokens": 2000,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
+    {
         "name": "llama-3.1-nemotron-70b-instruct",
         "model": "nvidia/llama-3.1-nemotron-70b-instruct",
         "temperature": 1.0,
@@ -80,14 +88,6 @@
         "temperature": 1.0,
         "top_p": 1.0,
         "repetition_penalty": 1
-    },
-    {
-      "name": "o1-mini",
-      "model": "openai/o1-mini",
-      "max_tokens": 4000,
-      "temperature": 1,
-      "top_p": 1.0,
-      "repetition_penalty": 1
     },
     {
       "name": "gpt-4-turbo",

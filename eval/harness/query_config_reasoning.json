@@ -1,0 +1,28 @@
+{
+  "llms": [    
+    {
+        "name": "o1-preview",
+        "model": "openai/o1-preview",
+        "max_tokens": 4000,
+        "temperature": 1,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+      },
+      {
+        "name": "o1-mini",
+        "model": "openai/o1-mini",
+        "max_tokens": 4000,
+        "temperature": 1,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+      },
+      {
+        "name": "QwQ-32B-Preview-Q4_K_M",
+        "model": "local",
+        "max_tokens": 4000,
+        "temperature": 1,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+      }               
+  ]
+}
