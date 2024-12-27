@@ -1,0 +1,148 @@
+{
+  "trolley_problem_easy": {
+    "gemini-2.0-flash-thinking-exp": {
+      "average_score": 2.3333333333333335,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 0.6666666666666666
+      }
+    }
+  },
+  "trolley_easy_forced": {
+    "gemini-2.0-flash-thinking-exp": {
+      "average_score": 1.6666666666666667,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+      },
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 0.6666666666666666,
+        "Answer states to pull the lever": 1.0
+      }
+    }
+  },
+  "dead_schrodingers_cat": {
+    "gemini-2.0-flash-thinking-exp": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer recognizes that the cat is already dead when placed in the box": 1.0,
+        "Answer states that the probability of the cat being alive is 0%": 1.0
+      },
+      "common_mistakes_stats": {}
+    }
+  },
+  "river_crossing_simple": {
+    "gemini-2.0-flash-thinking-exp": {
+      "average_score": 1.6666666666666667,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    }
+  },
+  "river_crossing_easy": {
+    "gemini-2.0-flash-thinking-exp": {
+      "average_score": 3.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    }
+  },
+  "river_crossing_even_simpler": {
+    "gemini-2.0-flash-thinking-exp": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0
+      },
+      "common_mistakes_stats": {}
+    }
+  },
+  "monty_hall_inverse": {
+    "gemini-2.0-flash-thinking-exp": {
+      "average_score": 4.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a donkey": 1.0
+      }
+    }
+  },
+  "jugs_1_liter": {
+    "gemini-2.0-flash-thinking-exp": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
+      },
+      "common_mistakes_stats": {}
+    }
+  },
+  "jugs_3_liters": {
+    "gemini-2.0-flash-thinking-exp": {
+      "average_score": 3.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+      },
+      "common_mistakes_stats": {
+        "Answer requires pouring water between the jugs multiple times": 1.0,
+        "Answer is formatted as itemized list with more than 3 entries": 1.0
+      }
+    }
+  },
+  "jugs_4_liters": {
+    "gemini-2.0-flash-thinking-exp": {
+      "average_score": 1.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer with instructions to pour water between the jugs multiple times": 1.0,
+        "Answer is formatted as itemized list with more than 3 entries": 1.0
+      }
+    }
+  },
+  "birthday_problem_easy": {
+    "gemini-2.0-flash-thinking-exp": {
+      "average_score": 3.3333333333333335,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that the probability is close to 1 (larger than 0.99).": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 1.0
+      }
+    }
+  },
+  "rope_burning_impossible": {
+    "gemini-2.0-flash-thinking-exp": {
+      "average_score": 1.3333333333333333,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution that uses both ropes to measure 20 minutes": 1.0,
+        "Answer provides a solution that lights the second rope after 30 minutes": 1.0
+      }
+    }
+  },
+  "rope_burning_easy": {
+    "gemini-2.0-flash-thinking-exp": {
+      "average_score": 2.6666666666666665,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution that lights both ropes simultaneously": 1.0,
+        "Answer provides a solution that measures 45 minutes": 0.6666666666666666
+      }
+    }
+  }
+}

@@ -23,6 +23,21 @@
         "temperature": 1,
         "top_p": 1.0,
         "repetition_penalty": 1
+      },
+      {
+        "name": "gemini-2.0-flash-thinking-exp",
+        "model": "google/gemini-2.0-flash-thinking-exp:free",
+        "temperature": 0.7,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+      },
+      {
+        "name": "o1",
+        "model": "manual",
+        "max_tokens": 4000,
+        "temperature": 1,
+        "top_p": 1.0,
+        "repetition_penalty": 1
       }               
   ]
 }
