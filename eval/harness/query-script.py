@@ -3,6 +3,7 @@ import json
 import requests
 import os
 from tqdm import tqdm
+from datetime import datetime
 
 def load_json(file_path):
     with open(file_path, 'r') as f:
@@ -43,8 +44,8 @@ def query_llm(prompt, llm_config, temperature_override):
     # )
     try:
         response = requests.post(
-            "http://localhost:1234/v1/chat/completions",
-            # "https://openrouter.ai/api/v1/chat/completions",
+            # "http://localhost:1234/v1/chat/completions",
+            "https://openrouter.ai/api/v1/chat/completions",
             headers=headers,
             json=data
         )
@@ -75,7 +76,8 @@ def main(args):
                 "prompt_id": prompt["prompt_id"],
                 "prompt": prompt["prompt"],
                 "llm": llm["name"],
-                "output": []
+                "output": [],
+                "timestamp": datetime.now().isoformat()
             }
             
             for _ in range(args.samples):
