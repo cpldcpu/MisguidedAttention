@@ -91,6 +91,13 @@
       "temperature": 0.7,
       "top_p": 1.0,
       "repetition_penalty": 1
+    },
+    {
+      "name": "DeepSeek-V3",
+      "model": "deepseek/deepseek-chat",
+      "temperature": 0.7,
+      "top_p": 1.0,
+      "repetition_penalty": 1
     }  
   ]
 }

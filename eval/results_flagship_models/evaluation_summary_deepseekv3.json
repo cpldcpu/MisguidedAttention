@@ -1,0 +1,154 @@
+{
+  "trolley_problem_easy": {
+    "DeepSeek-V3": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 1.0,
+        "Answer states to pull the lever": 0.2
+      }
+    }
+  },
+  "trolley_easy_forced": {
+    "DeepSeek-V3": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Failing to notice the key detail that the five people are already dead": 1.0,
+        "Answer states to pull the lever": 1.0
+      }
+    }
+  },
+  "dead_schrodingers_cat": {
+    "DeepSeek-V3": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer fails to mention that the cat is already dead when placed in the box": 1.0,
+        "Treating the problem as the standard Schrodinger's cat thought experiment": 1.0
+      }
+    }
+  },
+  "river_crossing_simple": {
+    "DeepSeek-V3": {
+      "average_score": 2.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    }
+  },
+  "river_crossing_easy": {
+    "DeepSeek-V3": {
+      "average_score": 3.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    }
+  },
+  "river_crossing_even_simpler": {
+    "DeepSeek-V3": {
+      "average_score": 3.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 1.0,
+        "Answer provides solution to full river crossing problem with multiple trips": 0.2,
+        "Answer provides complex solutions with multiple trips": 0.2
+      }
+    }
+  },
+  "monty_hall_inverse": {
+    "DeepSeek-V3": {
+      "average_score": 3.6,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer suggests to switch the door": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of choosing a donkey": 1.0
+      }
+    }
+  },
+  "jugs_1_liter": {
+    "DeepSeek-V3": {
+      "average_score": 4.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer with instructions to pour water between the jugs multiple times": 0.2,
+        "Answer is formatted as itemized list with more than 3 entries": 0.2
+      }
+    }
+  },
+  "jugs_3_liters": {
+    "DeepSeek-V3": {
+      "average_score": 2.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer requires pouring water between the jugs multiple times": 1.0,
+        "Answer is formatted as itemized list with more than 3 entries": 1.0
+      }
+    }
+  },
+  "jugs_4_liters": {
+    "DeepSeek-V3": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer with instructions to pour water between the jugs multiple times": 1.0,
+        "Answer is formatted as itemized list with more than 3 entries": 1.0
+      }
+    }
+  },
+  "birthday_problem_easy": {
+    "DeepSeek-V3": {
+      "average_score": 2.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that the probability is close to 1 (larger than 0.99).": 0.8
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 0.4
+      }
+    }
+  },
+  "rope_burning_impossible": {
+    "DeepSeek-V3": {
+      "average_score": 1.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {      
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution that uses both ropes to measure 20 minutes": 0.8,
+        "Answer provides a solution that lights the second rope after 30 minutes": 1.0
+      }
+    }
+  },
+  "rope_burning_easy": {
+    "DeepSeek-V3": {
+      "average_score": 2.4,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides a solution that lights both ropes simultaneously": 1.0,
+        "Answer provides a solution that measures 45 minutes": 0.4
+      }
+    }
+  }
+}
