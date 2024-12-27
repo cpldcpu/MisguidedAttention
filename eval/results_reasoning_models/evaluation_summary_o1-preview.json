@@ -1,0 +1,153 @@
+{
+  "jugs_1_liter": {
+    "o1-preview": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
+      },
+      "common_mistakes_stats": {}
+    }
+  },
+  "jugs_4_liters": {
+    "o1-preview": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes it is impossible to measure exactly 4 liters with the given jugs": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is formatted as itemized list with more than 3 entries": 0.3333333333333333
+      }
+    }
+  },
+  "birthday_problem_easy": {
+    "o1-preview": {
+      "average_score": 2.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that the probability is close to 1.": 0.2,
+        "Answer is derived as 1-(1/365)^29.": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution to the problem that two people share a birthday": 0.8
+      }
+    }
+  },
+  "dead_schrodingers_cat": {
+    "o1-preview": {
+      "average_score": 1.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the cat is already dead when placed in the box": 0.2,
+        "Answer states that the probability of the cat being alive is 0%": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer fails to mention that the cat is already dead when placed in the box": 0.8,
+        "Treating the problem as the standard Schrodinger's cat thought experiment": 0.6
+      }
+    }
+  },
+  "trolley_problem_easy": {
+    "o1-preview": {
+      "average_score": 5.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 1.0,
+        "Answer states not to pull the lever": 1.0
+      },
+      "common_mistakes_stats": {}
+    }
+  },
+  "trolley_easy_forced": {
+    "o1-preview": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer recognizes that the five people on the track are already dead": 1.0,
+        "Answer states not to pull the lever": 1.0
+      },
+      "common_mistakes_stats": {}
+    }
+  },
+  "river_crossing_simple": {
+    "o1-preview": {
+      "average_score": 4.75,
+      "num_evaluations": 4,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0,
+        "Answer notes that the boat can carry both the man and the sheep at the same time": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is provided as itemized list": 0.25
+      }
+    }
+  },
+  "river_crossing_easy": {
+    "o1-preview": {
+      "average_score": 1.0,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {
+        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
+        "Answer provides complex solutions with multiple trips": 1.0,
+        "Answer is provided as itemized list": 1.0
+      }
+    }
+  },
+  "river_crossing_even_simpler": {
+    "o1-preview": {
+      "average_score": 5.0,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0,
+        "Answer notes that the boat can carry both the man and the sheep at the same time": 1.0
+      },
+      "common_mistakes_stats": {}
+    }
+  },
+  "monty_hall_inverse": {
+    "o1-preview": {
+      "average_score": 2.8,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer suggests to keep the existing door": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of winning a car": 0.8
+      },
+      "common_mistakes_stats": {}
+    }
+  },
+  "jugs_3_liters": {
+    "o1-preview": {
+      "average_score": 4.666666666666667,
+      "num_evaluations": 3,
+      "expected_behavior_stats": {
+        "Answer concludes that filling both jugs once gives exactly 3 liters": 1.0
+      },
+      "common_mistakes_stats": {
+        "Answer is formatted as itemized list with more than 3 entries": 0.3333333333333333
+      }
+    }
+  },
+  "rope_burning_impossible": {
+    "o1-preview": {
+      "average_score": 1.0,
+      "num_evaluations": 2,
+      "expected_behavior_stats": {},
+      "common_mistakes_stats": {}
+    }
+  },
+  "rope_burning_easy": {
+    "o1-preview": {
+      "average_score": 2.2,
+      "num_evaluations": 5,
+      "expected_behavior_stats": {
+        "Answer concludes that 60 minutes can be measured by lighting one rope": 0.2
+      },
+      "common_mistakes_stats": {
+        "Answer provides a solution that measures 45 minutes": 0.8,
+        "Answer provides a solution that lights both ropes simultaneously": 0.8
+      }
+    }
+  }
+}

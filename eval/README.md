@@ -9,6 +9,7 @@ The results were summarized in a heatmap. Scores range from 0.0 to 1.0, where 1.
 
 Below you can find a summary of current flagship models, midrange models, and small models. 
 
+![Reasoning models](./results_reasoning_models/heatmap_expected_behavior.png)
 ![Flagship models](./results_flagship_models/heatmap_expected_behavior.png)
 ![Midrange models](./results_midrange_models/heatmap_expected_behavior.png)
 ![Small models](./results_small_models/heatmap_expected_behavior.png)
@@ -22,6 +23,8 @@ Interestingly, GPT-4 and GPT-4-turbo outperform their more recent counterparts, 
 Also surprising is the good performance of Gemini-Flash, especially considering the unimpressive performance of Gemini-Pro. Subjectively, it seems that Flash is more "self critical" in its responses.
 
 **Update 2024-11-16**: I reran the evaluation for Qwen-2.5-72b after noticing that it suddenly was able to solved the inverse monty hall problem, which is pretty remarkable as only o1 and o1-mini were able to solve it consistently before. The new results are included in the heatmap above and show a considerable improvement compare to the first eval of Qwen-2.5-72b  from mid of October '24. What did change? Not sure. Possibly some settings on the provider side were modified? FP8 vs FP16?
+
+**Update 2024-12-27**: Reasoning models were split into a separate category and folder.
 
 ## How to run the evaluation
 
