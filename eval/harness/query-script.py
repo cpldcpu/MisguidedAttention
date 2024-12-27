@@ -2,6 +2,7 @@ import argparse
 import json
 import requests
 import os
+import time
 from tqdm import tqdm
 from datetime import datetime
 
@@ -13,10 +14,9 @@ def save_json(data, file_path):
     with open(file_path, 'w') as f:
         json.dump(data, f, indent=2)
 
-def query_llm(prompt, llm_config, temperature_override):
+def query_llm(prompt, llm_config, temperature_override, max_retries=3):
     OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
     if not OPENROUTER_API_KEY:
-        # print("Using OPENAI_API_KEY instead of OPENROUTER_API_KEY")
         OPENROUTER_API_KEY = os.environ.get("OPENAI_API_KEY")
         if not OPENROUTER_API_KEY:
             raise ValueError("OPENROUTER_API_KEY and OPENAI_API_KEY environment variable not set")
@@ -37,32 +37,44 @@ def query_llm(prompt, llm_config, temperature_override):
         "presence_penalty": llm_config.get("presence_penalty", 0)
     }
 
-    # response = requests.post(
-    #     "https://openrouter.ai/api/v1/chat/completions",
-    #     headers=headers,
-    #     json=data
-    # )
-    try:
-        response = requests.post(
-            # "http://localhost:1234/v1/chat/completions",
-            "https://openrouter.ai/api/v1/chat/completions",
-            headers=headers,
-            json=data
-        )
-        response.raise_for_status()  # Raise an HTTPError for bad responses
-        if response.status_code == 200:
-            # print(f"Success: {response.status_code} {response.json()}")
-            return response.json()["choices"][0]["message"]["content"]
-        else:
-            print(f"Error: {response.status_code}, {response.text}")
-    except requests.exceptions.ChunkedEncodingError as e:
-        print(f"ChunkedEncodingError: {e}")
-        # Handle the error or retry the request
-    except requests.exceptions.RequestException as e:
-        print(f"Request failed: {e}")
-        # Handle other possible exceptions
+    for attempt in range(max_retries):
+        try:
+            response = requests.post(
+                "https://openrouter.ai/api/v1/chat/completions",
+                headers=headers,
+                json=data
+            )
+            response.raise_for_status()
+            response_json = response.json()
 
-        return None
+            # Check for error in response
+            if 'error' in response_json:
+                error = response_json['error']
+                if attempt < max_retries - 1:
+                    wait_time = (2 ** attempt) * 2  # Exponential backoff
+                    print(f"Error received. Retrying in {wait_time} seconds...")
+                    time.sleep(wait_time)
+                    continue
+                print(f"Error from provider: {error}")
+                return None
+
+            # Check for valid response structure
+            if 'choices' in response_json and len(response_json['choices']) > 0:
+                return response_json['choices'][0]['message']['content']
+            else:
+                print(f"Unexpected response format: {response_json}")
+                return None
+
+        except requests.exceptions.RequestException as e:
+            if attempt < max_retries - 1:
+                wait_time = (2 ** attempt) * 2
+                print(f"Request failed: {e}. Retrying in {wait_time} seconds...")
+                time.sleep(wait_time)
+            else:
+                print(f"Request failed after {max_retries} attempts: {e}")
+                return None
+
+    return None
 
 def main(args):
     dataset = load_json(args.dataset)
@@ -84,11 +96,14 @@ def main(args):
                 if args.debug:
                     print(f"Querying {llm['name']} with prompt: {prompt['prompt']}")
                 
-                answer = query_llm(prompt["prompt"], llm, args.temp)
+                answer = query_llm(prompt["prompt"], llm, args.temp, args.max_retries)
+                if answer is None:
+                    print(f"Failed to get response for prompt {prompt['prompt_id']}")
                 if args.debug:
                     print(f"Answer: {answer}")
 
                 result["output"].append(answer)
+                # result["output"].append(answer if answer is not None else "ERROR: Failed to get response")
             
             output["results"].append(result)
 
@@ -104,6 +119,7 @@ if __name__ == "__main__":
     parser.add_argument("--limit", type=int, default=0, help="Limit the number of prompts to evaluate (0 for no limit)")
     parser.add_argument("--temp", type=float, default=-1, help="Override temperature setting for LLMs (-1 to use config values)")
     parser.add_argument("--debug", action="store_true", help="Enable debug output")
+    parser.add_argument("--max-retries", type=int, default=8, help="Maximum number of retries for failed requests")
 
     args = parser.parse_args()
     main(args)
