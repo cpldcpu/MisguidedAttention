@@ -1,0 +1,7 @@
+llama-3.1-8b-instruct	0.06
+llama-3.2-1b-instruct	0.12
+llama-3.2-3b-instruct	0.13
+ministral-3b	0.18
+ministral-8b	0.16
+mistral-7b-instruct-v0.3	0.10
+qwen-2.5-7b-instruct	0.28

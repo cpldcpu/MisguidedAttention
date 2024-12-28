@@ -1,0 +1,15 @@
+claude-2.1	0.13
+claude-3-opus	0.22
+claude-3-sonnet	0.14
+claude-3.5-sonnet	0.34
+claude-3.5-sonnet-new	0.45
+DeepSeek-V3	0.22
+gemini-pro-1.5	0.21
+gpt-4-32k	0.46
+gpt-4o	0.32
+gpt-4o-2024-11-20	0.38
+grok-2	0.34
+grok-2-1212	0.34
+hermes-3-llama-3.1-405	0.27
+llama-3.1-405b-instruct	0.25
+mistral-large	0.39

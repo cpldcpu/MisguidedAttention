@@ -45,6 +45,11 @@ def process_summaries(summaries, valid_llms=None):
                     print(f"Ignoring LLM '{llm}' for prompt ID '{prompt_id}'")
     return pd.DataFrame(data)
 
+def save_llm_scores(llm_scores, output_file):
+    with open(output_file, 'w') as f:
+        for llm, score in llm_scores.items():
+            f.write(f"{llm}\t{score:.2f}\n")
+    print(f"LLM scores have been saved to '{output_file}'")
 
 def create_heatmap(data, value_col, output_file, cmap, vmin, vmax):
     # Group by llm and prompt_id, then aggregate using mean
@@ -102,6 +107,7 @@ def create_heatmap(data, value_col, output_file, cmap, vmin, vmax):
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
     plt.close()
     print(f"Heatmap has been generated and saved as '{output_file}'")
+    return row_averages
 
 def main(folder_path, valid_llms_file=None):
     summaries = load_evaluation_summaries(folder_path)
@@ -110,7 +116,11 @@ def main(folder_path, valid_llms_file=None):
    
     create_heatmap(data, 'average_rating', 'heatmap_average_rating.png', 'YlGnBu', 1, 5)
     create_heatmap(data, 'expected_minus_mistakes_score', 'heatmap_behavior_sum.png', 'YlGnBu', -1, 1)
-    create_heatmap(data, 'expected_behavior_score', 'heatmap_expected_behavior.png', 'YlGnBu', 0, 1)
+    
+    # Save LLM scores when generating expected behavior heatmap
+    expected_behavior_scores = create_heatmap(data, 'expected_behavior_score', 'heatmap_expected_behavior.png', 'YlGnBu', 0, 1)
+    save_llm_scores(expected_behavior_scores, 'expected_behavior_scores.txt')
+    
     create_heatmap(data, 'common_mistakes_score', 'heatmap_common_mistakes.png', 'YlGnBu', -1, 0)
 
 if __name__ == "__main__":
