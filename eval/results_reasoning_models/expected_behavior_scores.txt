@@ -1,3 +1,4 @@
+DeepSeek-R1-Lite-Preview	0.59
 gemini-2.0-flash-thinking-exp	0.31
 o1	0.77
 o1-mini	0.52
