@@ -102,6 +102,14 @@
       "temperature": 0.7,
       "top_p": 1.0,
       "repetition_penalty": 1
+    },
+    {
+      "name": "llama-3.3-70b-instruct",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "max_tokens": 2000,
+      "temperature": 0.8,
+      "top_p": 1.0,
+      "repetition_penalty": 1
     }
   ]
 }
