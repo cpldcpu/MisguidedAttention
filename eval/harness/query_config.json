@@ -1,11 +1,11 @@
 {
   "llms": [
     {
-      "name": "gpt-4o-2024-11-20",
-      "model": "openai/gpt-4o-2024-11-20",
+      "name": "grok-2-1212",
+      "model": "x-ai/grok-2-1212",
       "temperature": 0.7,
-      "top_p": 1.0,
+      "top_p": 0.95,
       "repetition_penalty": 1
-    }
+  }
   ]
 }
