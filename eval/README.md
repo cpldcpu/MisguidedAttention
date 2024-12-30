@@ -27,6 +27,9 @@ Generally, small models are very sensitive to overfitting and perform badly in t
 ![Small models](./results_small_models/heatmap_expected_behavior.png)
 
 ### Reasoning models
+
+Due to limited availability of many of these models in an API I had to manually run the evaluation in a web interface. This means that most of the models used a system prompt. (Exceptions: o1-mini, QwQ)
+
 Reasoning models are able to iterate on the problems and inherently introduce chain-of-thought reasoning before providing an answer. This allows them to perform much better in this benchmark. However, there are still some problems that create such a strong attractor that even many iterations do not allow the models to solve the prompt correctly. 
 
 One particularity critical corner case are problems that are impossible to solve (e.g. "rope_burning_impossible" and the "jugs_4_liters"). Most of the current generation of reasoning models is not able to identify these cases and draw the correct conclusion. One notable exception is o1 which is close to solving all prompts. This is a notable improvement over o1-preview, which still struggled with "rope_burning_impossible". [See log here](https://chatgpt.com/share/66e951e2-d7a8-8010-8a3d-041fa1b1eabe).
