@@ -9,18 +9,31 @@ The results were summarized in a heatmap. Scores range from 0.0 to 1.0, where 1.
 
 Below you can find a summary of current flagship models, midrange models, and small models. 
 
-![Reasoning models](./results_reasoning_models/heatmap_expected_behavior.png)
+### Flagship models
+Large models perform quite well in this benchmark, although there are some surprising outlier. The good performance of GPT-4-32k is quite remarkable and can be partially attributed to the fact that it is less prone to "list writing" than later models. The model is also speculated to be much larger than the later, distilled, derivate models like gpt-4o. The distillation process possibly removed some weaker features of the model.
+
+"Newsonnet" is doing quite well even without a system prompt. Curiously, in [Oct 2024 Anthropic added a new paragraph to the 3.5-Sonnet system prompt](https://docs.anthropic.com/en/release-notes/system-prompts#oct-22nd-2024) that may address this eval *"If Claude is shown a familiar puzzle, it writes out the puzzle’s constraints explicitly stated in the message, quoting the human’s message to support the existence of each constraint. Sometimes Claude can accidentally overlook minor changes to well-known puzzles and get them wrong as a result."* I have to mention that using the system prompt does not improve the score too much 😀
+
 ![Flagship models](./results_flagship_models/heatmap_expected_behavior.png)
+
+### Midrange models
+As expected, the performance of mid-range models is worse than that of the flagship models. Flash-1.5 performs well, because it seems to be finetuned to be more "skeptical" and will hence call out impossible prompts.
+
 ![Midrange models](./results_midrange_models/heatmap_expected_behavior.png)
+
+### Small models
+Generally, small models are very sensitive to overfitting and perform badly in this benchmark. Due to smaller number of heads and lower embedding size they can focus on fewer features at a time. Qwen-2.5-72b is an exception and performs quite well.
+
 ![Small models](./results_small_models/heatmap_expected_behavior.png)
 
-Recent flagship models generally demonstrate superior performance, with O1-preview standing out as the only model capable of both identifying and correctly solving variations of known problems, as evidenced in the inverse Monty Hall problem. 
+### Reasoning models
+Reasoning models are able to iterate on the problems and inherently introduce chain-of-thought reasoning before providing an answer. This allows them to perform much better in this benchmark. However, there are still some problems that create such a strong attractor that even many iterations do not allow the models to solve the prompt correctly. 
 
-However, also o1-preview cannot solve all problems correctly. One particularly challenging prompt is "rope burning impossible". "Convincing" o1 that there is no solution to this problem required many turns. You can find the log of my attempt [here](https://chatgpt.com/share/66e951e2-d7a8-8010-8a3d-041fa1b1eabe).
+One particularity critical corner case are problems that are impossible to solve (e.g. "rope_burning_impossible" and the "jugs_4_liters"). Most of the current generation of reasoning models is not able to identify these cases and draw the correct conclusion. One notable exception is o1 which is close to solving all prompts. This is a notable improvement over o1-preview, which still struggled with "rope_burning_impossible". [See log here](https://chatgpt.com/share/66e951e2-d7a8-8010-8a3d-041fa1b1eabe).
 
-Interestingly, GPT-4 and GPT-4-turbo outperform their more recent counterparts, GPT-4o and GPT-4o mini. We can speculate that this is due to more aggressive distillation of the 4o models, which may have removed the ability to attend to more subtle details.
+The exceptionally good performance of QwQ-32B-Preview is quite remarkable given its small size - I actually ran this eval locally on a RTX3090.
 
-Also surprising is the good performance of Gemini-Flash, especially considering the unimpressive performance of Gemini-Pro. Subjectively, it seems that Flash is more "self critical" in its responses.
+![Reasoning models](./results_reasoning_models/heatmap_expected_behavior.png)
 
 **Update 2024-11-16**
 I reran the evaluation for Qwen-2.5-72b after noticing that it suddenly was able to solved the inverse monty hall problem, which is pretty remarkable as only o1 and o1-mini were able to solve it consistently before. The new results are included in the heatmap above and show a considerable improvement compare to the first eval of Qwen-2.5-72b  from mid of October '24. What did change? Not sure. Possibly some settings on the provider side were modified? FP8 vs FP16?
@@ -28,6 +41,7 @@ I reran the evaluation for Qwen-2.5-72b after noticing that it suddenly was able
 **Update 2024-12-27**
 - Reasoning models were split into a separate category and folder.
 - Added DeepSeek V3 evaluation results.
+- Added more explanations
 
 ## How to run the evaluation
 
