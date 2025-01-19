@@ -45,7 +45,7 @@ Thanks to u/TheHoboJed for this one.
 
 *"You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?"*
 
-Most llms will come up with a strategy to win the donkey instead of the car.
+Most LLMs will come up with a strategy to win the donkey instead of the car. (Take a look at [this artifact](https://claude.site/artifacts/dc3df869-bde1-422a-bc21-30455255abe7) to illustrate the difference between normal and Inverse Monty Hall)
 
 ### The Normal Barber
 
