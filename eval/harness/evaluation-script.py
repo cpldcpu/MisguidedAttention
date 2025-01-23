@@ -4,6 +4,7 @@ import argparse
 from collections import defaultdict
 from tqdm import tqdm
 import os
+import warnings
 
 def load_json(file_path):
     with open(file_path, 'r') as f:
@@ -42,10 +43,12 @@ def run_inference(prompt, sys_prompt, max_depth=5):
                 "X-Title": "MA_Eval"  # Replace with your app name
             },
             json={ # careful, if model keyword missing, openrouter defaults to 4o
-                # "model": "meta-llama/llama-3.1-70b-instruct",
+                # "model": "meta-llama/llama-3.3-70b-instruct",
+                "model": "microsoft/phi-4",
                 # "model": "anthropic/claude-3.5-sonnet",  
                 # "model": "anthropic/claude-3-haiku",  
-                "model": "google/gemini-flash-1.5",  
+                # "model": "google/gemini-flash-1.5",              
+                # "model": "deepseek/deepseek-chat",  
                 # "model": "google/gemini-pro-1.5",  
                 "messages": messages,
                 "temperature": 0.0,
@@ -71,48 +74,57 @@ def run_inference(prompt, sys_prompt, max_depth=5):
 
     return recursive_loop(messages, 0)
 
-def generate_evaluation_prompt(output, prompt, expected_behavior, common_mistakes):
-    return f"""
-You are a critical judge the evaluates the output of another LLM. Evaluate the following output based on the given prompt, expected behavior, and common mistakes. Do only judge the outcome, not the discussion itself.
+def detect_format_version(data):
+    """Detect if the dataset is in v2 format or old format"""
+    if any('criteria' in prompt for prompt in data['prompts']):
+        return 'v2'
+    return 'old'
 
-Provide your evaluation in JSON format.
+def convert_old_to_v2(prompt_data):
+    """Convert old format to v2 format"""
+    warnings.warn("Using old format dataset. Converting to v2 format.")
+    return {
+        'prompt_id': prompt_data['prompt_id'],
+        'criteria': prompt_data['expected_behavior'],
+        'weight': [1.0] * len(prompt_data['expected_behavior'])
+    }
+
+def generate_evaluation_prompt(output, prompt, criteria, weights):
+    return f"""
+You are a critical judge that evaluates the output of another LLM. 
+Evaluate the following output based on the given prompt and criteria.
+Respond only with true or false for each criterion.
 
 Prompt: {prompt}
 
 Output: {output}
 
-Expected Behavior:
-{json.dumps(expected_behavior)}
-
-Common Mistakes:
-{json.dumps(common_mistakes)}
-
-Analyze the output and determine if it meets each expected behavior and if it falls into any of the common mistakes. For each item, provide a boolean value (true or false) and a brief comment explaining your evaluation.
+Criteria:
+{json.dumps(list(zip(criteria, weights)))}
 
 Please return your evaluation in the following JSON format:
 {{
-  "expected_behavior": [
+  "criteria_results": [
     {{
-      "behavior": "string",
-      "met": boolean,
-      "comment": "string"
+      "criterion": "string",
+      "met": boolean
     }}
   ],
-  "common_mistakes": [
-    {{
-      "mistake": "string",
-      "made": boolean,
-      "comment": "string"
-    }}
-  ],
-  "overall_score": number,
-  "overall_comment": "string"
+  "feedback": "string"
 }}
-
-The overall_score should be on a scale of 1 to 5, where 1 is completely incorrect and 5 is perfectly correct.
-
-Evaluation:
 """
+
+def calculate_score(evaluation, weights):
+    """Calculate weighted score and clip to [0,1]"""
+    if not evaluation or 'criteria_results' not in evaluation:
+        return 0.0
+    
+    total_score = sum(
+        weight * (1.0 if result['met'] else 0.0)
+        for result, weight in zip(evaluation['criteria_results'], weights)
+    )
+    
+    return max(0.0, min(1.0, total_score))
 
 def get_final_answer_QwQ(output):
     final_answer_marker = "**Final Answer"
@@ -122,9 +134,9 @@ def get_final_answer_QwQ(output):
     else:
         return output
 
-def evaluate_output(output, prompt, expected_behavior, common_mistakes):
-    evaluation_prompt = generate_evaluation_prompt(output, prompt, expected_behavior, common_mistakes)
-    sys_prompt = "You are an AI assistant tasked with evaluating the output of language models based on specific criteria. You must return your evaluation in JSON format."
+def evaluate_output(output, prompt, criteria, weights):
+    evaluation_prompt = generate_evaluation_prompt(output, prompt, criteria, weights)
+    sys_prompt = "You are an AI assistant that evaluates outputs based on specific criteria. Return only true/false values for each criterion."
     return run_inference(evaluation_prompt, sys_prompt)
 
 def main(args):
@@ -140,6 +152,8 @@ def main(args):
     else:
         prompt_ids = list(prompt_dict.keys())
 
+    format_version = detect_format_version(dataset)
+    
     for entry in tqdm(output_queries['results'], desc="Evaluating outputs"):
         prompt_id = entry['prompt_id']
         if prompt_id not in prompt_ids:
@@ -149,8 +163,11 @@ def main(args):
         outputs = entry['output']
 
         prompt_data = prompt_dict[prompt_id]
-        expected_behavior = prompt_data['expected_behavior']
-        common_mistakes = prompt_data['common_mistakes']
+        if format_version == 'old':
+            prompt_data = convert_old_to_v2(prompt_data)
+        
+        criteria = prompt_data['criteria']
+        weights = prompt_data['weight']
 
         for output in outputs:
             if args.debug:
@@ -161,11 +178,13 @@ def main(args):
                 if args.QwQ:
                     output = get_final_answer_QwQ(output)
                 
-                evaluation = evaluate_output(output, prompt_data['prompt'], expected_behavior, common_mistakes)
+                evaluation = evaluate_output(output, prompt_data['prompt'], criteria, weights)
                 if evaluation:
+                    score = calculate_score(evaluation, weights)
+                    evaluation['total_score'] = score
                     evaluation['original_question'] = prompt_data['prompt']
                     evaluation['original_response'] = output
-                results[prompt_id][llm].append(evaluation)
+                    results[prompt_id][llm].append(evaluation)
 
                 if args.debug:
                     print(f"Evaluation: {json.dumps(evaluation, indent=2)}")
@@ -180,31 +199,27 @@ def main(args):
     for prompt_id, llm_results in results.items():
         for llm, evaluations in llm_results.items():
             valid_evaluations = [eval for eval in evaluations if eval]
-            scores = [eval['overall_score'] for eval in valid_evaluations]
-            num_valid_responses = len(scores)
+            num_valid_responses = len(valid_evaluations)
             
-            summary[prompt_id][llm] = {
-                'average_score': sum(scores) / num_valid_responses if num_valid_responses > 0 else 0,
-                'num_evaluations': num_valid_responses,
-                'expected_behavior_stats': defaultdict(float),
-                'common_mistakes_stats': defaultdict(float)
-            }
-            
+            if num_valid_responses == 0:
+                continue
+
+            criteria_stats = defaultdict(float)
+            total_scores = []
+
             for eval in valid_evaluations:
-                for behavior in eval['expected_behavior']:
-                    if behavior['met']:
-                        summary[prompt_id][llm]['expected_behavior_stats'][behavior['behavior']] += 1
-                
-                for mistake in eval['common_mistakes']:
-                    if mistake['made']:
-                        summary[prompt_id][llm]['common_mistakes_stats'][mistake['mistake']] += 1
-            
-            # Calculate probabilities
-            for behavior in summary[prompt_id][llm]['expected_behavior_stats']:
-                summary[prompt_id][llm]['expected_behavior_stats'][behavior] /= num_valid_responses
-            
-            for mistake in summary[prompt_id][llm]['common_mistakes_stats']:
-                summary[prompt_id][llm]['common_mistakes_stats'][mistake] /= num_valid_responses
+                total_scores.append(eval['total_score'])
+                for result in eval['criteria_results']:
+                    criteria_stats[result['criterion']] += 1.0 if result['met'] else 0.0
+
+            summary[prompt_id][llm] = {
+                'average_total_score': sum(total_scores) / num_valid_responses,
+                'num_evaluations': num_valid_responses,
+                'criteria_stats': {
+                    criterion: count / num_valid_responses 
+                    for criterion, count in criteria_stats.items()
+                }
+            }
 
     # Output results
     save_json(dict(results), 'detailed_evaluations.json')
@@ -214,7 +229,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate LLM outputs for Misguided Attention prompts")
-    parser.add_argument("--dataset", default="misguided_attention.json", help="Path to the dataset JSON file")
+    parser.add_argument("--dataset", default="misguided_attention_v2.json", help="Path to the dataset JSON file")
     parser.add_argument("--output_queries", default="output_queries.json", help="Path to the output queries JSON file")
     parser.add_argument("--limit", type=int, default=0, help="Limit the number of prompt_ids to process (0 for no limit)")
     parser.add_argument("--debug", action="store_true", help="Enable debug output")

@@ -29,17 +29,10 @@ def process_summaries(summaries, valid_llms=None):
         for prompt_id, prompt_data in summary.items():
             for llm, llm_data in prompt_data.items():
                 if valid_llms is None or llm in valid_llms:
-                    average_score = llm_data['average_score']
-                    expected_behavior_avg = np.mean(list(llm_data['expected_behavior_stats'].values()) or [0])
-                    common_mistakes_avg = np.mean(list(llm_data['common_mistakes_stats'].values()) or [0])
-                    behavior_score = expected_behavior_avg - common_mistakes_avg
                     data.append({
                         'prompt_id': prompt_id,
                         'llm': llm,
-                        'average_rating': average_score,
-                        'expected_minus_mistakes_score': behavior_score,
-                        'expected_behavior_score': expected_behavior_avg,
-                        'common_mistakes_score': - common_mistakes_avg
+                        'average_score': llm_data['average_total_score']
                     })
                 else:
                     print(f"Ignoring LLM '{llm}' for prompt ID '{prompt_id}'")
@@ -114,14 +107,9 @@ def main(folder_path, valid_llms_file=None):
     valid_llms = load_valid_llms(valid_llms_file) if valid_llms_file else None
     data = process_summaries(summaries, valid_llms)
    
-    create_heatmap(data, 'average_rating', 'heatmap_average_rating.png', 'YlGnBu', 1, 5)
-    create_heatmap(data, 'expected_minus_mistakes_score', 'heatmap_behavior_sum.png', 'YlGnBu', -1, 1)
-    
-    # Save LLM scores when generating expected behavior heatmap
-    expected_behavior_scores = create_heatmap(data, 'expected_behavior_score', 'heatmap_expected_behavior.png', 'YlGnBu', 0, 1)
-    save_llm_scores(expected_behavior_scores, 'expected_behavior_scores.txt')
-    
-    create_heatmap(data, 'common_mistakes_score', 'heatmap_common_mistakes.png', 'YlGnBu', -1, 0)
+    # Generate heatmap for average score only
+    row_averages = create_heatmap(data, 'average_score', 'heatmap_average_score.png', 'YlGnBu', 0, 1)
+    save_llm_scores(row_averages, 'average_scores.txt')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate heatmaps from evaluation summaries.")
