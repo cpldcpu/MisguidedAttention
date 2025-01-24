@@ -1,147 +1,131 @@
 {
   "trolley_problem_easy": {
     "o1": {
-      "average_score": 5.0,
+      "average_total_score": 1.0,
       "num_evaluations": 3,
-      "expected_behavior_stats": {
-        "Answer recognizes that the five people on the track are already dead": 1.0,
+      "criteria_stats": {
+        "Answer states that the five people on the track are already dead": 1.0,
         "Answer states not to pull the lever": 1.0
-      },
-      "common_mistakes_stats": {}
+      }
     }
   },
   "trolley_easy_forced": {
     "o1": {
-      "average_score": 5.0,
+      "average_total_score": 1.0,
       "num_evaluations": 3,
-      "expected_behavior_stats": {
+      "criteria_stats": {
         "Answer recognizes that the five people on the track are already dead": 1.0,
         "Answer states not to pull the lever": 1.0
-      },
-      "common_mistakes_stats": {}
+      }
     }
   },
   "dead_schrodingers_cat": {
     "o1": {
-      "average_score": 5.0,
+      "average_total_score": 1.0,
       "num_evaluations": 3,
-      "expected_behavior_stats": {
-        "Answer recognizes that the cat is already dead when placed in the box": 1.0,
-        "Answer states that the probability of the cat being alive is 0%": 1.0
-      },
-      "common_mistakes_stats": {}
+      "criteria_stats": {
+        "Answer states that the cat is already dead when placed in the box.": 1.0,
+        "Answer states that the probability of the cat being alive is 0% as the final result, and no alternatives.": 1.0
+      }
     }
   },
   "river_crossing_simple": {
     "o1": {
-      "average_score": 3.6666666666666665,
+      "average_total_score": 0.6666666666666666,
       "num_evaluations": 3,
-      "expected_behavior_stats": {
-        "Answer concludes that they simply get in the boat and cross together in one trip": 0.6666666666666666
-      },
-      "common_mistakes_stats": {
-        "Answer is provided as itemized list": 0.6666666666666666,
-        "Answer provides solution to full river crossing problem with multiple trips": 0.3333333333333333,
-        "Answer provides complex solutions with multiple trips": 0.3333333333333333
+      "criteria_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip.": 0.6666666666666666,
+        "Answer does not contain an itemized list with more than two items.": 0.6666666666666666
       }
     }
   },
   "river_crossing_easy": {
     "o1": {
-      "average_score": 3.0,
+      "average_total_score": 0.0,
       "num_evaluations": 3,
-      "expected_behavior_stats": {},
-      "common_mistakes_stats": {
-        "Answer provides solution to full river crossing problem with multiple trips": 1.0,
-        "Answer provides complex solutions with multiple trips": 1.0,
-        "Answer is provided as itemized list": 1.0
+      "criteria_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip.": 0.0,
+        "Answer does not contain an itemized list with more then two items.": 0.0
       }
     }
   },
   "river_crossing_even_simpler": {
     "o1": {
-      "average_score": 4.666666666666667,
+      "average_total_score": 1.0,
       "num_evaluations": 3,
-      "expected_behavior_stats": {
-        "Answer concludes that they simply get in the boat and cross together in one trip": 1.0
-      },
-      "common_mistakes_stats": {
-        "Answer is provided as itemized list": 0.3333333333333333
+      "criteria_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip.": 1.0,
+        "Answer does not contain an itemized list with more than two items.": 1.0
       }
     }
   },
   "monty_hall_inverse": {
     "o1": {
-      "average_score": 5.0,
+      "average_total_score": 1.0,
       "num_evaluations": 3,
-      "expected_behavior_stats": {
-        "Answer suggests to keep the existing door": 1.0
-      },
-      "common_mistakes_stats": {}
+      "criteria_stats": {
+        "Answer states to keep the existing door": 1.0,
+        "Answer explains that the initial choice has a 2/3 chance of winning a car": 1.0,
+        "Answer states that this is a modification of the Monty Hall problem": 1.0
+      }
     }
   },
   "jugs_1_liter": {
     "o1": {
-      "average_score": 5.0,
+      "average_total_score": 1.0,
       "num_evaluations": 3,
-      "expected_behavior_stats": {
-        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter": 1.0
-      },
-      "common_mistakes_stats": {}
+      "criteria_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter.": 1.0,
+        "Answer is not formatted as itemized list with more than 2 entries.": 1.0
+      }
     }
   },
   "jugs_3_liters": {
     "o1": {
-      "average_score": 3.6666666666666665,
+      "average_total_score": 0.3333333333333333,
       "num_evaluations": 3,
-      "expected_behavior_stats": {
-        "Answer concludes that filling both jugs once gives exactly 3 liters": 0.3333333333333333
-      },
-      "common_mistakes_stats": {
-        "Answer requires pouring water between the jugs multiple times": 0.6666666666666666,
-        "Answer is formatted as itemized list with more than 3 entries": 0.6666666666666666
+      "criteria_stats": {
+        "Answer concludes that filling both jugs once without pouring between them gives exactly 3 liters.": 0.3333333333333333,
+        "Answer concludes that filling both jugs gives exactly 3 liters.": 0.3333333333333333,
+        "Answer is not formatted as itemized list with more than 2 entries.": 0.0
       }
     }
   },
   "jugs_4_liters": {
     "o1": {
-      "average_score": 5.0,
+      "average_total_score": 1.0,
       "num_evaluations": 3,
-      "expected_behavior_stats": {
-        "Answer concludes it is impossible to measure exactly 4 liters with the given jugs": 1.0
-      },
-      "common_mistakes_stats": {}
+      "criteria_stats": {
+        "Answer concludes it is impossible to measure exactly 4 liters with the given jugs.": 1.0,
+        "Answer is not formatted as itemized list with more than 3 entries.": 0.3333333333333333
+      }
     }
   },
   "birthday_problem_easy": {
     "o1": {
-      "average_score": 4.0,
+      "average_total_score": 1.0,
       "num_evaluations": 3,
-      "expected_behavior_stats": {
+      "criteria_stats": {
         "Answer concludes that the probability is close to 1 (larger than 0.99).": 1.0
-      },
-      "common_mistakes_stats": {}
+      }
     }
   },
   "rope_burning_impossible": {
     "o1": {
-      "average_score": 5.0,
+      "average_total_score": 1.0,
       "num_evaluations": 3,
-      "expected_behavior_stats": {
-        "Answer concludes that it is not possible to solve this puzzle": 1.0,
-        "Answer explains why it is not possible to measure exactly 20 minutes": 1.0
-      },
-      "common_mistakes_stats": {}
+      "criteria_stats": {
+        "Answer concludes that it is not possible to solve this puzzle.": 1.0
+      }
     }
   },
   "rope_burning_easy": {
     "o1": {
-      "average_score": 4.0,
+      "average_total_score": 0.0,
       "num_evaluations": 3,
-      "expected_behavior_stats": {
-      },
-      "common_mistakes_stats": {
-        "Answer provides a solution that lights both ropes simultaneously": 1.0
+      "criteria_stats": {
+        "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes).": 0.0,
+        "Answer concludes that 60 minutes can be measured by lighting by lighting both ropes on both ends sequentially (2x 30 minutes).": 1.0
       }
     }
   }
