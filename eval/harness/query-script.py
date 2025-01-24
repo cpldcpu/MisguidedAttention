@@ -112,7 +112,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate LLMs on a dataset of prompts")
-    parser.add_argument("--dataset", default="misguided_attention.json", help="Path to the dataset JSON file")
+    parser.add_argument("--dataset", default="misguided_attention_v2.json", help="Path to the dataset JSON file")
     parser.add_argument("--output", default="output_queries.json", help="Path to the output JSON file")
     parser.add_argument("--config", default="query_config.json", help="Path to the configuration JSON file")
     parser.add_argument("--samples", type=int, default=1, help="Number of repetitions for each question and LLM")
