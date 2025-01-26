@@ -48,6 +48,13 @@
         "temperature": 1.0,
         "top_p": 1,
         "repetition_penalty": 1
+    },
+    {
+        "name": "lfm-7b",
+        "model": "liquid/lfm-7b",
+        "temperature": 0.7,
+        "top_p": 1.0,
+        "repetition_penalty": 1
     }
    ]
 }
