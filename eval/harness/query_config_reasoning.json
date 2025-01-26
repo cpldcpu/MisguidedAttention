@@ -38,6 +38,22 @@
         "temperature": 1,
         "top_p": 1.0,
         "repetition_penalty": 1
-      }               
+      },
+      {
+        "name": "deepseek-r1",
+        "model": "deepseek/deepseek-r1",
+        "max_tokens": 4000,
+        "temperature": 1,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+      },
+      {
+        "name": "DeepSeek-R1-Lite-Preview",
+        "model": "deepseek/deepseek-r1",
+        "max_tokens": 4000,
+        "temperature": 1,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+      }  
   ]
 }
