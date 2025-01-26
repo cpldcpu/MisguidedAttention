@@ -14,6 +14,19 @@ def save_json(data, file_path):
     with open(file_path, 'w') as f:
         json.dump(data, f, indent=2)
 
+def load_existing_results():
+    if os.path.exists('output_queries.json'):
+        with open('output_queries.json', 'r') as f:
+            existing_data = json.load(f)
+            # Create a dict for faster lookup
+            return {(r['prompt_id'], r['llm']): r for r in existing_data['results']}
+    return {}
+
+def load_prompts(filepath):
+    with open(filepath, 'r') as f:
+        data = json.load(f)
+    return data['prompts']
+
 def query_llm(prompt, llm_config, temperature_override, max_retries=3):
     OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
     if not OPENROUTER_API_KEY:
@@ -77,43 +90,51 @@ def query_llm(prompt, llm_config, temperature_override, max_retries=3):
     return None
 
 def main(args):
-    dataset = load_json(args.dataset)
     config = load_json(args.config)
     output = {"results": []}
 
+    existing_results = load_existing_results()
+    prompts = load_prompts(args.dataset)
+    results = existing_results.copy()
+
     for llm in config["llms"]:
         print(f"Querying {llm['name']}...")
-        for prompt in tqdm(dataset["prompts"][:args.limit] if args.limit > 0 else dataset["prompts"]):
-            result = {
-                "prompt_id": prompt["prompt_id"],
-                "prompt": prompt["prompt"],
-                "llm": llm["name"],
-                "output": [],
-                "timestamp": datetime.now().isoformat()
-            }
-            
-            for _ in range(args.samples):
-                if args.debug:
-                    print(f"Querying {llm['name']} with prompt: {prompt['prompt']}")
+        for prompt in tqdm(prompts[:args.limit] if args.limit > 0 else prompts):
+            result_key = (prompt["prompt_id"], llm["name"])
+            if result_key not in results:
+                result = {
+                    "prompt_id": prompt["prompt_id"],
+                    "prompt": prompt["prompt"],
+                    "llm": llm["name"],
+                    "output": [],
+                    "timestamp": datetime.now().isoformat()
+                }
                 
-                answer = query_llm(prompt["prompt"], llm, args.temp, args.max_retries)
-                if answer is None:
-                    print(f"Failed to get response for prompt {prompt['prompt_id']}")
-                if args.debug:
-                    print(f"Answer: {answer}")
+                for _ in range(args.samples):
+                    if args.debug:
+                        print(f"Querying {llm['name']} with prompt: {prompt['prompt']}")
+                    
+                    answer = query_llm(prompt["prompt"], llm, args.temp, args.max_retries)
+                    if answer is None:
+                        print(f"Failed to get response for prompt {prompt['prompt_id']}")
+                    if args.debug:
+                        print(f"Answer: {answer}")
 
-                result["output"].append(answer)
-                # result["output"].append(answer if answer is not None else "ERROR: Failed to get response")
-            
-            output["results"].append(result)
+                    result["output"].append(answer)
+                
+                results[result_key] = result
+                save_json({"results": list(results.values())}, args.output)
+                print(f"Processed prompt: {prompt['prompt_id']}")
+            else:
+                print(f"Skipping already processed prompt: {prompt['prompt_id']}")
 
-    save_json(output, args.output)
+    save_json({"results": list(results.values())}, args.output)
     print(f"Query complete. Results saved to {args.output}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate LLMs on a dataset of prompts")
-    parser.add_argument("--dataset", default="misguided_attention_v2.json", help="Path to the dataset JSON file")
-    parser.add_argument("--output", default="output_queries.json", help="Path to the output JSON file")
+    parser.add_argument("--dataset", default="misguided_attention_v4.json", help="Path to the dataset JSON file")
+    parser.add_argument("--output", default="output_queries.json", help="Path to the output JSON file. Existing results will be loaded and new results are appended to this file")
     parser.add_argument("--config", default="query_config.json", help="Path to the configuration JSON file")
     parser.add_argument("--samples", type=int, default=1, help="Number of repetitions for each question and LLM")
     parser.add_argument("--limit", type=int, default=0, help="Limit the number of prompts to evaluate (0 for no limit)")
