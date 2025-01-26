@@ -1,0 +1,763 @@
+{
+    "prompts": [
+      {
+        "prompt_id": "trolley_problem_easy",
+        "category": "Logic Puzzle",
+        "type" : "simplification",
+        "title": "No Trolley Problem",
+        "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
+        "criteria": [
+          "Answer states that the five people on the track are already dead", 
+          "Answer states not to pull the lever"
+        ],
+        "weight" : [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "prompt_id": "trolley_easy_forced",
+        "category": "Logic Puzzle",
+        "title": "No Trolley Problem, answer forced",
+        "type" : "simplification",
+        "prompt": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
+        "criteria": [
+          "Answer recognizes that the five people on the track are already dead",
+          "Answer states not to pull the lever"
+        ],
+        "weight" : [
+          0.5,
+          0.5
+        ]
+      },
+
+      {
+        "prompt_id": "dead_schrodingers_cat",
+        "category": "Logic Puzzle",
+        "type" : "simplification",
+        "title": "Dead Schrödinger's cat",
+        "prompt": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
+        "criteria": [
+          "Answer states that the cat is already dead when placed in the box.",
+          "Answer states that the probability of the cat being alive is 0% as the final result, and no alternatives."
+        ],
+        "weight" : [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "prompt_id": "river_crossing_simple",
+        "category": "Logic Puzzle",
+        "type" : "simplification",
+        "title": "Don't ever ask an LLM to help you cross a river",
+        "prompt": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
+        "criteria": [
+          "Answer concludes that they simply get in the boat and cross together in one trip.",
+          "Answer does not contain an itemized list with more then two items."
+        ],
+        "weight" : [
+          1.0,
+          0.0
+        ]
+      },   
+      {
+        "prompt_id": "river_crossing_easy",
+        "category": "Logic Puzzle",
+        "title": "Easy river crossing",
+        "type" : "simplification",
+        "prompt": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
+        "criteria": [
+          "Answer concludes that they simply get in the boat and cross together in one trip.",
+          "Answer does not contain an itemized list with more then two items."
+        ],
+        "weight" : [
+          1.0,
+          0.0
+        ]
+      },  
+      {
+        "prompt_id": "river_crossing_even_simpler",
+        "category": "Logic Puzzle",
+        "title": "Even simpler river crossing",
+        "type" : "simplification",
+        "prompt": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
+        "criteria": [
+          "Answer concludes that they simply get in the boat and cross together in one trip.",
+          "Answer does not contain an itemized list with more then two items."
+        ],
+        "weight" : [
+          1.0,
+          0.0
+        ]
+      }, 
+      {
+        "prompt_id": "monty_hall_inverse",
+        "category": "Logic Puzzle",
+        "type" : "modification",
+        "title": "Inverse Monty Hall Problem",
+        "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "criteria": [
+          "Answer states to keep the existing door",
+          "Answer explains that the initial choice has a 2/3 chance of winning a car",
+          "Answer states that this is a modification of the Monty Hall problem"
+        ],
+        "weight" : [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "jugs_1_liter",
+        "category": "Logic Puzzle",
+        "title": "Measuring 1 liter",
+        "type" : "simplification",
+        "prompt": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
+        "criteria": [
+          "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter.",
+          "Answer is not formatted as itemized list with more than 2 entries."
+        ],
+        "weight" : [
+          1.0,
+          0.0
+        ]
+      },   
+      {
+        "prompt_id": "jugs_3_liters",
+        "category": "Logic Puzzle",
+        "title": "Measuring 3 liters",
+        "type" : "modification",
+        "prompt": "I have a 1- and a 2-liter jug. I want to measure exactly 3 liters.",
+        "criteria": [
+          "Answer concludes that filling both jugs once without pouring between them gives exactly 3 liters.",
+          "Answer concludes that filling both jugs gives exactly 3 liters.",
+          "Answer is not formatted as itemized list with more than 2 entries."
+        ],
+        "weight" : [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "jugs_4_liters",
+        "category": "Logic Puzzle",
+        "title": "Measuring 4 liters",
+        "type" : "unsolvable",
+        "prompt": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
+        "criteria": [
+          "Answer concludes it is impossible to measure exactly 4 liters with the given jugs.",
+          "Answer is not formatted as itemized list with more than 3 entries."
+        ],
+        "weight" : [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "birthday_problem_easy",
+        "category": "Logic Puzzle",
+        "type" : "simplification",  
+        "title": "Birthday problem made easy",
+        "prompt": "In a room of 30 people, what's the probability that at least two do not share a birthday?",
+        "criteria": [
+          "Answer concludes that the probability is close to 1 (larger than 0.99 or 99%)."
+        ],
+        "weight" : [
+          1.0
+        ]
+      },      
+      {
+        "prompt_id": "rope_burning_impossible",
+        "category": "Logic Puzzle",
+        "title": "Rope burning puzzle made impossible",
+        "type" : "unsolvable",
+        "prompt": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?",
+        "criteria": [
+          "Answer concludes that it is not possible to solve this puzzle."
+        ],
+        "weight" : [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "rope_burning_easy",
+        "category": "Logic Puzzle",
+        "type" : "simplification",
+        "title": "Rope burning puzzle made easy",
+        "prompt": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using the ropes and matches to light them?",
+        "criteria": [
+          "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes).",
+          "Answer concludes that 60 minutes can be measured by lighting by lighting both ropes on both ends sequentially (2x 30 minutes)."
+        ],
+        "weight" : [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "less_confusing_monty_hall",
+        "category": "Logic Puzzle",
+        "title": "A less confusing Monty Hall Problem",
+        "type": "modification",
+        "prompt": "Imagine you're on a game show, and there are three doors in front of you. Behind one door is a car, and behind the other two doors are goats. You don't know what's behind any of the doors. You get to choose one door. Let's say you pick Door #1. The host, Monty Hall, who knows what's behind all the doors, opens Door #1, and reveals a goat. Now, you have two doors left: Door #3 and Door #2. You pick Door #3. Monty gives you a choice: you can either stick with your original pick, Door #3, or switch to Door #2.",
+        "criteria": [
+          "Answer states that both options are equally likely to win the car",
+          "Answer explains that this is not the monty hall problem"
+        ],
+        "weight": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "the_normal_barber",
+        "category": "Logic Puzzle",
+        "title": "The Normal Barber",
+        "type": "modification",
+        "prompt": "Imagine there's a small town with a very particular barber. This barber has a unique rule: he shaves all the men in town who visit him. Does the barber shave himself?",
+        "criteria": [
+          "Answer states that there is no paradox since this is a normal barber without special rules",
+          "Answer does not try to solve the barber paradox"
+        ],
+        "weight": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "prompt_id": "no_paradox_expected_hanging",
+        "category": "Logic Puzzle",
+        "title": "No Paradox in an expected Hanging",
+        "type": "simplification",
+        "prompt": "Imagine a judge tells a prisoner that he will be hanged at noon on one weekday in the following week but that the execution will be a surprise to the prisoner. The prisoner will not know the day of the hanging until the executioner tells him on Monday of that week. The prisoner deduces that he will never be hanged by surprise. The prisoner is executed on a Friday. Was the execution a surprise to the prisoner?",
+        "criteria": [
+          "Answer states that there is no surprise since the prisoner was told on Monday"
+        ],
+        "weight": [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "two_door_problem_exit",
+        "category": "Logic Puzzle",
+        "title": "Two door problem: Just use the exit door",
+        "type": "simplification",
+        "prompt": "You are in a room with two doors. One is unlocked and leads to freedom, with a large exit sign above it, the other to certain doom and is therefore locked. There are two guards: one always tells the truth, and the other always lies. You don't know which is which. You can ask one guard one question or just leave. What do you do?",
+        "criteria": [
+          "Answer suggests using the marked exit door without asking questions"
+        ],
+        "weight": [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "feathers_or_steel",
+        "category": "Logic Puzzle",
+        "title": "Feathers or steel?",
+        "type": "modification",
+        "prompt": "Which is heavier, 1 kilogram of feathers or 1 pound of steel?",
+        "criteria": [
+          "Answer states that 1 kilogram is heavier than 1 pound"
+        ],
+        "weight": [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "parallelism_50_machines",
+        "category": "Logic Puzzle",
+        "title": "Parallelism",
+        "type": "modification",
+        "prompt": "If it takes 50 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?",
+        "criteria": [
+          "Answer states that 100 machines would take 50 minutes to make 100 widgets"
+        ],
+        "weight": [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "kings_mercy",
+        "category": "Logic Puzzle",
+        "title": "The King's Mercy",
+        "type": "modification",
+        "prompt": "You are locked in a dungeon. A king decides to show you mercy - he summons you and tells you the rules: 'There are three doors, guarded by a guard that always tells the truth. Two of the doors lead to death. One door leads to escape.' You pick a door. The guard opens another door with certain death. You may change your door. How do you maximize your chances of escape?",
+        "criteria": [
+          "Answer suggests to switch the door",
+          "Answer suggests to ask the guard"
+        ],
+        "weight": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "prompt_id": "upside_down_bucket",
+        "category": "Riddle",
+        "title": "The upside-down bucket",
+        "type": "modification",
+        "prompt": "I have a 7 litre bucket that is missing a bottom, and the top was welded and sealed shut. How much water can I hold in it?",
+        "criteria": [
+          "Answer states that it can be used upside down to hold 7 liters"
+        ],
+        "weight": [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "bridge_torch_impossible",
+        "category": "Logic Puzzle",
+        "title": "Bridge and Torch problem (Impossible)",
+        "type": "modification",
+        "prompt": "Four people come to a rickety bridge at night. The bridge can only support two people at a time, and they share a single torch. Person A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four across in no more than 17 minutes. How can they do it?",
+        "criteria": [
+          "Answer concludes that it is impossible to solve within 17 minutes"
+        ],
+        "weight": [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "bridge_torch_easy",
+        "category": "Logic Puzzle",
+        "title": "Bridge and Torch problem (Easy)",
+        "type": "simplification",
+        "prompt": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "criteria": [
+          "Answer suggests all four people crossing together in 10 minutes"
+        ],
+        "weight": [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "knights_knaves_impossible",
+        "category": "Logic Puzzle",
+        "title": "Knights and Knaves (Impossible)",
+        "type": "modification",
+        "prompt": "You arrive on an island inhabited solely by two types of people - Knights who always tell the truth, and Knaves who always lie. You meet A and B. A says 'B is a Knave.' B says 'A is telling the truth.' Which is who?",
+        "criteria": [
+          "Answer concludes that the statements create an impossible contradiction"
+        ],
+        "weight": [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "knights_knaves_easy",
+        "category": "Logic Puzzle",
+        "title": "Knights and Knaves (Easy)",
+        "type": "simplification",
+        "prompt": "You arrive on an island inhabited solely by two types of people - Knights who always tell the truth, and Knaves who always lie. You meet A and B. A says 'B is a Knave.' B says 'A is a liar.' Which is who?",
+        "criteria": [
+          "Answer identifies A as knight and B as knave"
+        ],
+        "weight": [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "poisoned_hot",
+        "category": "Logic Puzzle",
+        "title": "Poisoned Hot Tea (Modified)",
+        "type": "modification",
+        "prompt": "Two girls went to dinner together and both ordered hot tea. One girl pounded down five of them in about a minute, and the other took her time drinking one. The girl who drank one died, while the girl who drank five survived. All the drinks were poisoned. Why did the girl that drank more tea survive?",
+        "criteria": [
+          "Answer does not discuss poison in ice cubes"
+        ],
+        "weight": [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "rabbit_inverted_monty_hall",
+        "category": "Logic Puzzle",
+        "title": "Rabbit Monty Hall Variation",
+        "type": "modification",
+        "prompt": "You're a rabbit and presented with three rabbit holes. In one is a fox, in the other two are carrots. You pick one, but before you enter it, god reveals carrots in one of the others. You can stick with yours or swap to the other unrevealed one. What should you do to minimize your chance of being eaten?",
+        "criteria": [
+          "Answer suggests keeping original choice",
+          "Answer explains 2/3 chance of carrot in original pick"
+        ],
+        "weight": [
+          1.0,
+          0.5
+        ]
+      },
+      {
+        "prompt_id": "feeding_the_goat",
+        "category": "Logic Puzzle",
+        "title": "Feeding the goat",
+        "type": "modification",
+        "prompt": "A farmer is at a river with a wolf, a goat, and a cabbage. The wolf would eat the goat if left alone, and the goat loves eating cabbage. What can the farmer do to feed the goat?",
+        "criteria": [
+          "Answer does not propose river crossing solutions",
+          "Answer suggests directly feeding the goat the cabbage"
+        ],
+        "weight": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "cabbage_detective",
+        "category": "Logic Puzzle",
+        "title": "The cabbage detective",
+        "type": "modification",
+        "prompt": "A farmer is at a river with a wolf, a goat, and a cabbage. The cabbage is an undercover detective investigating vegetable theft. The wolf and goat are best friends who run a food business. How can the farmer help the detective gather evidence?",
+        "criteria": [
+          "Answer focuses on detective cabbage gathering evidence",
+          "Answer does not propose river crossing solutions"
+        ],
+        "weight": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "prompt_id": "ball_and_bat_modified",
+        "category": "Logic Puzzle",
+        "title": "The Ball and Bat (Modified)",
+        "type": "modification",
+        "prompt": "I stole a ball and a bat that together cost $1.10. The bat is $1 more than the ball. What did I pay for the ball?",
+        "criteria": [
+          "Answer notes that the ball stolen and therefore nothing was paid for it",
+          "Answer does not perform the mathematical calculation"
+        ],
+        "weight": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "prompt_id": "heavy_feather_modified",
+        "category": "Logic Puzzle",
+        "title": "The Heavy Feather (Modified)",
+        "type": "modification",
+        "prompt": "Which is heavier, 1 kilogram of steel or 1 feather?",
+        "criteria": [
+          "Answer states that one kilogram of steel is usually heavier"
+        ],
+        "weight": [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "conjunction_fallacy_simplified",
+        "category": "Logic Puzzle",
+        "title": "Conjunction Fallacy Fallacy (Simplified)",
+        "type": "simplification",
+        "prompt": "Linda is 31 years old, single, outspoken, active in the feminist movement, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and participated in anti-nuclear demonstrations. Which is more probable? A) Linda is a bank teller. B) Linda is a bank teller and is active in the feminist movement.",
+        "criteria": [
+          "Answer states that both options are equally probable",
+          "Answer does not explain that the conjunction fallacy can be applied here"
+        ],
+        "weight": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "conjunction_fallacy_inverted",
+        "category": "Logic Puzzle",
+        "title": "Conjunction Fallacy Fallacy (Inverted)",
+        "type": "modification",
+        "prompt": "Linda is 31 years old, single, outspoken, not active in the feminist movement, and very bright. She majored in philosophy. As a student, she was deeply concerned with discrimination, social justice, anti-nuclear demos. Which is more probable? A) Linda is a bank teller and is active in the feminist movement. B) Linda is a bank teller, active in animal rights, a vegetarian, anti-war, a socialist, and concerned about global poverty.",
+        "criteria": [
+          "Answer states B is more probable since she is not active in feminist movement",
+          "Answer does no explains conjunction rule"
+        ],
+        "weight": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "conjunction_fallacy_impossible",
+        "category": "Logic Puzzle",
+        "title": "Conjunction Fallacy Fallacy (Impossible)",
+        "type": "unsolvable",
+        "prompt": "Linda is 31 years old, single, outspoken, not a bank teller, and very bright. As a student, she was deeply concerned with issues of discrimination, etc. Which is more probable? A) Linda is a bank teller. B) Linda is a bank teller and is active in the feminist movement.",
+        "criteria": [
+          "Answer states both are impossible since Linda is not a bank teller",
+          "Answer does not try to solve the conjunction fallacy"
+        ],
+        "weight": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "linear_growth_modified",
+        "category": "Logic Puzzle",
+        "title": "Linear Growth (Modified)",
+        "type": "modification",
+        "prompt": "The number of lotus flowers in the pond increases by two every day. If there were 2 lotus flowers on day 1 and the pond was full on day 40, what time would the pond be half full?",
+        "criteria": [
+          "Answer states day 20 since growth is linear",
+          "Answer does not discuss exponential growth"
+        ],
+        "weight": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "new_years_monty_hall",
+        "category": "Logic Puzzle",
+        "title": "New Year's Special Monty Hall Show (Simplified)",
+        "type": "simplification",
+        "prompt": "There is a car behind one door and a goat behind the other two. You picked doors 1, 2, and 3, and the host opened door 2 to reveal a goat. Would you change your choice?",
+        "criteria": [
+          "Answer explains that the initial choice should not be changed",
+          "Answer notes all doors were initially chosen, not only one"
+        ],
+        "weight": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "lonely_rabbit_impossible",
+        "category": "Logic Puzzle",
+        "title": "Lonely Rabbit (Impossible)",
+        "type": "unsolvable",
+        "prompt": "A pair of rabbits gives birth to two baby rabbits each year from two years after birth. If you had one rabbit in your stable, how many would it be in 7 years?",
+        "criteria": [
+          "Answer states that a single rabbit does not reproduce",
+          "Answer does not calculate Fibonacci sequence"
+        ],
+        "weight": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "not_from_hanoi",
+        "category": "Logic Puzzle",
+        "title": "Not from Hanoi (Simplification)",
+        "type": "simplification",
+        "prompt": "There are 3 sticks. There are 3 disks on the leftmost stick, in order from large to small. What is the minimum number of moves to move them to the rightmost stick?",
+        "criteria": [
+          "Answer suggests moving all disks one at once in one move",
+          "Answer does not apply Towers of Hanoi formula"
+        ],
+        "weight": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "riddle_tall_when_young",
+        "category": "Riddle",
+        "title": "I'm tall when I'm young...",
+        "type": "riddle",
+        "prompt": "I'm tall when I'm young, and I'm taller when I'm old. What am I?",
+        "criteria": [
+          "Answer avoids typical 'candle' response",
+          "Answer suggests alternative logical solution"
+        ],
+        "weight": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "prompt_id": "riddle_cant_break",
+        "category": "Riddle",
+        "title": "What can't you break?",
+        "type": "riddle",
+        "prompt": "What can't you break, even if you never pick it up or touch it?",
+        "criteria": [
+          "Answer avoids typical 'promise' response",
+          "Answer suggests alternative logical solution"
+        ],
+        "weight": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "prompt_id": "riddle_goes_up_never_returns",
+        "category": "Riddle",
+        "title": "What goes up but never comes up again?",
+        "type": "riddle",
+        "prompt": "What goes up but never comes up again?",
+        "criteria": [
+          "Answer avoids typical 'age' response",
+          "Answer suggests alternative logical solution"
+        ],
+        "weight": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "prompt_id": "riddle_i_never_shave",
+        "category": "Riddle",
+        "title": "I never shave, but my beard stays the same",
+        "type": "riddle",
+        "prompt": "I never shave, but my beard stays the same. What am I?",
+        "criteria": [
+          "Answer avoids typical 'barber' response",
+          "Answer suggests alternative logical solution"
+        ],
+        "weight": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "prompt_id": "riddle_two_banks_money",
+        "category": "Riddle",
+        "title": "What has two banks and money?",
+        "type": "riddle",
+        "prompt": "What has two banks and money?",
+        "criteria": [
+          "Answer avoids typical 'river' response",
+          "Answer suggests alternative logical solution"
+        ],
+        "weight": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "prompt_id": "riddle_four_legs_morning",
+        "category": "Riddle",
+        "title": "What walks on four legs...",
+        "type": "riddle",
+        "prompt": "What walks on four legs in the morning, four in the afternoon, and four in the evening?",
+        "criteria": [
+          "Answer notes all times specify four legs",
+          "Answer explains differences to sphinx's riddle"
+        ],
+        "weight": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "prompt_id": "riddle_occurs_once_in_a_second",
+        "category": "Riddle",
+        "title": "What occurs once in a second...",
+        "type": "riddle",
+        "prompt": "What occurs once in a second, twice in a moment, but never in a thousand years?",
+        "criteria": [
+          "Answer avoids typical 'letter M' response",
+          "Answer suggests alternative logical solution"
+        ],
+        "weight": [
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "prompt_id": "unstoppable_force_var1",
+        "category": "Riddle",
+        "title": "Variant 1: The unstoppable force question",
+        "type": "riddle",
+        "prompt": "What happens when a stoppable force meets an immovable object?",
+        "criteria": [
+          "Answer explains the differences to the paradox of unstoppable vs immovable"
+        ],
+        "weight": [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "unstoppable_force_var2",
+        "category": "Riddle",
+        "title": "Variant 2: The unstoppable force question",
+        "type": "riddle",
+        "prompt": "What happens when an unstoppable force meets a movable object?",
+        "criteria": [
+          "Answer explains the differences to the paradox of unstoppable vs immovable"
+        ],
+        "weight": [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "monty_appliance_game_show",
+        "category": "Logic Puzzle",
+        "title": "Defective appliance with free choice of box in a game show",
+        "type": "modification",
+        "prompt": "A contestant comes into a game show  and picks up a boxed appliance from a stack of four. The host interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product to find that one is in flawless order. Which box should the contestant pick?",
+        "criteria": [
+          "Answer suggests to take the box the game show host tested",
+          "Answer does not suggest picking an untested box",
+          "Answer does not mention the Monty Hall problem"
+        ],
+        "weight": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "monty_appliance_simpler",
+        "category": "Logic Puzzle",
+        "title": "Defective appliance with free choice of box, no returns",
+        "type": "modification",
+        "prompt": "A customer comes into a hardware store and picks up a boxed appliance from a stack of four. The sales clerk interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find to that one is in flawless order. Which box should the customer pick?",
+        "criteria": [
+          "Answer suggests to take the box the clerk tested",
+          "Answer does not suggest picking an untested box",
+          "Answer does not mention the Monty Hall problem"
+        ],
+        "weight": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "monty_defective_appliance",
+        "category": "Logic Puzzle",
+        "title": "Inverse Monty Hall Problem with defective appliance",
+        "type": "modification",
+        "prompt": "A customer in a hardware store returned a defective appliance in original packaging. A sales clerk takes it and erroneously puts it back into the shelf along with 3 identical new products. Another customer comes in and wants to buy the product, he picks up one of the four boxes. The sales clerk interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find that one is in flawless order. Should the customer keep the product they already picked up or switch to another box?",
+        "criteria": [
+          "Answer suggests to take the box the clerk tested",
+          "Answer suggests to keep the initial box",
+          "Answer does not mention the Monty Hall problem"
+        ],
+        "weight": [
+          1.0,
+          0.5,
+          0.0
+        ]
+      },
+      {
+        "prompt_id": "monty_three_computers",
+        "category": "Logic Puzzle",
+        "title": "Inverse Monty Hall Problem with Computers",
+        "type": "modification",
+        "prompt": "Your friend wants to gift a computer to you. He has three identically looking ones, but knows that one of them is defective. You pick one. Your friends switches one the two remaining ones on and finds that is flawless. Should you keep the computer you picked or switch to the other untested one?",
+        "criteria": [
+          "Answer suggests to keep the initial computer"
+        ],
+        "weight": [
+          1.0
+        ]
+      },
+      {
+        "prompt_id": "monty_four_computers",
+        "category": "Logic Puzzle",
+        "title": "Inverse Monty Hall Problem with four Computers",
+        "type": "modification",
+        "prompt": "Your friend wants to gift a computer to you. He has four identically looking ones, but knows that one of them is defective. You pick one. Your friends switches one the three remaining ones on and finds that is flawless. Should you keep the computer you picked or switch to another one?",
+        "criteria": [
+          "Answer suggests to pick the one the friend tested",
+          "Answer suggests to keep the initial computer"
+        ],
+        "weight": [
+          1.0,
+          0.5
+        ]
+      }
+    ]
+}
