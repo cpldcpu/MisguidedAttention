@@ -59,19 +59,12 @@ def create_heatmap(data, value_col, output_file, cmap, vmin, vmax):
 
     plt.figure(figsize=(14, 9))
 
-    # plt.subplots_adjust(bottom=0.2)
-
-    # ax = sns.heatmap(pivot_table, cmap=cmap, annot=True, fmt='.1f', 
-    #                  cbar_kws={'label': value_col.replace('_', ' ').title()},
-    #                  vmin=vmin, vmax=vmax)
-
-    ax = sns.heatmap(pivot_table, cmap=cmap, annot=True, fmt='.1f', 
+   
+    ax = sns.heatmap(pivot_table, cmap=cmap, 
+                     annot=len(pivot_table.columns) < 30, fmt='.2f', 
                      cbar=False,
                      linewidths=1.0, linecolor='white',
                      vmin=vmin, vmax=vmax)
-
-    for t in ax.texts:
-        t.set_size(12)
 
     plt.title(f'{value_col.replace("_", " ").title()} Heatmap', fontsize=20)
     plt.xlabel('', fontsize=16)
@@ -85,17 +78,7 @@ def create_heatmap(data, value_col, output_file, cmap, vmin, vmax):
 
     plt.text(pivot_table.shape[1] + 0.5, -0.3, '⌀', 
             ha='left', va='center', fontsize=20, fontweight='bold')
-    
-
-    # for idx, average in enumerate(column_averages):
-    #     plt.text(idx + 0.5, pivot_table.shape[0] + 0.1, f'{average:.2f}', 
-    #             ha='center', va='top', fontsize=12)    
-
-    # ax.tick_params(axis='x', which='major', pad=10)
-    
-    # cbar = ax.collections[0].colorbar
-    # cbar.ax.tick_params(labelsize=12)
-    
+        
     plt.tight_layout()
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
     plt.close()
