@@ -29,31 +29,55 @@ def load_prompts(filepath):
 
 def query_llm(prompt, llm_config, temperature_override, max_retries=3):
     OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
-    if not OPENROUTER_API_KEY:
-        OPENROUTER_API_KEY = os.environ.get("OPENAI_API_KEY")
-        if not OPENROUTER_API_KEY:
-            raise ValueError("OPENROUTER_API_KEY and OPENAI_API_KEY environment variable not set")
+    DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
+    OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
-    headers = {
-        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-        "HTTP-Referer": "",  # Replace with your site URL
-        "X-Title": "MA_Eval"  # Replace with your app name
-    }
+    # Determine API endpoint and key based on model
+    if "deepseek" in llm_config["model"].lower():
+        api_key = DEEPSEEK_API_KEY    
+        base_url = "https://api.deepseek.com/v1/chat/completions"
+        if not api_key:
+            raise ValueError("DEEPSEEK_API_KEY environment variable not set")
+        
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        }
 
-    data = {
-        "model": llm_config["model"],
-        "messages": [{"role": "user", "content": f"Please answer the following question: {prompt}\nAnswer:"}],
-        "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
-        "max_tokens": llm_config.get("max_tokens", 4000),
-        "top_p": llm_config.get("top_p", 1),
-        "frequency_penalty": llm_config.get("frequency_penalty", 0),
-        "presence_penalty": llm_config.get("presence_penalty", 0)
-    }
+        data = {
+            "model": llm_config["model"],
+            "messages": [{"role": "user", "content": f"Please answer the following question: {prompt}\nAnswer:"}],
+            "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
+        }
+
+    else:
+        api_key = OPENROUTER_API_KEY or OPENAI_API_KEY
+        base_url = "https://openrouter.ai/api/v1/chat/completions"
+        if not api_key:
+            raise ValueError("Neither OPENROUTER_API_KEY nor OPENAI_API_KEY environment variable is set")
+
+        headers = {
+            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+            "HTTP-Referer": "",  # Replace with your site URL
+            "X-Title": "MA_Eval"  # Replace with your app name
+        }
+
+        data = {
+            "model": llm_config["model"],
+            "messages": [{"role": "user", "content": f"Please answer the following question: {prompt}\nAnswer:"}],
+            "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
+            "max_tokens": llm_config.get("max_tokens", 4000),
+            "top_p": llm_config.get("top_p", 1),
+            "frequency_penalty": llm_config.get("frequency_penalty", 0),
+            "presence_penalty": llm_config.get("presence_penalty", 0)
+        }
 
     for attempt in range(max_retries):
         try:
             response = requests.post(
-                "https://openrouter.ai/api/v1/chat/completions",
+                # "https://openrouter.ai/api/v1/chat/completions",
+                # "https://api.deepseek.com/v1/chat/completions",
+                base_url,
                 headers=headers,
                 json=data
             )
@@ -73,7 +97,19 @@ def query_llm(prompt, llm_config, temperature_override, max_retries=3):
 
             # Check for valid response structure
             if 'choices' in response_json and len(response_json['choices']) > 0:
-                return response_json['choices'][0]['message']['content']
+                response_content = response_json['choices'][0]['message']['content']
+                thinking_content = None
+                # print(f"Response: {response_json}")
+                # Check for thinking/reasoning content
+                if 'reasoning_content' in response_json['choices'][0]['message']:
+                    thinking_content = response_json['choices'][0]['message']['reasoning_content']
+                # elif 'thinking' in response_json['choices'][0]:
+                #     thinking_content = response_json['choices'][0]['thinking']
+                
+                return {
+                    'content': response_content,
+                    'thinking': thinking_content
+                }
             else:
                 print(f"Unexpected response format: {response_json}")
                 return None
@@ -96,6 +132,7 @@ def main(args):
     existing_results = load_existing_results()
     prompts = load_prompts(args.dataset)
     results = existing_results.copy()
+    processed_count = 0
 
     for llm in config["llms"]:
         print(f"Querying {llm['name']}...")
@@ -107,6 +144,7 @@ def main(args):
                     "prompt": prompt["prompt"],
                     "llm": llm["name"],
                     "output": [],
+                    "thinking": [],  # New array for thinking tokens
                     "timestamp": datetime.now().isoformat()
                 }
                 
@@ -114,20 +152,33 @@ def main(args):
                     if args.debug:
                         print(f"Querying {llm['name']} with prompt: {prompt['prompt']}")
                     
-                    answer = query_llm(prompt["prompt"], llm, args.temp, args.max_retries)
-                    if answer is None:
+                    response = query_llm(prompt["prompt"], llm, args.temp, args.max_retries)
+                    if response is None:
                         print(f"Failed to get response for prompt {prompt['prompt_id']}")
-                    if args.debug:
-                        print(f"Answer: {answer}")
+                        result["output"].append(None)
+                        result["thinking"].append(None)
+                    else:
+                        if args.debug:
+                            print(f"Answer: ...{response['content'][:-200]}")
+                            if response['thinking']:
+                                print(f"Thinking: ...{response['thinking'][:-200]}")
 
-                    result["output"].append(answer)
+                        result["output"].append(response['content'])
+                        result["thinking"].append(response['thinking'])
                 
                 results[result_key] = result
-                save_json({"results": list(results.values())}, args.output)
+                processed_count += 1
+                
+                # Save every three processed queries
+                if processed_count % 3 == 0:
+                    save_json({"results": list(results.values())}, args.output)
+                    print(f"Saved after processing {processed_count} queries")
+                
                 print(f"Processed prompt: {prompt['prompt_id']}")
             else:
                 print(f"Skipping already processed prompt: {prompt['prompt_id']}")
 
+    # Final save
     save_json({"results": list(results.values())}, args.output)
     print(f"Query complete. Results saved to {args.output}")
 
