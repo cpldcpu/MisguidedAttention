@@ -5,6 +5,7 @@ import os
 import time
 from tqdm import tqdm
 from datetime import datetime
+import google.generativeai as genai
 
 def load_json(file_path):
     with open(file_path, 'r') as f:
@@ -27,10 +28,56 @@ def load_prompts(filepath):
         data = json.load(f)
     return data['prompts']
 
-def query_llm(prompt, llm_config, temperature_override, max_retries=3):
+def load_cot_data(file_path):
+    """Load chain of thought data from a JSON file."""
+    if not file_path:
+        return {}
+    
+    with open(file_path, 'r') as f:
+        data = json.load(f)
+        # Create a mapping of prompt_id to thinking entries
+        return {result['prompt_id']: result['thinking'] for result in data['results']}
+
+def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retries=3):
     OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
     DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
     OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+    GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")   
+
+
+    if OPENROUTER_API_KEY == None:
+        OPENROUTER_API_KEY = OPENAI_API_KEY
+
+    # Construct the prompt with CoT if provided
+    prompt_text = f"Please answer the following question: {prompt}\n"
+    if cot_entry:
+        prompt_text += f"<thinking>{cot_entry}</thinking>\n"
+    prompt_text += "Answer:"
+
+    # Handle Gemini API separately
+    if "gemini" in llm_config["model"].lower():
+        if not GEMINI_API_KEY:
+            raise ValueError("GEMINI_API_KEY environment variable not set")
+        
+        genai.configure(api_key=GEMINI_API_KEY)
+        model = genai.GenerativeModel(llm_config["model"])
+        
+        # wait for 6s to avoid rate limiting
+        time.sleep(6)
+        try:
+            response = model.generate_content(
+                prompt_text,
+                generation_config=genai.types.GenerationConfig(
+                    temperature=temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0)
+                )
+            )
+            return {
+                'content': response.text,
+                'thinking': None  # Gemini doesn't provide separate thinking content
+            }
+        except Exception as e:
+            print(f"Gemini API error: {e}")
+            return None
 
     # Determine API endpoint and key based on model
     if "deepseek" in llm_config["model"].lower():
@@ -46,10 +93,9 @@ def query_llm(prompt, llm_config, temperature_override, max_retries=3):
 
         data = {
             "model": llm_config["model"],
-            "messages": [{"role": "user", "content": f"Please answer the following question: {prompt}\nAnswer:"}],
+            "messages": [{"role": "user", "content": prompt_text}],
             "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
         }
-
     else:
         api_key = OPENROUTER_API_KEY or OPENAI_API_KEY
         base_url = "https://openrouter.ai/api/v1/chat/completions"
@@ -64,7 +110,7 @@ def query_llm(prompt, llm_config, temperature_override, max_retries=3):
 
         data = {
             "model": llm_config["model"],
-            "messages": [{"role": "user", "content": f"Please answer the following question: {prompt}\nAnswer:"}],
+            "messages": [{"role": "user", "content": prompt_text}],
             "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
             "max_tokens": llm_config.get("max_tokens", 4000),
             "top_p": llm_config.get("top_p", 1),
@@ -134,6 +180,9 @@ def main(args):
     results = existing_results.copy()
     processed_count = 0
 
+    # Load CoT data if specified
+    cot_data = load_cot_data(args.cotfile)
+
     for llm in config["llms"]:
         print(f"Querying {llm['name']}...")
         for prompt in tqdm(prompts[:args.limit] if args.limit > 0 else prompts):
@@ -147,12 +196,26 @@ def main(args):
                     "thinking": [],  # New array for thinking tokens
                     "timestamp": datetime.now().isoformat()
                 }
+
+                # Get CoT entries for this prompt if available
+                cot_entries = cot_data.get(prompt["prompt_id"], []) if cot_data else []
                 
-                for _ in range(args.samples):
+                for i in range(args.samples):
+                    if args.cotfile:
+                        # Verify we have enough CoT entries
+                        if i >= len(cot_entries):
+                            raise ValueError(f"Not enough CoT entries for prompt {prompt['prompt_id']}. "
+                                          f"Need {args.samples}, but only have {len(cot_entries)}")
+                        cot_entry = cot_entries[i]
+                    else:
+                        cot_entry = None
+
                     if args.debug:
                         print(f"Querying {llm['name']} with prompt: {prompt['prompt']}")
-                    
-                    response = query_llm(prompt["prompt"], llm, args.temp, args.max_retries)
+                        if cot_entry:
+                            print(f"Using CoT entry: {cot_entry[:200]}...")
+
+                    response = query_llm(prompt["prompt"], llm, args.temp, cot_entry, args.max_retries)
                     if response is None:
                         print(f"Failed to get response for prompt {prompt['prompt_id']}")
                         result["output"].append(None)
@@ -192,6 +255,7 @@ if __name__ == "__main__":
     parser.add_argument("--temp", type=float, default=-1, help="Override temperature setting for LLMs (-1 to use config values)")
     parser.add_argument("--debug", action="store_true", help="Enable debug output")
     parser.add_argument("--max-retries", type=int, default=8, help="Maximum number of retries for failed requests")
+    parser.add_argument("--cotfile", help="Path to the Chain of Thought input JSON file")
 
     args = parser.parse_args()
     main(args)

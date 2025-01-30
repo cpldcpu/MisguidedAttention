@@ -93,9 +93,16 @@
       "repetition_penalty": 1
     },
     {
-      "name": "DeepSeek-V3",
+      "name": "DeepSeek-V3-OR",
       "model": "deepseek/deepseek-chat",
-      "temperature": 0.7,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "repetition_penalty": 1
+    },
+    {
+      "name": "DeepSeek-V3",
+      "model": "deepseek-chat",
+      "temperature": 1.0,
       "top_p": 1.0,
       "repetition_penalty": 1
     },
@@ -105,6 +112,22 @@
       "temperature": 0.7,
       "top_p": 0.95,
       "repetition_penalty": 1
+  },
+  {
+    "name": "minimax-01",
+    "model": "minimax/minimax-01",
+    "max_tokens": 2000,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "repetition_penalty": 1
+  },
+  {
+    "name": "gemini-exp-1206",
+    "model": "gemini-exp-1206",
+    "max_tokens": 2000,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "repetition_penalty": 1
   }  
   ]
 }

@@ -1,66 +1,68 @@
 {
   "trolley_problem_easy": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.8333333333333334,
+    "DeepSeek-V3": {
+      "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer states that the five people on the track are already dead": 1.0,
-        "Answer states not to pull the lever": 0.6666666666666666
+        "Answer states that the five people on the track are already dead": 0.0,
+        "Answer states not to pull the lever": 0.0
       }
     }
   },
   "trolley_easy_forced": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 1.0,
+    "DeepSeek-V3": {
+      "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer recognizes that the five people on the track are already dead": 1.0,
-        "Answer states not to pull the lever": 1.0
+        "Answer recognizes that the five people on the track are already dead": 0.0,
+        "Answer states not to pull the lever": 0.0
       }
     }
   },
   "dead_schrodingers_cat": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.6666666666666666,
+    "DeepSeek-V3": {
+      "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer states that the cat is already dead when placed in the box.": 1.0,
-        "Answer states that the probability of the cat being alive is 0% as the final result, and no alternatives.": 0.6666666666666666
+        "Answer states that the cat is already dead when placed in the box.": 0.0,
+        "Answer states that the probability of the cat being alive is 0% as the final result, and no alternatives.": 0.0
       }
     }
   },
   "river_crossing_simple": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.3333333333333333,
-      "num_evaluations": 3,
-      "criteria_stats": {
-        "Answer concludes that they simply get in the boat and cross together in one trip.": 0.3333333333333333,
-        "Answer does not contain an itemized list with more then two items.": 0.3333333333333333
-      }
-    }
-  },
-  "river_crossing_easy": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer concludes that they simply get in the boat and cross together in one trip.": 0.0,
-        "Answer does not contain an itemized list with more then two items.": 0.0
+        "Answer does not contain an itemized list with more than two items.": 0.0
+      }
+    }
+  },
+  "river_crossing_easy": {
+    "DeepSeek-V3": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip.": 0.0,
+        "Answer does not contain an itemized list with more then two items.": 0.0,
+        "Answer does not contain an itemized list with more than two items.": 0.3333333333333333
       }
     }
   },
   "river_crossing_even_simpler": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer concludes that they simply get in the boat and cross together in one trip.": 1.0,
-        "Answer does not contain an itemized list with more then two items.": 0.0
+        "Answer does not contain an itemized list with more then two items.": 0.3333333333333333,
+        "Answer does not contain an itemized list with more than two items.": 0.3333333333333333
       }
     }
   },
   "monty_hall_inverse": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -71,7 +73,7 @@
     }
   },
   "jugs_1_liter": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -81,18 +83,18 @@
     }
   },
   "jugs_3_liters": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer concludes that filling both jugs once without pouring between them gives exactly 3 liters.": 0.0,
         "Answer concludes that filling both jugs gives exactly 3 liters.": 0.0,
-        "Answer is not formatted as itemized list with more than 2 entries.": 0.3333333333333333
+        "Answer is not formatted as itemized list with more than 2 entries.": 0.0
       }
     }
   },
   "jugs_4_liters": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -102,45 +104,45 @@
     }
   },
   "birthday_problem_easy": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.3333333333333333,
+    "DeepSeek-V3": {
+      "average_total_score": 0.6666666666666666,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer concludes that the probability is close to 1 (larger than 0.99 or 99%) or equal to (1 - (1/365)^29)": 0.3333333333333333
+        "Answer concludes that the probability is close to 1 (larger than 0.99).": 0.6666666666666666
       }
     }
   },
   "rope_burning_impossible": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer concludes that the responder is not able to solve this puzzle or that it is not possible in general.": 0.0
+        "Answer concludes that it is not possible to solve this puzzle.": 0.0
       }
     }
   },
   "rope_burning_easy": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.3333333333333333,
+    "DeepSeek-V3": {
+      "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes).": 0.3333333333333333,
-        "Answer concludes that 60 minutes can be measured by lighting by lighting both ropes on both ends sequentially (2x 30 minutes).": 0.0
+        "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes).": 0.0,
+        "Answer concludes that 60 minutes can be measured by lighting by lighting both ropes on both ends sequentially (2x 30 minutes).": 0.3333333333333333
       }
     }
   },
   "less_confusing_monty_hall": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer states that both options are equally likely to win the car": 0.0,
-        "Answer explains that this is not the monty hall problem": 1.0
+        "Answer explains that this is not the Monty Hall problem": 0.0
       }
     }
   },
   "the_normal_barber": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -150,7 +152,7 @@
     }
   },
   "no_paradox_expected_hanging": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -159,16 +161,16 @@
     }
   },
   "two_door_problem_exit": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 1.0,
+    "DeepSeek-V3": {
+      "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer suggests using the marked exit door without asking questions": 1.0
+        "Answer suggests using the marked exit door without asking questions": 0.0
       }
     }
   },
   "feathers_or_steel": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -177,16 +179,16 @@
     }
   },
   "parallelism_50_machines": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 1.0,
+    "DeepSeek-V3": {
+      "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer states that 100 machines would take 50 minutes to make 100 widgets": 1.0
+        "Answer states that 100 machines would take 50 minutes to make 100 widgets": 0.0
       }
     }
   },
   "kings_mercy": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.5,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -196,7 +198,7 @@
     }
   },
   "upside_down_bucket": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -205,7 +207,7 @@
     }
   },
   "bridge_torch_impossible": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -214,7 +216,7 @@
     }
   },
   "bridge_torch_easy": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -223,64 +225,44 @@
     }
   },
   "knights_knaves_impossible": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.0,
+    "DeepSeek-V3": {
+      "average_total_score": 0.6666666666666666,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer concludes that the statements create an impossible contradiction": 0.0
+        "Answer concludes that the statements create an impossible contradiction": 0.6666666666666666
       }
     }
   },
   "knights_knaves_easy": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.3333333333333333,
+    "DeepSeek-V3": {
+      "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer identifies A as knight and B as knave": 0.3333333333333333
+        "Answer identifies A as knight and B as knave": 1.0
       }
     }
   },
   "poisoned_hot": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 1.0,
+    "DeepSeek-V3": {
+      "average_total_score": 0.3333333333333333,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer does not discuss poison in ice cubes": 1.0
-      }
-    }
-  },
-  "rabbit_inverted_monty_hall": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.5,
-      "num_evaluations": 3,
-      "criteria_stats": {
-        "Answer suggests keeping original choice": 0.0,
-        "Answer explains 2/3 chance of carrot in original pick": 1.0
+        "Answer does not discuss poison in ice cubes": 0.3333333333333333
       }
     }
   },
   "feeding_the_goat": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.3333333333333333,
+    "DeepSeek-V3": {
+      "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer does not propose river crossing solutions": 0.3333333333333333,
-        "Answer suggests directly feeding the goat the cabbage": 0.6666666666666666
-      }
-    }
-  },
-  "cabbage_detective": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 1.0,
-      "num_evaluations": 3,
-      "criteria_stats": {
-        "Answer focuses on detective cabbage gathering evidence": 1.0,
-        "Answer does not propose river crossing solutions": 1.0
+        "Answer does not propose river crossing solutions": 0.0,
+        "Answer suggests directly feeding the goat the cabbage": 0.3333333333333333
       }
     }
   },
   "ball_and_bat_modified": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -290,7 +272,7 @@
     }
   },
   "heavy_feather_modified": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -299,7 +281,7 @@
     }
   },
   "conjunction_fallacy_simplified": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -309,59 +291,59 @@
     }
   },
   "conjunction_fallacy_inverted": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.0,
+    "DeepSeek-V3": {
+      "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer states B is more probable since she is not active in feminist movement": 0.0,
-        "Answer does no explains conjunction rule": 0.0
+        "Answer states B is more probable since she is not active in feminist movement": 1.0,
+        "Answer does not explain conjunction rule": 0.3333333333333333
       }
     }
   },
   "conjunction_fallacy_impossible": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer states both are impossible since Linda is not a bank teller": 0.0,
-        "Answer does not try to solve the conjunction fallacy": 0.0
+        "Answer does not try to solve the conjunction fallacy": 1.0
       }
     }
   },
   "linear_growth_modified": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.0,
+    "DeepSeek-V3": {
+      "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer states day 20 since growth is linear": 0.0,
-        "Answer does not discuss exponential growth": 0.0
+        "Answer states day 20 since growth is linear": 1.0,
+        "Answer does not discuss exponential growth": 1.0
       }
     }
   },
   "new_years_monty_hall": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer explains that the initial choice should not be changed": 0.0,
-        "Answer notes all doors were initially chosen, not only one": 1.0
+        "Answer notes all doors were initially chosen, not only one": 0.6666666666666666
       }
     }
   },
   "lonely_rabbit_impossible": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.0,
+    "DeepSeek-V3": {
+      "average_total_score": 0.3333333333333333,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer states that a single rabbit does not reproduce": 0.0,
-        "Answer does not calculate Fibonacci sequence": 0.3333333333333333
+        "Answer states that a single rabbit does not reproduce": 0.3333333333333333,
+        "Answer does not calculate Fibonacci sequence": 1.0
       }
     }
   },
   "not_from_hanoi": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
-      "num_evaluations": 3,
+      "num_evaluations": 2,
       "criteria_stats": {
         "Answer suggests moving all disks one at once in one move": 0.0,
         "Answer does not apply Towers of Hanoi formula": 0.0
@@ -369,27 +351,27 @@
     }
   },
   "riddle_tall_when_young": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 1.0,
+    "DeepSeek-V3": {
+      "average_total_score": 0.3333333333333333,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer avoids typical 'candle' response": 1.0,
-        "Answer suggests alternative logical solution": 1.0
-      }
-    }
-  },
-  "riddle_cant_break": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.16666666666666666,
-      "num_evaluations": 3,
-      "criteria_stats": {
-        "Answer avoids typical 'promise' response": 0.0,
+        "Answer avoids typical 'candle' response": 0.3333333333333333,
         "Answer suggests alternative logical solution": 0.3333333333333333
       }
     }
   },
+  "riddle_cant_break": {
+    "DeepSeek-V3": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer avoids typical 'promise' response": 0.0,
+        "Answer suggests alternative logical solution": 0.0
+      }
+    }
+  },
   "riddle_goes_up_never_returns": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -399,17 +381,17 @@
     }
   },
   "riddle_i_never_shave": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 1.0,
+    "DeepSeek-V3": {
+      "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer avoids typical 'barber' response": 1.0,
-        "Answer suggests alternative logical solution": 1.0
+        "Answer avoids typical 'barber' response": 0.0,
+        "Answer suggests alternative logical solution": 0.0
       }
     }
   },
   "riddle_two_banks_money": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -419,17 +401,17 @@
     }
   },
   "riddle_four_legs_morning": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.5,
+    "DeepSeek-V3": {
+      "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer notes all times specify four legs": 0.0,
+        "Answer notes all times specify four legs": 1.0,
         "Answer explains differences to sphinx's riddle": 1.0
       }
     }
   },
   "riddle_occurs_once_in_a_second": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -439,7 +421,7 @@
     }
   },
   "unstoppable_force_var1": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
@@ -448,63 +430,83 @@
     }
   },
   "unstoppable_force_var2": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
+      "average_total_score": 0.6666666666666666,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer explains the differences to the paradox of unstoppable vs immovable": 0.6666666666666666
+      }
+    }
+  },
+  "rabbit_inverted_monty_hall": {
+    "DeepSeek-V3": {
+      "average_total_score": 0.6666666666666666,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer suggests keeping original choice": 0.6666666666666666,
+        "Answer explains 2/3 chance of carrot in original pick": 0.0
+      }
+    }
+  },
+  "cabbage_detective": {
+    "DeepSeek-V3": {
       "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer explains the differences to the paradox of unstoppable vs immovable": 1.0
+        "Answer focuses on detective cabbage gathering evidence": 1.0,
+        "Answer does not propose river crossing solutions": 1.0
       }
     }
   },
   "monty_appliance_game_show": {
-    "claude-3.5-sonnet-new": {
+    "DeepSeek-V3": {
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer suggests to take the box the game show host tested": 0.0,
-        "Answer does not suggest picking an untested box": 0.3333333333333333,
-        "Answer does not mention the Monty Hall problem": 0.0
-      }
-    }
-  },
-  "monty_appliance_simpler": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 1.0,
-      "num_evaluations": 3,
-      "criteria_stats": {
-        "Answer suggests to take the box the clerk tested": 1.0,
         "Answer does not suggest picking an untested box": 1.0,
         "Answer does not mention the Monty Hall problem": 1.0
       }
     }
   },
-  "monty_defective_appliance": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.3333333333333333,
+  "monty_appliance_simpler": {
+    "DeepSeek-V3": {
+      "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer suggests to take the box the clerk tested": 0.0,
-        "Answer suggests to keep the initial box": 0.6666666666666666,
-        "Answer does not mention the Monty Hall problem": 0.0
+        "Answer does not suggest picking an untested box": 0.0,
+        "Answer does not mention the Monty Hall problem": 1.0
+      }
+    }
+  },
+  "monty_defective_appliance": {
+    "DeepSeek-V3": {
+      "average_total_score": 0.16666666666666666,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer suggests to take the box the clerk tested": 0.0,
+        "Answer suggests to keep the initial box": 0.3333333333333333,
+        "Answer does not mention the Monty Hall problem": 0.3333333333333333
       }
     }
   },
   "monty_three_computers": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.6666666666666666,
+    "DeepSeek-V3": {
+      "average_total_score": 0.3333333333333333,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer suggests to keep the initial computer": 0.6666666666666666
+        "Answer suggests to keep the initial computer": 0.3333333333333333
       }
     }
   },
   "monty_four_computers": {
-    "claude-3.5-sonnet-new": {
-      "average_total_score": 0.5,
+    "DeepSeek-V3": {
+      "average_total_score": 0.3333333333333333,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer suggests to pick the one the friend tested": 0.0,
-        "Answer suggests to keep the initial computer": 1.0
+        "Answer suggests to keep the initial computer": 0.6666666666666666
       }
     }
   }

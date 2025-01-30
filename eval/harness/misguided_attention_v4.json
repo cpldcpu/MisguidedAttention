@@ -1,6 +1,36 @@
 {
     "prompts": [
       {
+        "prompt_id": "birthday_problem_easy",
+        "category": "Logic Puzzle",
+        "type" : "simplification",  
+        "title": "Birthday problem made easy",
+        "prompt": "In a room of 30 people, what's the probability that at least two do not share a birthday?",
+        "criteria": [
+          "The final answer states a probability close to 1 (larger than 0.99 or 99%)"
+        ],
+        "weight" : [
+          1.0
+        ]
+      },      
+      {
+        "prompt_id": "monty_hall_inverse",
+        "category": "Logic Puzzle",
+        "type" : "modification",
+        "title": "Inverse Monty Hall Problem",
+        "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "criteria": [
+          "Answer states to keep the existing door",
+          "Answer explains that the initial choice has a 2/3 chance of winning a car",
+          "Answer states that this is a modification of the Monty Hall problem"
+        ],
+        "weight" : [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
         "prompt_id": "trolley_problem_easy",
         "category": "Logic Puzzle",
         "type" : "simplification",
@@ -11,8 +41,8 @@
           "Answer states not to pull the lever"
         ],
         "weight" : [
-          0.5,
-          0.5
+          0.0,
+          1.0
         ]
       },
       {
@@ -26,8 +56,8 @@
           "Answer states not to pull the lever"
         ],
         "weight" : [
-          0.5,
-          0.5
+          0.0,
+          1.0
         ]
       },
       {
@@ -41,8 +71,8 @@
           "Answer states that the probability of the cat being alive is 0% as the final result, and no alternatives."
         ],
         "weight" : [
-          0.5,
-          0.5
+          0.0,
+          1.0
         ]
       },
       {
@@ -90,23 +120,7 @@
           0.0
         ]
       }, 
-      {
-        "prompt_id": "monty_hall_inverse",
-        "category": "Logic Puzzle",
-        "type" : "modification",
-        "title": "Inverse Monty Hall Problem",
-        "prompt": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
-        "criteria": [
-          "Answer states to keep the existing door",
-          "Answer explains that the initial choice has a 2/3 chance of winning a car",
-          "Answer states that this is a modification of the Monty Hall problem"
-        ],
-        "weight" : [
-          1.0,
-          0.0,
-          0.0
-        ]
-      },
+
       {
         "prompt_id": "jugs_1_liter",
         "category": "Logic Puzzle",
@@ -155,26 +169,13 @@
         ]
       },
       {
-        "prompt_id": "birthday_problem_easy",
-        "category": "Logic Puzzle",
-        "type" : "simplification",  
-        "title": "Birthday problem made easy",
-        "prompt": "In a room of 30 people, what's the probability that at least two do not share a birthday?",
-        "criteria": [
-          "Answer concludes that the probability is close to 1 (larger than 0.99 or 99%)."
-        ],
-        "weight" : [
-          1.0
-        ]
-      },      
-      {
         "prompt_id": "rope_burning_impossible",
         "category": "Logic Puzzle",
         "title": "Rope burning puzzle made impossible",
         "type" : "unsolvable",
         "prompt": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?",
         "criteria": [
-          "Answer concludes that it is not possible to solve this puzzle."
+          "Answer concludes that the responder is not able to solve this puzzle or that it is not possible in general"
         ],
         "weight" : [
           1.0

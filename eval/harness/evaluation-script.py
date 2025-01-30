@@ -25,41 +25,38 @@ def run_inference(prompt, sys_prompt, max_depth=5):
             print(f"Maximum recursion depth reached ({max_depth}). Stopping recursion.")
             return None
         OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")    
-        # OPENROUTER_API_KEY = os.environ.get("Path")
         if not OPENROUTER_API_KEY:
-            # print("Using OPENAI_API_KEY instead of OPENROUTER_API_KEY")
             OPENROUTER_API_KEY = os.environ.get("OPENAI_API_KEY")
             if not OPENROUTER_API_KEY:
                 raise ValueError("OPENROUTER_API_KEY and OPENAI_API_KEY environment variable not set")
 
-        response = requests.post(
-            # "http://localhost:1234/v1/chat/completions",
-            "https://openrouter.ai/api/v1/chat/completions",
+        try:
+            response = requests.post(
+                "https://openrouter.ai/api/v1/chat/completions",
+                headers = {
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+                    "HTTP-Referer": "",  
+                    "X-Title": "MA_Eval"  
+                },
+                json={
+                    "model": "meta-llama/llama-3.3-70b-instruct",
+                    "messages": messages,
+                    "temperature": 0.0,
+                    "max_tokens": 1000
+                }
+            )
 
-            headers = {
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-                "HTTP-Referer": "",  # Replace with your site URL
-                "X-Title": "MA_Eval"  # Replace with your app name
-            },
-            json={ # careful, if model keyword missing, openrouter defaults to 4o
-                # "model": "meta-llama/llama-3.3-70b-instruct",
-                "model": "microsoft/phi-4",
-                # "model": "anthropic/claude-3.5-sonnet",  
-                # "model": "anthropic/claude-3-haiku",  
-                # "model": "google/gemini-flash-1.5",              
-                # "model": "deepseek/deepseek-chat",  
-                # "model": "google/gemini-pro-1.5",  
-                "messages": messages,
-                "temperature": 0.0,
-                "max_tokens": 1000
-            }
-        )
+            response.raise_for_status()  # Raise an exception for bad status codes
+            response_json = response.json()
 
-        if response.status_code == 200:
-            content = response.json()['choices'][0]['message']['content']
-            # content = '{' + content.partition('{')[2]  
-            content = '{' + content.partition('{')[2].rpartition('}')[0] + '}' # llama 3.1 tends to attach text before and after the JSON response
+            if 'choices' not in response_json or not response_json['choices']:
+                print(f"Invalid API response format: {response_json}")
+                return None
+
+            content = response_json['choices'][0]['message']['content']
+            content = '{' + content.partition('{')[2].rpartition('}')[0] + '}'
+
             try:
                 json_response = json.loads(content)
                 return json_response
@@ -68,8 +65,12 @@ def run_inference(prompt, sys_prompt, max_depth=5):
                 messages.append({"role": "assistant", "content": content})
                 messages.append({"role": "user", "content": "The response was not in valid JSON format. Please provide a valid JSON response."})
                 return recursive_loop(messages, depth + 1)
-        else:
-            print(f"Error: {response.status_code}, {response.text}")
+
+        except requests.exceptions.RequestException as e:
+            print(f"API request error: {e}")
+            return None
+        except Exception as e:
+            print(f"Unexpected error: {e}")
             return None
 
     return recursive_loop(messages, 0)

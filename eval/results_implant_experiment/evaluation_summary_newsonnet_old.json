@@ -21,20 +21,20 @@
   },
   "dead_schrodingers_cat": {
     "claude-3.5-sonnet-new": {
-      "average_total_score": 0.6666666666666666,
+      "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer states that the cat is already dead when placed in the box.": 1.0,
-        "Answer states that the probability of the cat being alive is 0% as the final result, and no alternatives.": 0.6666666666666666
+        "Answer states that the probability of the cat being alive is 0% as the final result, and no alternatives.": 1.0
       }
     }
   },
   "river_crossing_simple": {
     "claude-3.5-sonnet-new": {
-      "average_total_score": 0.3333333333333333,
+      "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer concludes that they simply get in the boat and cross together in one trip.": 0.3333333333333333,
+        "Answer concludes that they simply get in the boat and cross together in one trip.": 0.0,
         "Answer does not contain an itemized list with more then two items.": 0.3333333333333333
       }
     }
@@ -55,6 +55,7 @@
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer concludes that they simply get in the boat and cross together in one trip.": 1.0,
+        "Answer does not contain an itemized list with more than two items.": 0.0,
         "Answer does not contain an itemized list with more then two items.": 0.0
       }
     }
@@ -66,7 +67,7 @@
       "criteria_stats": {
         "Answer states to keep the existing door": 0.0,
         "Answer explains that the initial choice has a 2/3 chance of winning a car": 0.0,
-        "Answer states that this is a modification of the Monty Hall problem": 0.0
+        "Answer states that this is a modification of the Monty Hall problem": 1.0
       }
     }
   },
@@ -87,7 +88,7 @@
       "criteria_stats": {
         "Answer concludes that filling both jugs once without pouring between them gives exactly 3 liters.": 0.0,
         "Answer concludes that filling both jugs gives exactly 3 liters.": 0.0,
-        "Answer is not formatted as itemized list with more than 2 entries.": 0.3333333333333333
+        "Answer is not formatted as itemized list with more than 2 entries.": 1.0
       }
     }
   },
@@ -106,7 +107,7 @@
       "average_total_score": 0.3333333333333333,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer concludes that the probability is close to 1 (larger than 0.99 or 99%) or equal to (1 - (1/365)^29)": 0.3333333333333333
+        "Answer concludes that the probability is close to 1 (larger than 0.99 or 99%).": 0.3333333333333333
       }
     }
   },
@@ -115,7 +116,7 @@
       "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer concludes that the responder is not able to solve this puzzle or that it is not possible in general.": 0.0
+        "Answer concludes that it is not possible to solve this puzzle.": 0.0
       }
     }
   },
@@ -135,7 +136,7 @@
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer states that both options are equally likely to win the car": 0.0,
-        "Answer explains that this is not the monty hall problem": 1.0
+        "Answer explains that this is not the Monty Hall problem": 1.0
       }
     }
   },
@@ -178,10 +179,10 @@
   },
   "parallelism_50_machines": {
     "claude-3.5-sonnet-new": {
-      "average_total_score": 1.0,
+      "average_total_score": 0.3333333333333333,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer states that 100 machines would take 50 minutes to make 100 widgets": 1.0
+        "Answer states that 100 machines would take 50 minutes to make 100 widgets": 0.3333333333333333
       }
     }
   },
@@ -251,11 +252,11 @@
   },
   "rabbit_inverted_monty_hall": {
     "claude-3.5-sonnet-new": {
-      "average_total_score": 0.5,
+      "average_total_score": 0.16666666666666666,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer suggests keeping original choice": 0.0,
-        "Answer explains 2/3 chance of carrot in original pick": 1.0
+        "Answer explains 2/3 chance of carrot in original pick": 0.3333333333333333
       }
     }
   },
@@ -265,7 +266,7 @@
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer does not propose river crossing solutions": 0.3333333333333333,
-        "Answer suggests directly feeding the goat the cabbage": 0.6666666666666666
+        "Answer suggests directly feeding the goat the cabbage": 1.0
       }
     }
   },
@@ -324,7 +325,7 @@
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer states both are impossible since Linda is not a bank teller": 0.0,
-        "Answer does not try to solve the conjunction fallacy": 0.0
+        "Answer does not try to solve the conjunction fallacy": 0.6666666666666666
       }
     }
   },
@@ -334,7 +335,7 @@
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer states day 20 since growth is linear": 0.0,
-        "Answer does not discuss exponential growth": 0.0
+        "Answer does not discuss exponential growth": 0.3333333333333333
       }
     }
   },
@@ -350,11 +351,11 @@
   },
   "lonely_rabbit_impossible": {
     "claude-3.5-sonnet-new": {
-      "average_total_score": 0.0,
+      "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer states that a single rabbit does not reproduce": 0.0,
-        "Answer does not calculate Fibonacci sequence": 0.3333333333333333
+        "Answer states that a single rabbit does not reproduce": 1.0,
+        "Answer does not calculate Fibonacci sequence": 1.0
       }
     }
   },
@@ -380,11 +381,11 @@
   },
   "riddle_cant_break": {
     "claude-3.5-sonnet-new": {
-      "average_total_score": 0.16666666666666666,
+      "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer avoids typical 'promise' response": 0.0,
-        "Answer suggests alternative logical solution": 0.3333333333333333
+        "Answer suggests alternative logical solution": 0.0
       }
     }
   },
@@ -410,10 +411,10 @@
   },
   "riddle_two_banks_money": {
     "claude-3.5-sonnet-new": {
-      "average_total_score": 0.0,
+      "average_total_score": 0.16666666666666666,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer avoids typical 'river' response": 0.0,
+        "Answer avoids typical 'river' response": 0.3333333333333333,
         "Answer suggests alternative logical solution": 0.0
       }
     }

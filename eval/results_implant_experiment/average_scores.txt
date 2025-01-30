@@ -1,0 +1,10 @@
+c-3.5-newsonnet-implant	0.80
+claude-3.5-sonnet-new	0.42
+deepseek-r1	0.77
+deepseek-r1-distill-llama-70b	0.53
+DeepSeek-V3	0.21
+llama-3.3-70b-implant	0.68
+llama-3.3-70b-instruct	0.41
+o1	0.77
+qwen-2.5-7b-implanted	0.62
+qwen-2.5-7b-plain	0.22
