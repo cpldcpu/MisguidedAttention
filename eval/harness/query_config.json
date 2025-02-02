@@ -1,12 +1,13 @@
 {
   "llms": [
     {
-      "name": "llama-3.3-70b-instruct",
-      "model": "meta-llama/llama-3.3-70b-instruct",
+      "name": "mistral-small-3",
+      "model": "mistral/mistral-small-24b-instruct-2501",
       "max_tokens": 2000,
-      "temperature": 0.8,
+      "temperature": 1.0,
       "top_p": 1.0,
       "repetition_penalty": 1
     }
-  ]
+]
+
 }

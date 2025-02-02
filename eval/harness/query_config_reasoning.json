@@ -38,6 +38,29 @@
         "temperature": 1,
         "top_p": 1.0,
         "repetition_penalty": 1
-      }               
+      },
+      {
+        "name": "deepseek-r1",
+        "model": "deepseek-reasoner",
+        "max_tokens": 16000,
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+      },
+      {
+        "name": "DeepSeek-R1-Lite-Preview",
+        "model": "deepseek/deepseek-r1",
+        "max_tokens": 4000,
+        "temperature": 1,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+      },
+      {
+        "name": "deepseek-r1-distill-llama-70b",
+        "model": "deepseek/deepseek-r1-distill-llama-70b",
+        "temperature": 0.9,
+        "top_p": 0.9,
+        "repetition_penalty": 1
+      }  
   ]
 }

@@ -1,6 +1,6 @@
 # Misguided Attention
 
-*Version 0.2 (November 2024)* - **[Evaluation](eval/)**
+*Version 0.3 (January 2025)* - **[Evaluation](eval/)**
 
 This is a collection of prompts to challenge the reasoning abilities of large language models in presence of misguiding information. They are slight variations of commonly known thought experiments, riddles or paradoxes ("trick questions"). 
 
@@ -28,6 +28,8 @@ For reference here are links to explanations of some of the original unmodified 
 - Two doors problem, apparently a variant of Knights and Knaves: https://en.wikipedia.org/wiki/Knights_and_Knaves from this movie: https://en.wikipedia.org/wiki/Labyrinth_(1986_film)
 - Water pouring puzzle: https://en.wikipedia.org/wiki/Water_pouring_puzzle
 - Rope burning puzzle: https://en.wikipedia.org/wiki/Rope_burning_puzzle
+- Bridge and torch problem: https://en.wikipedia.org/wiki/Bridge_and_torch_problem
+
   
 ## Prompts based on logic puzzles
 
@@ -169,6 +171,132 @@ Most LLMs will provide a solution to the original birthday problem instead.
 
 *"If it takes 50 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?"*
 
+### Additions January 2025
+
+#### The King's Mercy (Monty Hall simplification)
+
+*"You are locked in a dungeon. A king decides to show you mercy - he summons you and tells you the rules of the challenge to your escape: 'There are three doors, guarded by a guard that always tells the truth. You may ask the guard one question. Two of the doors lead to certain and painful death. One door leads to your escape.' As you approach the doors, the guard, that knows which doors lead to death and which to escape, says to you 'choose the door that you think leads to your escape'. After you choose it, the guard opens the other door, that leads to certain death. Now there are two closed doors - one leading to escape, another to certain death. The guard allows you to change the door.*"
+
+*"How do you maximize your chances of escape?*"
+
+#### The upside-down bucket (riddle)
+
+*"I have a 7 litre bucket that is missing a bottom, and the top was welded and sealed shut. How much water can I hold in it?"*
+
+Thanks to [@TheJzuken](https://github.com/TheJzuken) for these two.
+
+#### Bridge and Torch problem (Impossible)
+
+*"Four people come to a rickety bridge at night. The bridge can only support two people at a time, and any group crossing must carry the single torch they share to light their way. Person A takes 1 minute to cross, Person B takes 3 minutes, Person C takes 5 minutes, and Person D takes 10 minutes. When two people cross together, they must move at the slower person's pace. For example, if Person A and D cross together, it takes them 10 minutes. After a crossing, someone must bring the torch back for anyone still waiting. The challenge is to get all four people safely across the bridge in no more than 17 minutes. How can they do it?"*
+
+#### Bridge and Torch problem (Easy)
+
+*"Four people come to a rickety bridge at night. The bridge can support four people at a time, and any group crossing must carry the single torch they share to light their way. Person A takes 1 minute to cross, Person B takes 3 minutes, Person C takes 5 minutes, and Person D takes 10 minutes. When four people cross together, they must move at the slowest person's pace. For example, if Person A and D cross together, it takes them 10 minutes. After a crossing, someone must bring the torch back for anyone still waiting. The challenge is to get all four people safely across the bridge in no more than 17 minutes. How can they do it?"*
+
+Suggested by [eyTns](https://github.com/cpldcpu/MisguidedAttention/issues/11)
+
+#### Knights and Knaves (Impossible)
+
+*"You arrive on an island inhabited solely by two types of people - Knights who always tell the truth, and Knaves who always lie. Standing at a fork in the road, you meet two inhabitants named A and B. A says "B is a Knave." B says "A is telling the truth." You need to determine who is who to find the correct path."*
+
+#### Knights and Knaves (Easy)
+
+*"You arrive on an island inhabited solely by two types of people - Knights who always tell the truth, and Knaves who always lie. Standing at a fork in the road, you meet two inhabitants named A and B. A says "B is a Knave." B says "A is a liar." You need to determine who is who to find the correct path."*
+
+#### Poisoned Hot (Modified)
+
+*"Two girls went to dinner together and both ordered hot tea. One girl pounded down five of them in about a minute, and the other took her time drinking one. The girl who drank one died, while the girl who drank five survived. However, all of the drinks that were served turned out to contain poison. Why did the girl that drank more hot tea survive?*"
+
+Thanks to /u/WiSaGaN for the cue.
+
+If you wonder about the correct solution for this one: There are not ice cubes!
+
+#### Inverted Monty Hall Variation (Modified)
+
+*"You're a rabbit and are presented with three rabbit holes. In one is a fox, out to eat you. In the other two there are large stashes of delicious carrots. You pick one, but before you enter it, god reveals a stash of carrots on one of the two others. He then offers you the choice of keeping your selected hole or swapping to the other unrevealed one. What should you do to minimize your chances of being eaten?"*
+
+#### Feeding the goat (Simplified river crossing)
+
+*"A farmer is at a river with a wolf, a goat, and a cabbage. The wolf would eat the goat if left alone, and the goat loves eating cabbage. What can the farmer do to feed the goat?"*
+
+#### Feeding the wolf (Simplified river crossing)
+
+*"A farmer is at a river with a wolf, a goat, and a cabbage. The wolf is strictly vegetarian and loves cabbage. The goat is very protective of vegetables. How can the farmer get the cabbage to the wolf?"*
+
+#### The farmer's dilemma (Simplified river crossing)
+
+*"A farmer is at a river with a wolf, a goat, and a cabbage. The cabbage is actually an undercover detective investigating vegetable theft. The wolf and goat are best friends who run a successful food import business. How can the farmer help the detective gather evidence?"*
+
+Claude Sonnet suggested the last two. Turns out that many LLMs will somehow inject a river crossing puzzle solution into these scenarios.
+
+#### The Doom Slayer's teleporter (Modified River Crossing)
+
+*"Doom Slayer needs to teleport from Phobos to Deimos. He has his pet bunny, his pet cacodemon, and a UAC scientist who tagged along. The Doom Slayer can only teleport with one of them at a time. But if he leaves the bunny and the cacodemon together alone, the bunny will eat the cacodemon. And if he leaves the cacodemon and the scientist alone, the cacodemon will eat the scientist. How should the Doom Slayer get himself and all his companions safely to Deimos?"*
+
+Suggested by [int19h](https://github.com/int19h).
+
+#### The Ball and Bat (Modified)
+
+*"I stole a ball and a bat that together cost $1.10. The bat is $1 more than the ball. What did I pay for the ball?"*
+
+Reference: https://en.wikipedia.org/wiki/Cognitive_reflection_test
+
+#### The Heavy Feather (Modified)
+
+*"Which is heavier, 1 kilogram of steel or 1 feather?"*
+
+#### Conjunction Fallacy Fallacy (Simplified)
+
+*"Linda is 31 years old, single, outspoken, active in the feminist movement and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in anti-nuclear demonstrations. Which is more probable?"*
+
+- *A) Linda is a bank teller.*
+- *B) Linda is a bank teller and is active in the feminist movement.*
+
+
+#### Conjunction Fallacy Fallacy (Inverted)
+
+*"Linda is 31 years old, single, outspoken, not active in the feminist movement, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in anti-nuclear demonstrations. Which is more probable?"*
+
+-  *A) Linda is a bank teller and is active in the feminist movement.*
+-  *B) Linda is a bank teller, active in animal rights, a vegetarian, anti-war, a socialist, and concerned about global poverty.*
+
+#### Conjunction Fallacy Fallacy (Impossible)
+
+*"Linda is 31 years old, single, outspoken, not a bank teller, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in anti-nuclear demonstrations. Which is more probable?"*
+
+- *A) Linda is a bank teller.*
+- *B) Linda is a bank teller and is active in the feminist movement.*
+
+Suggested by [Jona Sassenhagen](https://github.com/jona-sassenhagen) [See here for details](https://github.com/cpldcpu/MisguidedAttention/issues/10)
+
+
+#### Linear Growth (Modified)
+
+*"The number of lotus flowers in the pond increases by two every day. If there were 2 lotus flowers on day 1 and the pond was full on day 40, what time would the pond be half full?*"
+
+#### New Year's Special Monty Hall Show (Simplified)
+
+*"There is a car behind one door and a goat behind the other two. You picked all the doors 1, 2, and 3, and the host opened the door 2 to show that there is a goat. So, would you change your choice?*"
+
+#### Lonely Rabbit (Impossible)
+
+*"A pair of rabbits give birth to two baby rabbits each year from two years after birth. If you had one rabbit, how many would it be in 7 years?"*
+
+#### Not from Hanoi (Simplification)
+
+*"There are 3 sticks. There are 3 disks on the leftmost stick, in order from large to small. What is the minimum number of disk moves to move them to the rightmost stick?*"
+
+
+#### Athelete vs. Fast Tortoise (Modified)
+
+*"An athlete and a tortoise compete for a run. The distance is 100 meters, but the athlete give 100 meters head-start to the tortoise, and the tortoise's speed is twice the athlete's speed. Can athlete catch up with the tortoise?"
+
+#### Not Nim (Simplification)
+
+*"A and B take turns naming increasing numbers. Each player can name as many increasing numbers as they want. The first player starts with 1. Then B takes over and so on. The person who says 31 loses. What should A do to start first and win?"*
+
+All of the ones above by [eyTns](https://github.com/cpldcpu/MisguidedAttention/issues/11)
+
 ## Prompts based on riddles
 
 [As suggested](https://github.com/cpldcpu/MisguidedAttention/issues/4) by @av, also riddles can be used as a basis for prompts that challenge the reasoning abilities of LLMs.
@@ -207,6 +335,5 @@ Variant 1: *"What happens when a stoppable force meets an immovable object?"*
 Variant 2: *"What happens when a unstoppable force meets a movable object?"*
 
 The first variant seems to throw off more llms.
-
 
 

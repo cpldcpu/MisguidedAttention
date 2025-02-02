@@ -28,80 +28,57 @@ def create_plots(summary_data, output_file, limit):
 def plot_prompt(ax, prompt_data, prompt_id):
     llms = sorted(prompt_data.keys())
     
-    # Get all unique behaviors and mistakes across all LLMs
-    all_behaviors = set()
-    all_mistakes = set()
+    # Get all unique criteria across all LLMs
+    all_criteria = set()
     for llm in llms:
-        all_behaviors.update(prompt_data[llm]['expected_behavior_stats'].keys())
-        all_mistakes.update(prompt_data[llm]['common_mistakes_stats'].keys())
-    all_behaviors = sorted(all_behaviors)
-    all_mistakes = sorted(all_mistakes, reverse=True)
-    # all_mistakes = sorted(all_mistakes)
+        all_criteria.update(prompt_data[llm]['criteria_stats'].keys())
+    all_criteria = sorted(all_criteria)
     
-    total_bars = max(len(all_behaviors), len(all_mistakes))
+    total_bars = len(all_criteria)
     bar_width = 0.8 / total_bars
     
     ax2 = ax.twinx()  # Create a secondary y-axis
     
-    # Create color maps for behaviors (green) and mistakes (red)
-    green_cmap = plt.cm.Greens
-    red_cmap = plt.cm.Reds
-
-    # behavior_colors = [green_cmap(0.3 + 0.7 * i / (len(all_behaviors) - 1)) for i in range(len(all_behaviors))]
-    # mistake_colors = [red_cmap(0.3 + 0.7 * i / (len(all_mistakes) - 1)) for i in range(len(all_mistakes))]
-    behavior_colors = [green_cmap(0.3 + 0.7 * i / (len(all_behaviors) - 0)) for i in range(len(all_behaviors))]
-    mistake_colors = [red_cmap(0.3 + 0.7 * i / (len(all_mistakes) - 0)) for i in range(len(all_mistakes))]
+    # Create color map for criteria (using a blue-green palette)
+    color_map = plt.cm.viridis
+    criteria_colors = [color_map(0.3 + 0.7 * i / max(1, len(all_criteria) - 1)) for i in range(len(all_criteria))]
 
     legend_handles = []
     legend_labels = []
     max_n = 0
     
     for llm_index, llm in enumerate(llms):
-        expected_behaviors = prompt_data[llm]['expected_behavior_stats']
-        common_mistakes = prompt_data[llm]['common_mistakes_stats']
+        criteria_stats = prompt_data[llm]['criteria_stats']
         
-        for j in range(total_bars):
+        for j, criterion in enumerate(all_criteria):
             x = llm_index + (j - total_bars/2 + 0.5) * bar_width
-            
-            if j < len(all_behaviors):
-                behavior = all_behaviors[j]
-                value = expected_behaviors.get(behavior, 0)
-                bar = ax.bar(x, value, width=bar_width, color=behavior_colors[j])
-                if llm_index == 0:  # Add to legend only once
-                    legend_handles.append(bar)
-                    legend_labels.append(behavior)
-            
-            if j < len(all_mistakes):
-                mistake = all_mistakes[j]
-                value = common_mistakes.get(mistake, 0)
-                bar = ax.bar(x, -value, width=bar_width, color=mistake_colors[j])
-                # if llm_index == 0 and j >= len(all_behaviors):  # Add to legend only once and if not already added
-                if llm_index == 0:  # Add to legend only once and if not already added
-                    legend_handles.append(bar)
-                    legend_labels.append(mistake)
+            value = criteria_stats.get(criterion, 0)
+            bar = ax.bar(x, value, width=bar_width, color=criteria_colors[j])
+            if llm_index == 0:  # Add to legend only once
+                legend_handles.append(bar)
+                legend_labels.append(criterion)
         
-        ax2.scatter(llm_index, prompt_data[llm]['average_score'], color='black', zorder=3)
+        # Plot average total score
+        ax2.scatter(llm_index, prompt_data[llm]['average_total_score'], color='black', zorder=3)
         max_n = max(max_n, prompt_data[llm]['num_evaluations'])
 
-    ax.set_title(prompt_id, fontsize=16, fontweight='bold')
+    ax.set_title(f"{prompt_id}\n[n={max_n}]", fontsize=16, fontweight='bold')
     ax.set_xticks(range(len(llms)))
     ax.set_xticklabels(llms, rotation=45, ha='right', fontsize=14)
-    ax.set_ylabel(f'Positive/negative behavior Score [n={max_n}]', fontsize=14)
+    ax.set_ylabel('Criteria Success Rate', fontsize=14)
     ax.tick_params(axis='y', labelsize=12)
-    ax.axhline(y=0, color='k', linestyle='-', linewidth=0.5)
-    ax.set_ylim(-1.3, 1.3)  # Adjusted to show both positive and negative values
     ax.grid(axis='y', linestyle='--', alpha=0.7)
+    ax.set_ylim(0, 1.1)  # Set y-axis limits from 0 to 1.1 to show full range
     
-    ax2.set_ylabel('Quality Eval (1-5)', fontsize=14)
+    ax2.set_ylabel('Total Score (0-1)', fontsize=14)
     ax2.tick_params(axis='y', labelsize=12)
-    ax2.set_ylim(0, 6)
+    ax2.set_ylim(0, 1.1)
 
-    # Add legend to top-left corner
-    # legend_labels = all_behaviors + all_mistakes
+    # Add legend
     ax.legend(legend_handles, legend_labels,  
               loc='upper left', fontsize=12, title_fontsize=14, ncol=1)
 
-    # Adjust layout to prevent x-axis label overlap
+    # Adjust layout
     plt.subplots_adjust(bottom=0.2, top=0.9, left=0.1, right=0.9)
 
 def main():

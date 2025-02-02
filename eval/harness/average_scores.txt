@@ -1,0 +1,9 @@
+claude-3.5-sonnet-new	0.37
+deepseek-r1	0.55
+deepseek-r1-distill-llama-70b	0.43
+DeepSeek-V3	0.27
+gemini-exp-1206	0.23
+gpt-4o-2024-11-20	0.34
+llama-3.3-70b-instruct	0.35
+minimax-01	0.37
+mistral-small-3	0.28

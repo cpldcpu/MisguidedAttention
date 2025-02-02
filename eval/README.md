@@ -1,7 +1,8 @@
-# Evaluation 
-This folder contains code for and results of evaluating various Large Language Models (LLMs) on a [subset of 13 prompts](prompts.md) from the Misguided Attention prompt list.
+# Evaluation Update for v0.3 *update in progress*
 
-The evaluation is performed by directly prompting the model without any guiding examples (zero shot) at their default temperature via the API. Typically 5 results were sampled for each prompt. The results were evaluated against contrasting positive and negative criteria by using an LLM as a judge and manually reviewing the results. (See [Findings and issues encountered](#findings-and-issues-encountered) for more details)
+This folder contains code for and results of evaluating various Large Language Models (LLMs) on a [subset of 13 prompts](prompts.md) from the Misguided Attention prompt list. Starting with v0.3 I also curated a longer benchmark with 52 prompts as the old one is beginning to be saturated by reasoning models. Preliminary results are shown below.
+
+The evaluation is performed by directly prompting the model without any guiding examples (zero shot) at their default temperature via the API. Typically 5 results were sampled for each prompt (3 for the long dataset). For v0.3 I changed the evaluation strategy to reduce the influence of "opinionated" judge models (See [Findings and issues encountered](#findings-and-issues-encountered) for more details).
 
 ## Result Summary
 
@@ -14,17 +15,17 @@ Large models perform quite well in this benchmark, although there are some surpr
 
 "Newsonnet" is doing quite well even without a system prompt. Curiously, in [Oct 2024 Anthropic added a new paragraph to the 3.5-Sonnet system prompt](https://docs.anthropic.com/en/release-notes/system-prompts#oct-22nd-2024) that may address this eval *"If Claude is shown a familiar puzzle, it writes out the puzzle’s constraints explicitly stated in the message, quoting the human’s message to support the existence of each constraint. Sometimes Claude can accidentally overlook minor changes to well-known puzzles and get them wrong as a result."* I have to mention that using the system prompt does not improve the score too much 😀
 
-![Flagship models](./results_flagship_models/heatmap_expected_behavior.png)
+![Flagship models](./summaries/heatmap_flagship.png)
 
 ### Midrange models
 As expected, the performance of mid-range models is worse than that of the flagship models. Flash-1.5 performs well, because it seems to be finetuned to be more "skeptical" and will hence call out impossible prompts.
 
-![Midrange models](./results_midrange_models/heatmap_expected_behavior.png)
+![Midrange models](./summaries/heatmap_midrange.png)
 
 ### Small models
 Generally, small models are very sensitive to overfitting and perform badly in this benchmark. Due to smaller number of heads and lower embedding size they can focus on fewer features at a time. Qwen-2.5-72b is an exception and performs quite well.
 
-![Small models](./results_small_models/heatmap_expected_behavior.png)
+![Small models](./summaries/heatmap_small.png)
 
 ### Reasoning models
 
@@ -36,7 +37,7 @@ One particularity critical corner case are problems that are impossible to solve
 
 The exceptionally good performance of QwQ-32B-Preview is quite remarkable given its small size - I actually ran this eval locally on a RTX3090.
 
-![Reasoning models](./results_reasoning_models/heatmap_expected_behavior.png)
+![Reasoning models](./summaries/heatmap_reasoning.png)
 
 **Update 2024-11-16**
 I reran the evaluation for Qwen-2.5-72b after noticing that it suddenly was able to solved the inverse monty hall problem, which is pretty remarkable as only o1 and o1-mini were able to solve it consistently before. The new results are included in the heatmap above and show a considerable improvement compare to the first eval of Qwen-2.5-72b  from mid of October '24. What did change? Not sure. Possibly some settings on the provider side were modified? FP8 vs FP16?

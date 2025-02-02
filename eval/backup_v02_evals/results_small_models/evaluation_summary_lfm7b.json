@@ -1,0 +1,133 @@
+{
+  "trolley_problem_easy": {
+    "lfm-7b": {
+      "average_total_score": 0.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states that the five people on the track are already dead": 0.0,
+        "Answer states not to pull the lever": 0.0
+      }
+    }
+  },
+  "trolley_easy_forced": {
+    "lfm-7b": {
+      "average_total_score": 0.1,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer recognizes that the five people on the track are already dead": 0.2,
+        "Answer states not to pull the lever": 0.0
+      }
+    }
+  },
+  "dead_schrodingers_cat": {
+    "lfm-7b": {
+      "average_total_score": 0.4,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states that the cat is already dead when placed in the box.": 0.6,
+        "Answer states that the probability of the cat being alive is 0% as the final result, and no alternatives.": 0.2
+      }
+    }
+  },
+  "river_crossing_simple": {
+    "lfm-7b": {
+      "average_total_score": 0.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip.": 0.0,
+        "Answer does not contain an itemized list with more than two items.": 0.0
+      }
+    }
+  },
+  "river_crossing_easy": {
+    "lfm-7b": {
+      "average_total_score": 0.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip.": 0.0,
+        "Answer does not contain an itemized list with more then two items.": 0.0,
+        "Answer does not contain an itemized list with more than two items.": 0.0
+      }
+    }
+  },
+  "river_crossing_even_simpler": {
+    "lfm-7b": {
+      "average_total_score": 0.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip.": 0.0,
+        "Answer does not contain an itemized list with more than two items.": 0.0
+      }
+    }
+  },
+  "monty_hall_inverse": {
+    "lfm-7b": {
+      "average_total_score": 0.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer states to keep the existing door": 0.0,
+        "Answer explains that the initial choice has a 2/3 chance of winning a car": 0.0,
+        "Answer states that this is a modification of the Monty Hall problem": 0.4
+      }
+    }
+  },
+  "jugs_1_liter": {
+    "lfm-7b": {
+      "average_total_score": 0.6,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter.": 0.6,
+        "Answer is not formatted as itemized list with more than 2 entries.": 0.0
+      }
+    }
+  },
+  "jugs_3_liters": {
+    "lfm-7b": {
+      "average_total_score": 0.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes that filling both jugs once without pouring between them gives exactly 3 liters.": 0.0,
+        "Answer concludes that filling both jugs gives exactly 3 liters.": 0.0,
+        "Answer is not formatted as itemized list with more than 2 entries.": 0.2
+      }
+    }
+  },
+  "jugs_4_liters": {
+    "lfm-7b": {
+      "average_total_score": 0.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes it is impossible to measure exactly 4 liters with the given jugs.": 0.0,
+        "Answer is not formatted as itemized list with more than 3 entries.": 0.0
+      }
+    }
+  },
+  "birthday_problem_easy": {
+    "lfm-7b": {
+      "average_total_score": 0.4,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes that the probability is close to 1 (larger than 0.99).": 0.4
+      }
+    }
+  },
+  "rope_burning_impossible": {
+    "lfm-7b": {
+      "average_total_score": 0.0,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes that it is not possible to solve this puzzle.": 0.0
+      }
+    }
+  },
+  "rope_burning_easy": {
+    "lfm-7b": {
+      "average_total_score": 0.4,
+      "num_evaluations": 5,
+      "criteria_stats": {
+        "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes).": 0.4,
+        "Answer concludes that 60 minutes can be measured by lighting by lighting both ropes on both ends sequentially (2x 30 minutes).": 0.4
+      }
+    }
+  }
+}

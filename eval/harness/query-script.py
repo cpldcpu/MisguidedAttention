@@ -5,6 +5,7 @@ import os
 import time
 from tqdm import tqdm
 from datetime import datetime
+import google.generativeai as genai
 
 def load_json(file_path):
     with open(file_path, 'r') as f:
@@ -14,33 +15,115 @@ def save_json(data, file_path):
     with open(file_path, 'w') as f:
         json.dump(data, f, indent=2)
 
-def query_llm(prompt, llm_config, temperature_override, max_retries=3):
+def load_existing_results():
+    if os.path.exists('output_queries.json'):
+        with open('output_queries.json', 'r') as f:
+            existing_data = json.load(f)
+            # Create a dict for faster lookup
+            return {(r['prompt_id'], r['llm']): r for r in existing_data['results']}
+    return {}
+
+def load_prompts(filepath):
+    with open(filepath, 'r') as f:
+        data = json.load(f)
+    return data['prompts']
+
+def load_cot_data(file_path):
+    """Load chain of thought data from a JSON file."""
+    if not file_path:
+        return {}
+    
+    with open(file_path, 'r') as f:
+        data = json.load(f)
+        # Create a mapping of prompt_id to thinking entries
+        return {result['prompt_id']: result['thinking'] for result in data['results']}
+
+def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retries=3):
     OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
-    if not OPENROUTER_API_KEY:
-        OPENROUTER_API_KEY = os.environ.get("OPENAI_API_KEY")
-        if not OPENROUTER_API_KEY:
-            raise ValueError("OPENROUTER_API_KEY and OPENAI_API_KEY environment variable not set")
+    DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
+    OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+    GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")   
 
-    headers = {
-        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-        "HTTP-Referer": "",  # Replace with your site URL
-        "X-Title": "MA_Eval"  # Replace with your app name
-    }
 
-    data = {
-        "model": llm_config["model"],
-        "messages": [{"role": "user", "content": f"Please answer the following question: {prompt}\nAnswer:"}],
-        "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
-        "max_tokens": llm_config.get("max_tokens", 4000),
-        "top_p": llm_config.get("top_p", 1),
-        "frequency_penalty": llm_config.get("frequency_penalty", 0),
-        "presence_penalty": llm_config.get("presence_penalty", 0)
-    }
+    if OPENROUTER_API_KEY == None:
+        OPENROUTER_API_KEY = OPENAI_API_KEY
+
+    # Construct the prompt with CoT if provided
+    prompt_text = f"Please answer the following question: {prompt}\n"
+    if cot_entry:
+        prompt_text += f"<thinking>{cot_entry}</thinking>\n"
+    prompt_text += "Answer:"
+
+    # Handle Gemini API separately
+    if "gemini" in llm_config["model"].lower():
+        if not GEMINI_API_KEY:
+            raise ValueError("GEMINI_API_KEY environment variable not set")
+        
+        genai.configure(api_key=GEMINI_API_KEY)
+        model = genai.GenerativeModel(llm_config["model"])
+        
+        # wait for 6s to avoid rate limiting
+        time.sleep(6)
+        try:
+            response = model.generate_content(
+                prompt_text,
+                generation_config=genai.types.GenerationConfig(
+                    temperature=temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0)
+                )
+            )
+            return {
+                'content': response.text,
+                'thinking': None  # Gemini doesn't provide separate thinking content
+            }
+        except Exception as e:
+            print(f"Gemini API error: {e}")
+            return None
+
+    # Determine API endpoint and key based on model
+    if "deepseek" in llm_config["model"].lower():
+        api_key = DEEPSEEK_API_KEY    
+        base_url = "https://api.deepseek.com/v1/chat/completions"
+        if not api_key:
+            raise ValueError("DEEPSEEK_API_KEY environment variable not set")
+        
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        }
+
+        data = {
+            "model": llm_config["model"],
+            "messages": [{"role": "user", "content": prompt_text}],
+            "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
+        }
+    else:
+        api_key = OPENROUTER_API_KEY or OPENAI_API_KEY
+        base_url = "https://openrouter.ai/api/v1/chat/completions"
+        if not api_key:
+            raise ValueError("Neither OPENROUTER_API_KEY nor OPENAI_API_KEY environment variable is set")
+
+        headers = {
+            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+            "HTTP-Referer": "",  # Replace with your site URL
+            "X-Title": "MA_Eval"  # Replace with your app name
+        }
+
+        data = {
+            "model": llm_config["model"],
+            "messages": [{"role": "user", "content": prompt_text}],
+            "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
+            "max_tokens": llm_config.get("max_tokens", 4000),
+            "top_p": llm_config.get("top_p", 1),
+            "frequency_penalty": llm_config.get("frequency_penalty", 0),
+            "presence_penalty": llm_config.get("presence_penalty", 0)
+        }
 
     for attempt in range(max_retries):
         try:
             response = requests.post(
-                "https://openrouter.ai/api/v1/chat/completions",
+                # "https://openrouter.ai/api/v1/chat/completions",
+                # "https://api.deepseek.com/v1/chat/completions",
+                base_url,
                 headers=headers,
                 json=data
             )
@@ -60,7 +143,19 @@ def query_llm(prompt, llm_config, temperature_override, max_retries=3):
 
             # Check for valid response structure
             if 'choices' in response_json and len(response_json['choices']) > 0:
-                return response_json['choices'][0]['message']['content']
+                response_content = response_json['choices'][0]['message']['content']
+                thinking_content = None
+                # print(f"Response: {response_json}")
+                # Check for thinking/reasoning content
+                if 'reasoning_content' in response_json['choices'][0]['message']:
+                    thinking_content = response_json['choices'][0]['message']['reasoning_content']
+                # elif 'thinking' in response_json['choices'][0]:
+                #     thinking_content = response_json['choices'][0]['thinking']
+                
+                return {
+                    'content': response_content,
+                    'thinking': thinking_content
+                }
             else:
                 print(f"Unexpected response format: {response_json}")
                 return None
@@ -77,49 +172,90 @@ def query_llm(prompt, llm_config, temperature_override, max_retries=3):
     return None
 
 def main(args):
-    dataset = load_json(args.dataset)
     config = load_json(args.config)
     output = {"results": []}
 
+    existing_results = load_existing_results()
+    prompts = load_prompts(args.dataset)
+    results = existing_results.copy()
+    processed_count = 0
+
+    # Load CoT data if specified
+    cot_data = load_cot_data(args.cotfile)
+
     for llm in config["llms"]:
         print(f"Querying {llm['name']}...")
-        for prompt in tqdm(dataset["prompts"][:args.limit] if args.limit > 0 else dataset["prompts"]):
-            result = {
-                "prompt_id": prompt["prompt_id"],
-                "prompt": prompt["prompt"],
-                "llm": llm["name"],
-                "output": [],
-                "timestamp": datetime.now().isoformat()
-            }
-            
-            for _ in range(args.samples):
-                if args.debug:
-                    print(f"Querying {llm['name']} with prompt: {prompt['prompt']}")
+        for prompt in tqdm(prompts[:args.limit] if args.limit > 0 else prompts):
+            result_key = (prompt["prompt_id"], llm["name"])
+            if result_key not in results:
+                result = {
+                    "prompt_id": prompt["prompt_id"],
+                    "prompt": prompt["prompt"],
+                    "llm": llm["name"],
+                    "output": [],
+                    "thinking": [],  # New array for thinking tokens
+                    "timestamp": datetime.now().isoformat()
+                }
+
+                # Get CoT entries for this prompt if available
+                cot_entries = cot_data.get(prompt["prompt_id"], []) if cot_data else []
                 
-                answer = query_llm(prompt["prompt"], llm, args.temp, args.max_retries)
-                if answer is None:
-                    print(f"Failed to get response for prompt {prompt['prompt_id']}")
-                if args.debug:
-                    print(f"Answer: {answer}")
+                for i in range(args.samples):
+                    if args.cotfile:
+                        # Verify we have enough CoT entries
+                        if i >= len(cot_entries):
+                            raise ValueError(f"Not enough CoT entries for prompt {prompt['prompt_id']}. "
+                                          f"Need {args.samples}, but only have {len(cot_entries)}")
+                        cot_entry = cot_entries[i]
+                    else:
+                        cot_entry = None
 
-                result["output"].append(answer)
-                # result["output"].append(answer if answer is not None else "ERROR: Failed to get response")
-            
-            output["results"].append(result)
+                    if args.debug:
+                        print(f"Querying {llm['name']} with prompt: {prompt['prompt']}")
+                        if cot_entry:
+                            print(f"Using CoT entry: {cot_entry[:200]}...")
 
-    save_json(output, args.output)
+                    response = query_llm(prompt["prompt"], llm, args.temp, cot_entry, args.max_retries)
+                    if response is None:
+                        print(f"Failed to get response for prompt {prompt['prompt_id']}")
+                        result["output"].append(None)
+                        result["thinking"].append(None)
+                    else:
+                        if args.debug:
+                            print(f"Answer: ...{response['content'][:-200]}")
+                            if response['thinking']:
+                                print(f"Thinking: ...{response['thinking'][:-200]}")
+
+                        result["output"].append(response['content'])
+                        result["thinking"].append(response['thinking'])
+                
+                results[result_key] = result
+                processed_count += 1
+                
+                # Save every three processed queries
+                if processed_count % 3 == 0:
+                    save_json({"results": list(results.values())}, args.output)
+                    print(f"Saved after processing {processed_count} queries")
+                
+                print(f"Processed prompt: {prompt['prompt_id']}")
+            else:
+                print(f"Skipping already processed prompt: {prompt['prompt_id']}")
+
+    # Final save
+    save_json({"results": list(results.values())}, args.output)
     print(f"Query complete. Results saved to {args.output}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate LLMs on a dataset of prompts")
-    parser.add_argument("--dataset", default="misguided_attention.json", help="Path to the dataset JSON file")
-    parser.add_argument("--output", default="output_queries.json", help="Path to the output JSON file")
+    parser.add_argument("--dataset", default="misguided_attention_v4.json", help="Path to the dataset JSON file")
+    parser.add_argument("--output", default="output_queries.json", help="Path to the output JSON file. Existing results will be loaded and new results are appended to this file")
     parser.add_argument("--config", default="query_config.json", help="Path to the configuration JSON file")
     parser.add_argument("--samples", type=int, default=1, help="Number of repetitions for each question and LLM")
     parser.add_argument("--limit", type=int, default=0, help="Limit the number of prompts to evaluate (0 for no limit)")
     parser.add_argument("--temp", type=float, default=-1, help="Override temperature setting for LLMs (-1 to use config values)")
     parser.add_argument("--debug", action="store_true", help="Enable debug output")
     parser.add_argument("--max-retries", type=int, default=8, help="Maximum number of retries for failed requests")
+    parser.add_argument("--cotfile", help="Path to the Chain of Thought input JSON file")
 
     args = parser.parse_args()
     main(args)
