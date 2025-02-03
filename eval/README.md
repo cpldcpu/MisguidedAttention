@@ -4,7 +4,8 @@ This folder contains code for and results of evaluating various Large Language M
 
 The evaluation is performed by directly prompting the model without any guiding examples (zero shot) at their default temperature via the API. Typically 5 results were sampled for each prompt (3 for the long dataset). For v0.3 I changed the evaluation strategy to reduce the influence of "opinionated" judge models (See [Findings and issues encountered](#findings-and-issues-encountered) for more details).
 
-## Result Summary
+
+## Results 12 Question Eval
 
 The results were summarized in a heatmap. Scores range from 0.0 to 1.0, where 1.0 indicates consistent expected behavior across all trials, and 0.0 indicates consistent failure to produce expected behavior. The rightmost column displays each model's mean performance score across all test cases.
 
@@ -38,6 +39,14 @@ One particularity critical corner case are problems that are impossible to solve
 The exceptionally good performance of QwQ-32B-Preview is quite remarkable given its small size - I actually ran this eval locally on a RTX3090.
 
 ![Reasoning models](./summaries/heatmap_reasoning.png)
+
+## Results 52 Question Eval
+
+The heatmap below shows initial results for the long evaluation with 52 questions. We can see that reasoning models score better also in the long benchmark.
+
+![Long eval](./summaries/heatmap_long.png)
+
+## Updates
 
 **Update 2024-11-16**
 I reran the evaluation for Qwen-2.5-72b after noticing that it suddenly was able to solved the inverse monty hall problem, which is pretty remarkable as only o1 and o1-mini were able to solve it consistently before. The new results are included in the heatmap above and show a considerable improvement compare to the first eval of Qwen-2.5-72b  from mid of October '24. What did change? Not sure. Possibly some settings on the provider side were modified? FP8 vs FP16?
