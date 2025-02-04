@@ -5,6 +5,7 @@ from collections import defaultdict
 from tqdm import tqdm
 import os
 import warnings
+import time
 
 def load_json(file_path):
     with open(file_path, 'r') as f:
@@ -13,6 +14,40 @@ def load_json(file_path):
 def save_json(data, file_path):
     with open(file_path, 'w') as f:
         json.dump(data, f, indent=2)
+
+def make_api_call(messages, api_key, max_retries=3):
+    for attempt in range(max_retries):
+        try:
+            response = requests.post(
+                "https://openrouter.ai/api/v1/chat/completions",
+                headers = {
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {api_key}",
+                    "HTTP-Referer": "",  
+                    "X-Title": "MA_Eval"  
+                },
+                json={
+                    "model": "meta-llama/llama-3.3-70b-instruct",
+                    "messages": messages,
+                    "temperature": 0.0,
+                    "max_tokens": 1000
+                }
+            )
+            
+            response.raise_for_status()
+            return response.json()
+            
+        except requests.exceptions.RequestException as e:
+            if attempt < max_retries - 1 and (
+                isinstance(e, requests.exceptions.HTTPError) and 
+                e.response is not None and 
+                e.response.status_code == 429
+            ):
+                print(f"Rate limit error, retrying in 2 seconds... (Attempt {attempt + 1}/{max_retries})")
+                time.sleep(2)
+                continue
+            raise
+    return None
 
 def run_inference(prompt, sys_prompt, max_depth=5):
     messages = [
@@ -24,6 +59,7 @@ def run_inference(prompt, sys_prompt, max_depth=5):
         if depth >= max_depth:
             print(f"Maximum recursion depth reached ({max_depth}). Stopping recursion.")
             return None
+            
         OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")    
         if not OPENROUTER_API_KEY:
             OPENROUTER_API_KEY = os.environ.get("OPENAI_API_KEY")
@@ -31,24 +67,10 @@ def run_inference(prompt, sys_prompt, max_depth=5):
                 raise ValueError("OPENROUTER_API_KEY and OPENAI_API_KEY environment variable not set")
 
         try:
-            response = requests.post(
-                "https://openrouter.ai/api/v1/chat/completions",
-                headers = {
-                    "Content-Type": "application/json",
-                    "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-                    "HTTP-Referer": "",  
-                    "X-Title": "MA_Eval"  
-                },
-                json={
-                    "model": "meta-llama/llama-3.3-70b-instruct",
-                    "messages": messages,
-                    "temperature": 0.0,
-                    "max_tokens": 1000
-                }
-            )
-
-            response.raise_for_status()  # Raise an exception for bad status codes
-            response_json = response.json()
+            response_json = make_api_call(messages, OPENROUTER_API_KEY)
+            if not response_json:
+                print("Failed after all retry attempts")
+                return None
 
             if 'choices' not in response_json or not response_json['choices']:
                 print(f"Invalid API response format: {response_json}")
@@ -66,9 +88,6 @@ def run_inference(prompt, sys_prompt, max_depth=5):
                 messages.append({"role": "user", "content": "The response was not in valid JSON format. Please provide a valid JSON response."})
                 return recursive_loop(messages, depth + 1)
 
-        except requests.exceptions.RequestException as e:
-            print(f"API request error: {e}")
-            return None
         except Exception as e:
             print(f"Unexpected error: {e}")
             return None
@@ -230,7 +249,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate LLM outputs for Misguided Attention prompts")
-    parser.add_argument("--dataset", default="misguided_attention_v2.json", help="Path to the dataset JSON file")
+    parser.add_argument("--dataset", default="misguided_attention_v4_long.json", help="Path to the dataset JSON file")
     parser.add_argument("--output_queries", default="output_queries.json", help="Path to the output queries JSON file")
     parser.add_argument("--limit", type=int, default=0, help="Limit the number of prompt_ids to process (0 for no limit)")
     parser.add_argument("--debug", action="store_true", help="Enable debug output")
