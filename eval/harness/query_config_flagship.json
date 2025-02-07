@@ -136,6 +136,14 @@
     "temperature": 0.7,
     "top_p": 1.0,
     "repetition_penalty": 1
+  },
+  {
+    "name": "gemini-2.0-pro-exp-02-05",
+    "model": "gemini-2.0-pro-exp-02-05",
+    "max_tokens": 2000,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "repetition_penalty": 1
   }
   ]
 }
