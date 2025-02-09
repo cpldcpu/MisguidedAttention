@@ -1,4 +1,4 @@
-# Evaluation Update for v0.3 *update in progress*
+# Evaluation Update for v0.3 
 
 This folder contains code for and results of evaluating various Large Language Models (LLMs) on a [subset of 13 prompts](prompts.md) from the Misguided Attention prompt list. Starting with v0.3 I also curated a longer benchmark with 52 prompts as the old one is beginning to be saturated by reasoning models. Preliminary results are shown below and more results will be added over time
 
