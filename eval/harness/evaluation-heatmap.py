@@ -41,10 +41,10 @@ def process_summaries(summaries, valid_llms=None):
 def save_llm_scores(llm_scores, output_file):
     with open(output_file, 'w') as f:
         for llm, score in llm_scores.items():
-            f.write(f"{llm}\t{score:.2f}\n")
+            f.write(f"{llm}\t{score:.3f}\n")
     print(f"LLM scores have been saved to '{output_file}'")
 
-def create_heatmap(data, value_col, output_file, cmap, vmin, vmax):
+def create_heatmap(data, value_col, output_file, cmap, vmin, vmax, title='Misguided Attention Eval (long)'):
     # Group by llm and prompt_id, then aggregate using mean
     grouped_data = data.groupby(['llm', 'prompt_id'])[value_col].mean().reset_index()
     
@@ -66,7 +66,7 @@ def create_heatmap(data, value_col, output_file, cmap, vmin, vmax):
                      linewidths=1.0, linecolor='white',
                      vmin=vmin, vmax=vmax)
 
-    plt.title(f'{value_col.replace("_", " ").title()} Heatmap', fontsize=20)
+    plt.title(title, fontsize=20)
     plt.xlabel('', fontsize=16)
     plt.ylabel('', fontsize=16)
     plt.xticks(rotation=45, ha='right', fontsize=12)
@@ -79,27 +79,34 @@ def create_heatmap(data, value_col, output_file, cmap, vmin, vmax):
     plt.text(pivot_table.shape[1] + 0.5, -0.3, '⌀', 
             ha='left', va='center', fontsize=20, fontweight='bold')
         
+    # Add footer
+    plt.figtext(0.99, 0.01, 'github.com/cpldcpu/MisguidedAttention', 
+                ha='right', va='bottom', color='darkgray', fontsize=8)
+    
     plt.tight_layout()
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
     plt.close()
     print(f"Heatmap has been generated and saved as '{output_file}'")
     return row_averages
 
-def main(folder_path, valid_llms_file=None):
+def main(folder_path, valid_llms_file=None, title='Misguided Attention Eval (long)'):
     summaries = load_evaluation_summaries(folder_path)
     valid_llms = load_valid_llms(valid_llms_file) if valid_llms_file else None
     data = process_summaries(summaries, valid_llms)
    
     # Generate heatmap for average score only
-    row_averages = create_heatmap(data, 'average_score', 'heatmap_average_score.png', 'YlGnBu', 0, 1)
+    row_averages = create_heatmap(data, 'average_score', 'heatmap_average_score.png', 
+                                 'YlGnBu', 0, 1, title)
     save_llm_scores(row_averages, 'average_scores.txt')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate heatmaps from evaluation summaries.")
     parser.add_argument('folder_path', type=str, help='Path to the folder containing evaluation summary JSON files')
     parser.add_argument('--valid_llms', type=str, help='Path to JSON file containing valid LLMs. Usually this is query_config.json')
+    parser.add_argument('--title', type=str, default='Misguided Attention Eval (long)', 
+                       help='Title of the plot')
     args = parser.parse_args()
     
-    main(args.folder_path, args.valid_llms)
+    main(args.folder_path, args.valid_llms, args.title)
 
 
