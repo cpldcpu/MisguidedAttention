@@ -11,6 +11,13 @@ The evaluation consists of three steps:
 2. **Evaluate the responses** using [Evaluation-script.py](evaluation-script.py)
 3.  **Visualize the data** as bar plots in pdf with the [summary-script.py](summary-script.py) as heat maps with the [heatmap-script.py](heatmap-script.py)
   
+    
+## File Scrambling
+
+To prevent web crawlers from indexing the evaluation prompts and potentially including them in future LLM training data, the prompt file is stored in a scrambled format (`.scr`) in the repository.
+
+The `scrambler.py` script in the `harness` folder can be used to scramble/descramble the file. The script uses a simple XOR encryption.
+
 ## Querying LLMs
 
 First, set up your environment:
@@ -71,4 +78,10 @@ Options:
 ```
 ### Visualizing the data
 
-Use the [summary-script.py](summary-script.py) to create a PDF report or the[heatmap-script.py](heatmap-script.py) to create heatmaps of the evaluation results. Note thate the heatmap script will process all the `evaluation_summary` files in the given folder. Refer to the help function for details.
+Use the [summary-script.py](summary-script.py) to create a PDF report or the[heatmap-script.py](heatmap-script.py) to create heatmaps of the evaluation results. Note that the heatmap script will process all the `evaluation_summary` files in the given folder. Refer to the help function for details. 
+
+In addition to a .png file with the heatmap, the heatmap script will also generated a .txt file with average scores. This .txt file is used by the [plot_barchart.py](plot_barchart.py) script to create a bar chart summary.
+
+
+
+
