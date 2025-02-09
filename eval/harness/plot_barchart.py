@@ -69,9 +69,16 @@ def create_barchart(scores_file, output_file, title='Misguided Attention Eval (l
     # Add value labels on top of bars
     for bar in bars:
         height = bar.get_height()
-        plt.text(bar.get_x() + bar.get_width()/2., height,
+        # Determine rotation based on number of bars
+        rotation = 90 if len(scores) > 12 else 0
+        # Add text with smaller font size and adjusted position
+        plt.text(bar.get_x() + bar.get_width()/2., 
+                height + (1 if rotation == 90 else 0),  # Add small offset when rotated
                 f'{height:.1f}%',
-                ha='center', va='bottom')
+                ha='center',  # Always center horizontally
+                va='bottom',  # Always align to bottom
+                rotation=rotation,
+                fontsize=8)
     
     # Add legend - fixed to ensure correct color matching
     unique_pairs = sorted(set((cat[0], cat[1]) for cat in categories))

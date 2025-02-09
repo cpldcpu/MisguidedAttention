@@ -8,11 +8,15 @@ The evaluation is performed by directly prompting the model without any guiding 
 
 The heatmap below shows initial results for the long evaluation with 52 questions. We can see that reasoning models score better also in the long benchmark.
 
-![bar chartl](./summaries/barchart_long_eval.png)
+![bar chart](./summaries/barchart_long_eval.png)
 
 ![Long eval](./summaries/heatmap_long.png)
 
 ## Results 12 Question (short) Eval
+
+These are historical results from the short evaluation, which is slowly becoming saturated. 
+
+![bar chart](./summaries/barchart_short_eval.png)
 
 The results were summarized in a heatmap. Scores range from 0.0 to 1.0, where 1.0 indicates consistent expected behavior across all trials, and 0.0 indicates consistent failure to produce expected behavior. The rightmost column displays each model's mean performance score across all test cases.
 
