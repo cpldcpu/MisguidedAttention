@@ -61,6 +61,14 @@
         "temperature": 0.9,
         "top_p": 0.9,
         "repetition_penalty": 1
+      },
+      {
+        "name": "o3-mini",
+        "model": "openai/o3-mini",
+        "max_tokens": 8000,
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "repetition_penalty": 1
       }  
   ]
 }
