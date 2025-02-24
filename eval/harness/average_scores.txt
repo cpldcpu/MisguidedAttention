@@ -1,4 +1,5 @@
 claude-3.5-sonnet-new	0.372
+claude-3.7-sonnet	0.462
 deepseek-r1	0.551
 deepseek-r1-distill-llama-70b	0.426
 DeepSeek-V3	0.269

@@ -144,6 +144,13 @@
     "temperature": 1.0,
     "top_p": 1.0,
     "repetition_penalty": 1
+  },
+  {
+    "name": "claude-3.7-sonnet",
+    "model": "anthropic/claude-3.7-sonnet",
+    "temperature": 0.9,
+    "top_p": 0.9,
+    "repetition_penalty": 1
   }
   ]
 }
