@@ -114,6 +114,7 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
             "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
             "max_tokens": llm_config.get("max_tokens", 4000),
             "top_p": llm_config.get("top_p", 1),
+            "include_reasoning": True,
             "frequency_penalty": llm_config.get("frequency_penalty", 0),
             "presence_penalty": llm_config.get("presence_penalty", 0)
         }
@@ -145,12 +146,14 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
             if 'choices' in response_json and len(response_json['choices']) > 0:
                 response_content = response_json['choices'][0]['message']['content']
                 thinking_content = None
-                # print(f"Response: {response_json}")
-                # Check for thinking/reasoning content
-                if 'reasoning_content' in response_json['choices'][0]['message']:
+                # print(response_json['choices'][0])
+                # Check for thinking/reasoning content in different possible locations
+                if 'reasoning' in response_json['choices'][0]['message']:
+                    thinking_content = response_json['choices'][0]['message']['reasoning']
+                elif 'reasoning_content' in response_json['choices'][0]['message']:
                     thinking_content = response_json['choices'][0]['message']['reasoning_content']
-                # elif 'thinking' in response_json['choices'][0]:
-                #     thinking_content = response_json['choices'][0]['thinking']
+                elif 'thinking' in response_json['choices'][0]:
+                    thinking_content = response_json['choices'][0]['thinking']
                 
                 return {
                     'content': response_content,
@@ -247,7 +250,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate LLMs on a dataset of prompts")
-    parser.add_argument("--dataset", default="misguided_attention_v4.json", help="Path to the dataset JSON file")
+    parser.add_argument("--dataset", default="misguided_attention_v4_long.json", help="Path to the dataset JSON file")
     parser.add_argument("--output", default="output_queries.json", help="Path to the output JSON file. Existing results will be loaded and new results are appended to this file")
     parser.add_argument("--config", default="query_config.json", help="Path to the configuration JSON file")
     parser.add_argument("--samples", type=int, default=1, help="Number of repetitions for each question and LLM")

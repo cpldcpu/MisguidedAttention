@@ -69,6 +69,14 @@
         "temperature": 1.0,
         "top_p": 1.0,
         "repetition_penalty": 1
+      },
+      {
+        "name": "claude-3.7-thinking-4k",
+        "model": "anthropic/claude-3.7-sonnet:thinking",
+        "max_tokens": 4096,
+        "temperature": 0.9,
+        "top_p": 0.9,
+        "repetition_penalty": 1
       }  
   ]
 }
