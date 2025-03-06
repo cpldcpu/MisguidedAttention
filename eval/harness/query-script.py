@@ -3,6 +3,7 @@ import json
 import requests
 import os
 import time
+import re
 from tqdm import tqdm
 from datetime import datetime
 import google.generativeai as genai
@@ -38,7 +39,32 @@ def load_cot_data(file_path):
         # Create a mapping of prompt_id to thinking entries
         return {result['prompt_id']: result['thinking'] for result in data['results']}
 
-def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retries=3):
+def extract_thinking_from_response(response_text):
+    """
+    Extract content within <think> tags and return both the thinking content and cleaned response.
+    
+    Args:
+        response_text (str): The full response text that may contain <think> tags
+        
+    Returns:
+        tuple: (cleaned_response, thinking_content)
+    """
+    if not response_text or '<think>' not in response_text:
+        return response_text, None
+        
+    # Extract all content within <think> tags
+    think_pattern = re.compile(r'<think>(.*?)</think>', re.DOTALL)
+    think_matches = think_pattern.findall(response_text)
+    
+    # Join multiple thinking sections if they exist
+    thinking_content = "\n".join(think_matches) if think_matches else None
+    
+    # Remove <think> blocks to get the clean response
+    cleaned_response = think_pattern.sub('', response_text).strip()
+    
+    return cleaned_response, thinking_content
+
+def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retries=3, extract_thinking=False):
     OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
     DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
     OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
@@ -71,9 +97,17 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
                     temperature=temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0)
                 )
             )
+            
+            # Process the response to extract <think> tags if requested
+            if extract_thinking and response.text:
+                cleaned_response, thinking_content = extract_thinking_from_response(response.text)
+                return {
+                    'content': cleaned_response,
+                    'thinking': thinking_content
+                }
             return {
                 'content': response.text,
-                'thinking': None  # Gemini doesn't provide separate thinking content
+                'thinking': None
             }
         except Exception as e:
             print(f"Gemini API error: {e}")
@@ -114,6 +148,7 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
             "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
             "max_tokens": llm_config.get("max_tokens", 4000),
             "top_p": llm_config.get("top_p", 1),
+            "top_k": llm_config.get("top_k", 0),  # Add top_k parameter with default 0
             "include_reasoning": True,
             "frequency_penalty": llm_config.get("frequency_penalty", 0),
             "presence_penalty": llm_config.get("presence_penalty", 0)
@@ -146,14 +181,20 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
             if 'choices' in response_json and len(response_json['choices']) > 0:
                 response_content = response_json['choices'][0]['message']['content']
                 thinking_content = None
-                # print(response_json['choices'][0])
-                # Check for thinking/reasoning content in different possible locations
-                if 'reasoning' in response_json['choices'][0]['message']:
-                    thinking_content = response_json['choices'][0]['message']['reasoning']
-                elif 'reasoning_content' in response_json['choices'][0]['message']:
-                    thinking_content = response_json['choices'][0]['message']['reasoning_content']
-                elif 'thinking' in response_json['choices'][0]:
-                    thinking_content = response_json['choices'][0]['thinking']
+                
+                # Process the response to extract <think> tags if requested
+                if extract_thinking and response_content:
+                    cleaned_response, extracted_thinking = extract_thinking_from_response(response_content)
+                    response_content = cleaned_response
+                    thinking_content = extracted_thinking
+                else:
+                    # Default behavior: Check for thinking/reasoning content in different possible locations
+                    if 'reasoning' in response_json['choices'][0]['message']:
+                        thinking_content = response_json['choices'][0]['message']['reasoning']
+                    elif 'reasoning_content' in response_json['choices'][0]['message']:
+                        thinking_content = response_json['choices'][0]['message']['reasoning_content']
+                    elif 'thinking' in response_json['choices'][0]:
+                        thinking_content = response_json['choices'][0]['thinking']
                 
                 return {
                     'content': response_content,
@@ -218,16 +259,16 @@ def main(args):
                         if cot_entry:
                             print(f"Using CoT entry: {cot_entry[:200]}...")
 
-                    response = query_llm(prompt["prompt"], llm, args.temp, cot_entry, args.max_retries)
+                    response = query_llm(prompt["prompt"], llm, args.temp, cot_entry, args.max_retries, args.think)
                     if response is None:
                         print(f"Failed to get response for prompt {prompt['prompt_id']}")
                         result["output"].append(None)
                         result["thinking"].append(None)
                     else:
                         if args.debug:
-                            print(f"Answer: ...{response['content'][:-200]}")
+                            print(f"Answer: ...{response['content'][:200]}")
                             if response['thinking']:
-                                print(f"Thinking: ...{response['thinking'][:-200]}")
+                                print(f"Thinking: ...{response['thinking'][:200]}")
 
                         result["output"].append(response['content'])
                         result["thinking"].append(response['thinking'])
@@ -259,6 +300,7 @@ if __name__ == "__main__":
     parser.add_argument("--debug", action="store_true", help="Enable debug output")
     parser.add_argument("--max-retries", type=int, default=8, help="Maximum number of retries for failed requests")
     parser.add_argument("--cotfile", help="Path to the Chain of Thought input JSON file")
+    parser.add_argument("--think", action="store_true", help="Extract content within <think> tags as thinking content")
 
     args = parser.parse_args()
     main(args)

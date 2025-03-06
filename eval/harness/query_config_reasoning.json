@@ -77,6 +77,15 @@
         "temperature": 0.9,
         "top_p": 0.9,
         "repetition_penalty": 1
+      },
+      {
+        "name": "QwQ-32b-16k",
+        "model": "qwen/qwq-32b",
+        "max_tokens": 32000,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 40,
+        "repetition_penalty": 0
       }  
   ]
 }
