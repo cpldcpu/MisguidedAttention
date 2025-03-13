@@ -7,6 +7,7 @@ DeepSeek-V3	0.269
 gemini-2.0-flash	0.282
 gemini-2.0-pro-exp-02-05	0.346
 gemini-exp-1206	0.229
+gemma-3-27b	0.215
 gpt-4o-2024-11-20	0.337
 gpt-4o-20250129	0.321
 llama-3.3-70b-instruct	0.353
@@ -14,3 +15,4 @@ minimax-01	0.365
 mistral-small-3	0.279
 o3-mini	0.468
 qwen-max	0.314
+QwQ-32b-16k	0.522

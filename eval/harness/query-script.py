@@ -148,9 +148,10 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
             "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
             "max_tokens": llm_config.get("max_tokens", 4000),
             "top_p": llm_config.get("top_p", 1),
+            "min_p": llm_config.get("min_p", 0),
             "top_k": llm_config.get("top_k", 0),  # Add top_k parameter with default 0
             "include_reasoning": True,
-            "frequency_penalty": llm_config.get("frequency_penalty", 0),
+            "frequency_penalty": llm_config.get("frequency_penalty", 1),
             "presence_penalty": llm_config.get("presence_penalty", 0)
         }
 
