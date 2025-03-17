@@ -152,9 +152,10 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
             "top_k": llm_config.get("top_k", 0),  # Add top_k parameter with default 0
             "include_reasoning": True,
             "frequency_penalty": llm_config.get("frequency_penalty", 1),
-            "presence_penalty": llm_config.get("presence_penalty", 0)
+            "presence_penalty": llm_config.get("presence_penalty", 0),
+            "provider": {"order": [llm_config.get("provider", "")]} if llm_config.get("provider") else None
         }
-
+    # print(data)
     for attempt in range(max_retries):
         try:
             response = requests.post(
