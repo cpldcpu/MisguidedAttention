@@ -134,6 +134,31 @@
         "temperature": 1.0,
         "top_p": 1.0,
         "repetition_penalty": 1
-      }  
+      },
+      {
+        "name": "command-a-03-2025",
+        "model": "cohere/command-a-03-2025",
+        "max_tokens": 4000,
+        "temperature": 0.3,
+        "top_p": 1,
+        "repetition_penalty": 1
+      },
+      {
+        "name": "olmo-2-0325-32b",
+        "model": "allenai/olmo-2-0325-32b-instruct",
+        "max_tokens": 4000,
+        "temperature": 1.0,
+        "top_p": 1,
+        "repetition_penalty": 1
+      },
+      {
+        "name": "mistral-small-3.1-2503",
+        "model": "mistralai/mistral-small-3.1-24b-instruct-2503",
+        "max_tokens": 2000,
+        "temperature": 1.0,
+        "top_p": 1,
+        "repetition_penalty": 1,
+        "provider": "Mistral"
+      }      
   ]
 }

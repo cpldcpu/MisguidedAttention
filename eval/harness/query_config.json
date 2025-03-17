@@ -1,12 +1,13 @@
 {
   "llms": [
     {
-      "name": "gemma-3-27b",
-      "model": "google/gemma-3-27b-it",
-      "max_tokens": 4000,
+      "name": "mistral-small-3.1-2503",
+      "model": "mistralai/mistral-small-3.1-24b-instruct-2503",
+      "max_tokens": 2000,
       "temperature": 1.0,
       "top_p": 1,
-      "repetition_penalty": 1
+      "repetition_penalty": 1,
+      "provider": "Mistral"
     }  
 ]
 
