@@ -114,7 +114,7 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
             return None
 
     # Determine API endpoint and key based on model
-    if "deepseek" in llm_config["model"].lower():
+    if "d33pseek" in llm_config["model"].lower():
         api_key = DEEPSEEK_API_KEY    
         base_url = "https://api.deepseek.com/v1/chat/completions"
         if not api_key:
