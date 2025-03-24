@@ -1,14 +1,13 @@
 {
   "llms": [
     {
-      "name": "mistral-small-3.1-2503",
-      "model": "mistralai/mistral-small-3.1-24b-instruct-2503",
-      "max_tokens": 2000,
-      "temperature": 1.0,
+      "name": "deepseek-chat-v3-0324",
+      "model": "deepseek/deepseek-chat-v3-0324",
+      "max_tokens": 4000,
+      "temperature": 0.7,
       "top_p": 1,
-      "repetition_penalty": 1,
-      "provider": "Mistral"
-    }  
+      "repetition_penalty": 1
+    }   
 ]
 
 }

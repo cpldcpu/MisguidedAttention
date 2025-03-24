@@ -35,8 +35,7 @@
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer concludes that they simply get in the boat and cross together in one trip.": 0.0,
-        "Answer does not contain an itemized list with more then two items.": 0.0,
-        "Answer does not contain an itemized list with more than two items.": 0.0
+        "Answer does not contain an itemized list with more then two items.": 0.0
       }
     }
   },
@@ -97,8 +96,7 @@
       "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer concludes that the probability is close to 1 (larger than 0.99 or 99%) or equal to (1 - (1/365)^29).": 0.6666666666666666,
-        "Answer concludes that the probability is close to 1 (larger than 0.99 or 99%) or equal to \\({1 - \\left( \\frac{1}{365} \\right)^{29}}\\).": 0.3333333333333333
+        "Answer concludes that the probability is close to 1 (larger than 0.99 or 99%) or equal to (1 - (1/365)^29).": 1.0
       }
     }
   },
@@ -317,11 +315,11 @@
   },
   "riddle_cant_break": {
     "deepseek-chat-v3-0324": {
-      "average_total_score": 0.3333333333333333,
+      "average_total_score": 0.16666666666666666,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer avoids typical 'promise' response": 0.0,
-        "Answer suggests alternative logical solution": 0.6666666666666666
+        "Answer suggests alternative logical solution": 0.3333333333333333
       }
     }
   },
@@ -347,11 +345,11 @@
   },
   "riddle_two_banks_money": {
     "deepseek-chat-v3-0324": {
-      "average_total_score": 0.16666666666666666,
+      "average_total_score": 0.3333333333333333,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer avoids typical 'river' response": 0.0,
-        "Answer suggests alternative logical solution": 0.3333333333333333
+        "Answer suggests alternative logical solution": 0.6666666666666666
       }
     }
   },
@@ -367,11 +365,11 @@
   },
   "riddle_occurs_once_in_a_second": {
     "deepseek-chat-v3-0324": {
-      "average_total_score": 0.0,
+      "average_total_score": 0.16666666666666666,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer avoids typical 'letter M' response": 0.0,
-        "Answer suggests alternative logical solution": 0.0
+        "Answer suggests alternative logical solution": 0.3333333333333333
       }
     }
   },
@@ -399,7 +397,7 @@
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer suggests to take the box the game show host tested": 0.3333333333333333,
-        "Answer does not suggest picking an untested box": 0.6666666666666666,
+        "Answer does not suggest picking an untested box": 0.3333333333333333,
         "Answer does not mention the Monty Hall problem": 0.0
       }
     }
@@ -465,6 +463,24 @@
       }
     }
   },
+  "feathers_or_steel": {
+    "deepseek-chat-v3-0324": {
+      "average_total_score": 1.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states that 1 kilogram is heavier than 1 pound": 1.0
+      }
+    }
+  },
+  "parallelism_50_machines": {
+    "deepseek-chat-v3-0324": {
+      "average_total_score": 0.3333333333333333,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states that 100 machines would take 50 minutes to make 100 widgets": 0.3333333333333333
+      }
+    }
+  },
   "no_paradox_expected_hanging": {
     "deepseek-chat-v3-0324": {
       "average_total_score": 0.0,
@@ -483,30 +499,12 @@
       }
     }
   },
-  "feathers_or_steel": {
+  "rabbit_inverted_monty_hall": {
     "deepseek-chat-v3-0324": {
       "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer states that 1 kilogram is heavier than 1 pound": 1.0
-      }
-    }
-  },
-  "parallelism_50_machines": {
-    "deepseek-chat-v3-0324": {
-      "average_total_score": 0.0,
-      "num_evaluations": 3,
-      "criteria_stats": {
-        "Answer states that 100 machines would take 50 minutes to make 100 widgets": 0.0
-      }
-    }
-  },
-  "rabbit_inverted_monty_hall": {
-    "deepseek-chat-v3-0324": {
-      "average_total_score": 0.5,
-      "num_evaluations": 3,
-      "criteria_stats": {
-        "Answer suggests keeping original choice": 0.3333333333333333,
+        "Answer suggests keeping original choice": 1.0,
         "Answer explains 2/3 chance of carrot in original pick": 0.6666666666666666
       }
     }
