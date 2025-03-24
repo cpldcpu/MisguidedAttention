@@ -11,11 +11,11 @@
   },
   "trolley_easy_forced": {
     "olmo-2-0325-32b": {
-      "average_total_score": 0.0,
+      "average_total_score": 0.3333333333333333,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer recognizes that the five people on the track are already dead": 0.0,
-        "Answer states not to pull the lever": 0.0
+        "Answer states not to pull the lever": 0.3333333333333333
       }
     }
   },
@@ -35,7 +35,7 @@
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer concludes that they simply get in the boat and cross together in one trip.": 0.0,
-        "Answer does not contain an itemized list with more then two items.": 0.6666666666666666
+        "Answer does not contain an itemized list with more then two items.": 1.0
       }
     }
   },
@@ -50,6 +50,17 @@
       }
     }
   },
+  "river_crossing_even_simpler": {
+    "olmo-2-0325-32b": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip.": 0.0,
+        "Answer does not contain an itemized list with more then two items.": 0.6666666666666666,
+        "Answer does not contain an itemized list with more than two items.": 0.0
+      }
+    }
+  },
   "monty_hall_inverse": {
     "olmo-2-0325-32b": {
       "average_total_score": 0.0,
@@ -57,7 +68,7 @@
       "criteria_stats": {
         "Answer states to keep the existing door": 0.0,
         "Answer explains that the initial choice has a 2/3 chance of winning a car": 0.0,
-        "Answer states that this is a modification of the Monty Hall problem": 0.3333333333333333
+        "Answer states that this is a modification of the Monty Hall problem": 0.0
       }
     }
   },
@@ -67,7 +78,18 @@
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter.": 0.6666666666666666,
-        "Answer is not formatted as itemized list with more than 2 entries.": 0.6666666666666666
+        "Answer is not formatted as itemized list with more than 2 entries.": 0.3333333333333333
+      }
+    }
+  },
+  "jugs_3_liters": {
+    "olmo-2-0325-32b": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer concludes that filling both jugs once without pouring between them gives exactly 3 liters.": 0.0,
+        "Answer concludes that filling both jugs gives exactly 3 liters.": 0.0,
+        "Answer is not formatted as itemized list with more than 2 entries.": 0.0
       }
     }
   },
@@ -77,7 +99,7 @@
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer concludes it is impossible to measure exactly 4 liters with the given jugs.": 0.0,
-        "Answer is not formatted as itemized list with more than 3 entries.": 0.3333333333333333
+        "Answer is not formatted as itemized list with more than 3 entries.": 0.0
       }
     }
   },
@@ -106,7 +128,7 @@
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes).": 0.3333333333333333,
-        "Answer concludes that 60 minutes can be measured by lighting by lighting both ropes on both ends sequentially (2x 30 minutes).": 1.0
+        "Answer concludes that 60 minutes can be measured by lighting by lighting both ropes on both ends sequentially (2x 30 minutes).": 0.6666666666666666
       }
     }
   },
@@ -150,19 +172,19 @@
   },
   "feathers_or_steel": {
     "olmo-2-0325-32b": {
-      "average_total_score": 0.6666666666666666,
+      "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer states that 1 kilogram is heavier than 1 pound": 0.6666666666666666
+        "Answer states that 1 kilogram is heavier than 1 pound": 1.0
       }
     }
   },
   "parallelism_50_machines": {
     "olmo-2-0325-32b": {
-      "average_total_score": 0.3333333333333333,
+      "average_total_score": 0.6666666666666666,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer states that 100 machines would take 50 minutes to make 100 widgets": 0.3333333333333333
+        "Answer states that 100 machines would take 50 minutes to make 100 widgets": 0.6666666666666666
       }
     }
   },
@@ -214,10 +236,10 @@
   },
   "knights_knaves_easy": {
     "olmo-2-0325-32b": {
-      "average_total_score": 0.3333333333333333,
+      "average_total_score": 0.6666666666666666,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer identifies A as knight and B as knave": 0.3333333333333333
+        "Answer identifies A as knight and B as knave": 0.6666666666666666
       }
     }
   },
@@ -232,11 +254,11 @@
   },
   "rabbit_inverted_monty_hall": {
     "olmo-2-0325-32b": {
-      "average_total_score": 0.16666666666666666,
+      "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer suggests keeping original choice": 0.0,
-        "Answer explains 2/3 chance of carrot in original pick": 0.3333333333333333
+        "Answer explains 2/3 chance of carrot in original pick": 0.0
       }
     }
   },
@@ -246,17 +268,17 @@
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer does not propose river crossing solutions": 0.0,
-        "Answer suggests directly feeding the goat the cabbage": 0.3333333333333333
+        "Answer suggests directly feeding the goat the cabbage": 0.0
       }
     }
   },
   "cabbage_detective": {
     "olmo-2-0325-32b": {
-      "average_total_score": 0.6666666666666666,
+      "average_total_score": 0.5,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer focuses on detective cabbage gathering evidence": 1.0,
-        "Answer does not propose river crossing solutions": 0.3333333333333333
+        "Answer does not propose river crossing solutions": 0.0
       }
     }
   },
@@ -309,6 +331,16 @@
       }
     }
   },
+  "linear_growth_modified": {
+    "olmo-2-0325-32b": {
+      "average_total_score": 1.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states day 20 since growth is linear": 1.0,
+        "Answer does not discuss exponential growth": 0.6666666666666666
+      }
+    }
+  },
   "new_years_monty_hall": {
     "olmo-2-0325-32b": {
       "average_total_score": 0.0,
@@ -325,7 +357,7 @@
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer states that a single rabbit does not reproduce": 0.0,
-        "Answer does not calculate Fibonacci sequence": 0.0
+        "Answer does not calculate Fibonacci sequence": 0.3333333333333333
       }
     }
   },
@@ -341,40 +373,40 @@
   },
   "riddle_tall_when_young": {
     "olmo-2-0325-32b": {
-      "average_total_score": 0.16666666666666666,
+      "average_total_score": 0.3333333333333333,
       "num_evaluations": 3,
       "criteria_stats": {
         "Answer avoids typical 'candle' response": 0.0,
-        "Answer suggests alternative logical solution": 0.3333333333333333
+        "Answer suggests alternative logical solution": 0.6666666666666666
       }
     }
   },
   "riddle_cant_break": {
     "olmo-2-0325-32b": {
-      "average_total_score": 0.3333333333333333,
+      "average_total_score": 0.16666666666666666,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer avoids typical 'promise' response": 0.3333333333333333,
+        "Answer avoids typical 'promise' response": 0.0,
         "Answer suggests alternative logical solution": 0.3333333333333333
       }
     }
   },
   "riddle_goes_up_never_returns": {
     "olmo-2-0325-32b": {
-      "average_total_score": 0.3333333333333333,
+      "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer avoids typical 'age' response": 0.3333333333333333,
-        "Answer suggests alternative logical solution": 0.3333333333333333
+        "Answer avoids typical 'age' response": 0.0,
+        "Answer suggests alternative logical solution": 0.0
       }
     }
   },
   "riddle_i_never_shave": {
     "olmo-2-0325-32b": {
-      "average_total_score": 0.8333333333333334,
+      "average_total_score": 1.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer avoids typical 'barber' response": 0.6666666666666666,
+        "Answer avoids typical 'barber' response": 1.0,
         "Answer suggests alternative logical solution": 1.0
       }
     }
@@ -384,8 +416,8 @@
       "average_total_score": 0.5,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer avoids typical 'river' response": 0.3333333333333333,
-        "Answer suggests alternative logical solution": 0.6666666666666666
+        "Answer avoids typical 'river' response": 0.0,
+        "Answer suggests alternative logical solution": 1.0
       }
     }
   },
@@ -420,10 +452,10 @@
   },
   "unstoppable_force_var2": {
     "olmo-2-0325-32b": {
-      "average_total_score": 0.0,
+      "average_total_score": 0.3333333333333333,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer explains the differences to the paradox of unstoppable vs immovable": 0.0
+        "Answer explains the differences to the paradox of unstoppable vs immovable": 0.3333333333333333
       }
     }
   },
@@ -434,7 +466,7 @@
       "criteria_stats": {
         "Answer suggests to take the box the game show host tested": 0.0,
         "Answer does not suggest picking an untested box": 0.0,
-        "Answer does not mention the Monty Hall problem": 0.3333333333333333
+        "Answer does not mention the Monty Hall problem": 0.6666666666666666
       }
     }
   },
@@ -456,7 +488,7 @@
       "criteria_stats": {
         "Answer suggests to take the box the clerk tested": 0.0,
         "Answer suggests to keep the initial box": 0.0,
-        "Answer does not mention the Monty Hall problem": 0.3333333333333333
+        "Answer does not mention the Monty Hall problem": 0.0
       }
     }
   },
@@ -471,42 +503,11 @@
   },
   "monty_four_computers": {
     "olmo-2-0325-32b": {
-      "average_total_score": 0.3333333333333333,
+      "average_total_score": 0.0,
       "num_evaluations": 3,
       "criteria_stats": {
-        "Answer suggests to pick the one the friend tested": 0.3333333333333333,
+        "Answer suggests to pick the one the friend tested": 0.0,
         "Answer suggests to keep the initial computer": 0.0
-      }
-    }
-  },
-  "river_crossing_even_simpler": {
-    "olmo-2-0325-32b": {
-      "average_total_score": 0.0,
-      "num_evaluations": 3,
-      "criteria_stats": {
-        "Answer concludes that they simply get in the boat and cross together in one trip.": 0.0,
-        "Answer does not contain an itemized list with more then two items.": 0.3333333333333333
-      }
-    }
-  },
-  "jugs_3_liters": {
-    "olmo-2-0325-32b": {
-      "average_total_score": 0.0,
-      "num_evaluations": 3,
-      "criteria_stats": {
-        "Answer concludes that filling both jugs once without pouring between them gives exactly 3 liters.": 0.0,
-        "Answer concludes that filling both jugs gives exactly 3 liters.": 0.0,
-        "Answer is not formatted as itemized list with more than 2 entries.": 0.0
-      }
-    }
-  },
-  "linear_growth_modified": {
-    "olmo-2-0325-32b": {
-      "average_total_score": 0.3333333333333333,
-      "num_evaluations": 3,
-      "criteria_stats": {
-        "Answer states day 20 since growth is linear": 0.3333333333333333,
-        "Answer does not discuss exponential growth": 1.0
       }
     }
   }

@@ -123,7 +123,7 @@
       "name": "gemma-3-27b",
       "model": "google/gemma-3-27b-it",
       "max_tokens": 4000,
-      "temperature": 1.0,
+      "temperature": 0.7,
       "top_p": 1,
       "repetition_penalty": 1
     },
@@ -147,7 +147,7 @@
         "name": "olmo-2-0325-32b",
         "model": "allenai/olmo-2-0325-32b-instruct",
         "max_tokens": 4000,
-        "temperature": 1.0,
+        "temperature": 0.7,
         "top_p": 1,
         "repetition_penalty": 1
       },
