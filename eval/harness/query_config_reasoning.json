@@ -79,7 +79,7 @@
         "repetition_penalty": 1
       },
       {
-        "name": "QwQ-32b-16k",
+        "name": "QwQ-32b",
         "model": "qwen/qwq-32b",
         "max_tokens": 32000,
         "temperature": 0.6,

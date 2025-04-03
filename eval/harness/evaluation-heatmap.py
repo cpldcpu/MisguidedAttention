@@ -55,6 +55,13 @@ def create_heatmap(data, value_col, output_file, cmap, vmin, vmax, title='Misgui
 
     # Calculate row averages
     row_averages = pivot_table.mean(axis=1)
+    
+    # Sort pivot table rows by average score in descending order
+    pivot_table = pivot_table.loc[row_averages.sort_values(ascending=False).index]
+    
+    # Recalculate row averages after sorting
+    row_averages = pivot_table.mean(axis=1)
+    
     column_averages = pivot_table.mean(axis=0)
 
     plt.figure(figsize=(14, 9))
