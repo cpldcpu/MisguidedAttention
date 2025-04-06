@@ -81,7 +81,7 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
     prompt_text += "Answer:"
 
     # Handle Gemini API separately
-    if "gemini" in llm_config["model"].lower():
+    if "g3mini" in llm_config["model"].lower():
         if not GEMINI_API_KEY:
             raise ValueError("GEMINI_API_KEY environment variable not set")
         
