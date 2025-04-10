@@ -41,7 +41,7 @@ def load_cot_data(file_path):
 
 def extract_thinking_from_response(response_text):
     """
-    Extract content within <think> tags and return both the thinking content and cleaned response.
+    Extract content within <think></think> tags and return both the thinking content and cleaned response.
     
     Args:
         response_text (str): The full response text that may contain <think> tags
@@ -51,17 +51,17 @@ def extract_thinking_from_response(response_text):
     """
     if not response_text or '<think>' not in response_text:
         return response_text, None
-        
-    # Extract all content within <think> tags
-    think_pattern = re.compile(r'<think>(.*?)</think>', re.DOTALL)
-    think_matches = think_pattern.findall(response_text)
-    
-    # Join multiple thinking sections if they exist
-    thinking_content = "\n".join(think_matches) if think_matches else None
-    
-    # Remove <think> blocks to get the clean response
-    cleaned_response = think_pattern.sub('', response_text).strip()
-    
+
+    # print("---> thinking content found!")
+    # print("extracting thinking content...")        
+
+    pattern = re.compile(r'<think>(.*?)</think>', re.DOTALL)
+    thinking_segments = pattern.findall(response_text)
+    thinking_content = '\n'.join(thinking_segments) if thinking_segments else None
+    cleaned_response = pattern.sub('', response_text).strip()
+
+    # print(f"Extracted thinking content: {thinking_content[0:200]}...")  # Print first 200 characters for brevity
+    # print(f"Cleaned response: {cleaned_response[:200]}...")  
     return cleaned_response, thinking_content
 
 def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retries=3, extract_thinking=False):
@@ -69,7 +69,7 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
     DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
     OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
     GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")   
-
+    NOUS_API_KEY = os.environ.get("NOUS_API_KEY")  # Add Nous API key
 
     if OPENROUTER_API_KEY == None:
         OPENROUTER_API_KEY = OPENAI_API_KEY
@@ -77,8 +77,16 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
     # Construct the prompt with CoT if provided
     prompt_text = f"Please answer the following question: {prompt}\n"
     if cot_entry:
-        prompt_text += f"<thinking>{cot_entry}</thinking>\n"
+        prompt_text += f"<think>{cot_entry}</think>\n"
     prompt_text += "Answer:"
+    
+    # Helper function to prepare messages with system prompt if available
+    def prepare_messages(prompt_text, llm_config):
+        messages = []
+        if "system_prompt" in llm_config and llm_config["system_prompt"]:
+            messages.append({"role": "system", "content": llm_config["system_prompt"]})
+        messages.append({"role": "user", "content": prompt_text})
+        return messages
 
     # Handle Gemini API separately
     if "g3mini" in llm_config["model"].lower():
@@ -114,7 +122,26 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
             return None
 
     # Determine API endpoint and key based on model
-    if "d33pseek" in llm_config["model"].lower():
+    if "hermes" in llm_config["model"].lower():
+        api_key = NOUS_API_KEY
+        base_url = "https://inference-api.nousresearch.com/v1/chat/completions"
+        if not api_key:
+            raise ValueError("NOUS_API_KEY environment variable not set")
+        
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        }
+
+        messages = prepare_messages(prompt_text, llm_config)
+        # print(f"Prompt: {messages}")
+        data = {
+            "model": llm_config["model"],
+            "messages": messages,
+            "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
+            "max_tokens": llm_config.get("max_tokens", 4000)
+        }
+    elif "d33pseek" in llm_config["model"].lower():
         api_key = DEEPSEEK_API_KEY    
         base_url = "https://api.deepseek.com/v1/chat/completions"
         if not api_key:
@@ -125,9 +152,11 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
             "Content-Type": "application/json"
         }
 
+        messages = prepare_messages(prompt_text, llm_config)
+        
         data = {
             "model": llm_config["model"],
-            "messages": [{"role": "user", "content": prompt_text}],
+            "messages": messages,
             "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
         }
     else:
@@ -142,9 +171,11 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
             "X-Title": "MA_Eval"  # Replace with your app name
         }
 
+        messages = prepare_messages(prompt_text, llm_config)
+
         data = {
             "model": llm_config["model"],
-            "messages": [{"role": "user", "content": prompt_text}],
+            "messages": messages,
             "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
             "max_tokens": llm_config.get("max_tokens", 4000),
             "top_p": llm_config.get("top_p", 1),
@@ -189,14 +220,18 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
                     cleaned_response, extracted_thinking = extract_thinking_from_response(response_content)
                     response_content = cleaned_response
                     thinking_content = extracted_thinking
+                    # print(f"Extracted thinking content: {thinking_content}")
                 else:
                     # Default behavior: Check for thinking/reasoning content in different possible locations
                     if 'reasoning' in response_json['choices'][0]['message']:
                         thinking_content = response_json['choices'][0]['message']['reasoning']
+                        # print(f"Extracted reasoning: {thinking_content}")
                     elif 'reasoning_content' in response_json['choices'][0]['message']:
                         thinking_content = response_json['choices'][0]['message']['reasoning_content']
+                        # print(f"Extracted reasoning content: {thinking_content}")
                     elif 'thinking' in response_json['choices'][0]:
                         thinking_content = response_json['choices'][0]['thinking']
+                        # print(f"Extracted thinking: {thinking_content}")
                 
                 return {
                     'content': response_content,

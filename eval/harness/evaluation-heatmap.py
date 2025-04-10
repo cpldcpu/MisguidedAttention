@@ -23,19 +23,36 @@ def load_valid_llms(file_path):
     return [llm['name'] for llm in config['llms']]
 
 
-def process_summaries(summaries, valid_llms=None):
+def process_summaries(summaries, valid_llms=None, add_solved=False):
     data = []
+    max_scores = {}  # Track maximum score per prompt_id
+    
     for summary in summaries:
         for prompt_id, prompt_data in summary.items():
             for llm, llm_data in prompt_data.items():
                 if valid_llms is None or llm in valid_llms:
+                    score = llm_data['average_total_score']
                     data.append({
                         'prompt_id': prompt_id,
                         'llm': llm,
-                        'average_score': llm_data['average_total_score']
+                        'average_score': score
                     })
+                    
+                    # Update maximum score for this prompt
+                    if prompt_id not in max_scores or score > max_scores[prompt_id]:
+                        max_scores[prompt_id] = score
                 else:
                     print(f"Ignoring LLM '{llm}' for prompt ID '{prompt_id}'")
+    
+    # Add "solved prompts" entry if requested
+    if add_solved:
+        for prompt_id, max_score in max_scores.items():
+            data.append({
+                'prompt_id': prompt_id,
+                'llm': "solved prompts",
+                'average_score': max_score
+            })
+    
     return pd.DataFrame(data)
 
 def save_llm_scores(llm_scores, output_file):
@@ -96,10 +113,10 @@ def create_heatmap(data, value_col, output_file, cmap, vmin, vmax, title='Misgui
     print(f"Heatmap has been generated and saved as '{output_file}'")
     return row_averages
 
-def main(folder_path, valid_llms_file=None, title='Misguided Attention Eval (long)'):
+def main(folder_path, valid_llms_file=None, title='Misguided Attention Eval (long)', add_solved=False):
     summaries = load_evaluation_summaries(folder_path)
     valid_llms = load_valid_llms(valid_llms_file) if valid_llms_file else None
-    data = process_summaries(summaries, valid_llms)
+    data = process_summaries(summaries, valid_llms, add_solved)
    
     # Generate heatmap for average score only
     row_averages = create_heatmap(data, 'average_score', 'heatmap_average_score.png', 
@@ -112,8 +129,10 @@ if __name__ == "__main__":
     parser.add_argument('--valid_llms', type=str, help='Path to JSON file containing valid LLMs. Usually this is query_config.json')
     parser.add_argument('--title', type=str, default='Misguided Attention Eval (long)', 
                        help='Title of the plot')
+    parser.add_argument('--solved', action='store_true', 
+                       help='Add a "solved prompts" entry showing maximum score across all LLMs')
     args = parser.parse_args()
     
-    main(args.folder_path, args.valid_llms, args.title)
+    main(args.folder_path, args.valid_llms, args.title, args.solved)
 
 

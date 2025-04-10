@@ -1,9 +1,11 @@
 {
   "llms": [
+
     {
-      "name": "hermes-3-llama-3.1-70b",
-      "model": "nousresearch/hermes-3-llama-3.1-70b",
-      "temperature": 0.98,
+      "name": "Hermes-3-Llama-3.1-70B",
+      "model": "Hermes-3-Llama-3.1-70B",
+      "max_tokens": 5000,
+      "temperature": 0.7,
       "top_p": 1,
       "repetition_penalty": 1
     },

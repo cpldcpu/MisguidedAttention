@@ -1,8 +1,12 @@
+grok-3-mini-beta-think	0.647
 QwQ-32b	0.561
 claude-3.7-thinking-4k	0.561
 gemini-2.5-pro-preview-03-25	0.552
 deepseek-r1	0.551
+grok-3-beta	0.551
 deepseek-chat-v3-0324	0.535
+DeepHermes-3-Mistral-24B-Pre	0.484
+optimus-alpha	0.474
 o3-mini	0.468
 claude-3.7-sonnet	0.462
 deepseek-r1-distill-llama-70b	0.426
@@ -14,6 +18,7 @@ llama-3.3-70b-instruct	0.353
 gemini-2.0-pro-exp-02-05	0.346
 gpt-4o-2024-11-20	0.337
 gpt-4o-20250129	0.321
+Hermes-3-Llama-3.1-70B	0.314
 qwen-max	0.314
 command-a-03-2025	0.301
 llama-4-maverick	0.295

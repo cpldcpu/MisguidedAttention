@@ -94,6 +94,32 @@
         "temperature": 0.7,
         "top_p": 1,
         "repetition_penalty": 1
+      },
+      {
+        "name": "grok-3-mini-beta-think",
+        "model": "x-ai/grok-3-mini-beta",
+        "max_tokens": 16000,
+        "temperature": 0.7,
+        "top_p": 1,
+        "repetition_penalty": 1
+      },
+      {
+        "name": "ll3.1-nemotron-253b-v1-thk",
+        "model": "nvidia/llama-3.1-nemotron-ultra-253b-v1:free",
+        "max_tokens": 4096,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "repetition_penalty": 1,
+        "system_prompt": "detailed thinking on"
+      },
+      {
+        "name": "DeepHermes-3-Mistral-24B-Pre",
+        "model": "DeepHermes-3-Mistral-24B-Preview",
+        "max_tokens": 20000,
+        "temperature": 0.7,
+        "top_p": 1.0,
+        "repetition_penalty": 1,
+        "system_prompt": "You are a deep thinking AI, you may use extremely long chains of thought to deeply consider the problem and deliberate with yourself via systematic reasoning processes to help come to a correct solution prior to answering. You should enclose your thoughts and internal monologue inside <think> </think> tags, and then provide your solution or response to the problem."
       }  
   ]
 }
