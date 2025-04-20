@@ -81,7 +81,7 @@ def create_heatmap(data, value_col, output_file, cmap, vmin, vmax, title='Misgui
     
     column_averages = pivot_table.mean(axis=0)
 
-    plt.figure(figsize=(14, 9))
+    plt.figure(figsize=(14, 12))
 
    
     ax = sns.heatmap(pivot_table, cmap=cmap, 
