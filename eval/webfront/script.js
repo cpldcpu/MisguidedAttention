@@ -426,32 +426,61 @@ document.addEventListener('DOMContentLoaded', function() {
                 processedData.criteriaDetails
             );
 
-             // 4. Add Average Score Column data (based on original averages data)
-             const avgColumnLabel = 'Ø Average';
-             const finalTasks = [...processedData.tasks, avgColumnLabel]; // Add column label
-             const finalZData = zData.map((row, index) => {
-                 const modelName = sortedFilteredModels[index];
-                 return [...row, processedData.modelAverages[modelName]?.average ?? null];
-             });
-             const finalHoverText = hoverText.map((row, index) => {
-                 const modelName = sortedFilteredModels[index];
-                 const avgData = processedData.modelAverages[modelName];
-                 const avgScore = avgData?.average ?? 'N/A';
-                 const numTasks = avgData?.count ?? 0;
-                 const avgHover = `<b>Model:</b> ${modelName}<br>Overall Average: ${avgScore === 'N/A' ? 'N/A' : avgScore.toFixed(3)}<br>(${numTasks} tasks evaluated)`;
-                 return [...row, avgHover];
-             });
-             // --- End Add Average Score Column ---
+            // 4. Create annotations for average scores
+            const annotations = [];
+            
+            // For each model, add its average score as an annotation
+            sortedFilteredModels.forEach((modelName, index) => {
+                const avg = processedData.modelAverages[modelName]?.average ?? null;
+                if (avg !== null) {
+                    const scoreText = (avg * 100).toFixed(1) + '%';
+                    annotations.push({
+                        x: processedData.tasks.length + 0.25, // Moved further right (was -0.5)
+                        y: index,
+                        xref: 'x',
+                        yref: 'y',
+                        text: scoreText,
+                        showarrow: false,
+                        font: {
+                            family: 'Arial',
+                            size: 10,
+                            color: '#333'
+                        },
+                        bgcolor: 'rgba(255, 255, 255, 0.7)',
+                        bordercolor: 'rgba(0, 0, 0, 0)',
+                        borderwidth: 1,
+                        borderpad: 2,
+                        align: 'center',
+                    });
+                }
+            });
+            
+            // Add a header annotation for "Average"
+            annotations.push({
+                x: processedData.tasks.length + 0.25, // Align with other annotations (was -0.5)
+                y: -0.8, // Position slightly above the first row
+                xref: 'x',
+                yref: 'y',
+                text: 'Average',
+                showarrow: false,
+                font: {
+                    family: 'Arial',
+                    size: 10,
+                    color: '#333',
+                    weight: 'bold'
+                },
+                align: 'center',
+            });
 
-            // 5. Define Plotly Trace and Layout
+            // Set up the main heatmap trace
             const trace = {
-                x: finalTasks,
+                x: processedData.tasks,
                 y: displayModels, // Use just model names for Y-axis labels
-                z: finalZData,
+                z: zData,
                 type: 'heatmap',
                 hoverongaps: false,
-                hovertext: finalHoverText, // Use hover text including the average column
-                hoverinfo: 'text', // Crucial: use our custom hovertext
+                hovertext: hoverText, 
+                hoverinfo: 'text',
                 colorscale: 'YlGnBu',
                 reversescale: true,
                 showscale: true,
@@ -461,53 +490,59 @@ document.addEventListener('DOMContentLoaded', function() {
                 zmax: 1,
                 colorbar: { thickness: 15, len: 0.8, y: 0.5, ypad: 0, title: { text: 'Score', side: 'right' }, tickvals: [0, 0.2, 0.4, 0.6, 0.8, 1.0], ticktext: ['0.0', '0.2', '0.4', '0.6', '0.8', '1.0'] }
             };
+
+            // Create layout with extra space on the right for average scores
             const layout = {
                 xaxis: {
-                    side: 'bottom', tickangle: -45, automargin: true, tickfont: { size: 10 },
-                    showticklabels: true, ticks: 'outside', linewidth: 1, linecolor: '#444'
+                    side: 'bottom', 
+                    tickangle: -45, 
+                    automargin: true, 
+                    tickfont: { size: 10 },
+                    showticklabels: true, 
+                    ticks: 'outside', 
+                    linewidth: 1, 
+                    linecolor: '#444',
+                    range: [-0.5, processedData.tasks.length + 1.0] // Extended range to make room for annotations (was +0.5)
                 },
                 yaxis: {
-                    side: 'left', automargin: true, tickfont: { size: 10 },
-                    autorange: 'reversed', // Crucial for correct sort display (index 0 at top)
-                    showticklabels: true, ticks: 'outside', linewidth: 1, linecolor: '#444',
-                    type: 'category' // Explicitly set as category axis for Plotly
+                    side: 'left', 
+                    automargin: true, 
+                    tickfont: { size: 10 },
+                    autorange: 'reversed', 
+                    showticklabels: true, 
+                    ticks: 'outside', 
+                    linewidth: 1, 
+                    linecolor: '#444',
+                    type: 'category' 
                 },
-                autosize: true, // Let plot resize with container
-                margin: { l: 0, r: 0, b: 0, t: 0, pad: 4 }, // Use automargin primarily
-                plot_bgcolor: '#FFF', // White background for plot area
-                paper_bgcolor: '#FFF', // White background for surrounding paper
-                annotations: [], // No annotations
-                shapes: [], // No shapes
-                height: Math.max(600, filteredModels.length * 18 + 150), // Dynamically adjust height
-                // Configure the modebar position
-                modebar: {
-                    orientation: 'v' // Horizontal orientation
-                }
+                annotations: annotations,
+                margin: { l: 0, r: 75, b: 0, t: 0, pad: 4 }, // Increased right margin from 60 to 75
+                plot_bgcolor: '#FFF',
+                paper_bgcolor: '#FFF',
+                height: Math.max(600, filteredModels.length * 18 + 150),
+                modebar: { orientation: 'v' }
             };
 
-            // 6. Render/Update Plot using Plotly.react for efficiency
-            // Pass the config object with displayModeBar: true (or default)
+            // 5. Render/Update Plot using Plotly.react for efficiency
             Plotly.react(heatmapDiv, [trace], layout, { responsive: true, displaylogo: false })
-                 .then(gd => { // gd is the graph div after plotting/reacting
-                     // ** Removed calls to addYAxisLabelHovers **
-                     setupClickHandler(); // Attach click handler for response modal
-                     console.log("Heatmap updated successfully.");
-                 })
-                 .catch(err => {
-                     console.error("Plotly rendering/update failed:", err);
-                     displayError(`Plotly rendering failed: ${err.message}`);
-                 })
-                 .finally(() => {
-                    loadingMessage.style.display = 'none'; // Hide loading indicator regardless of success/failure
-                 });
+                .then(gd => {
+                    setupClickHandler(); // Attach click handler for response modal
+                    console.log("Heatmap updated successfully.");
+                })
+                .catch(err => {
+                    console.error("Plotly rendering/update failed:", err);
+                    displayError(`Plotly rendering failed: ${err.message}`);
+                })
+                .finally(() => {
+                    loadingMessage.style.display = 'none';
+                });
 
         } catch (error) {
-             displayError(`Failed to update heatmap: ${error.message}`);
-             console.error("Update heatmap error:", error);
-             loadingMessage.style.display = 'none'; // Hide loading on error
+            displayError(`Failed to update heatmap: ${error.message}`);
+            console.error("Update heatmap error:", error);
+            loadingMessage.style.display = 'none'; // Hide loading on error
         }
     } // End updateHeatmap
-
 
     /** Attaches the click handler to the heatmap div for showing response details. */
     function setupClickHandler() {

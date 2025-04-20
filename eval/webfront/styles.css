@@ -85,28 +85,23 @@ h1 {
     color: #0056b3;
 }
 
+/* Heatmap container layout */
 #heatmap-container {
     width: 98%;
-    /* Adjust height calculation if needed, ensure enough space below controls */
-    /* Height is now dynamically set in JS based on model count */
-    min-height: 500px; /* Set a reasonable minimum */
-    /* max-height removed, height is dynamic */
-    margin: auto; /* Center horizontally */
-    overflow: hidden; /* Prevent scrollbars if plot fits */
+    min-height: 500px;
+    margin: auto;
+    overflow: hidden;
     position: relative;
     background-color: #fff;
-    padding: 5px; /* Reduced padding */
+    padding: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border-radius: 5px;
+    /* Remove display: flex; as we're now using annotations */
 }
 
 #heatmap {
-    width: 100%;
-    height: 100%; /* Ensure Plotly div takes space */
-}
-
-#heatmap .plotly .heatmap {
-    shape-rendering: crispEdges; /* Sharp grid lines */
+    width: 100%; /* Take full width */
+    height: 100%;
 }
 
 /* Styling for axis labels */
@@ -440,6 +435,51 @@ h1 {
 #modalBody .markdown-content img {
     max-width: 100%;
     height: auto;
+}
+
+/* GitHub Link Styling */
+.github-link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9em;
+    font-weight: 500;
+    background-color: #f5f5f5;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: background-color 0.2s;
+}
+
+.github-link:hover {
+    background-color: #e6e6e6;
+    text-decoration: none;
+}
+
+.github-link img {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
+/* Heatmap Instructions */
+.heatmap-instructions {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 0.9em;
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.heatmap-instructions p {
+    margin: 0;
 }
 
 /* --- End Modal Styles --- */
