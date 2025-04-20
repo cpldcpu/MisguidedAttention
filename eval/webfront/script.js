@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const responseModalBody = document.getElementById('modalBody');
     const responseModalCloseBtn = responseModal.querySelector('.close-button');
     const viewToggleBtn = document.getElementById('viewToggleBtn');
+    // View Mode Button
+    const viewModeToggleBtn = document.getElementById('viewModeToggleBtn');
     // Filter Configuration Modal Elements
     const filterConfigModal = document.getElementById('filterConfigModal');
     const filterModalTypeContainer = document.getElementById('filterModalTypeContainer');
@@ -27,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let processedData = null; // Holds results from processInitialData { models, tasks, scores, criteriaDetails, modelAverages, uniqueTypes, uniqueLabs }
     let currentlyDisplayedModels = []; // Holds original model names in current filtered/sorted display order
     let currentViewMode = 'markdown'; // Track the current view mode: 'markdown' or 'code'
+    let currentVisMode = 'heatmap'; // Track visualization mode: 'heatmap' or 'barchart'
 
     // --- Modal Controls ---
     function showModal(modalElement) { if (modalElement) modalElement.style.display = 'block'; }
@@ -82,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Sort Dropdown Change
         sortSelect.addEventListener('change', () => {
             currentSortBy = sortSelect.value;
-            updateHeatmap();
+            updateVisualization();
         });
 
         // Open Filter Modal Button
@@ -96,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
         applyFiltersBtn.addEventListener('click', () => {
             updateCurrentFiltersFromModal(); // Read selections from modal checkboxes
             hideModal(filterConfigModal);     // Close the modal
-            updateHeatmap();                 // Re-render the heatmap
+            updateVisualization();           // Re-render the visualization
         });
 
         // "Select All/None" Buttons (inside modal, using delegation on modal element)
@@ -108,19 +111,33 @@ document.addEventListener('DOMContentLoaded', function() {
                  if (optionsContainer) {
                      const checkState = target.matches('.select-all-btn');
                      optionsContainer.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = checkState);
-                     // No need to update global state or heatmap here, only on "Apply"
+                     // No need to update global state or visualization here, only on "Apply"
                  }
              }
         });
 
-        // Initial Heatmap Render
-        updateHeatmap();
+        // View Mode Toggle Button
+        viewModeToggleBtn.addEventListener('click', function() {
+            if (currentVisMode === 'heatmap') {
+                currentVisMode = 'barchart';
+                viewModeToggleBtn.textContent = 'Switch to Heatmap';
+                viewModeToggleBtn.classList.add('active');
+            } else {
+                currentVisMode = 'heatmap';
+                viewModeToggleBtn.textContent = 'Switch to Bar Chart';
+                viewModeToggleBtn.classList.remove('active');
+            }
+            updateVisualization();
+        });
+
+        // Initial Visualization Render
+        updateVisualization();
 
     } catch (error) {
         displayError(`An error occurred during setup: ${error.message}`);
         console.error("Setup error:", error);
     } finally {
-        // loading message hidden inside updateHeatmap's finally block
+        // loading message hidden inside updateVisualization's finally block
     }
     // --- End Main Execution Flow ---
 
@@ -200,6 +217,175 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     } // End populateFilterCheckboxes
 
+
+    /** Main function to update the visualization based on current view mode */
+    function updateVisualization() {
+        if (currentVisMode === 'heatmap') {
+            updateHeatmap();
+        } else {
+            updateBarChart();
+        }
+    }
+
+    /** Main function to filter, sort, and update/render the bar chart. */
+    function updateBarChart() {
+        if (!processedData) { displayError("Cannot update chart: Processed data unavailable."); return; }
+        loadingMessage.style.display = 'block'; // Show loading before processing
+
+        try {
+            // 1. Filter Models based on current selections from global state
+            const filteredModels = filterModels(
+                processedData.models,
+                currentFilterTypes,
+                currentFilterLabs,
+                modelInfo
+            );
+
+            // Handle case where no models match filters
+            if (filteredModels.length === 0) {
+                heatmapDiv.innerHTML = "<p style='text-align: center; color: orange; padding: 20px;'>No models match the current filter criteria.</p>";
+                loadingMessage.style.display = 'none'; // Hide loading
+                currentlyDisplayedModels = []; // Reset displayed models
+                return; // Stop if no models to display
+            }
+
+            // 2. Sort the Filtered Models
+            const sortedFilteredModels = sortModels(
+                filteredModels,
+                currentSortBy,
+                processedData.modelAverages,
+                modelInfo
+            );
+            currentlyDisplayedModels = sortedFilteredModels; // Store current order for click handling
+
+            // 3. Prepare bar chart data
+            const barData = prepareBarChartData(sortedFilteredModels, modelInfo);
+            
+            // 4. Define Plotly Bar Chart
+            const layout = {
+                xaxis: {
+                    title: '',
+                    tickangle: -45,
+                    automargin: true,
+                    tickfont: { size: 10 },
+                },
+                yaxis: {
+                    title: 'Average Score (%)',
+                    range: [0, 100],
+                    ticksuffix: '%'
+                },
+                legend: {
+                    title: { text: 'Model Type' },
+                    orientation: 'h',
+                    x: 0.5,
+                    y: 1.1,
+                    xanchor: 'center',
+                    yanchor: 'bottom',
+                    bgcolor: 'rgba(255,255,255,0.6)'
+                },
+                margin: { l: 50, r: 20, t: 50, b: 120 },
+                barmode: 'group',
+                height: Math.max(600, filteredModels.length * 15 + 200), // Dynamic height based on model count
+                plot_bgcolor: '#FFF',
+                paper_bgcolor: '#FFF',
+            };
+
+            // 5. Render Bar Chart
+            Plotly.react(heatmapDiv, barData, layout, { responsive: true, displaylogo: false })
+                .catch(err => {
+                    console.error("Bar chart rendering failed:", err);
+                    displayError(`Bar chart rendering failed: ${err.message}`);
+                })
+                .finally(() => {
+                    loadingMessage.style.display = 'none';
+                });
+
+        } catch (error) {
+            displayError(`Failed to update bar chart: ${error.message}`);
+            console.error("Update bar chart error:", error);
+            loadingMessage.style.display = 'none';
+        }
+    } // End updateBarChart
+    
+    /** Prepares data for bar chart using model averages */
+    function prepareBarChartData(sortedModels, modelInfoData) {
+        const safeModelInfo = modelInfoData || {};
+        
+        // Prepare a single trace with all models
+        const modelNames = [];
+        const modelScores = [];
+        const hoverTexts = [];
+        const barColors = [];
+        
+        // Define color map for model types - use exact match for keys
+        const colorMap = {
+            'Flagship': 'rgb(220, 57, 18)',  // Red
+            'flagship': 'rgb(220, 57, 18)',  // Red (lowercase variant)
+            'Midrange': 'rgb(51, 160, 44)',  // Green
+            'midrange': 'rgb(51, 160, 44)',  // Green (lowercase variant)
+            'Reasoning': 'rgb(106, 61, 154)', // Purple
+            'reasoning': 'rgb(106, 61, 154)'  // Purple (lowercase variant)
+        };
+        
+        // Use default color for unknown types
+        const defaultColor = 'rgb(128, 128, 128)'; // Gray
+        
+        // Track used model types for debugging
+        const usedModelTypes = new Set();
+        
+        // Maintain original sort order from sortedModels
+        sortedModels.forEach(modelName => {
+            // Get model info, checking both modelInfo and safeModelInfo
+            const info = safeModelInfo[modelName] || {};
+            const avgData = processedData.modelAverages[modelName];
+            const score = avgData?.average ?? null;
+            
+            // Skip models with no score
+            if (score === null) return;
+            
+            // Use score as percentage (0-100 scale)
+            const scorePercent = score * 100;
+            
+            // Get model type for color coding - check multiple possible property names
+            let modelType = null;
+            if (info.model_type) modelType = info.model_type;
+            else if (info.modelType) modelType = info.modelType;
+            else if (info.type) modelType = info.type;
+            else modelType = 'Unknown';
+            
+            // Track model types for debugging
+            usedModelTypes.add(modelType);
+            
+            // Add to arrays
+            modelNames.push(modelName);
+            modelScores.push(scorePercent);
+            hoverTexts.push(`<b>${modelName}</b><br>Score: ${scorePercent.toFixed(1)}%<br>Type: ${modelType}<br>Lab: ${info.lab || 'Unknown'}`);
+            
+            // Use the color from colorMap or default color
+            const barColor = colorMap[modelType] || defaultColor;
+            barColors.push(barColor);
+        });
+        
+        // Log the model types found (for debugging)
+        console.log("Model types found:", Array.from(usedModelTypes));
+        console.log("Sample colors:", barColors.slice(0, 5));
+        
+        // Create a single trace with all models
+        return [{
+            x: modelNames,
+            y: modelScores,
+            text: hoverTexts,
+            hoverinfo: 'text',
+            type: 'bar',
+            marker: {
+                color: barColors,
+                line: {
+                    width: 1,
+                    color: 'rgba(0,0,0,0.3)'
+                }
+            }
+        }];
+    } // End prepareBarChartData
 
     /** Main function to filter, sort, and update/render the heatmap. */
     function updateHeatmap() {

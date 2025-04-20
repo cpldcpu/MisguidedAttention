@@ -64,7 +64,26 @@ h1 {
     background-color: #e0e0e0;
 }
 
-/* Removed hover remark styles */
+/* View mode toggle button */
+#viewModeToggleBtn {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+#viewModeToggleBtn:hover {
+    background-color: #e0e0e0;
+}
+
+#viewModeToggleBtn.active {
+    background-color: #e6f2ff;
+    border-color: #80bdff;
+    color: #0056b3;
+}
 
 #heatmap-container {
     width: 98%;
