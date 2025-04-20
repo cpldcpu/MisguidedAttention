@@ -4,5 +4,9 @@ eval/harness/misguided_attention_v4_long.json
 eval/results_CoT_length/
 misguided_attention_v4_long.json
 eval/results_llamascompared/
+models.js
+responses.js
+data.js
+
 
 
