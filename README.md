@@ -1,6 +1,6 @@
 # Misguided Attention
 
-*Version 0.3 (January 2025)* - **[Evaluation](eval/)**
+*Version 0.3 (January 2025)* - **[Evaluation](eval/)** - **New: [Interactive evaluation results](https://cpldcpu.github.io/MisguidedAttention/)**
 
 This is a collection of prompts to challenge the reasoning abilities of large language models in presence of misguiding information. They are slight variations of commonly known thought experiments, riddles or paradoxes ("trick questions"). 
 
