@@ -1,0 +1,426 @@
+/* style.css */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding to body instead */
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#controls-area {
+    display: flex; /* Use flexbox for alignment */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Add space between control groups */
+    margin-bottom: 25px; /* Increased space below controls */
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+.control-group {
+    display: flex; /* Use flex within the group too */
+    align-items: center; /* Align label and control vertically */
+    gap: 8px; /* Space between label and control */
+    margin: 0; /* Remove margin, use gap from parent */
+    padding: 0; /* Remove padding */
+    border: none; /* Remove border */
+    background-color: transparent; /* Remove background */
+    min-width: auto; /* Let content size determine width */
+}
+
+.control-group label {
+    margin-bottom: 0; /* Remove bottom margin */
+    font-weight: bold;
+    font-size: 0.95em;
+    color: #555;
+    white-space: nowrap; /* Prevent label wrapping */
+}
+
+.sort-group select,
+#openFilterConfigBtn {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff; /* Ensure background */
+    min-width: 150px; /* Adjust min-width if needed */
+}
+
+#openFilterConfigBtn {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+#openFilterConfigBtn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Removed hover remark styles */
+
+#heatmap-container {
+    width: 98%;
+    /* Adjust height calculation if needed, ensure enough space below controls */
+    /* Height is now dynamically set in JS based on model count */
+    min-height: 500px; /* Set a reasonable minimum */
+    /* max-height removed, height is dynamic */
+    margin: auto; /* Center horizontally */
+    overflow: hidden; /* Prevent scrollbars if plot fits */
+    position: relative;
+    background-color: #fff;
+    padding: 5px; /* Reduced padding */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+#heatmap {
+    width: 100%;
+    height: 100%; /* Ensure Plotly div takes space */
+}
+
+#heatmap .plotly .heatmap {
+    shape-rendering: crispEdges; /* Sharp grid lines */
+}
+
+/* Styling for axis labels */
+.js-plotly-plot .plotly .xtick text,
+.js-plotly-plot .plotly .ytick text {
+    font-family: inherit;
+    font-size: 10px;
+    white-space: nowrap;
+    cursor: default; /* Standard cursor */
+}
+
+/* Removed .yaxis-label-with-hover styles */
+
+#loading-message[style*="display: none;"] {
+    display: none !important;
+}
+
+
+/* --- General Modal Styles --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Overlay */
+    padding-top: 60px; /* Location of the box */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Responsive width */
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.modal-content .close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 10; /* Ensure it's above other elements */
+}
+.modal-content .close-button:hover,
+.modal-content .close-button:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+/* Modal header with title and toggle button */
+.modal-content .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    padding-right: 40px; /* Add padding to prevent overlap with close button */
+}
+
+.modal-content .modal-header h2 {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 1.4em;
+}
+
+/* Toggle View Button */
+.view-toggle-btn {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    color: #555;
+    transition: background-color 0.2s;
+}
+
+.view-toggle-btn:hover {
+    background: #e0e0e0;
+}
+
+/* Code view style */
+.code-view {
+    background-color: #f8f8f8;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 0.9em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.4;
+    color: #333;
+    overflow-x: auto;
+    tab-size: 4;
+}
+
+.modal-content #modalBody { /* Specific to response modal */
+    max-height: 65vh; /* Limit height */
+    overflow-y: auto; /* Add scrollbar if needed */
+}
+
+/* --- Specific Styles for Filter Config Modal --- */
+.filter-modal-content {
+    max-width: 600px; /* Suitable width for filter options */
+}
+
+.filter-modal-section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.filter-modal-section:last-of-type {
+    border-bottom: none; /* Remove border on last section */
+}
+
+.filter-modal-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #444;
+}
+
+.filter-modal-section .filter-actions {
+     margin-bottom: 10px; /* Space above checkboxes */
+}
+.filter-modal-section .filter-actions button {
+    font-size: 0.8em;
+    padding: 3px 8px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: #e9e9e9;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.filter-modal-section .filter-actions button:hover {
+    background-color: #dcdcdc;
+}
+
+.filter-modal-section .checkbox-options {
+    max-height: 180px; /* Limit height of checkbox area */
+    overflow-y: auto; /* Enable scrolling */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+    columns: 2; /* Arrange checkboxes in two columns */
+    column-gap: 20px; /* Space between columns */
+}
+.filter-modal-section .checkbox-options div { /* Styling for each checkbox+label container */
+    display: block;
+    margin-bottom: 6px;
+    white-space: nowrap; /* Prevent wrapping */
+    break-inside: avoid-column; /* Try to prevent breaking within columns */
+}
+.filter-modal-section .checkbox-options input[type="checkbox"] {
+    margin-right: 6px;
+    vertical-align: middle; /* Align checkbox with text */
+}
+.filter-modal-section .checkbox-options label {
+    font-weight: normal;
+    font-size: 0.9em;
+    cursor: pointer;
+    display: inline; /* Keep label next to checkbox */
+    margin-bottom: 0;
+    color: #333;
+}
+
+.modal-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    text-align: right; /* Align buttons to the right */
+}
+.modal-footer button {
+    padding: 8px 15px;
+    margin-left: 10px; /* Space between buttons */
+    font-size: 0.95em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#applyFiltersBtn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+}
+#applyFiltersBtn:hover {
+    background-color: #45a049;
+}
+.modal-footer .close-button-alt { /* Style for "Cancel" button */
+     background-color: #f0f0f0;
+     border: 1px solid #ccc;
+     color: #333;
+}
+.modal-footer .close-button-alt:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* --- Response Modal Body Styles (Copied from previous version) --- */
+/* Add styles for the modal question */
+#modalBody .modal-question {
+    background-color: #f0f7ff;
+    padding: 12px 15px;
+    border-left: 3px solid #4a90e2;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+#modalBody .modal-question p {
+    margin: 0;
+    font-size: 1.05em;
+    line-height: 1.4;
+}
+
+#modalBody .modal-divider {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 15px 0;
+}
+
+#modalBody .response-item {
+    border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; background-color: #f9f9f9;
+}
+#modalBody h4 {
+    margin-top: 0; margin-bottom: 8px; color: #333; font-size: 1.1em;
+}
+#modalBody p {
+    margin-bottom: 10px; line-height: 1.5;
+}
+#modalBody p b {
+    color: #444;
+}
+#modalBody pre {
+    background-color: #eee; padding: 10px; border-radius: 3px; white-space: pre-wrap; word-wrap: break-word; max-height: 300px; overflow-y: auto; font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; font-size: 0.9em; border: 1px solid #ddd;
+}
+#modalBody .criteria-list {
+    list-style-type: none; padding-left: 0; margin-top: 10px;
+}
+#modalBody .criteria-list li {
+    margin-bottom: 5px; font-size: 0.95em;
+}
+#modalBody .criterion-met-true {
+    color: green; font-weight: bold;
+}
+#modalBody .criterion-met-false {
+    color: red; font-weight: bold;
+}
+#modalBody .feedback-section {
+    margin-top: 10px; font-style: italic; color: #555; border-top: 1px dashed #eee; padding-top: 10px;
+}
+
+/* Styles for rendered markdown */
+#modalBody .markdown-content {
+    background-color: #f2f2f2; /* Darker background color, similar to code view */
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: auto;
+}
+
+#modalBody .markdown-content h1,
+#modalBody .markdown-content h2,
+#modalBody .markdown-content h3,
+#modalBody .markdown-content h4,
+#modalBody .markdown-content h5,
+#modalBody .markdown-content h6 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+#modalBody .markdown-content pre,
+#modalBody .markdown-content code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    padding: 2px 4px;
+    font-size: 0.9em;
+}
+
+#modalBody .markdown-content pre {
+    padding: 10px;
+    overflow-x: auto;
+}
+
+#modalBody .markdown-content blockquote {
+    margin: 0;
+    padding-left: 10px;
+    border-left: 3px solid #ccc;
+    color: #555;
+}
+
+#modalBody .markdown-content table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#modalBody .markdown-content table th,
+#modalBody .markdown-content table td {
+    border: 1px solid #ddd;
+    padding: 6px;
+}
+
+#modalBody .markdown-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- End Modal Styles --- */
