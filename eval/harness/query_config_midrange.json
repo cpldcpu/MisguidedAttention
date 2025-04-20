@@ -169,6 +169,23 @@
         "temperature": 0.7,
         "top_p": 1,
         "repetition_penalty": 1
-      }       
+      },
+      {
+        "name": "gpt-4.1-mini",
+        "model": "openai/gpt-4.1-mini",
+        "max_tokens": 4999,
+        "temperature": 0.7,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+      },
+    
+    {
+        "name": "gpt-4.1-nano",
+        "model": "openai/gpt-4.1-nano",
+        "max_tokens": 4999,
+        "temperature": 0.7,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+      }         
   ]
 }

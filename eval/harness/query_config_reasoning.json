@@ -120,6 +120,31 @@
         "top_p": 1.0,
         "repetition_penalty": 1,
         "system_prompt": "You are a deep thinking AI, you may use extremely long chains of thought to deeply consider the problem and deliberate with yourself via systematic reasoning processes to help come to a correct solution prior to answering. You should enclose your thoughts and internal monologue inside <think> </think> tags, and then provide your solution or response to the problem."
-      }  
+      },
+      {
+        "name": "o4-mini-high",
+        "model": "openai/o4-mini-high",
+        "max_tokens": 16000,
+        "temperature": 0.7,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+      },
+      {
+        "name": "glm-z1-32b",
+        "model": "thudm/glm-z1-32b:free",
+        "max_tokens": 16000,
+        "temperature": 0.7,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+      },
+      {
+        "name": "ll3.3-nemotron-49b-v1-thk",
+        "model": "nvidia/llama-3.1-nemotron-ultra-49b-v1:free",
+        "max_tokens": 4096,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "repetition_penalty": 1,
+        "system_prompt": "detailed thinking on"
+      }    
   ]
 }

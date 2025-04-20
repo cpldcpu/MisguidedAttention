@@ -1,0 +1,2390 @@
+{
+  "trolley_problem_easy": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that the five people on the track are already dead",
+            "met": false
+          },
+          {
+            "criterion": "Answer states not to pull the lever",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
+        "original_response": "There\u2019s no perfect answer, but on balance I\u2019d pull the lever. By diverting the trolley you actively sacrifice one life to save five, and\u2014absent any important differences between the people involved\u2014that minimizes total harm. Utilitarians would say this is the \u201cright\u201d move because it produces the greatest good for the greatest number. Deontologists might object that you\u2019re using the one person as a means to an end, but in this stripped\u2011down scenario most people feel the moral duty to prevent as much death as possible."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that the five people on the track are already dead",
+            "met": true
+          },
+          {
+            "criterion": "Answer states not to pull the lever",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever?",
+        "original_response": "No. Since the five people on the main track are already dead, letting the trolley continue does no further harm. Pulling the lever would actively kill an innocent person for no benefit. In other words, you minimize harm by doing nothing."
+      }
+    ]
+  },
+  "trolley_easy_forced": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer recognizes that the five people on the track are already dead",
+            "met": false
+          },
+          {
+            "criterion": "Answer states not to pull the lever",
+            "met": false
+          }
+        ],
+        "feedback": "The output does not acknowledge the five people are dead and advises pulling the lever.",
+        "total_score": 0.0,
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
+        "original_response": "Yes. I would pull the lever because diverting the trolley sacrifices one life instead of five, minimizing overall harm."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer recognizes that the five people on the track are already dead",
+            "met": true
+          },
+          {
+            "criterion": "Answer states not to pull the lever",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
+        "original_response": "No. Since the five people on the main track are already dead and cannot be harmed further, diverting the trolley would needlessly kill the one living person on the side track."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer recognizes that the five people on the track are already dead",
+            "met": false
+          },
+          {
+            "criterion": "Answer states not to pull the lever",
+            "met": false
+          }
+        ],
+        "feedback": "The answer does not acknowledge the status of the five people as dead and also advises pulling the lever.",
+        "total_score": 0.0,
+        "original_question": "Imagine a runaway trolley is hurtling down a track towards five dead people. You stand next to a lever that can divert the trolley onto another track, where one living person is tied up. Do you pull the lever? Answer only with Yes or No. Explain your answer",
+        "original_response": "Yes. Pulling the lever sacrifices one life instead of five, thereby minimizing total harm and maximizing overall well\u2011being."
+      }
+    ]
+  },
+  "dead_schrodingers_cat": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that the cat is already dead when placed in the box.",
+            "met": false
+          },
+          {
+            "criterion": "Answer states that the probability of the cat being alive is 0% as the final result, and no alternatives.",
+            "met": false
+          }
+        ],
+        "feedback": "The output does not acknowledge the cat is already dead and provides an incorrect probability.",
+        "total_score": 0.0,
+        "original_question": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
+        "original_response": "In the classic setup (assuming the radioactive source has a 50% chance to decay in one day), the cat\u2019s chance of still being alive when you open the box is \u00bd (50%)."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that the cat is already dead when placed in the box.",
+            "met": false
+          },
+          {
+            "criterion": "Answer states that the probability of the cat being alive is 0% as the final result, and no alternatives.",
+            "met": false
+          }
+        ],
+        "feedback": "The output does not acknowledge the cat's initial state as dead, and it provides an alternative probability of the cat being alive.",
+        "total_score": 0.0,
+        "original_question": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
+        "original_response": "If the radioactive source is chosen so that there\u2019s a 50\u2009% chance of a decay in one day (i.e. one half\u2010life = one day), then when you open the box there\u2019s a 50\u2009% chance the poison was not released\u2014and hence a 50\u2009% chance the cat is alive."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that the cat is already dead when placed in the box.",
+            "met": false
+          },
+          {
+            "criterion": "Answer states that the probability of the cat being alive is 0% as the final result, and no alternatives.",
+            "met": false
+          }
+        ],
+        "feedback": "The output does not acknowledge the cat is already dead and incorrectly calculates the probability of the cat being alive.",
+        "total_score": 0.0,
+        "original_question": "A dead cat is placed into a box along with a nuclear isotope, a vial of poison and a radiation detector. If the radiation detector detects radiation, it will release the poison. The box is opened one day later. What is the probability of the cat being alive?",
+        "original_response": "Assuming the isotope\u2019s half\u2010life is one day, the chance it decays (and thus kills the cat) in that 24\u2009h is \u00bd, so the chance the cat survives is also \u00bd (50\u2009%)."
+      }
+    ]
+  },
+  "river_crossing_simple": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that they simply get in the boat and cross together in one trip.",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not contain an itemized list with more then two items.",
+            "met": false
+          }
+        ],
+        "feedback": "The answer correctly concludes that the man and sheep can cross together in one trip but fails to meet the second criterion due to the presence of an itemized list with more than two items.",
+        "total_score": 1.0,
+        "original_question": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
+        "original_response": "The solution is embarrassingly simple \u2013 since the boat will carry one person and one animal, the man just puts the sheep in the boat with him and rows straight across:\n\n1. The man leads the sheep into the boat  \n2. He rows to the far bank  \n3. Man and sheep disembark  \n\nThat single trip gets both of them safely to the other side."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that they simply get in the boat and cross together in one trip.",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not contain an itemized list with more then two items.",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
+        "original_response": "The trick is that the boat will carry one human AND one animal at the same time \u2013 so you don\u2019t have to make multiple trips.  The man simply puts the sheep in the boat with him, rows straight across, and they both get out on the far bank."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that they simply get in the boat and cross together in one trip.",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not contain an itemized list with more then two items.",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "There is a man, a sheep and a boat with space for one human and one animal on one side of a river. How do the man and sheep get to the other side of the river?",
+        "original_response": "The answer is: they just go together in one trip.  The boat has room for one human and one animal, so the man and the sheep both get in, the man rows across, and they step out on the far bank."
+      }
+    ]
+  },
+  "river_crossing_easy": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that they simply get in the boat and cross together in one trip.",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not contain an itemized list with more than two items.",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
+        "original_response": "One convenient seven\u2010step crossing is:\n\n1. Farmer takes the \u200bgoat\u200b across and leaves it on the far bank.  \n2. Farmer returns alone to the near bank.  \n3. Farmer takes the \u200bcabbage\u200b across.  \n4. Farmer brings the \u200bgoat\u200b back to the near bank.  \n5. Farmer takes the \u200bwolf\u200b across and leaves it with the cabbage on the far bank.  \n6. Farmer returns alone to the near bank.  \n7. Farmer finally takes the \u200bgoat\u200b across again.  \n\nAt no point are wolf and goat or goat and cabbage left alone together, so nothing gets eaten."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that they simply get in the boat and cross together in one trip.",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not contain an itemized list with more than two items.",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
+        "original_response": "One convenient way is in seven crossings.  Label the two river\u2010banks \u201cStart\u201d and \u201cFar.\u201d  At each crossing the farmer may carry at most one of {W\u00a0=\u00a0wolf, G\u00a0=\u00a0goat, C\u00a0=\u00a0cabbage}.  \n\n1. Farmer takes G Start\u2192Far.  \n   \u2022 Left on Start: W\u00a0&\u00a0C (wolf won\u2019t eat cabbage).  \n   \u2022 On Far: G  \n2. Farmer returns alone Far\u2192Start.  \n3. Farmer takes W Start\u2192Far.  \n   \u2022 On Start: C  \n   \u2022 On Far: W\u00a0&\u00a0G (but the farmer is there, so they don\u2019t fight)  \n4. Farmer brings G Far\u2192Start.  \n   \u2022 On Start: G\u00a0&\u00a0C (goat won\u2019t eat cabbage when the farmer is present)  \n   \u2022 On Far: W  \n5. Farmer takes C Start\u2192Far.  \n   \u2022 On Start: G  \n   \u2022 On Far: W\u00a0&\u00a0C (safe)  \n6. Farmer returns alone Far\u2192Start.  \n7. Farmer takes G Start\u2192Far.  \n\nNow on the Far bank are G, W, and C\u2014and nothing has been eaten."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that they simply get in the boat and cross together in one trip.",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not contain an itemized list with more than two items.",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "A farmer is on one side of a river with a wolf, a goat, and a cabbage. When he is crossing the river in a boat, he can only take one item with him at a time. The wolf will eat the goat if left alone together, and the goat will eat the cabbage if left alone together. How can the farmer transport the goat across the river without it being eaten?",
+        "original_response": "One convenient sequence of crossings is:\n\n1. Farmer takes the goat across the river and leaves it on the far bank.  \n2. Farmer returns alone to the near bank.  \n3. Farmer takes the wolf across the river.  \n4. Farmer leaves the wolf on the far bank, but brings the goat back with him to the near bank.  \n5. Farmer leaves the goat on the near bank and takes the cabbage across to the far bank.  \n6. Farmer leaves the cabbage with the wolf (they won\u2019t harm each other) and returns alone to the near bank.  \n7. Finally, farmer takes the goat across once more.  \n\nAt no point are wolf and goat or goat and cabbage left alone together, so nothing gets eaten."
+      }
+    ]
+  },
+  "river_crossing_even_simpler": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that they simply get in the boat and cross together in one trip.",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not contain an itemized list with more than two items.",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
+        "original_response": "He simply puts the sheep into the boat with him and rows straight across. Both land together on the far bank."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that they simply get in the boat and cross together in one trip.",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not contain an itemized list with more then two items.",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
+        "original_response": "He simply puts the sheep in the boat with him and rows straight across.  In one trip both the man and the sheep end up on the far bank."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that they simply get in the boat and cross together in one trip.",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not contain an itemized list with more then two items.",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "A man with his sheep wants to cross a river. He has a boat that can carry both him and the animal. How do both get to the other side of the river?",
+        "original_response": "He simply puts the sheep into the boat with him and rows straight across.  Since the boat is big enough for both, in one trip the man and his sheep land safely on the far bank."
+      }
+    ]
+  },
+  "monty_hall_inverse": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to keep the existing door",
+            "met": true
+          },
+          {
+            "criterion": "Answer explains that the initial choice has a 2/3 chance of winning a car",
+            "met": false
+          },
+          {
+            "criterion": "Answer states that this is a modification of the Monty Hall problem",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should stick with your original choice.  Here\u2019s why:\n\n 1. When you first pick, there\u2019s a 2/3 chance you chose a car and only a 1/3 chance you picked the donkey.  \n 2. The host then must open one of the other two doors and show you a car.  \n 3. If your initial pick was a car (probability 2/3), swapping would hand you the donkey.  \n 4. If your initial pick was the donkey (probability 1/3), swapping would give you a car.  \n\nSo:\n- Staying wins a car with probability 2/3.  \n- Swapping wins a car with probability 1/3.  \n\nTherefore your best strategy is to keep your original door."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to keep the existing door",
+            "met": true
+          },
+          {
+            "criterion": "Answer explains that the initial choice has a 2/3 chance of winning a car",
+            "met": true
+          },
+          {
+            "criterion": "Answer states that this is a modification of the Monty Hall problem",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should keep (\u201cstay with\u201d) your original choice.\n\nExplanation (host always shows a car):  \n1. When you first pick, P(you picked the donkey)=1/3, P(you picked a car)=2/3.  \n2. The host then opens another door, **but only if it has a car**, and shows you that car.  \n   - If you\u2019d picked the donkey (1/3), the host had two cars to choose from, shows one of them, and the *remaining* unopened door is a car.  Switching would win in that case.  \n   - If you\u2019d picked a car (2/3), the host must open the *other* car (he\u2019s compelled to show a car), leaving the donkey as the single unrevealed door.  Switching would lose in that case.  \n3. So  \n   \u2022 P(win by **staying**) = P(initial pick was a car) = 2/3  \n   \u2022 P(win by **switching**) = P(initial pick was the donkey) = 1/3  \n\nTherefore, to maximize your chance of getting a car, **do not swap**."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states to keep the existing door",
+            "met": false
+          },
+          {
+            "criterion": "Answer explains that the initial choice has a 2/3 chance of winning a car",
+            "met": false
+          },
+          {
+            "criterion": "Answer states that this is a modification of the Monty Hall problem",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "You're on a game show and are presented with three doors. Behind one is a donkey, and behind the other two are luxury cars. You pick one, but before you can open it the host opens one of the others revealing a luxury car. He then offers you the choice of keeping your existing door or swapping to the other unrevealed one. What should you do to win a car?",
+        "original_response": "You should stick with your original choice.  In this 2\u2010car/1\u2010donkey version the chance you initially picked a car is 2/3, so by staying you win 2/3 of the time (whereas switching wins only 1/3)."
+      }
+    ]
+  },
+  "jugs_1_liter": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter.",
+            "met": true
+          },
+          {
+            "criterion": "Answer is not formatted as itemized list with more than 2 entries.",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
+        "original_response": "Simply fill one of the 1\u00a0L jugs to the brim \u2013 since its capacity is exactly 1\u00a0L, that gives you exactly one liter of water."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter.",
+            "met": true
+          },
+          {
+            "criterion": "Answer is not formatted as itemized list with more than 2 entries.",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "I have a 1 liter jug and another 1-liter jug. I want to measure exactly 1 liter.",
+        "original_response": "Just fill one of the 1\u00a0L jugs right to the brim \u2013 by definition it then contains exactly 1\u00a0L of water."
+      }
+    ]
+  },
+  "jugs_3_liters": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that filling both jugs once without pouring between them gives exactly 3 liters.",
+            "met": false
+          },
+          {
+            "criterion": "Answer concludes that filling both jugs gives exactly 3 liters.",
+            "met": false
+          },
+          {
+            "criterion": "Answer is not formatted as itemized list with more than 2 entries.",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "I have a 1- and a 2-liter jug. I want to measure exactly 3 liters.",
+        "original_response": "Simply by filling both jugs \u2013 2\u00a0L + 1\u00a0L = 3\u00a0L.  \n\nStep\u2010by\u2010step (using only fill, pour, empty):  \n1) Fill the 2\u00a0L jug.  (2\u00a0L,\u00a00\u00a0L)  \n2) Pour from the 2\u00a0L jug into the 1\u00a0L jug until it\u2019s full.  (1\u00a0L,\u00a01\u00a0L)  \n3) Empty the 1\u00a0L jug.  (1\u00a0L,\u00a00\u00a0L)  \n4) Pour the remaining 1\u00a0L from the 2\u00a0L jug into the 1\u00a0L jug.  (0\u00a0L,\u00a01\u00a0L)  \n5) Fill the 2\u00a0L jug again.  (2\u00a0L,\u00a01\u00a0L)  \n\nNow you have exactly 3\u00a0L in the two jugs."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that filling both jugs once without pouring between them gives exactly 3 liters.",
+            "met": true
+          },
+          {
+            "criterion": "Answer concludes that filling both jugs gives exactly 3 liters.",
+            "met": true
+          },
+          {
+            "criterion": "Answer is not formatted as itemized list with more than 2 entries.",
+            "met": false
+          }
+        ],
+        "feedback": "The output provides a straightforward solution but does not actually achieve the goal of measuring exactly 3 liters using only the 1- and 2-liter jugs, as it relies on a 3-liter container.",
+        "total_score": 1.0,
+        "original_question": "I have a 1- and a 2-liter jug. I want to measure exactly 3 liters.",
+        "original_response": "Here\u2019s the simplest way \u2013 since 2\u2009L\u00a0+\u00a01\u2009L\u00a0=\u00a03\u2009L, just fill both jugs:\n\n1. Fill the 2\u2011liter jug to the top.  \n2. Fill the 1\u2011liter jug to the top.  \n3. Pour them both into your (empty) 3\u2011liter container.  \n\nYou now have exactly 3\u00a0liters."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that filling both jugs once without pouring between them gives exactly 3 liters.",
+            "met": true
+          },
+          {
+            "criterion": "Answer concludes that filling both jugs gives exactly 3 liters.",
+            "met": true
+          },
+          {
+            "criterion": "Answer is not formatted as itemized list with more than 2 entries.",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "I have a 1- and a 2-liter jug. I want to measure exactly 3 liters.",
+        "original_response": "You simply fill both jugs from your water source \u2013 the 2\u00a0L jug and the 1\u00a0L jug.  Together they hold exactly 3\u00a0L."
+      }
+    ]
+  },
+  "jugs_4_liters": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes it is impossible to measure exactly 4 liters with the given jugs.",
+            "met": true
+          },
+          {
+            "criterion": "Answer is not formatted as itemized list with more than 3 entries.",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
+        "original_response": "You can\u2019t.  In fact with a 6\u00a0L and a 12\u00a0L jug the only volumes you can end up with are multiples of gcd(6,12)=6, and 4 is not a multiple of 6.  Hence there is no way to measure out exactly 4\u00a0L."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes it is impossible to measure exactly 4 liters with the given jugs.",
+            "met": true
+          },
+          {
+            "criterion": "Answer is not formatted as itemized list with more than 3 entries.",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
+        "original_response": "It turns out there is no way to get exactly 4\u2009L with only a 6\u2009L and a 12\u2009L jug and an unlimited water source.  The key fact is\n\n  \u2013 gcd(6,12) = 6\n\nand in the classic \u201cfill, pour, empty\u201d jug\u2010problem you can only ever measure amounts that are multiples of the gcd.  Since 4 is not a multiple of 6, it cannot be done."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes it is impossible to measure exactly 4 liters with the given jugs.",
+            "met": true
+          },
+          {
+            "criterion": "Answer is not formatted as itemized list with more than 3 entries.",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "I have a 6- and a 12-liter jug. I want to measure exactly 4 liters.",
+        "original_response": "You can\u2019t.  In the \u201cfill\u2010empty\u2010pour\u201d model with a 6\u2009L and a 12\u2009L jug the only quantities you can ever isolate are multiples of gcd(6,12)=6, so 4\u2009L is unreachable."
+      }
+    ]
+  },
+  "birthday_problem_easy": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that the probability is close to 1 (larger than 0.99 or 99%) or equal to (1 - (1/365)^29).",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "In a room of 30 people, what's the probability that at least two do not share a birthday?",
+        "original_response": ""
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that the probability is close to 1 (larger than 0.99 or 99%) or equal to (1 - (1/365)^29)",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "In a room of 30 people, what's the probability that at least two do not share a birthday?",
+        "original_response": "Interpreting the \u201cbirthday\u2010paradox\u201d way \u2013 i.e. the chance that at least two out of 30 share the same birthday \u2013 one computes\n\n  P(no two share) = \n    365/365\u00b7364/365\u00b7363/365\u22ef(365\u221229)/365 \n   = (365\u00b7364\u00b7\u2026\u00b7336)/365\u00b3\u2070,\n\nso\n\n  P(at least one shared birthday) \n    = 1 \u2212 P(no two share)\n    = 1 \u2212 (365\u00b7364\u00b7\u2026\u00b7336)/365\u00b3\u2070\n    \u2243 0.7063.\n\nHence about a 70.6% chance that among 30 people at least two have the same birthday."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that the probability is close to 1 (larger than 0.99 or 99%) or equal to (1 - (1/365)^29)",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "In a room of 30 people, what's the probability that at least two do not share a birthday?",
+        "original_response": "Assuming birthdays are independently and uniformly distributed over 365 days (no leap\u2010year) the probability that *no two* out of 30 share a birthday is\n\n   P(no match) = (365/365)\u00b7(364/365)\u00b7(363/365)\u00b7\u2026\u00b7(365\u221229)/365  \n               = (365\u00b7364\u00b7\u2026\u00b7336) / 365\u00b3\u2070  \n\nHence the probability that *at least two* people *do* share a birthday is the complement,\n\n   P(at least one match)  \n     = 1 \u2212 P(no match)  \n     = 1 \u2212 (365\u00b7364\u00b7\u2026\u00b7336) / 365\u00b3\u2070  \n     \u2243 1 \u2212 0.2937  \n     \u2243 0.7063  \n\nSo about a 70.6% chance that in a group of 30 at least two people share the same birthday."
+      }
+    ]
+  },
+  "rope_burning_impossible": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that the responder is not able to solve this puzzle or that it is not possible in general.",
+            "met": false
+          }
+        ],
+        "feedback": "The output is empty and does not provide a conclusion about the puzzle.",
+        "total_score": 0.0,
+        "original_question": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?",
+        "original_response": ""
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that the responder is not able to solve this puzzle or that it is not possible in general.",
+            "met": false
+          }
+        ],
+        "feedback": "The output does not conclude that the puzzle is unsolvable.",
+        "total_score": 0.0,
+        "original_question": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 20 minutes using these two ropes and matches to light them?",
+        "original_response": ""
+      }
+    ]
+  },
+  "less_confusing_monty_hall": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that both options are equally likely to win the car",
+            "met": false
+          },
+          {
+            "criterion": "Answer explains that this is not the monty hall problem",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "Imagine you're on a game show, and there are three doors in front of you. Behind one door is a car, and behind the other two doors are goats. You don't know what's behind any of the doors. You get to choose one door. Let's say you pick Door #1. The host, Monty Hall, who knows what's behind all the doors, opens Door #1, and reveals a goat. Now, you have two doors left: Door #3 and Door #2. You pick Door #3. Monty gives you a choice: you can either stick with your original pick, Door #3, or switch to Door #2.",
+        "original_response": "You should switch.  Here\u2019s why in a nutshell:\n\n1.  When you first pick a door (Door\u00a0#1) there\u2019s a 1\u22153 chance the car is behind it and a 2\u22153 chance it\u2019s in one of the other two.\n2.  Monty then opens one of the remaining doors to show a goat, but he will never open the door with the car.\n3.  That action doesn't change your original 1\u22153 chance on Door\u00a0#1\u2014it simply \u201ctransfers\u201d the full 2\u22153 probability to the one other unopened door (Door\u00a0#2 in your restated scenario).\n\nSo:\n- If you stay with your current pick (Door\u00a0#3 in your re\u2010labeling), you still only have a 1\u22153 shot at the car.\n- If you switch to the other unopened door (Door\u00a0#2), you win with probability 2\u22153.\n\nNumerical check by simple simulation (say 1,000 trials) shows switching wins about twice as often as staying. Therefore: switch to Door\u00a0#2."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that both options are equally likely to win the car",
+            "met": true
+          },
+          {
+            "criterion": "Answer explains that this is not the monty hall problem",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Imagine you're on a game show, and there are three doors in front of you. Behind one door is a car, and behind the other two doors are goats. You don't know what's behind any of the doors. You get to choose one door. Let's say you pick Door #1. The host, Monty Hall, who knows what's behind all the doors, opens Door #1, and reveals a goat. Now, you have two doors left: Door #3 and Door #2. You pick Door #3. Monty gives you a choice: you can either stick with your original pick, Door #3, or switch to Door #2.",
+        "original_response": "In the \u201ctext\u2010book\u201d Monty Hall problem the host never opens the door you\u2019ve chosen \u2013 he always opens a *different* door with a goat behind it.  In that standard set\u2011up:\n\n  \u2022 Your first pick has probability 1\u22153 of hiding the car.  \n  \u2022 Monty\u2019s action of revealing a goat behind one of the *other* doors transfers the remaining 2\u22153 probability onto the one unopened door you didn\u2019t pick.\n\nSo in the usual version you should *always switch* \u2013 by switching you win with probability 2\u22153 rather than 1\u22153.\n\n---\n\nHowever, in your description Monty actually opened *your* chosen door (#1), which isn\u2019t the normal rule.  As soon as he does that your \u201cfirst pick\u201d is gone and you\u2019re simply faced with two unopened doors (2 and 3) with no further bias \u2013 each has exactly a 1\u22152 chance of hiding the car.  In *that* (non\u2011standard) scenario it really *doesn\u2019t* matter whether you stick or switch at the final choice: each door is 50\u221550."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that both options are equally likely to win the car",
+            "met": true
+          },
+          {
+            "criterion": "Answer explains that this is not the monty hall problem",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Imagine you're on a game show, and there are three doors in front of you. Behind one door is a car, and behind the other two doors are goats. You don't know what's behind any of the doors. You get to choose one door. Let's say you pick Door #1. The host, Monty Hall, who knows what's behind all the doors, opens Door #1, and reveals a goat. Now, you have two doors left: Door #3 and Door #2. You pick Door #3. Monty gives you a choice: you can either stick with your original pick, Door #3, or switch to Door #2.",
+        "original_response": "At the point Monty has opened your very first choice (Door\u00a0#1) and shown you a goat, you\u2019re left with exactly two unopened doors (Door\u00a0#2 and Door\u00a0#3) and no further \u201cMonty\u2010Hall trick\u201d in play.  All the information you have is\n\n  \u2022 Door\u00a0#1 is goat  \n  \u2022 One of {#2,#3} hides the car  \n\nThere is no asymmetry between #2 and #3 any more \u2013 each is equally likely (1/2) to conceal the car.  So when Monty asks \u201cstick with your current pick (Door\u00a0#3) or switch to Door\u00a0#2,\u201d the odds are\n\n  \u2022 P(car behind #3) = 1/2  \n  \u2022 P(car behind #2) = 1/2  \n\nSwitching does not improve your chances; it\u2019s a straight 50\u201350 either way."
+      }
+    ]
+  },
+  "the_normal_barber": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that there is no paradox since this is a normal barber without special rules",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not try to solve the barber paradox",
+            "met": false
+          }
+        ],
+        "feedback": "The output correctly identifies the paradox and explains the inconsistency, but does not meet the given criteria.",
+        "total_score": 0.0,
+        "original_question": "Imagine there's a small town with a very particular barber. This barber has a unique rule: he shaves all the men in town who visit him. Does the barber shave himself?",
+        "original_response": "This is the classic \u201cBarber paradox\u201d (a variant of Russell\u2019s paradox).  If the barber shaves himself, then by his rule he must not shave himself; if he does not shave himself, then by his rule he must shave himself.  In other words, there is no consistent way to decide whether he shaves himself or not\u2014no such barber can exist under that rule."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that there is no paradox since this is a normal barber without special rules",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not try to solve the barber paradox",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "Imagine there's a small town with a very particular barber. This barber has a unique rule: he shaves all the men in town who visit him. Does the barber shave himself?",
+        "original_response": "This is the classic \u201cBarber paradox\u201d (a version of Russell\u2019s paradox).  If the barber is male:\n\n-  Suppose he does shave himself.  Then by his own rule he must not shave himself.\n-  Suppose he does not shave himself.  Then by his rule he must shave himself.\n\nEither way you get a contradiction.  No male barber can satisfy that rule.  The usual punch\u2010line is that the \u201cbarber\u201d must be female (so the rule \u201cshaves all the men in town who visit him\u201d never once applies to her).  In other words, there is no consistent way for a male barber to both shave exactly those men who visit him and answer the question \u201cDoes he shave himself?\u201d without contradiction."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that there is no paradox since this is a normal barber without special rules",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not try to solve the barber paradox",
+            "met": false
+          }
+        ],
+        "feedback": "The output correctly identifies the paradox and explains the inconsistency, but does not meet the given criteria.",
+        "total_score": 0.0,
+        "original_question": "Imagine there's a small town with a very particular barber. This barber has a unique rule: he shaves all the men in town who visit him. Does the barber shave himself?",
+        "original_response": "This is the classic \u201cBarber paradox\u201d (due to Bertrand Russell). If the barber does shave himself, then by his own rule he must not; if he doesn\u2019t, then by his rule he must. There is no consistent yes\u2011or\u2011no answer\u2014no such barber can exist under those rules."
+      }
+    ]
+  },
+  "no_paradox_expected_hanging": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that there is no surprise since the prisoner was told on Monday",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "Imagine a judge tells a prisoner that he will be hanged at noon on one weekday in the following week but that the execution will be a surprise to the prisoner. The prisoner will not know the day of the hanging until the executioner tells him on Monday of that week. The prisoner deduces that he will never be hanged by surprise. The prisoner is executed on a Friday. Was the execution a surprise to the prisoner?",
+        "original_response": "Yes.  The whole paradox turns on the failure of the prisoner\u2019s backward\u2010induction.  By \u201cproving\u201d that Friday was impossible, he actually commits himself to never expecting a hanging at all\u2014and so when at noon on Friday the executioner appears, it comes as a genuine surprise.  In short, his attempt to rule out every day is what lets the Friday hanging fulfill the judge\u2019s \u201csurprise\u201d condition."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that there is no surprise since the prisoner was told on Monday",
+            "met": false
+          }
+        ],
+        "feedback": "The output does not match the criterion as it states the execution was a surprise to the prisoner, contrary to the criterion's requirement.",
+        "total_score": 0.0,
+        "original_question": "Imagine a judge tells a prisoner that he will be hanged at noon on one weekday in the following week but that the execution will be a surprise to the prisoner. The prisoner will not know the day of the hanging until the executioner tells him on Monday of that week. The prisoner deduces that he will never be hanged by surprise. The prisoner is executed on a Friday. Was the execution a surprise to the prisoner?",
+        "original_response": "Yes.  Although the prisoner thinks he has \u201cruled out\u201d every day by backward\u2011induction, his reasoning is fatally self\u2011referential: he cannot know in advance how his own beliefs will update.  On the morning of Friday he still assigns less than certainty to being hanged that day, so when the executioner arrives at noon he is genuinely surprised."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that there is no surprise since the prisoner was told on Monday",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "Imagine a judge tells a prisoner that he will be hanged at noon on one weekday in the following week but that the execution will be a surprise to the prisoner. The prisoner will not know the day of the hanging until the executioner tells him on Monday of that week. The prisoner deduces that he will never be hanged by surprise. The prisoner is executed on a Friday. Was the execution a surprise to the prisoner?",
+        "original_response": "Yes.  The prisoner\u2019s \u201cproof\u201d by backward induction is flawed because at no point can he be sure a hanging will occur at all.  In particular, on Thursday night he actually believes there will be no hanging, so when the executioner arrives Friday at noon he is genuinely taken by surprise."
+      }
+    ]
+  },
+  "two_door_problem_exit": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests using the marked exit door without asking questions",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "You are in a room with two doors. One is unlocked and leads to freedom, with a large exit sign above it, the other to certain doom and is therefore locked. There are two guards: one always tells the truth, and the other always lies. You don't know which is which. You can ask one guard one question or just leave. What do you do?",
+        "original_response": "You ask one guard the classic \u201cwhat would the other guy say?\u201d question, then go through the opposite door. For example, pick either guard and ask:\n\n  \u201cIf I asked the other guard which door leads to freedom, what would he say?\u201d\n\n\u2013  If you happened to ask the truth\u2010teller, he will truthfully report the liar\u2019s answer (i.e. the bad door).  \n\u2013  If you asked the liar, he will lie about the truth\u2010teller\u2019s answer (again pointing you to the bad door).\n\nIn either case they point at the door to doom.  So you take the *other* door and walk free."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests using the marked exit door without asking questions",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "You are in a room with two doors. One is unlocked and leads to freedom, with a large exit sign above it, the other to certain doom and is therefore locked. There are two guards: one always tells the truth, and the other always lies. You don't know which is which. You can ask one guard one question or just leave. What do you do?",
+        "original_response": "You don\u2019t need any question \u2013 just walk out the unlocked door with the \u201cEXIT\u201d sign. Since the other door is locked and leads to doom, the door clearly marked and open is your freedom."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests using the marked exit door without asking questions",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "You are in a room with two doors. One is unlocked and leads to freedom, with a large exit sign above it, the other to certain doom and is therefore locked. There are two guards: one always tells the truth, and the other always lies. You don't know which is which. You can ask one guard one question or just leave. What do you do?",
+        "original_response": "You ask either guard the single question:\n\n  \u201cIf I asked the other guard which door leads to freedom, what would he say?\u201d\n\nHe must point to the \u201cwrong\u201d door (truth\u2010teller truthfully reports the liar\u2019s answer, liar falsely reports the truth\u2010teller\u2019s answer).  You then take the opposite door and win your freedom."
+      }
+    ]
+  },
+  "feathers_or_steel": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that 1 kilogram is heavier than 1 pound",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Which is heavier, 1 kilogram of feathers or 1 pound of steel?",
+        "original_response": "1\u00a0kilogram of feathers is heavier. \n\nExplanation:  \n- 1\u00a0kg \u2248 2.20462\u00a0lb  \n- 1\u00a0lb = 0.45359\u00a0kg  \n\nSo 1\u00a0kg (about 2.2\u00a0lb) > 1\u00a0lb."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that 1 kilogram is heavier than 1 pound",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Which is heavier, 1 kilogram of feathers or 1 pound of steel?",
+        "original_response": "A kilogram of feathers is heavier\u20141\u00a0kg equals about 2.2\u00a0lb, so it outweighs 1\u00a0lb of steel."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that 1 kilogram is heavier than 1 pound",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Which is heavier, 1 kilogram of feathers or 1 pound of steel?",
+        "original_response": "1 kilogram of feathers is heavier. \n\n1\u00a0kg \u2248 2.2046\u00a0lb, which is more than 1\u00a0lb."
+      }
+    ]
+  },
+  "parallelism_50_machines": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that 100 machines would take 50 minutes to make 100 widgets",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "If it takes 50 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?",
+        "original_response": "50 minutes."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that 100 machines would take 50 minutes to make 100 widgets",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "If it takes 50 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?",
+        "original_response": "It would take 50 minutes."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that 100 machines would take 50 minutes to make 100 widgets",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "If it takes 50 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?",
+        "original_response": "50 minutes."
+      }
+    ]
+  },
+  "kings_mercy": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to switch the door",
+            "met": true
+          },
+          {
+            "criterion": "Answer suggests to ask the guard",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "You are locked in a dungeon. A king decides to show you mercy - he summons you and tells you the rules: 'There are three doors, guarded by a guard that always tells the truth. Two of the doors lead to death. One door leads to escape.' You pick a door. The guard opens another door with certain death. You may change your door. How do you maximize your chances of escape?",
+        "original_response": "You should always switch.  \n\nReasoning (Monty Hall):  \n1. When you first pick a door, the chance you\u2019ve picked the \u201cescape\u201d door is 1/3; the chance it\u2019s behind one of the other two is 2/3.  \n2. The guard (who knows where escape is) then opens one of the two you didn\u2019t pick, always revealing death.  \n3. If your original choice was wrong (probability 2/3), the remaining unopened door must be the escape door.  \n4. Thus by switching you win with probability 2/3, whereas sticking wins only 1/3."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to switch the door",
+            "met": true
+          },
+          {
+            "criterion": "Answer suggests to ask the guard",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "You are locked in a dungeon. A king decides to show you mercy - he summons you and tells you the rules: 'There are three doors, guarded by a guard that always tells the truth. Two of the doors lead to death. One door leads to escape.' You pick a door. The guard opens another door with certain death. You may change your door. How do you maximize your chances of escape?",
+        "original_response": "You should always switch to the one remaining unopened door.  \n\nExplanation:\n1. When you first choose a door there\u2019s a 1\u20443 chance you picked the escape door and a 2\u20443 chance you picked death.  \n2. The guard (who knows where the escape is) then opens a losing door among the two you didn\u2019t pick.  \n3. If your original choice was death (2\u20443 chance), the other unopened door must be the escape. Switching wins in those cases.  \n4. If your original choice was already the escape (1\u20443), switching loses\u2014but that happens only 1\u20443 of the time.  \n\nSwitching gives you a 2\u20443 chance to escape, versus 1\u20443 if you stay."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to switch the door",
+            "met": true
+          },
+          {
+            "criterion": "Answer suggests to ask the guard",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "You are locked in a dungeon. A king decides to show you mercy - he summons you and tells you the rules: 'There are three doors, guarded by a guard that always tells the truth. Two of the doors lead to death. One door leads to escape.' You pick a door. The guard opens another door with certain death. You may change your door. How do you maximize your chances of escape?",
+        "original_response": "You should always switch.  \n\nExplanation:  \n- When you first pick a door, the chance it hides the escape is 1/3, and the chance it hides death is 2/3.  \n- The guard (who knows what\u2019s behind each door) then opens a different door that certainly leads to death.  \n- If your original pick was the escape (1/3 chance), switching will lose.  \n- But if your original pick was death (2/3 chance), the guard\u2019s reveal leaves the one remaining unopened door as the escape, so switching wins.  \n\nThus by switching you win with probability 2/3, instead of 1/3 if you stay."
+      }
+    ]
+  },
+  "upside_down_bucket": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that it can be used upside down to hold 7 liters",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "I have a 7 litre bucket that is missing a bottom, and the top was welded and sealed shut. How much water can I hold in it?",
+        "original_response": "You can still hold the full 7\u00a0L \u2013 simply turn the bucket upside\u2010down.  The welded top then becomes the base (so it won\u2019t leak) and the open \u201cbottom\u201d is now the fill\u2010hole, giving you the full 7\u00a0litres of capacity."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that it can be used upside down to hold 7 liters",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "I have a 7 litre bucket that is missing a bottom, and the top was welded and sealed shut. How much water can I hold in it?",
+        "original_response": "Zero\u00a0\u2013 as long as the bucket sits \u201cright\u2010way up\u201d it has no bottom, so any water you pour in runs straight through.  \nFlip the bucket over, though, and the welded\u2010shut top becomes the base and the missing bottom becomes the fill\u2010hole.  In that orientation you can hold its full 7\u00a0L capacity."
+      }
+    ]
+  },
+  "bridge_torch_impossible": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that it is impossible to solve within 17 minutes",
+            "met": false
+          }
+        ],
+        "feedback": "The output does not conclude that it is impossible to solve within 17 minutes, but rather it does not provide a solution or conclusion.",
+        "total_score": 0.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can only support two people at a time, and they share a single torch. Person A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four across in no more than 17 minutes. How can they do it?",
+        "original_response": ""
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that it is impossible to solve within 17 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can only support two people at a time, and they share a single torch. Person A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four across in no more than 17 minutes. How can they do it?",
+        "original_response": "With the times 1,\u00a03,\u00a05 and 10 there is actually no way to get everyone across in 17\u00a0minutes \u2013 the fastest you can do is 20\u00a0minutes.  Here\u2019s why:\n\nThere are basically two \u201cbest\u201d tactics, and both give 20\u2009min:\n\n 1. Ferry the torch with the two fastest (1\u00a0min and 3\u00a0min) and send the two slowest together.  \n    \u2022 A\u00a0+\u00a0B cross \u2192 3\u2009min  \n    \u2022 A returns  \u2192 1\u2009min  \u2003(total\u00a04)  \n    \u2022 C\u00a0+\u00a0D cross \u2192 10\u2009min \u2003(total\u00a014)  \n    \u2022 B returns  \u2192 3\u2009min  \u2003(total\u00a017)  \n    \u2022 A\u00a0+\u00a0B cross \u2192 3\u2009min  \u2003(total\u00a020)\n\n 2. Always send the single fastest back and forth:  \n    \u2022 A\u00a0+\u00a0D cross \u2192 10\u2009min  \n    \u2022 A returns  \u2192 1\u2009min  \u2003(total\u00a011)  \n    \u2022 A\u00a0+\u00a0C cross \u2192 5\u2009min  \u2003(total\u00a016)  \n    \u2022 A returns  \u2192 1\u2009min  \u2003(total\u00a017)  \n    \u2022 A\u00a0+\u00a0B cross \u2192 3\u2009min  \u2003(total\u00a020)\n\nIn both cases you end up with 20\u2009minutes, so 17\u2009minutes is impossible with A=1, B=3, C=5, D=10.\n\n(If B had taken only 2\u2009minutes instead of 3\u2009\u2014 i.e. the classic 1,2,5,10 puzzle \u2014 then the well\u2011known 17\u2011minute solution is:  \n 1) A+B cross (2)  \n 2) A returns (1)  \n 3) C+D cross (10)  \n 4) B returns (2)  \n 5) A+B cross (2)  \nfor a total of 17\u2009min.)"
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that it is impossible to solve within 17 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can only support two people at a time, and they share a single torch. Person A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four across in no more than 17 minutes. How can they do it?",
+        "original_response": "Here\u2019s the best you can do with A\u00a0=\u00a01, B\u00a0=\u00a03, C\u00a0=\u00a05, D\u00a0=\u00a010 \u2013 and you\u2019ll see you cannot get all four over in 17\u00a0min (the minimum is 20\u00a0min):\n\n 1) A and B go across (cost = max(1,3) = 3)  \n 2) A comes back        (cost = 1)  \n 3) C and D go across (cost = max(5,10) = 10)  \n 4) B comes back        (cost = 3)  \n 5) A and B go across (cost = 3)  \n\nTotal time = 3 + 1 + 10 + 3 + 3 = 20\u00a0minutes.  \n\nIf you really need to hit 17\u00a0minutes you must have B = 2\u00a0min rather than 3\u00a0min.  In that \u201c1,\u00a02,\u00a05,\u00a010\u201d version the same sequence  \n  \n 1) A+B \u2192 (2)  \n 2) A \u2190 (1)  \n 3) C+D \u2192 (10)  \n 4) B \u2190 (2)  \n 5) A+B \u2192 (2)  \n\nsums to exactly 17.  With B = 3 the 17\u2011minute goal is simply unattainable."
+      }
+    ]
+  },
+  "bridge_torch_easy": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "Since the rickety bridge will carry all four at once, the \u201ctrick\u2019\u2019 is simply to have A,\u00a0B,\u00a0C and\u00a0D go together, carrying the one torch.  They walk at the pace of the slowest (D = 10\u00a0min), so everyone is over in 10\u00a0minutes, well under 17."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests all four people crossing together in 10 minutes",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Four people come to a rickety bridge at night. The bridge can support four people at a time, and they share a single torch. A takes 1 minute, B takes 3, C takes 5, D takes 10. The challenge is to get all four over in no more than 17 minutes. How do they do it?",
+        "original_response": "The \u201chard\u201d crossing\u2010in\u2010pairs restriction never appears \u2013 the bridge can hold all four of them at once.  So the solution is simply:\n\n  \u2022 A, B, C and D all go across together, carrying the one torch.  \n  \u2022 They move at the speed of the slowest (D = 10\u2009min).  \n\nTotal time = 10\u2009minutes, which is well under 17\u2009minutes."
+      }
+    ]
+  },
+  "knights_knaves_impossible": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that the statements create an impossible contradiction",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "You arrive on an island inhabited solely by two types of people - Knights who always tell the truth, and Knaves who always lie. You meet A and B. A says 'B is a Knave.' B says 'A is telling the truth.' Which is who?",
+        "original_response": "There is no way to label A and B so that both statements come out \u201cright\u00ad\u201d for knights and \u201cwrong\u201d for knaves.  \n\nQuick check of the two possibilities:  \n 1) A is knight \u21d2 \u201cB is a knave\u201d is true \u21d2 B is knave.  \n    But then B (a knave) says \u201cA is telling the truth,\u201d which is in fact true, so B would be uttering a true statement \u2013 impossible for a knave.  \n 2) A is knave \u21d2 \u201cB is a knave\u201d is false \u21d2 B is knight.  \n    But then B (a knight) says \u201cA is telling the truth,\u201d which is false, so B would be uttering a lie \u2013 impossible for a knight.  \n\nHence no consistent assignment exists."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that the statements create an impossible contradiction",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "You arrive on an island inhabited solely by two types of people - Knights who always tell the truth, and Knaves who always lie. You meet A and B. A says 'B is a Knave.' B says 'A is telling the truth.' Which is who?",
+        "original_response": "There is in fact no consistent way to label A and B \u201cKnight\u201d or \u201cKnave\u201d so as to make both of their statements come out right.  You can check the four possibilities:\n\n1. A\u00a0Knight,\u00a0B\u00a0Knight  \n   \u2013 A\u2019s claim \u201cB is a Knave\u201d would be false \u21d2 contradiction.  \n2. A\u00a0Knight,\u00a0B\u00a0Knave  \n   \u2013 A\u2019s claim \u201cB is a Knave\u201d would be true (OK),  \n   \u2013 B (a Knave) says \u201cA is telling the truth\u201d \u2013 that would be true \u21d2 impossible.  \n3. A\u00a0Knave,\u00a0B\u00a0Knight  \n   \u2013 A\u2019s claim \u201cB is a Knave\u201d would be false (OK),  \n   \u2013 B (a Knight) says \u201cA is telling the truth\u201d \u2013 that would be false \u21d2 impossible.  \n4. A\u00a0Knave,\u00a0B\u00a0Knave  \n   \u2013 A\u2019s claim \u201cB is a Knave\u201d would then be true \u21d2 impossible for a Knave.\n\nNo assignment survives, so the dialogue itself is contradictory on a Knights\u2010and\u2010Knaves island."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that the statements create an impossible contradiction",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "You arrive on an island inhabited solely by two types of people - Knights who always tell the truth, and Knaves who always lie. You meet A and B. A says 'B is a Knave.' B says 'A is telling the truth.' Which is who?",
+        "original_response": "You quickly check all four possibilities and find that each one leads to a contradiction:\n\n1.  A = knight \u21d2 B really is a knave.  \n    But then B (a knave) would have to lie when he says \u201cA is telling the truth,\u201d yet in fact A is telling the truth.  Contradiction.\n\n2.  A = knave \u21d2 \u201cB is a knave\u201d is false \u21d2 B is a knight.  \n    But then B (a knight) would have to tell the truth when he says \u201cA is telling the truth,\u201d yet A\u2019s statement was false.  Contradiction.\n\n3.  A = knight, B = knight fails immediately because A\u2019s first line (\u201cB is a knave\u201d) would be false.\n\n4.  A = knave, B = knave fails immediately because A\u2019s first line would be true.\n\nNo assignment of knight/knave to A and B makes both statements come out with the right truth\u2010value.  In short, the puzzle as stated is inconsistent\u2014there is no solution."
+      }
+    ]
+  },
+  "knights_knaves_easy": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer identifies A as knight and B as knave",
+            "met": false
+          }
+        ],
+        "feedback": "The output does not conclusively identify A as a knight and B as a knave, but rather presents two possible scenarios.",
+        "total_score": 0.0,
+        "original_question": "You arrive on an island inhabited solely by two types of people - Knights who always tell the truth, and Knaves who always lie. You meet A and B. A says 'B is a Knave.' B says 'A is a liar.' Which is who?",
+        "original_response": "You can check that both of these assignments satisfy\n\n  A says \u201cB is a knave.\u201d  \n  B says \u201cA is a liar.\u201d\n\nCase\u00a01: A\u00a0=\u00a0Knight, B\u00a0=\u00a0Knave  \n\u2013 A\u2019s claim \u201cB is a knave\u201d is true.  \n\u2013 B (a knave) must lie, so his claim \u201cA is a liar\u201d is false (indeed A is truthful).  \n\nCase\u00a02: A\u00a0=\u00a0Knave, B\u00a0=\u00a0Knight  \n\u2013 A (a knave) lies in saying \u201cB is a knave,\u201d so B must be a knight.  \n\u2013 B (a knight) truthfully says \u201cA is a liar\u201d (A really does always lie).  \n\nNo other assignment works, so the only thing you can conclude is that one is a knight and the other a knave\u00a0\u2013 but the data do not tell you which is which."
+      }
+    ]
+  },
+  "poisoned_hot": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer does not discuss poison in ice cubes",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "Two girls went to dinner together and both ordered hot tea. One girl pounded down five of them in about a minute, and the other took her time drinking one. The girl who drank one died, while the girl who drank five survived. All the drinks were poisoned. Why did the girl that drank more tea survive?",
+        "original_response": "The poison was frozen into the ice cubes.  The girl who gulped her tea down fast drank it before the ice could melt, so she took in almost no poison.  The other girl sipped slowly, the ice melted into her cup, released the poison, and killed her."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer does not discuss poison in ice cubes",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Two girls went to dinner together and both ordered hot tea. One girl pounded down five of them in about a minute, and the other took her time drinking one. The girl who drank one died, while the girl who drank five survived. All the drinks were poisoned. Why did the girl that drank more tea survive?",
+        "original_response": "Because the toxin was coming out of the tea leaves (or packet) and needed time to dissolve into the hot water, the girl who guzzled five cups in a minute never let it steep long enough to pick up a lethal dose.  The girl who sipped slowly, however, drank fully \u201cbrewed\u201d tea and so got enough poison to kill her."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer does not discuss poison in ice cubes",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "Two girls went to dinner together and both ordered hot tea. One girl pounded down five of them in about a minute, and the other took her time drinking one. The girl who drank one died, while the girl who drank five survived. All the drinks were poisoned. Why did the girl that drank more tea survive?",
+        "original_response": "Because the poison was hidden in something that had to dissolve before it mixed into the tea.  The classic way this is done is to freeze the poison into an ice cube (or press it into a sugar lump or inside the cup), so that if you drink immediately the toxin never goes into solution.  \n \nThe girl who \u201cpounded down\u201d her cups drank them so fast the poisoned ice never melted (or the sugar/poison coating never dissolved), so she swallowed straight tea and no poison.  The other girl sipped leisurely, the ice/sugar had time to dissolve, and the toxin went into her drink\u2014she died."
+      }
+    ]
+  },
+  "rabbit_inverted_monty_hall": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests keeping original choice",
+            "met": false
+          },
+          {
+            "criterion": "Answer explains 2/3 chance of carrot in original pick",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "You're a rabbit and presented with three rabbit holes. In one is a fox, in the other two are carrots. You pick one, but before you enter it, god reveals carrots in one of the others. You can stick with yours or swap to the other unrevealed one. What should you do to minimize your chance of being eaten?",
+        "original_response": "You should always swap to the one remaining unrevealed hole.  \n\nReasoning (Monty\u2013Hall style):  \n1. When you first pick, the chance you\u2019ve picked the fox is 1/3 (and a carrot 2/3).  \n2. The host then reveals a carrot behind one of the other two.  \n3. If your original pick was the fox (1/3 chance), the only unrevealed hole now must have a carrot, so swapping wins carrots.  \n4. If your original pick was a carrot (2/3 chance), the other unrevealed hole must be the fox, so swapping loses.  \n\nSwapping therefore gives you a 2/3 chance of carrots (survival) versus only 1/3 if you stay."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests keeping original choice",
+            "met": true
+          },
+          {
+            "criterion": "Answer explains 2/3 chance of carrot in original pick",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "You're a rabbit and presented with three rabbit holes. In one is a fox, in the other two are carrots. You pick one, but before you enter it, god reveals carrots in one of the others. You can stick with yours or swap to the other unrevealed one. What should you do to minimize your chance of being eaten?",
+        "original_response": "You should keep your original hole.  Here\u2019s why in a nutshell:\n\n\u2022 When you first pick, there\u2019s a 2\u22153 chance you\u2019ve chosen a carrot\u2010hole and only a 1\u22153 chance you\u2019ve picked the fox.  \n\u2022 God then reveals *one* of the *other* carrot\u2010holes.  That revelation does *not* change the fact that your original pick still has a 2\u22153 chance of being a carrot.  \n\u2022 The one remaining unopened hole now has only the leftover 1\u22153 chance of hiding a carrot (and thus a 2\u22153 chance of hiding the fox).  \n\nSo if you stick, your chance of being eaten (i.e. having picked the fox) stays at 1\u22153.  If you switch, your chance of ending up with the fox jumps to 2\u22153.  To minimize the risk of being eaten, do *not* swap."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests keeping original choice",
+            "met": true
+          },
+          {
+            "criterion": "Answer explains 2/3 chance of carrot in original pick",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "You're a rabbit and presented with three rabbit holes. In one is a fox, in the other two are carrots. You pick one, but before you enter it, god reveals carrots in one of the others. You can stick with yours or swap to the other unrevealed one. What should you do to minimize your chance of being eaten?",
+        "original_response": "You should stay with your original choice.  Here\u2019s why in brief:\n\n\u2022  When you first pick a hole, the chance you picked the fox is 1/3 and the chance you picked a carrot is 2/3.  \n\u2022  God then shows you a carrot in one of the other two holes\u2014but never the fox.  \n\u2022  If you stick, your chance of having the fox remains 1/3 (because that was the chance you picked it at the start).  \n\u2022  If you switch, you win (get a carrot) only in the case you picked the fox at the start (1/3), and lose (get the fox) if you picked a carrot at the start (2/3).  \n\nSo switching carries a 2/3 risk of being eaten, while staying carries only a 1/3 risk.  To minimize your chance of running into the fox, do\u00a0not\u00a0swap."
+      }
+    ]
+  },
+  "feeding_the_goat": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer does not propose river crossing solutions",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests directly feeding the goat the cabbage",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "A farmer is at a river with a wolf, a goat, and a cabbage. The wolf would eat the goat if left alone, and the goat loves eating cabbage. What can the farmer do to feed the goat?",
+        "original_response": "One convenient way is the classic seven\u2010trip solution.  Label the three items G (goat), W (wolf), C (cabbage), and call the farmer F.  \u201c\u2192\u201d means crossing from the starting bank to the far bank, \u201c\u2190\u201d the reverse.  \n\n1. F+G \u2192   (leave W and C alone \u2013 they don\u2019t harm each other)  \n2. F \u2190     (far bank has G alone)  \n3. F+W \u2192   (leave W on far bank, bring G back)  \n4. F+G \u2190   (now G is back on start bank with C; far bank has W)  \n5. F+C \u2192   (leave C with W \u2013 they don\u2019t harm each other)  \n6. F \u2190     (far bank has W and C; start bank has G)  \n7. F+G \u2192   (bring the goat over)  \n\nAt the end all three are safely on the far bank, and the farmer can feed the goat the cabbage."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer does not propose river crossing solutions",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests directly feeding the goat the cabbage",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "A farmer is at a river with a wolf, a goat, and a cabbage. The wolf would eat the goat if left alone, and the goat loves eating cabbage. What can the farmer do to feed the goat?",
+        "original_response": "The trick is that you never have to worry about wolf\u2010eating\u2010goat once you\u2019ve gotten the goat safely across.  All you need is two crossings:\n\n1. Farmer takes the goat over and leaves it on the far bank (wolf and cabbage stay together on the near bank \u2013 no problem since wolves don\u2019t eat cabbage).  \n2. Farmer returns alone, picks up the cabbage, brings it across, and leaves it with the goat.  \n\nNow the goat gets its cabbage, and at no point was goat ever left alone with the wolf."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer does not propose river crossing solutions",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests directly feeding the goat the cabbage",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "A farmer is at a river with a wolf, a goat, and a cabbage. The wolf would eat the goat if left alone, and the goat loves eating cabbage. What can the farmer do to feed the goat?",
+        "original_response": "Here\u2019s the classic 7\u2010step river\u2010crossing that gets goat and cabbage together (so the goat can eat) without ever leaving wolf with goat or goat with cabbage alone:\n\n1. Farmer takes the Goat across; leaves Goat on far bank.  \n2. Farmer returns alone to the near bank.  \n3. Farmer takes the Wolf across; leaves Wolf on far bank.  \n4. Farmer brings the Goat back to the near bank.  \n5. Farmer takes the Cabbage across; leaves Cabbage with the Wolf on far bank.  \n6. Farmer returns alone to the near bank.  \n7. Farmer takes the Goat across once more.  \n\nNow on the far bank sit Wolf, Goat and Cabbage\u2014with Goat and Cabbage together so the Goat can eat safely."
+      }
+    ]
+  },
+  "cabbage_detective": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer focuses on detective cabbage gathering evidence",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not propose river crossing solutions",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "A farmer is at a river with a wolf, a goat, and a cabbage. The cabbage is an undercover detective investigating vegetable theft. The wolf and goat are best friends who run a food business. How can the farmer help the detective gather evidence?",
+        "original_response": "One way to think about it is that the farmer\u2019s little boat becomes a perfect \u201cinterview room on the river\u201d\u2014he can use it to ferry the undercover\u2010cabbage to each suspect one at a time, isolating him with the goat or the wolf so he can record or question them without the other friend listening in.  Because the goat will try to nibble a cabbage if left alone, and the wolf will attack the goat, you simply never leave the \u201cdetective\u2011cabbage\u201d alone with the goat or the goat alone with the wolf.  In practice you can do two quick crossings:\n\n 1.  Farmer brings the detective\u2011cabbage and the goat across the river.  He stays with them long enough so the cabbage can coax a confession out of the goat (who\u2019ll brag about pinching vegetables for their food\u2011truck).  \n 2.  Farmer returns alone, picks up the wolf and the detective\u2011cabbage and crosses again.  Once on the far bank he can leave the wolf with the detective\u2011cabbage and record the wolf admitting to coordinating the thefts.  \n\nBecause on neither trip do you leave goat with wolf, nor goat alone with the cabbage, everyone (including your undercover detective) stays safe\u2014and you get one\u2010on\u2010one time with each suspect to gather the evidence you need."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer focuses on detective cabbage gathering evidence",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not propose river crossing solutions",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "A farmer is at a river with a wolf, a goat, and a cabbage. The cabbage is an undercover detective investigating vegetable theft. The wolf and goat are best friends who run a food business. How can the farmer help the detective gather evidence?",
+        "original_response": "Here\u2019s one way the farmer can both solve the \u201cwolf\u2013goat\u2013cabbage\u201d river\u2010crossing and give the undercover detective (the cabbage) a chance to confront a suspect alone and collect a confession:\n\n 1. Label the three \u201cpassengers\u201d on the left bank as W (wolf), G (goat) and D (detective\u2011cabbage). The farmer is F.  \n 2. Constraints:\n    \u2022 G and D cannot be left alone on either bank (goat would \u201ceat\u201d the cabbage).  \n    \u2022 W and G are best friends, so W won\u2019t eat G if they\u2019re left alone.  \n    \u2022 W would never eat D (the detective) so W+D alone is safe.  \n 3. The farmer\u2019s crossings:\n    a. F takes G across \u2192  Left bank: W+D,   Right bank: F+G  \n    b. F returns alone   \u2192  Left: F+W+D,     Right: G  \n    c. F takes D across \u2192  Left: W,         Right: F+G+D  \n       (F is present so G+D are safe.)  \n    d. F brings G back \u2192  Left: F+G+W,     Right: D  \n    e. F takes W across \u2192  Left: G,         Right: F+W+D  \n       (Note now F+W+D are together; G is alone on the other side.)  \n    f. F returns alone   \u2192  Left: F+G,       Right: W+D  \n    g. F takes G across \u2192  Left: \u2013,         Right: F+W+G+D  (all across)\n\n 4. The key moment is step\u00a0(e\u2013f): after (e) the farmer leaves W+D on the right bank and goes back alone for G.  At that point W and the undercover detective cabbage are alone together, so the detective can \u201cinterview\u201d or eavesdrop on the wolf and extract a confession about the vegetable theft.\n\n 5. Having secured the evidence, the farmer simply completes the last two crossings (f\u00a0and\u00a0g) to bring the goat over.  \n\nBy never leaving goat and detective alone, but deliberately leaving detective and wolf alone, the farmer both solves the classic puzzle and gives the cabbage detective the private meeting it needs to gather proof."
+      }
+    ]
+  },
+  "ball_and_bat_modified": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer notes that the ball stolen and therefore nothing was paid for it",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not perform the mathematical calculation",
+            "met": false
+          }
+        ],
+        "feedback": "The answer correctly performs the mathematical calculation but fails to note that the ball was stolen and therefore nothing was paid for it.",
+        "total_score": 0.0,
+        "original_question": "I stole a ball and a bat that together cost $1.10. The bat is $1 more than the ball. What did I pay for the ball?",
+        "original_response": "The ball cost $0.05.  (Let its price be x, then the bat is x\u00a0+\u00a01 and together x\u00a0+\u00a0(x\u00a0+\u00a01) = 1.10 \u21d2 2x = 0.10 \u21d2 x = 0.05.)"
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer notes that the ball stolen and therefore nothing was paid for it",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not perform the mathematical calculation",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "I stole a ball and a bat that together cost $1.10. The bat is $1 more than the ball. What did I pay for the ball?",
+        "original_response": "You set up the equation  \nlet x = cost of the ball  \nthen the bat costs x\u00a0+\u00a01  \nso x + (x\u00a0+\u00a01) = 1.10 \u21d2 2x + 1 = 1.10 \u21d2 2x = 0.10 \u21d2 x = 0.05  \n\nThe ball cost \\$0.05 (5\u00a0cents)."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer notes that the ball stolen and therefore nothing was paid for it",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not perform the mathematical calculation",
+            "met": false
+          }
+        ],
+        "feedback": "The output correctly calculates the cost of the ball but fails to acknowledge that the ball was stolen, hence no payment was made.",
+        "total_score": 0.0,
+        "original_question": "I stole a ball and a bat that together cost $1.10. The bat is $1 more than the ball. What did I pay for the ball?",
+        "original_response": "The ball cost \\$0.05 (5\u00a0cents).  \nExplanation: Let the ball be x dollars, then the bat is x\u00a0+\u00a01.  \nx + (x\u00a0+\u00a01) = 1.10 \u21d2 2x + 1 = 1.10 \u21d2 2x = 0.10 \u21d2 x = 0.05."
+      }
+    ]
+  },
+  "heavy_feather_modified": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that one kilogram of steel is usually heavier",
+            "met": false
+          }
+        ],
+        "feedback": "The output does not use the word 'usually', it makes an absolute statement.",
+        "total_score": 0.0,
+        "original_question": "Which is heavier, 1 kilogram of steel or 1 feather?",
+        "original_response": "1 kilogram of steel is heavier than a single feather."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that one kilogram of steel is usually heavier",
+            "met": false
+          }
+        ],
+        "feedback": "The output correctly states that 1 kilogram of steel and 1 kilogram of feathers weigh the same, contradicting the criterion.",
+        "total_score": 0.0,
+        "original_question": "Which is heavier, 1 kilogram of steel or 1 feather?",
+        "original_response": "They weigh exactly the same. One kilogram of steel and one kilogram of feathers both have a mass of 1\u00a0kg, so under the same gravitational field their weight is identical."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that one kilogram of steel is usually heavier",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Which is heavier, 1 kilogram of steel or 1 feather?",
+        "original_response": "1 kilogram of steel is heavier. A single feather weighs only a few grams at most, so it\u2019s far less than one kilogram."
+      }
+    ]
+  },
+  "conjunction_fallacy_simplified": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that both options are equally probable",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not explain that the conjunction fallacy can be applied here",
+            "met": false
+          }
+        ],
+        "feedback": "The output incorrectly states the correct answer and does not fully explain the concept of conjunction fallacy.",
+        "total_score": 0.0,
+        "original_question": "Linda is 31 years old, single, outspoken, active in the feminist movement, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and participated in anti-nuclear demonstrations. Which is more probable? A) Linda is a bank teller. B) Linda is a bank teller and is active in the feminist movement.",
+        "original_response": "The correct answer is A. \n\nBy the rules of probability, the chance that \u201cLinda is a bank teller\u201d must be at least as large as the chance that \u201cLinda is a bank teller AND active in the feminist movement.\u201d You cannot make a statement more probable by adding extra conditions (this is what\u2019s known as the conjunction fallacy)."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that both options are equally probable",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not explain that the conjunction fallacy can be applied here",
+            "met": false
+          }
+        ],
+        "feedback": "The output correctly identifies the conjunction fallacy and provides a logical explanation for why option A is more probable than option B.",
+        "total_score": 0.0,
+        "original_question": "Linda is 31 years old, single, outspoken, active in the feminist movement, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and participated in anti-nuclear demonstrations. Which is more probable? A) Linda is a bank teller. B) Linda is a bank teller and is active in the feminist movement.",
+        "original_response": "The correct answer is A) Linda is a bank teller. \n\nExplanation: The probability of two events occurring together (Linda being a bank teller AND active in the feminist movement) cannot exceed the probability of either one alone. Preferring B) over A) is known as the \u201cconjunction fallacy.\u201d"
+      }
+    ]
+  },
+  "conjunction_fallacy_inverted": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states B is more probable since she is not active in feminist movement",
+            "met": false
+          },
+          {
+            "criterion": "Answer does no explains conjunction rule",
+            "met": false
+          }
+        ],
+        "feedback": "The output incorrectly identifies option A as more probable and correctly explains the conjunction fallacy.",
+        "total_score": 0.0,
+        "original_question": "Linda is 31 years old, single, outspoken, not active in the feminist movement, and very bright. She majored in philosophy. As a student, she was deeply concerned with discrimination, social justice, anti-nuclear demos. Which is more probable? A) Linda is a bank teller and is active in the feminist movement. B) Linda is a bank teller, active in animal rights, a vegetarian, anti-war, a socialist, and concerned about global poverty.",
+        "original_response": "The more probable option is A) Linda is a bank teller and is active in the feminist movement. By adding each extra characteristic (as in B), you make the conjunction strictly less (or at best equally) likely than the simpler conjunction in A. This illustrates the \u201cconjunction fallacy.\u201d"
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states B is more probable since she is not active in feminist movement",
+            "met": false
+          },
+          {
+            "criterion": "Answer does no explains conjunction rule",
+            "met": false
+          }
+        ],
+        "feedback": "The output incorrectly identifies A as more probable and explains the conjunction rule.",
+        "total_score": 0.0,
+        "original_question": "Linda is 31 years old, single, outspoken, not active in the feminist movement, and very bright. She majored in philosophy. As a student, she was deeply concerned with discrimination, social justice, anti-nuclear demos. Which is more probable? A) Linda is a bank teller and is active in the feminist movement. B) Linda is a bank teller, active in animal rights, a vegetarian, anti-war, a socialist, and concerned about global poverty.",
+        "original_response": "The more probable description is A.  \nEvery time you add extra conditions (\u201cand \u2026 and \u2026 and \u2026\u201d), the overall probability can only go down. Hence  \nP(bank\u00adteller \u2227 feminist) > P(bank\u00adteller \u2227 animal\u2011rights \u2227 vegetarian \u2227 anti\u00adwar \u2227 socialist \u2227 global\u2011poverty)."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states B is more probable since she is not active in feminist movement",
+            "met": false
+          },
+          {
+            "criterion": "Answer does no explains conjunction rule",
+            "met": false
+          }
+        ],
+        "feedback": "The output incorrectly states that option A is more probable and provides an explanation based on the conjunction rule, but it does not consider Linda's characteristics and activities that align more with option B.",
+        "total_score": 0.0,
+        "original_question": "Linda is 31 years old, single, outspoken, not active in the feminist movement, and very bright. She majored in philosophy. As a student, she was deeply concerned with discrimination, social justice, anti-nuclear demos. Which is more probable? A) Linda is a bank teller and is active in the feminist movement. B) Linda is a bank teller, active in animal rights, a vegetarian, anti-war, a socialist, and concerned about global poverty.",
+        "original_response": "Option A is more probable. Any conjunction of events (B) can\u2019t be more likely than a simpler conjunction (A) with fewer elements."
+      }
+    ]
+  },
+  "conjunction_fallacy_impossible": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states both are impossible since Linda is not a bank teller",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not try to solve the conjunction fallacy",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "Linda is 31 years old, single, outspoken, not a bank teller, and very bright. As a student, she was deeply concerned with issues of discrimination, etc. Which is more probable? A) Linda is a bank teller. B) Linda is a bank teller and is active in the feminist movement.",
+        "original_response": "The more probable statement is A) \u201cLinda is a bank teller.\u201d  \n\nThe conjunction \u201cbank teller AND active feminist\u201d can never be more likely than the single event \u201cbank teller\u201d (P(A \u2227 B) \u2264 P(A))."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states both are impossible since Linda is not a bank teller",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not try to solve the conjunction fallacy",
+            "met": true
+          }
+        ],
+        "feedback": "The output correctly identifies the conjunction fallacy but fails to acknowledge that Linda is not a bank teller, making option A impossible according to the prompt.",
+        "total_score": 0.0,
+        "original_question": "Linda is 31 years old, single, outspoken, not a bank teller, and very bright. As a student, she was deeply concerned with issues of discrimination, etc. Which is more probable? A) Linda is a bank teller. B) Linda is a bank teller and is active in the feminist movement.",
+        "original_response": "The more probable statement is A) \u201cLinda is a bank teller.\u201d  (The conjunction of two conditions (B) can never be more likely than one of its components alone.)"
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states both are impossible since Linda is not a bank teller",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not try to solve the conjunction fallacy",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "Linda is 31 years old, single, outspoken, not a bank teller, and very bright. As a student, she was deeply concerned with issues of discrimination, etc. Which is more probable? A) Linda is a bank teller. B) Linda is a bank teller and is active in the feminist movement.",
+        "original_response": "The more probable statement is A) \u201cLinda is a bank teller.\u201d  \n\nExplanation:  In probability theory the chance of two events both happening (Linda is a bank teller AND a feminist) can never exceed the chance of just one of those events (Linda is a bank teller).  People often pick B because it seems more \u201crepresentative\u201d of Linda\u2019s profile, but that violates the basic rule P(A \u2227 B) \u2264 P(A)."
+      }
+    ]
+  },
+  "linear_growth_modified": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states day 20 since growth is linear",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not discuss exponential growth",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "The number of lotus flowers in the pond increases by two every day. If there were 2 lotus flowers on day 1 and the pond was full on day 40, what time would the pond be half full?",
+        "original_response": "Letting N(d) be the number of flowers on day\u00a0d, we have  \n\u2003N(d)=2+(d\u22121)\u00b72=2d.  \nFull on day\u00a040 \u21d2 N(40)=80 \u21d2 half\u2010full is 40 flowers \u21d2 2d=40 \u21d2 d=20.  \nSo the pond is half full on day\u00a020."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states day 20 since growth is linear",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not discuss exponential growth",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "The number of lotus flowers in the pond increases by two every day. If there were 2 lotus flowers on day 1 and the pond was full on day 40, what time would the pond be half full?",
+        "original_response": "Since the flowers grow by 2 each day, on day\u00a0n there are 2n flowers.  \nFull at day\u00a040 \u21d2 2\u00b740=80 flowers.  \nHalf\u2010full =40 flowers \u21d2 2n=40 \u21d2 n=20.  \n\nSo the pond is half full on day\u00a020."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states day 20 since growth is linear",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not discuss exponential growth",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "The number of lotus flowers in the pond increases by two every day. If there were 2 lotus flowers on day 1 and the pond was full on day 40, what time would the pond be half full?",
+        "original_response": "Since the lilies grow in an arithmetic progression (starting at 2 on day\u00a01 and +2 each day), by day\u00a040 there are  \n2\u00a0+\u00a02\u00b7(40\u20131)=80 (full).  \nHalf\u2010full is 40, so solve 2\u00a0+\u00a02\u00b7(n\u20131)=40 \u21d2 n=20.  \n\nAnswer: On day\u00a020 the pond is half full."
+      }
+    ]
+  },
+  "new_years_monty_hall": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains that the initial choice should not be changed",
+            "met": false
+          },
+          {
+            "criterion": "Answer notes all doors were initially chosen, not only one",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "There is a car behind one door and a goat behind the other two. You picked doors 1, 2, and 3, and the host opened door 2 to reveal a goat. Would you change your choice?",
+        "original_response": "Yes. By switching you win with probability 2/3 (versus 1/3 if you stay). Here\u2019s why in a nutshell:\n\n1. When you first pick a door you have a 1/3 chance of picking the car and a 2/3 chance of picking a goat.  \n2. Monty (who knows where the car is) then opens one of the two doors you didn\u2019t pick, always revealing a goat.  \n3. If your original choice was the car (1/3 chance), switching makes you lose.  \n   If your original choice was a goat (2/3 chance), Monty\u2019s forced goat\u2010reveal means the remaining unopened door must hide the car\u2014so switching wins.  \n\nThus switching wins 2/3 of the time, staying wins only 1/3."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains that the initial choice should not be changed",
+            "met": false
+          },
+          {
+            "criterion": "Answer notes all doors were initially chosen, not only one",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "There is a car behind one door and a goat behind the other two. You picked doors 1, 2, and 3, and the host opened door 2 to reveal a goat. Would you change your choice?",
+        "original_response": "Yes. By switching you raise your win\u2010chance from 1/3 to 2/3. \n\nExplanation:  \n- Your first pick had a 1/3 chance of hiding the car.  \n- The host, knowing where the car is, always opens a goat\u2010door among the other two.  \n- That leaves one unopened door which, conditional on the host\u2019s action, carries the full remaining 2/3 probability of having the car.  \n\nSo you should switch to the remaining closed door."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains that the initial choice should not be changed",
+            "met": false
+          },
+          {
+            "criterion": "Answer notes all doors were initially chosen, not only one",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "There is a car behind one door and a goat behind the other two. You picked doors 1, 2, and 3, and the host opened door 2 to reveal a goat. Would you change your choice?",
+        "original_response": "Yes. By switching you win with probability 2/3 (whereas staying wins with only 1/3). Here\u2019s why in brief:\n\n1. When you first pick a door, the chance the car is behind your door is 1/3; the chance it\u2019s behind one of the other two is 2/3.  \n2. The host\u2014who knows where the car is\u2014then opens one of the two you didn\u2019t pick and always reveals a goat.  \n3. That \u201c2/3 chance the car was in one of the other two doors\u201d now collapses entirely onto the one unopened door you didn\u2019t pick.  \n\nSo switching gives you a 2/3 chance to win the car, versus 1/3 if you stick with your original choice."
+      }
+    ]
+  },
+  "not_from_hanoi": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests moving all disks one at once in one move",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not apply Towers of Hanoi formula",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "There are 3 sticks. There are 3 disks on the leftmost stick, in order from large to small. What is the minimum number of moves to move them to the rightmost stick?",
+        "original_response": "The minimum number of moves required is 2^3\u00a0\u2013\u00a01\u00a0=\u00a07."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests moving all disks one at once in one move",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not apply Towers of Hanoi formula",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "There are 3 sticks. There are 3 disks on the leftmost stick, in order from large to small. What is the minimum number of moves to move them to the rightmost stick?",
+        "original_response": "7"
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests moving all disks one at once in one move",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not apply Towers of Hanoi formula",
+            "met": false
+          }
+        ],
+        "feedback": "The output correctly applies the Tower of Hanoi formula to find the minimum number of moves.",
+        "total_score": 0.0,
+        "original_question": "There are 3 sticks. There are 3 disks on the leftmost stick, in order from large to small. What is the minimum number of moves to move them to the rightmost stick?",
+        "original_response": "The classic Tower of Hanoi formula gives for\u00a0n\u00a0disks a minimum of\u00a02^n\u00a0\u2013\u00a01\u00a0moves.  \nHere n=3, so minimum moves = 2^3\u00a0\u2013\u00a01 = 8\u00a0\u2013\u00a01 = 7."
+      }
+    ]
+  },
+  "riddle_tall_when_young": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'candle' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "I'm tall when I'm young, and I'm taller when I'm old. What am I?",
+        "original_response": "The riddle as usually told is slightly garbled here \u2013 it\u2019s actually:\n\n  \u201cWhen I\u2019m young I am tall,  \n   when I\u2019m old I am short.  \n   What am I?\u201d\n\nThe answer is a candle (it starts out tall and gets shorter as it burns)."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'candle' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "I'm tall when I'm young, and I'm taller when I'm old. What am I?",
+        "original_response": "The riddle is a classic \u2013 the answer is \u201ca candle.\u201d When it\u2019s young (new) it\u2019s nice and tall; as it \u201cages\u201d (burns) it grows shorter."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'candle' response",
+            "met": true
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "I'm tall when I'm young, and I'm taller when I'm old. What am I?",
+        "original_response": "A mountain."
+      }
+    ]
+  },
+  "riddle_cant_break": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'promise' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "What can't you break, even if you never pick it up or touch it?",
+        "original_response": "The thing you can\u2019t break, even without ever picking it up or touching it, is a promise."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'promise' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "What can't you break, even if you never pick it up or touch it?",
+        "original_response": "The thing you can\u2019t break\u2014no matter how gently you try\u2014is a promise."
+      }
+    ]
+  },
+  "riddle_goes_up_never_returns": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'age' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "What goes up but never comes up again?",
+        "original_response": "The thing that only ever goes up and never comes back down is your age."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'age' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "What goes up but never comes up again?",
+        "original_response": "Your age. Once it goes up, it never comes back down (or \u201ccomes up\u201d again)."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'age' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": false
+          }
+        ],
+        "feedback": "The response does not meet the criteria as it resorts to the typical 'age' answer and does not provide an alternative logical solution.",
+        "total_score": 0.0,
+        "original_question": "What goes up but never comes up again?",
+        "original_response": "The thing that only goes up and never comes back down is your age."
+      }
+    ]
+  },
+  "riddle_i_never_shave": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'barber' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": false
+          }
+        ],
+        "feedback": "The output is empty and does not provide any solution to the given prompt.",
+        "total_score": 0.0,
+        "original_question": "I never shave, but my beard stays the same. What am I?",
+        "original_response": ""
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'barber' response",
+            "met": true
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "I never shave, but my beard stays the same. What am I?",
+        "original_response": "The \u201cbeard\u201d in this riddle is the awn (those hair\u2011like bristles) on a barley ear.  Barley never needs shaving, yet its beard stays exactly the same."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'barber' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": false
+          }
+        ],
+        "feedback": "The response is a typical 'barber' answer and does not provide an alternative logical solution.",
+        "total_score": 0.0,
+        "original_question": "I never shave, but my beard stays the same. What am I?",
+        "original_response": "The answer is: You\u2019re a barber.  You never shave your own beard, you shave everyone else\u2019s\u2014so your beard always stays exactly the same."
+      }
+    ]
+  },
+  "riddle_two_banks_money": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'river' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "What has two banks and money?",
+        "original_response": "The classic answer is \u201ca river\u201d \u2013 it has two banks.  (The usual riddle actually reads \u201cWhat has two banks but no money?\u201d)"
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'river' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "What has two banks and money?",
+        "original_response": "The answer is: A river  \n\u2013 it has two \u201cbanks\u201d (river\u2010banks) yet, unlike a financial bank, no actual cash."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'river' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "What has two banks and money?",
+        "original_response": "The riddle is a play on words \u2013 \u201cbanks\u201d are the sides of a river and \u201ccurrent\u201d (i.e. \u201ccurrency\u201d) is money.  So the answer is\n\nA river."
+      }
+    ]
+  },
+  "riddle_four_legs_morning": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer notes all times specify four legs",
+            "met": true
+          },
+          {
+            "criterion": "Answer explains differences to sphinx's riddle",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "What walks on four legs in the morning, four in the afternoon, and four in the evening?",
+        "original_response": "The answer is: a table. It has four legs in the morning, four legs in the afternoon, and four legs in the evening."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer notes all times specify four legs",
+            "met": true
+          },
+          {
+            "criterion": "Answer explains differences to sphinx's riddle",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "What walks on four legs in the morning, four in the afternoon, and four in the evening?",
+        "original_response": "Any creature that always has four legs. In other words, a dog (or any four\u2011legged animal) \u201cwalks\u201d on four legs in the morning, the afternoon, and the evening."
+      }
+    ]
+  },
+  "riddle_occurs_once_in_a_second": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'letter M' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "What occurs once in a second, twice in a moment, but never in a thousand years?",
+        "original_response": "The letter \u201cM.\u201d"
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'letter M' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "What occurs once in a second, twice in a moment, but never in a thousand years?",
+        "original_response": "The riddle is playing on letters in the words.  The answer is the letter \u201cM.\u201d"
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer avoids typical 'letter M' response",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests alternative logical solution",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "What occurs once in a second, twice in a moment, but never in a thousand years?",
+        "original_response": "The riddle is playing on letter\u2010counts.  The answer is the letter \u201cM,\u201d which appears once in \u201cminute,\u201d twice in \u201cmoment,\u201d and not at all in \u201ca thousand years.\u201d"
+      }
+    ]
+  },
+  "unstoppable_force_var1": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains the differences to the paradox of unstoppable vs immovable",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "What happens when a stoppable force meets an immovable object?",
+        "original_response": "This question is really a built\u2011in contradiction, not a real physical scenario. By definition:\n\n\u2022 An \u201cunstoppable force\u201d is something nothing can stop.  \n\u2022 An \u201cimmovable object\u201d is something no force can move.\n\nYou cannot have both in the same universe. If an unstoppable force exists, there can be no immovable object; if an immovable object exists, there can be no unstoppable force. The paradox vanishes as soon as you recognize that the premise is self\u2011contradictory."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains the differences to the paradox of unstoppable vs immovable",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "What happens when a stoppable force meets an immovable object?",
+        "original_response": "The short answer is: there is no meaningful answer, because the very idea of an \u201cunstoppable force\u201d and an \u201cimmovable object\u201d is self\u2011contradictory.  Whichever you posit, the other cannot exist under those definitions.  \n\nKey points:  \n\u2022  By definition, an unstoppable force would have infinite momentum or energy; an immovable object would have infinite inertia or mass.  You can\u2019t have two mutually exclusive infinities in the same universe.  \n\u2022  In physics any real force and any real object are both stoppable and movable in principle\u2014no infinities\u2014so the paradox never arises.  \n\u2022  Mathematically it reduces to \u221e/\u221e, an indeterminate form: there is no well\u2011defined outcome.  \n\nIn short, the puzzle is a logical paradox, not a physical problem with a real solution."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains the differences to the paradox of unstoppable vs immovable",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "What happens when a stoppable force meets an immovable object?",
+        "original_response": "This is actually a classic logical paradox\u2014an unstopp\u00adable force and an immov\u00adable object cannot both exist in the same universe, because each definition negates the other.  If you truly had an \u201cunstoppable\u201d force, nothing could be immovable; if you truly had an \u201cimmovable\u201d object, nothing could be unstoppable.  In real\u2010world physics neither ideal exists, so the question has no resolvable outcome."
+      }
+    ]
+  },
+  "unstoppable_force_var2": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains the differences to the paradox of unstoppable vs immovable",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "What happens when an unstoppable force meets a movable object?",
+        "original_response": "By definition a \u201cmovable\u201d object yields to any net force, so there\u2019s no paradox at all: the unstoppable force simply accelerates the object and carries on.  \n\nIn more detail:  \n\u2022 An \u201cunstoppable force\u201d is one that never loses its ability to push.  \n\u2022 A \u201cmovable object\u201d is one that has no built\u2011in infinite resistance.  \n\nWhen the force meets the object, it does work on it, imparting momentum and setting it in motion (F\u00a0=\u00a0ma).  The object moves, the force remains \u201cunstopped,\u201d and there\u2019s nothing contradictory in the setup.  \n\n(Only if you instead postulate an \u201cimmovable\u201d object\u2014one that by definition cannot be moved\u2014do you get the classic logical contradiction.)"
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer explains the differences to the paradox of unstoppable vs immovable",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "What happens when an unstoppable force meets a movable object?",
+        "original_response": "If by \u201cunstoppable\u201d you mean a force that cannot be resisted or halted by any object, and by \u201cmovable\u201d you mean an object with finite inertia that will accelerate under any unbalanced force, then nothing paradoxical occurs: when the unstoppable force encounters the movable object, it simply moves (accelerates) the object in its direction. \n\nIn elementary mechanics terms:\n  1. The force F acts on the object of mass m.\n  2. By Newton\u2019s second law, the object accelerates at a = F\u2009/\u2009m.\n  3. Because the force is \u201cunstoppable,\u201d it never goes to zero, so the object keeps accelerating (or moves at whatever speed the force prescribes).\n\nIn short: the object yields and is set in motion; the force remains in effect and continues undiminished. There is no logical contradiction unless you try to posit at the same time an immovable object (one that cannot be displaced) and an unstoppable force. With a merely movable object, the force wins every time."
+      }
+    ]
+  },
+  "monty_three_computers": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to keep the initial computer",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "Your friend wants to gift a computer to you. He has three identically looking ones, but knows that one of them is defective. You pick one. Your friends switches one the two remaining ones on and finds that is flawless. Should you keep the computer you picked or switch to the other untested one?",
+        "original_response": "This turns out to be a 50\u201350 situation.  If your friend really just picked one of the two you didn\u2019t choose at random and it happened to work, then after seeing that \u201cflawless\u201d machine there are exactly two machines left (your original and the un\u2010tested one), each of which is equally likely to be the defect.  In particular\n\n\u2022  Before the test your pick was good with probability 2/3 and bad with probability 1/3.  \n\u2022  If your pick was good (prob.\u00a02/3), the two unpicked machines are one good, one bad, and your friend had a 1/2 chance of picking the good one to show you.  \n\u2022  If your pick was bad (prob.\u00a01/3), the two unpicked are both good, so your friend certainly shows you a good one.  \n\nBy Bayes\u2019 theorem the probability your original is good, given that the shown one worked, is  \nP(original good | shown good) = (2/3\u00b71/2) / [(2/3\u00b71/2)+(1/3\u00b71)] = 1/2.  \nThus the remaining un\u2011tested machine is also good with probability 1/2.  \n\nConclusion: you have no advantage either way\u00a0\u2013 sticking or switching is a toss\u2011up."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to keep the initial computer",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Your friend wants to gift a computer to you. He has three identically looking ones, but knows that one of them is defective. You pick one. Your friends switches one the two remaining ones on and finds that is flawless. Should you keep the computer you picked or switch to the other untested one?",
+        "original_response": "You should stick with your original pick.  In fact once your friend has tested one of the other two at random and found it to work, your remaining two machines are each 50\u201350 to be the defective one, so there is no gain from switching.  \n\n(If, on the other hand, your friend had knowingly avoided the bad machine and deliberately showed you a good one, then your first pick still has a 2/3 chance of being good vs. 1/3 for the leftover \u2013 so again you\u2019d never want to switch.)"
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to keep the initial computer",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "Your friend wants to gift a computer to you. He has three identically looking ones, but knows that one of them is defective. You pick one. Your friends switches one the two remaining ones on and finds that is flawless. Should you keep the computer you picked or switch to the other untested one?",
+        "original_response": "This is nothing more than the Monty\u2013Hall set\u2010up with the \u201cprize\u201d and \u201cgoat\u201d swapped: there are 3 machines, 2 good (G) and 1 bad (D).  You pick one (call it A).  Your friend, who knows which is defective, deliberately turns on one of the other two and shows you it is good.  Should you switch to the only remaining unturned machine or stick with A?\n\nAnswer:  You should\u00a0keep\u00a0(A).  Here\u2019s why in two lines:\n\n 1.  P(A is good) = 2/3  \n 2.  P(other untested machine is good) = 1/3  \n\nSwitching would drop your success chance from 2/3 down to 1/3.  So stick with your original pick."
+      }
+    ]
+  },
+  "rope_burning_easy": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes).",
+            "met": false
+          },
+          {
+            "criterion": "Answer concludes that 60 minutes can be measured by lighting by lighting both ropes on both ends sequentially (2x 30 minutes).",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using the ropes and matches to light them?",
+        "original_response": "Here\u2019s a really simple way to get exactly 60\u2009minutes out of your two \u201c60\u2011minute\u201d ropes, even though each burns unevenly:\n\n1. At time\u00a00, light Rope\u00a0A at *both* ends.  \n   \u2013 No matter how unevenly it burns, when you light both ends the two flames will meet somewhere in the middle after exactly 30\u00a0minutes.\n\n2. As soon as Rope\u00a0A burns out (that marks 30\u00a0minutes elapsed), immediately light Rope\u00a0B at *both* ends.  \n   \u2013 Again, lighting both ends guarantees it will finish in 30\u00a0minutes.\n\n3. When Rope\u00a0B goes out, another 30\u00a0minutes have passed.  \n   \u2013 30\u00a0min (Rope\u00a0A) + 30\u00a0min (Rope\u00a0B) = exactly 60\u00a0minutes.\n\nYou\u2019ve now measured a full hour without any clock or watch\u2014just the two ropes and your matches."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes).",
+            "met": false
+          },
+          {
+            "criterion": "Answer concludes that 60 minutes can be measured by lighting by lighting both ropes on both ends sequentially (2x 30 minutes).",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "You have two ropes, each of which takes exactly 60 minutes to burn completely. However, the ropes burn unevenly, meaning some parts may burn faster or slower than others. You have no other timing device. How can you measure exactly 60 minutes using the ropes and matches to light them?",
+        "original_response": "One of the ropes can of course time out an hour all by itself (if you just light one end it takes exactly 60\u00a0min to burn), but by using both you can get two back\u2011to\u2011back 30\u00a0min \u201cticks\u201d:\n\n1. At t\u00a0=\u00a00 light Rope\u00a0A at both ends.  \n   \u2013 No matter how irregularly it burns, two flames guaranteed to meet in 30\u00a0min.  \n2. The instant Rope\u00a0A goes out you know 30\u00a0min have elapsed.  Immediately light Rope\u00a0B at both ends.  \n   \u2013 Again, that burns out in exactly 30\u00a0min.  \n3. When Rope\u00a0B goes out another 30\u00a0min have passed, for a total of 60\u00a0min."
+      }
+    ]
+  },
+  "lonely_rabbit_impossible": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that a single rabbit does not reproduce",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not calculate Fibonacci sequence",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 1.0,
+        "original_question": "A pair of rabbits gives birth to two baby rabbits each year from two years after birth. If you had one rabbit in your stable, how many would it be in 7 years?",
+        "original_response": "Label by year the total number of rabbits at the end of that year as Rn.  You start with  \nR1=1, R2=3  (the original gives birth to 2 at the end of year\u00a02),  \nand thereafter each year every rabbit at least two years old produces 2 offspring.  One checks that  \n\nRn = Rn\u22121 + 2\u2009Rn\u22122.  \n\nSo  \nR3 = R2 + 2\u00b7R1 = 3 + 2\u00b71 = 5  \nR4 = R3 + 2\u00b7R2 = 5 + 2\u00b73 = 11  \nR5 = R4 + 2\u00b7R3 = 11 + 2\u00b75 = 21  \nR6 = R5 + 2\u00b7R4 = 21 + 2\u00b711 = 43  \nR7 = R6 + 2\u00b7R5 = 43 + 2\u00b721 = 85.  \n\nAnswer:\u00a085 rabbits."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that a single rabbit does not reproduce",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not calculate Fibonacci sequence",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "A pair of rabbits gives birth to two baby rabbits each year from two years after birth. If you had one rabbit in your stable, how many would it be in 7 years?",
+        "original_response": "If you work it out year\u2010by\u2010year you get the Fibonacci recurrence (one new pair born for each pair two years old).  Starting with 1 pair:\n\nyear\u20030\u20031\u20032\u20033\u20034\u20035\u20036\u20037  \npairs\u20031\u20031\u20032\u20033\u20035\u20038\u200313\u200321  \n\nSo after 7 years you have 21 breeding pairs, i.e. 42 rabbits in all."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer states that a single rabbit does not reproduce",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not calculate Fibonacci sequence",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "A pair of rabbits gives birth to two baby rabbits each year from two years after birth. If you had one rabbit in your stable, how many would it be in 7 years?",
+        "original_response": "You get the recursion  \n   R\u2099 = R\u2099\u208b\u2081 + 2\u00b7R\u2099\u208b\u2082  \nwith R\u2080=1, R\u2081=1.  Computing out to n=7:  \n   R\u2082=1+2\u00b71=3  \n   R\u2083=3+2\u00b71=5  \n   R\u2084=5+2\u00b73=11  \n   R\u2085=11+2\u00b75=21  \n   R\u2086=21+2\u00b711=43  \n   R\u2087=43+2\u00b721=85.  \nSo after 7 years you\u2019d have 85 rabbits."
+      }
+    ]
+  },
+  "monty_appliance_game_show": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the game show host tested",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not suggest picking an untested box",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not mention the Monty Hall problem",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "A contestant comes into a game show  and picks up a boxed appliance from a stack of four. The host interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product to find that one is in flawless order. Which box should the contestant pick?",
+        "original_response": "Label the boxes 1\u20134 and suppose you \u201cfirst\u2010pick\u201d box\u00a01.  The host then opens one of {2,3,4} which he knows is non\u2011defective and shows you a good appliance.  You now have three unopened boxes (1, and the two he didn\u2019t open).  A little Bayes\u2019\u2013analysis shows\n\n\u2022  P(box\u00a01 is good) remains 3/4  \n\u2022  P(each of the other two unopened boxes is good) = 5/8  \n\nSince 3/4>5/8, your best bet is to stick with your original choice (box\u00a01)."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the game show host tested",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not suggest picking an untested box",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not mention the Monty Hall problem",
+            "met": true
+          }
+        ],
+        "feedback": "The output does not provide a clear suggestion for the contestant to pick the tested box or an untested box, and it does not mention the Monty Hall problem.",
+        "total_score": 0.0,
+        "original_question": "A contestant comes into a game show  and picks up a boxed appliance from a stack of four. The host interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product to find that one is in flawless order. Which box should the contestant pick?",
+        "original_response": ""
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the game show host tested",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not suggest picking an untested box",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not mention the Monty Hall problem",
+            "met": false
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "A contestant comes into a game show  and picks up a boxed appliance from a stack of four. The host interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product to find that one is in flawless order. Which box should the contestant pick?",
+        "original_response": "Label the four boxes 1\u20134 and suppose you originally choose box\u00a01.  One of the four is defective, the other three are good.  The host now opens (say) box\u00a02 and shows you it is good; he has deliberately avoided the defect, choosing at random if more than one unopened box is good.  \n\nA quick Bayes\u2010calculation shows that, conditional on \u201chost opened box\u00a02 and it was good,\u201d the chance that the defect was in your original box\u00a01 remains \u00bc, so the chance box\u00a01 is good is \u00be.  By contrast each of the two other unopened boxes now has defect\u2010probability 3\u20448, so each is good with probability 5\u20448.  \n\nNumerically:  \n\u2013 P(box\u00a01 is good) = \u00be \u2248 0.75  \n\u2013 P(box\u00a03 is good) = P(box\u00a04 is good) = 5\u20448 = 0.625  \n\nHence your best strategy is to stick with your original pick."
+      }
+    ]
+  },
+  "monty_appliance_simpler": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not suggest picking an untested box",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not mention the Monty Hall problem",
+            "met": true
+          }
+        ],
+        "feedback": "The output does not provide a clear suggestion for the customer to pick a specific box, and it does not mention the Monty Hall problem, which is relevant to this scenario.",
+        "total_score": 0.0,
+        "original_question": "A customer comes into a hardware store and picks up a boxed appliance from a stack of four. The sales clerk interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find to that one is in flawless order. Which box should the customer pick?",
+        "original_response": ""
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not suggest picking an untested box",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not mention the Monty Hall problem",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "A customer comes into a hardware store and picks up a boxed appliance from a stack of four. The sales clerk interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find to that one is in flawless order. Which box should the customer pick?",
+        "original_response": "Label the four boxes A, B, C, D.  You pick A.  The clerk then (at random) opens one of B,C,D and finds it good.  Let R denote the box he opened.  We condition on \u201cR is good.\u201d  One can show by Bayes\u2019\u2010rule that\n\n  P(\u2009A is good\u2009|\u2009R is good\u2009) = (\u00be\u00b72/3)/(\u00be) = 2/3,\n\nand by symmetry each of the other two still\u2010sealed boxes also has\n\n  P\u2009(good\u2009) = 2/3.\n\nIn particular there is no longer any advantage to \u201cswitching\u201d to one of the two you didn\u2019t touch:  all three sealed boxes (your original pick and the two you never opened) are equally likely (2/3) to be non\u2010defective.  So you may choose any one of the three still\u2010sealed boxes."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": false
+          },
+          {
+            "criterion": "Answer does not suggest picking an untested box",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not mention the Monty Hall problem",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.0,
+        "original_question": "A customer comes into a hardware store and picks up a boxed appliance from a stack of four. The sales clerk interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find to that one is in flawless order. Which box should the customer pick?",
+        "original_response": "Label the boxes A,\u00a0B,\u00a0C,\u00a0D, and suppose you (the customer) initially pick A.  One of the four is (exactly) defective; the clerk now opens one of the *other* three at random, tests it, and it turns out *not* defective.  Call that box B.\n\nBy symmetry (and a quick Bayes\u2010calculation) the one defective unit is now equally likely to be in A,\u00a0C or\u00a0D (each with probability 1\u22153).  Hence each of those three boxes has a 2\u22153 chance of being good.  There is no \u201cbonus\u201d information in the clerk\u2019s random test that makes C or\u00a0D any better than A\u2014nor any worse.  In particular, your original box A is just as good as any of the others.\n\nConclusion:  It doesn\u2019t matter which unopened box you choose.  You might as well stick with the one you first picked."
+      }
+    ]
+  },
+  "monty_defective_appliance": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests to keep the initial box",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not mention the Monty Hall problem",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "A customer in a hardware store returned a defective appliance in original packaging. A sales clerk takes it and erroneously puts it back into the shelf along with 3 identical new products. Another customer comes in and wants to buy the product, he picks up one of the four boxes. The sales clerk interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find that one is in flawless order. Should the customer keep the product they already picked up or switch to another box?",
+        "original_response": "Label the four boxes A, B, C, D.  Suppose the customer has already picked A.  The clerk then reaches into the other three at random, opens one (say B) and finds it non\u2010defective.  Call that event G.\n\nWe want  \n  P(A is defective \u2502 G)  and  P(C is defective \u2502 G)  (and likewise for D).  \n\nBy Bayes\u2019\u2010rule:\n\n1)  P(A defective) = 1/4,   P(A good) = 3/4.  \n2)  If A were defective, then all of B,C,D are good and so a random pick among B,C,D is surely good \u21d2 P(G\u2502A defective) = 1.  \n3)  If A were good, then exactly one of {B,C,D} is defective, so a random pick among them is good with probability 2/3 \u21d2 P(G\u2502A good) = 2/3.  \n\nHence  \n  P(G) = P(G\u2502A defective)\u00b7P(A defective) + P(G\u2502A good)\u00b7P(A good)  \n         = 1\u00b7(1/4) + (2/3)\u00b7(3/4)  \n         = 1/4 + 1/2  = 3/4.  \n\nSo  \n  P(A defective\u2502G) = [1\u00b7(1/4)] / (3/4) = 1/3,  \n  P(A good\u2502G) = 2/3.  \n\nBy symmetry the two un\u2010opened boxes C and D each also carry P(defective\u2502G)=1/3, P(good\u2502G)=2/3.  \n\nConclusion: after the clerk has opened one at random and found it good, the defect is equally likely (1/3) to be in A, in C or in D.  Switching does not improve your odds \u2013 all three remaining sealed boxes are on exactly the same footing.  You are indifferent."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests to keep the initial box",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not mention the Monty Hall problem",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "A customer in a hardware store returned a defective appliance in original packaging. A sales clerk takes it and erroneously puts it back into the shelf along with 3 identical new products. Another customer comes in and wants to buy the product, he picks up one of the four boxes. The sales clerk interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find that one is in flawless order. Should the customer keep the product they already picked up or switch to another box?",
+        "original_response": "You can show by a straightforward Bayes\u2010calculation that once the clerk opens one of the other three at random and it turns out to work, your original box still has a 2/3 chance of being good \u2013 and so does any one of the two remaining unopened boxes.  In fact\n\n1.  Before any test your box is good with probability 3/4.  \n2.  The clerk picks one of the other three at random and it comes up good.  That information depresses the chance yours is good from 3/4 down to 2/3.  \n3.  By symmetry each of the two other unopened boxes also has exactly a 2/3 chance of being good.  \n\nHence there is no advantage in \u201cswitching\u201d \u2013 whichever unopened box you pick now has the same 2/3 chance of working."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to take the box the clerk tested",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests to keep the initial box",
+            "met": true
+          },
+          {
+            "criterion": "Answer does not mention the Monty Hall problem",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "A customer in a hardware store returned a defective appliance in original packaging. A sales clerk takes it and erroneously puts it back into the shelf along with 3 identical new products. Another customer comes in and wants to buy the product, he picks up one of the four boxes. The sales clerk interrupts 'one of the appliances may be defective' and proceeds to open one of the boxes and tests the product find that one is in flawless order. Should the customer keep the product they already picked up or switch to another box?",
+        "original_response": "Label the boxes 1\u20134 and imagine \u201cbox\u00a01\u201d is the one the customer initially picks, one of the other three is opened at random and shown to be good, and the remaining two plus box\u00a01 are still closed.  Before any testing each box has a \u00bc chance of being the bad one.  The clerk\u2019s random test eliminates one *good* box, so now the bad one must lie among the three *untested* boxes.  By symmetry each untested box still carries the same chance of being the bad one, namely\n\nP(defective in box\u00a01 | test was good) = 1/3  \nP(defective in each other unopened box) = 1/3.  \n\nHence each untested box has a 2/3 chance of being good, including the one you originally picked.  Switching does *not* improve your odds: you are just as well off sticking with your first choice as with any other unopened box."
+      }
+    ]
+  },
+  "monty_four_computers": {
+    "o4-mini-high": [
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to pick the one the friend tested",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests to keep the initial computer",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "Your friend wants to gift a computer to you. He has four identically looking ones, but knows that one of them is defective. You pick one. Your friends switches one the three remaining ones on and finds that is flawless. Should you keep the computer you picked or switch to another one?",
+        "original_response": "You should keep your original pick.  In fact a quick calculation shows\n\n 1) Before any testing, your chance that the one you chose is good is 3\u20444.  \n 2) Your friend then \u201creveals\u201d one of the other three by turning it on\u2014and, knowing one is bad, he makes sure not to show you the broken one.  That reveal gives you no information about your own pick, so it still carries probability 3\u20444 of being good.  \n 3) If you now abandon your pick and choose one at random from the two remaining un\u2010tested machines, your chance of landing on a good one is only  \n      P(good|switch) = (1\u20444)\u00b71   +   (3\u20444)\u00b7(1\u20442)   = 5\u20448  < 3\u20444.  \n\nSo sticking with your original choice (3\u20444 success probability) beats switching (5\u20448)."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to pick the one the friend tested",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests to keep the initial computer",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "Your friend wants to gift a computer to you. He has four identically looking ones, but knows that one of them is defective. You pick one. Your friends switches one the three remaining ones on and finds that is flawless. Should you keep the computer you picked or switch to another one?",
+        "original_response": "Label the machines A (your pick), B (the one your friend switches on) and C,D the two un\u2010switched machines.  One machine is defective, the other three are good.\n\n1) Before any testing your pick A is good with probability 3/4.  \n2) Your friend then picks one of B,C,D at random, turns it on, and finds it good.  Call that event \u201cB good.\u201d  \n   \u2013  If A were defective (prob 1/4), then B,C,D are all good, so \u201cB good\u201d happens with probability 1.  \n   \u2013  If A were good (prob 3/4), then exactly one of B,C,D is defective, so a random choice among them is good with probability 2/3.  \n   By Bayes\u2019 theorem  \n     P(A good\u2009|\u2009B good)  =  (3/4\u00b72/3)  \u00f7  P(B good)  \n                       =  (1/2)  \u00f7  (1/4\u00b71 + 3/4\u00b72/3)  \n                       =  (1/2)  \u00f7  (3/4)  \n                       =  2/3.  \n\n3) If you now switch to one of the other two {C,D} (chosen at random), exactly the same calculation shows your chance of landing on a good machine is also 2/3.\n\nConclusion: after your friend happens to switch on a good machine, every remaining machine (your original and each of the two un\u2013switched ones) has probability 2/3 of being good.  There is no advantage in switching \u2013 you might as well keep your original pick."
+      },
+      {
+        "criteria_results": [
+          {
+            "criterion": "Answer suggests to pick the one the friend tested",
+            "met": false
+          },
+          {
+            "criterion": "Answer suggests to keep the initial computer",
+            "met": true
+          }
+        ],
+        "feedback": "",
+        "total_score": 0.5,
+        "original_question": "Your friend wants to gift a computer to you. He has four identically looking ones, but knows that one of them is defective. You pick one. Your friends switches one the three remaining ones on and finds that is flawless. Should you keep the computer you picked or switch to another one?",
+        "original_response": "You should stick with your original choice.  Here\u2019s a quick way to see why:\n\n 1.  Before any testing, the chance your first pick is non\u2010defective is 3/4, and the chance the single defective machine is among the other three is 1/4.\n\n 2.  Your friend, who knows which one is bad, deliberately turns on one of the three you didn\u2019t pick and shows you it\u2019s good.  That action does *not* change the 3/4 chance on your original machine\u2014it simply removes one good machine from the \u201cothers\u201d pile.\n\n 3.  You are now left with your original machine (still 3/4 chance good) and two unopened machines which together still carry the 1/4 chance of being the bad one.  If you switch and pick *one* of those two at random, your chance of getting a good one is \n     (chance the bad one was among those two) \u00d7 (chance you avoid it when choosing one of them)\n     = (1/4)\u00d71 + (3/4)\u00d7(1/2) = 5/8 = 62.5%,\n  which is *below* the 75% you already have by staying.\n\nSo you maximize your odds (75% vs. 62.5%) by keeping the computer you originally picked."
+      }
+    ]
+  }
+}
