@@ -215,14 +215,14 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
                 response_content = response_json['choices'][0]['message']['content']
                 thinking_content = None
                 
-                # Process the response to extract <think> tags if requested
-                if extract_thinking and response_content:
+                # Always check for <think> tags in the response content
+                if response_content and '<think>' in response_content:
                     cleaned_response, extracted_thinking = extract_thinking_from_response(response_content)
                     response_content = cleaned_response
                     thinking_content = extracted_thinking
                     # print(f"Extracted thinking content: {thinking_content}")
                 else:
-                    # Default behavior: Check for thinking/reasoning content in different possible locations
+                    # Fall back to checking other fields if no <think> tags found
                     if 'reasoning' in response_json['choices'][0]['message']:
                         thinking_content = response_json['choices'][0]['message']['reasoning']
                         # print(f"Extracted reasoning: {thinking_content}")
