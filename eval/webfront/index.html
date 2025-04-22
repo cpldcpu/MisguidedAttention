@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Model Evaluation Heatmap</title>
-    <!-- Plotly.js CDN -->
-    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <!-- Updated Plotly.js to specific version instead of using latest -->
+    <script src='https://cdn.plot.ly/plotly-2.24.1.min.js'></script>
     <!-- Markdown-it for rendering markdown responses -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js"></script>
+    <!-- KaTeX for LaTeX math rendering (direct method, no markdown-it plugin) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+    <!-- Removed problematic markdown-it-katex plugin -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>

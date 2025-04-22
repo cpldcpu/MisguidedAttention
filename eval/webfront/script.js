@@ -549,13 +549,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const gd = document.getElementById('heatmap');
         if (!gd) { console.error("setupClickHandler: Heatmap div not found."); return; }
 
-        // Initialize markdown-it parser
+        // Initialize markdown-it parser without KaTeX plugin
         const md = window.markdownit({
             html: false,        // Disable HTML tags in source
             breaks: true,       // Convert '\n' in paragraphs into <br>
             linkify: true,      // Autoconvert URL-like text to links
             typographer: true,  // Enable some language-neutral replacements
         });
+        
+        // Don't use the problematic markdown-it-katex plugin
+        // We'll render KaTeX directly after markdown rendering
 
         gd.onclick = null; // Clear previous simple JS onclick listener
 
@@ -649,6 +652,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             showModal(responseModal); // Show the response modal
+            
+            // Immediately render any math in the markdown view if it's active
+            if (currentViewMode === 'markdown' && window.renderMathInElement) {
+                document.querySelectorAll('.view-markdown').forEach(el => {
+                    renderKatexMath(el);
+                });
+            }
         });
         
         // Set up view toggle button handler
@@ -665,8 +675,102 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelectorAll('.view-code').forEach(el => el.style.display = 'none');
                 viewToggleBtn.textContent = 'View as Code';
                 currentViewMode = 'markdown';
+                
+                // Render KaTeX elements
+                if (window.renderMathInElement) {
+                    document.querySelectorAll('.view-markdown').forEach(el => {
+                        renderKatexMath(el);
+                    });
+                }
             }
         });
+        
+        // Helper function to render KaTeX math
+        function renderKatexMath(element) {
+            if (!window.renderMathInElement) return;
+            
+            try {
+                // Pre-process to protect currency values with $ signs
+                const htmlContent = element.innerHTML;
+                
+                // Create a temporary div to work with the HTML content
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = htmlContent;
+                
+                // Find text nodes containing currency patterns like $XX.XX
+                const walker = document.createTreeWalker(
+                    tempDiv,
+                    NodeFilter.SHOW_TEXT,
+                    null,
+                    false
+                );
+                
+                // Currency pattern: $ followed by digits, possibly with decimal point and more digits
+                const currencyRegex = /\$\d+(\.\d+)?/g;
+                const currencyPlaceholders = [];
+                let node;
+                
+                // Process text nodes to protect currency
+                while (node = walker.nextNode()) {
+                    if (currencyRegex.test(node.nodeValue)) {
+                        // Replace currency patterns with placeholders
+                        let counter = 0;
+                        const newText = node.nodeValue.replace(currencyRegex, match => {
+                            const placeholder = `CURRENCY_PLACEHOLDER_${currencyPlaceholders.length}`;
+                            currencyPlaceholders.push(match); // Store original text
+                            return placeholder; 
+                        });
+                        node.nodeValue = newText;
+                    }
+                }
+                
+                // Now render KaTeX on the protected HTML
+                window.renderMathInElement(tempDiv, {
+                    delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '$', right: '$', display: false},
+                        {left: '\\(', right: '\\)', display: false},
+                        {left: '\\[', right: '\\]', display: true}
+                    ],
+                    throwOnError: false
+                });
+                
+                // Restore currency placeholders
+                const processedHTML = tempDiv.innerHTML;
+                let restoredHTML = processedHTML;
+                
+                for (let i = 0; i < currencyPlaceholders.length; i++) {
+                    const placeholder = `CURRENCY_PLACEHOLDER_${i}`;
+                    const original = currencyPlaceholders[i];
+                    restoredHTML = restoredHTML.replace(placeholder, original);
+                }
+                
+                // Set the processed content back to the original element
+                element.innerHTML = restoredHTML;
+                
+                // Additional processing for \boxed{...} notation that might be outside delimiters
+                if (restoredHTML.includes('\\boxed')) {
+                    // Find all instances of \boxed{...} that aren't already rendered
+                    const boxedRegex = /\\boxed\{([^{}]+)\}/g;
+                    const newContent = element.innerHTML.replace(boxedRegex, (match, content) => {
+                        try {
+                            // Attempt to render the boxed content with KaTeX
+                            const rendered = window.katex.renderToString(`\\boxed{${content}}`, {
+                                throwOnError: false,
+                                displayMode: false
+                            });
+                            return rendered;
+                        } catch (err) {
+                            console.warn("Error rendering boxed content:", err);
+                            return match; // Keep original if rendering fails
+                        }
+                    });
+                    element.innerHTML = newContent;
+                }
+            } catch (err) {
+                console.warn("KaTeX rendering error:", err);
+            }
+        }
     } // End setupClickHandler
 
 
