@@ -145,6 +145,28 @@
         "top_p": 0.95,
         "repetition_penalty": 1,
         "system_prompt": "detailed thinking on"
-      }    
+      },
+      {
+        "name": "qwen3-235b-a22b-think",
+        "model": "qwen/qwen3-235b-a22b",
+        "max_tokens": 30000,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0,
+        "system_prompt": "/think",
+        "repetition_penalty": 1
+      },
+      {
+        "name": "qwen3-30b-a3b-think",
+        "model": "qwen/qwen3-30b-a3b",
+        "max_tokens":30000,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0,
+        "system_prompt": "/think",
+        "repetition_penalty": 1
+      }        
   ]
 }
