@@ -204,10 +204,10 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
                 error = response_json['error']
                 if attempt < max_retries - 1:
                     wait_time = (2 ** attempt) * 2  # Exponential backoff
-                    print(f"Error received. Retrying in {wait_time} seconds...")
+                    print(f"Error received: {error.get('message', 'Unknown API error')}. Retrying in {wait_time} seconds...")
                     time.sleep(wait_time)
                     continue
-                print(f"Error from provider: {error}")
+                print(f"Error from provider after {max_retries} attempts: {error}")
                 return None
 
             # Check for valid response structure
@@ -244,10 +244,10 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
         except requests.exceptions.RequestException as e:
             if attempt < max_retries - 1:
                 wait_time = (2 ** attempt) * 2
-                print(f"Request failed: {e}. Retrying in {wait_time} seconds...")
+                print(f"Request failed ({type(e).__name__}): {e}. Retrying in {wait_time} seconds...")
                 time.sleep(wait_time)
             else:
-                print(f"Request failed after {max_retries} attempts: {e}")
+                print(f"Request failed after {max_retries} attempts ({type(e).__name__}): {e}")
                 return None
 
     return None
