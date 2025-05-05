@@ -167,6 +167,15 @@
         "min_p": 0,
         "system_prompt": "/think",
         "repetition_penalty": 1
+      },
+      {
+        "name": "phi-4-reasoning-plus",
+        "model": "microsoft/phi-4-reasoning-plus",
+        "max_tokens": 30000,
+        "temperature": 0.7,
+        "top_p": 1,
+        "min_p": 0,
+        "repetition_penalty": 1
       }        
   ]
 }
