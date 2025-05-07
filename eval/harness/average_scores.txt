@@ -1,4 +1,5 @@
 grok-3-mini-beta-think	0.647
+gemini-2.5-pro-preview-05-06	0.588
 ll3.3-nemotron-49b-v1-thk	0.574
 QwQ-32b	0.561
 claude-3.7-thinking-4k	0.561
@@ -9,8 +10,8 @@ deepseek-chat-v3-0324	0.535
 glm-z1-32b	0.535
 qwen3-235b-a22b-think	0.490
 gpt-4.1-mini	0.487
-phi-4-reasoning-plus	0.484
 DeepHermes-3-Mistral-24B-Pre	0.484
+phi-4-reasoning-plus	0.484
 optimus-alpha	0.474
 o3-mini	0.468
 claude-3.7-sonnet	0.462
