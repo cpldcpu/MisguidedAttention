@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Model Evaluation Heatmap</title>
+    <!-- Updated Plotly.js to specific version instead of using latest -->
+    <script src='https://cdn.plot.ly/plotly-2.24.1.min.js'></script>
+    <!-- Markdown-it for rendering markdown responses -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js"></script>
+    <!-- KaTeX for LaTeX math rendering (direct method, no markdown-it plugin) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+    <!-- Removed problematic markdown-it-katex plugin -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- GitHub Repository Link -->
+    <a href="https://github.com/cpldcpu/MisguidedAttention" target="_blank" rel="noopener noreferrer" class="github-link">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+        <span>Repository</span>
+    </a>
+
+    <h1 style="text-align: center; font-weight: bold; margin-bottom: 5px; margin-top: 0px;">Interactive Misguided Attention Eval </h1>
+
+    <!-- == Controls Area == -->
+    <div id="controls-area" style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 20px;">
+        <!-- Sort Group -->
+        <div class="control-group sort-group" style="display: flex; align-items: center; gap: 5px;">
+            <label for="sortSelect">Sort Models By:</label>
+            <select id="sortSelect">
+                <option value="average_score" selected>Average Score (High to Low)</option>
+                <option value="model_type">Model Type (A-Z)</option>
+                <option value="lab">Lab (A-Z)</option>
+                <option value="name">Name (A-Z)</option>
+            </select>
+        </div>
+
+        <!-- View Toggle Button -->
+        <div class="control-group view-toggle-group" style="display: flex; align-items: center; gap: 5px;">
+            <label>View:</label>
+            <button type="button" id="viewModeToggleBtn">Switch to Bar Chart</button>
+        </div>
+
+        <!-- Filter Config Button - Fixed structure -->
+        <div class="control-group filter-config-group" style="display: flex; align-items: center; gap: 5px;">
+            <label>Filters:</label>
+            <button type="button" id="openFilterConfigBtn">Configure Filters...</button>
+        </div>
+        <div class="heatmap-instructions">
+            <p>📊 Click on any cell in the heatmap to see detailed responses.</p>
+        </div>
+    </div>
+    <!-- == End Controls Area == -->
+
+    <div id="heatmap-container">
+        <div id="heatmap"></div>
+        <div id="loading-message" style="display: none; text-align: center; padding: 20px;">Loading data and generating heatmap...</div>
+    </div>
+
+    <!-- == Response Details Modal == -->
+    <div id="responseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle">Response Details</h2>
+                <button id="viewToggleBtn" class="view-toggle-btn">View as Code</button>
+            </div>
+            <div id="modalBody">
+                <!-- Response details will be loaded here -->
+            </div>
+        </div>
+    </div>
+    <!-- == End Response Details Modal == -->
+
+    <!-- == Filter Configuration Modal == -->
+    <div id="filterConfigModal" class="modal">
+        <div class="modal-content filter-modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Configure Filters</h2>
+
+            <div class="filter-modal-section">
+                <h3>Filter by Model Type</h3>
+                <div class="filter-actions">
+                    <button class="select-all-btn" data-target="filterModalTypeContainer">All</button>
+                    <button class="select-none-btn" data-target="filterModalTypeContainer">None</button>
+                </div>
+                <div class="checkbox-options" id="filterModalTypeContainer">
+                    <!-- Checkboxes populated by JS -->
+                </div>
+            </div>
+
+            <div class="filter-modal-section">
+                <h3>Filter by Lab</h3>
+                 <div class="filter-actions">
+                    <button class="select-all-btn" data-target="filterModalLabContainer">All</button>
+                    <button class="select-none-btn" data-target="filterModalLabContainer">None</button>
+                </div>
+                <div class="checkbox-options" id="filterModalLabContainer">
+                    <!-- Checkboxes populated by JS -->
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" id="applyFiltersBtn">Apply Filters</button>
+                <button type="button" class="close-button-alt">Cancel</button> <!-- Alternative close button -->
+            </div>
+        </div>
+    </div>
+    <!-- == End Filter Configuration Modal == -->
+
+
+    <!-- Include prepared data -->
+    <script src="data.js"></script>       <!-- Summary scores -->
+    <script src="responses.js"></script>  <!-- Detailed responses -->
+    <script src="models.js"></script>     <!-- Model metadata -->
+    <!-- Include the main script -->
+    <script src="script.js"></script>
+</body>
+</html>
