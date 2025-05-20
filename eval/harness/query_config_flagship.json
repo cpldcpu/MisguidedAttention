@@ -226,6 +226,14 @@
     "min_p": 0,
     "system_prompt": "/no_think",
     "repetition_penalty": 1
+  },
+  {
+  "name": "gemini-2.5-pro-preview-05-06",
+  "model": "google/gemini-2.5-pro-preview",
+  "max_tokens": 50000,
+  "temperature": 0.7,
+  "top_p": 1,
+  "repetition_penalty": 1
   }
 
   ]

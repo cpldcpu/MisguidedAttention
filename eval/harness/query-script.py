@@ -52,16 +52,11 @@ def extract_thinking_from_response(response_text):
     if not response_text or '<think>' not in response_text:
         return response_text, None
 
-    # print("---> thinking content found!")
-    # print("extracting thinking content...")        
-
     pattern = re.compile(r'<think>(.*?)</think>', re.DOTALL)
     thinking_segments = pattern.findall(response_text)
     thinking_content = '\n'.join(thinking_segments) if thinking_segments else None
     cleaned_response = pattern.sub('', response_text).strip()
 
-    # print(f"Extracted thinking content: {thinking_content[0:200]}...")  # Print first 200 characters for brevity
-    # print(f"Cleaned response: {cleaned_response[:200]}...")  
     return cleaned_response, thinking_content
 
 def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retries=3, extract_thinking=False):
@@ -134,7 +129,6 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
         }
 
         messages = prepare_messages(prompt_text, llm_config)
-        # print(f"Prompt: {messages}")
         data = {
             "model": llm_config["model"],
             "messages": messages,
@@ -186,12 +180,9 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
             "presence_penalty": llm_config.get("presence_penalty", 0),
             "provider": {"order": [llm_config.get("provider", "")]} if llm_config.get("provider") else None
         }
-    # print(data)
     for attempt in range(max_retries):
         try:
             response = requests.post(
-                # "https://openrouter.ai/api/v1/chat/completions",
-                # "https://api.deepseek.com/v1/chat/completions",
                 base_url,
                 headers=headers,
                 json=data
@@ -220,23 +211,32 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
                     cleaned_response, extracted_thinking = extract_thinking_from_response(response_content)
                     response_content = cleaned_response
                     thinking_content = extracted_thinking
-                    # print(f"Extracted thinking content: {thinking_content}")
                 else:
-                    # Fall back to checking other fields if no <think> tags found
                     if 'reasoning' in response_json['choices'][0]['message']:
                         thinking_content = response_json['choices'][0]['message']['reasoning']
-                        # print(f"Extracted reasoning: {thinking_content}")
                     elif 'reasoning_content' in response_json['choices'][0]['message']:
                         thinking_content = response_json['choices'][0]['message']['reasoning_content']
-                        # print(f"Extracted reasoning content: {thinking_content}")
                     elif 'thinking' in response_json['choices'][0]:
                         thinking_content = response_json['choices'][0]['thinking']
-                        # print(f"Extracted thinking: {thinking_content}")
                 
-                return {
+                api_response_data = {
                     'content': response_content,
                     'thinking': thinking_content
                 }
+
+                # Add only tokens_completion if this was an OpenRouter call
+                if base_url == "https://openrouter.ai/api/v1/chat/completions":
+                    # Check for a 'data' field as in the example, otherwise use response_json root
+                    source_for_metadata = response_json.get('data') if isinstance(response_json.get('data'), dict) else response_json
+                    
+                    # Only get tokens_completion from usage or source_for_metadata
+                    if response_json.get('usage'):
+                        usage_data = response_json.get('usage', {})
+                        api_response_data['tokens_completion'] = usage_data.get('completion_tokens')
+                    else:
+                        api_response_data['tokens_completion'] = source_for_metadata.get('tokens_completion')
+                
+                return api_response_data
             else:
                 print(f"Unexpected response format: {response_json}")
                 return None
@@ -275,7 +275,9 @@ def main(args):
                     "llm": llm["name"],
                     "output": [],
                     "thinking": [],  # New array for thinking tokens
-                    "timestamp": datetime.now().isoformat()
+                    "timestamp": datetime.now().isoformat(),
+                    # Only keep tokens_completion
+                    "tokens_completion": []
                 }
 
                 # Get CoT entries for this prompt if available
@@ -301,14 +303,18 @@ def main(args):
                         print(f"Failed to get response for prompt {prompt['prompt_id']}")
                         result["output"].append(None)
                         result["thinking"].append(None)
+                        result["tokens_completion"].append(None)
                     else:
                         if args.debug:
-                            print(f"Answer: ...{response['content'][:200]}")
-                            if response['thinking']:
-                                print(f"Thinking: ...{response['thinking'][:200]}")
+                            print(f"Answer: ...{response.get('content', '')[:200]}")
+                            if response.get('thinking'):
+                                print(f"Thinking: ...{response.get('thinking', '')[:200]}")
+                            if response.get('tokens_completion') is not None:
+                                print(f"  Tokens Completion: {response.get('tokens_completion')}")
 
-                        result["output"].append(response['content'])
-                        result["thinking"].append(response['thinking'])
+                        result["output"].append(response.get('content'))
+                        result["thinking"].append(response.get('thinking'))
+                        result["tokens_completion"].append(response.get('tokens_completion'))
                 
                 results[result_key] = result
                 processed_count += 1

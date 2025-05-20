@@ -197,6 +197,22 @@
         "min_p": 0,
         "system_prompt": "/no_think",
         "repetition_penalty": 1
-      }         
+      },
+          {
+      "name": "mistral-medium-3",
+      "model": "mistralai/mistral-medium-3",
+      "max_tokens": 50000,
+      "temperature": 0.7,
+      "top_p": 1,
+      "repetition_penalty": 1
+    },
+        {
+      "name": "gemini-2.5-flash-preview-05-20",
+      "model": "google/gemini-2.5-flash-preview-05-20",
+      "max_tokens": 30000,
+      "temperature": 0.7,
+      "top_p": 1,
+      "repetition_penalty": 1
+    }
   ]
 }
