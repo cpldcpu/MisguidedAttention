@@ -1,4 +1,6 @@
+deepseek-r1-0528	0.671
 grok-3-mini-beta-think	0.647
+claude-opus-4	0.641
 gemini-2.5-flash-preview-05-20:thinking	0.635
 gemini-2.5-pro-preview-05-06	0.588
 ll3.3-nemotron-49b-v1-thk	0.574
@@ -12,10 +14,11 @@ glm-z1-32b	0.535
 mistral-medium-3	0.506
 qwen3-235b-a22b-think	0.490
 gpt-4.1-mini	0.487
-DeepHermes-3-Mistral-24B-Pre	0.484
 phi-4-reasoning-plus	0.484
+DeepHermes-3-Mistral-24B-Pre	0.484
 optimus-alpha	0.474
 o3-mini	0.468
+claude-sonnet-4	0.465
 claude-3.7-sonnet	0.462
 gpt-4.1	0.442
 qwen3-235b-a22b-nothink	0.436
@@ -44,4 +47,5 @@ mistral-small-3.1-2503	0.260
 jamba-1.6-large	0.250
 gemma-3-27b	0.234
 gemini-exp-1206	0.229
+gemma-3n-e4b-it	0.228
 olmo-2-0325-32b	0.192
