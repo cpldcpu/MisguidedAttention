@@ -1,0 +1,514 @@
+{
+  "trolley_problem_easy": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states that the five people on the track are already dead": 1.0,
+        "Answer states not to pull the lever": 0.0
+      }
+    }
+  },
+  "trolley_easy_forced": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer recognizes that the five people on the track are already dead": 0.0,
+        "Answer states not to pull the lever": 0.0
+      }
+    }
+  },
+  "dead_schrodingers_cat": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states that the cat is already dead when placed in the box.": 0.3333333333333333,
+        "Answer states that the probability of the cat being alive is 0% as the final result, and no alternatives.": 0.0
+      }
+    }
+  },
+  "river_crossing_simple": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip.": 0.0,
+        "Answer does not contain an itemized list with more than two items.": 0.0,
+        "Answer does not contain an itemized list with more then two items.": 0.0
+      }
+    }
+  },
+  "river_crossing_easy": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip.": 0.0,
+        "Answer does not contain an itemized list with more then two items.": 0.0,
+        "Answer does not contain an itemized list with more than two items.": 0.0
+      }
+    }
+  },
+  "river_crossing_even_simpler": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.6666666666666666,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer concludes that they simply get in the boat and cross together in one trip.": 0.6666666666666666,
+        "Answer does not contain an itemized list with more then two items.": 0.0
+      }
+    }
+  },
+  "monty_hall_inverse": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states to keep the existing door": 0.0,
+        "Answer explains that the initial choice has a 2/3 chance of winning a car": 0.0,
+        "Answer states that this is a modification of the Monty Hall problem": 0.0
+      }
+    }
+  },
+  "jugs_1_liter": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 1.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer concludes that filling one of the 1-liter jugs once is sufficient to measure 1 liter.": 1.0,
+        "Answer is not formatted as itemized list with more than 2 entries.": 1.0
+      }
+    }
+  },
+  "jugs_3_liters": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer concludes that filling both jugs once without pouring between them gives exactly 3 liters.": 0.0,
+        "Answer concludes that filling both jugs gives exactly 3 liters.": 0.0,
+        "Answer is not formatted as itemized list with more than 2 entries.": 0.6666666666666666
+      }
+    }
+  },
+  "jugs_4_liters": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer concludes it is impossible to measure exactly 4 liters with the given jugs.": 0.0,
+        "Answer is not formatted as itemized list with more than 3 entries.": 0.0
+      }
+    }
+  },
+  "birthday_problem_easy": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer concludes that the probability is close to 1 (larger than 0.99 or 99%) or equal to (1 - (1/365)^29)": 0.0,
+        "Answer concludes that the probability is close to 1 (larger than 0.99 or 99%) or equal to \\({1 - \\left( \\frac{1}{365} \\right)^{29}}\\).": 0.0
+      }
+    }
+  },
+  "rope_burning_impossible": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 1.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer concludes that the responder is not able to solve this puzzle or that it is not possible in general.": 1.0
+      }
+    }
+  },
+  "rope_burning_easy": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer concludes that 60 minutes can be measured by lighting one rope on one end (1x 60 minutes).": 0.0,
+        "Answer concludes that 60 minutes can be measured by lighting by lighting both ropes on both ends sequentially (2x 30 minutes).": 0.6666666666666666
+      }
+    }
+  },
+  "less_confusing_monty_hall": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states that both options are equally likely to win the car": 0.0,
+        "Answer explains that this is not the monty hall problem": 0.0
+      }
+    }
+  },
+  "the_normal_barber": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states that there is no paradox since this is a normal barber without special rules": 0.0,
+        "Answer does not try to solve the barber paradox": 0.0
+      }
+    }
+  },
+  "no_paradox_expected_hanging": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states that there is no surprise since the prisoner was told on Monday": 0.0
+      }
+    }
+  },
+  "two_door_problem_exit": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer suggests using the marked exit door without asking questions": 0.0
+      }
+    }
+  },
+  "feathers_or_steel": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 1.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states that 1 kilogram is heavier than 1 pound": 1.0
+      }
+    }
+  },
+  "parallelism_50_machines": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.3333333333333333,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states that 100 machines would take 50 minutes to make 100 widgets": 0.3333333333333333
+      }
+    }
+  },
+  "kings_mercy": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.5,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer suggests to switch the door": 1.0,
+        "Answer suggests to ask the guard": 0.0
+      }
+    }
+  },
+  "upside_down_bucket": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states that it can be used upside down to hold 7 liters": 0.0
+      }
+    }
+  },
+  "bridge_torch_impossible": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 1.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer concludes that it is impossible to solve within 17 minutes": 1.0
+      }
+    }
+  },
+  "bridge_torch_easy": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer suggests all four people crossing together in 10 minutes": 0.0
+      }
+    }
+  },
+  "knights_knaves_impossible": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer concludes that the statements create an impossible contradiction": 0.0
+      }
+    }
+  },
+  "knights_knaves_easy": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.3333333333333333,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer identifies A as knight and B as knave": 0.3333333333333333
+      }
+    }
+  },
+  "poisoned_hot": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 1.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer does not discuss poison in ice cubes": 1.0
+      }
+    }
+  },
+  "rabbit_inverted_monty_hall": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer suggests keeping original choice": 0.0,
+        "Answer explains 2/3 chance of carrot in original pick": 0.0
+      }
+    }
+  },
+  "feeding_the_goat": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer does not propose river crossing solutions": 0.0,
+        "Answer suggests directly feeding the goat the cabbage": 0.0
+      }
+    }
+  },
+  "cabbage_detective": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.6666666666666666,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer focuses on detective cabbage gathering evidence": 1.0,
+        "Answer does not propose river crossing solutions": 0.3333333333333333
+      }
+    }
+  },
+  "ball_and_bat_modified": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer notes that the ball stolen and therefore nothing was paid for it": 0.0,
+        "Answer does not perform the mathematical calculation": 0.0
+      }
+    }
+  },
+  "heavy_feather_modified": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states that one kilogram of steel is usually heavier": 0.0
+      }
+    }
+  },
+  "conjunction_fallacy_simplified": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states that both options are equally probable": 0.0,
+        "Answer does not explain that the conjunction fallacy can be applied here": 1.0
+      }
+    }
+  },
+  "conjunction_fallacy_inverted": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 1.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states B is more probable since she is not active in feminist movement": 1.0,
+        "Answer does no explains conjunction rule": 1.0
+      }
+    }
+  },
+  "conjunction_fallacy_impossible": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states both are impossible since Linda is not a bank teller": 0.0,
+        "Answer does not try to solve the conjunction fallacy": 1.0
+      }
+    }
+  },
+  "linear_growth_modified": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states day 20 since growth is linear": 0.0,
+        "Answer does not discuss exponential growth": 1.0
+      }
+    }
+  },
+  "new_years_monty_hall": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer explains that the initial choice should not be changed": 0.0,
+        "Answer notes all doors were initially chosen, not only one": 1.0
+      }
+    }
+  },
+  "lonely_rabbit_impossible": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer states that a single rabbit does not reproduce": 0.0,
+        "Answer does not calculate Fibonacci sequence": 0.0
+      }
+    }
+  },
+  "not_from_hanoi": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer suggests moving all disks one at once in one move": 0.0,
+        "Answer does not apply Towers of Hanoi formula": 0.0
+      }
+    }
+  },
+  "riddle_tall_when_young": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 1.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer avoids typical 'candle' response": 1.0,
+        "Answer suggests alternative logical solution": 1.0
+      }
+    }
+  },
+  "riddle_cant_break": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer avoids typical 'promise' response": 0.0,
+        "Answer suggests alternative logical solution": 0.0
+      }
+    }
+  },
+  "riddle_goes_up_never_returns": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer avoids typical 'age' response": 0.0,
+        "Answer suggests alternative logical solution": 0.0
+      }
+    }
+  },
+  "riddle_i_never_shave": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 1.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer avoids typical 'barber' response": 1.0,
+        "Answer suggests alternative logical solution": 1.0
+      }
+    }
+  },
+  "riddle_two_banks_money": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer avoids typical 'river' response": 0.0,
+        "Answer suggests alternative logical solution": 0.0
+      }
+    }
+  },
+  "riddle_four_legs_morning": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer notes all times specify four legs": 0.0,
+        "Answer explains differences to sphinx's riddle": 0.0
+      }
+    }
+  },
+  "riddle_occurs_once_in_a_second": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer avoids typical 'letter M' response": 0.0,
+        "Answer suggests alternative logical solution": 0.0
+      }
+    }
+  },
+  "unstoppable_force_var1": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 1.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer explains the differences to the paradox of unstoppable vs immovable": 1.0
+      }
+    }
+  },
+  "unstoppable_force_var2": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.3333333333333333,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer explains the differences to the paradox of unstoppable vs immovable": 0.3333333333333333
+      }
+    }
+  },
+  "monty_appliance_game_show": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer suggests to take the box the game show host tested": 0.0,
+        "Answer does not suggest picking an untested box": 0.0,
+        "Answer does not mention the Monty Hall problem": 0.3333333333333333
+      }
+    }
+  },
+  "monty_appliance_simpler": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer suggests to take the box the clerk tested": 0.0,
+        "Answer does not suggest picking an untested box": 0.0,
+        "Answer does not mention the Monty Hall problem": 1.0
+      }
+    }
+  },
+  "monty_defective_appliance": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer suggests to take the box the clerk tested": 0.0,
+        "Answer suggests to keep the initial box": 0.0,
+        "Answer does not mention the Monty Hall problem": 0.0
+      }
+    }
+  },
+  "monty_three_computers": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer suggests to keep the initial computer": 0.0
+      }
+    }
+  },
+  "monty_four_computers": {
+    "gemma-3n-e4b-it": {
+      "average_total_score": 0.0,
+      "num_evaluations": 3,
+      "criteria_stats": {
+        "Answer suggests to pick the one the friend tested": 0.0,
+        "Answer suggests to keep the initial computer": 0.0
+      }
+    }
+  }
+}
