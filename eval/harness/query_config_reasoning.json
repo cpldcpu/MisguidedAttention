@@ -185,6 +185,14 @@
       "temperature": 0.7,
       "top_p": 1,
       "repetition_penalty": 1
-    }
+    },
+          {
+        "name": "deepseek-r1-0528",
+        "model": "deepseek-reasoner",
+        "max_tokens": 16000,
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "repetition_penalty": 1
+      }
   ]
 }

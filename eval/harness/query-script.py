@@ -135,7 +135,7 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
             "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
             "max_tokens": llm_config.get("max_tokens", 4000)
         }
-    elif "d33pseek" in llm_config["model"].lower():
+    elif "deepseek" in llm_config["model"].lower():
         api_key = DEEPSEEK_API_KEY    
         base_url = "https://api.deepseek.com/v1/chat/completions"
         if not api_key:

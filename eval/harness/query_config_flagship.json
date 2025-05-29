@@ -234,7 +234,21 @@
   "temperature": 0.7,
   "top_p": 1,
   "repetition_penalty": 1
-  }
+  },
+      {
+      "name": "claude-sonnet-4",
+      "model": "anthropic/claude-sonnet-4",
+      "temperature": 0.9,
+      "top_p": 0.9,
+      "repetition_penalty": 1
+    },
+        {
+      "name": "claude-opus-4",
+      "model": "anthropic/claude-opus-4",
+      "temperature": 0.9,
+      "top_p": 0.9,
+      "repetition_penalty": 1
+    }
 
   ]
 }
