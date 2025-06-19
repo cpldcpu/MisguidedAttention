@@ -1,12 +1,12 @@
 {
   "llms": [
     {
-      "name": "claude-opus-4",
-      "model": "anthropic/claude-opus-4",
-      "temperature": 0.9,
-      "top_p": 0.9,
+      "name": "magistral-medium-2506-thinking",
+      "model": "mistralai/magistral-medium-2506:thinking",
+       "max_tokens": 40000,
+      "temperature": 0.7,
+      "top_p": 0.95,
       "repetition_penalty": 1
     }
-]
-
+  ]
 }
