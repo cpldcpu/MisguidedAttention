@@ -305,22 +305,6 @@
       "timestamp": "2025-04-05T12:24:23.833729"
     },
     {
-      "prompt_id": "XXrope_burning_impossible",
-      "prompt": "---",
-      "llm": "gemini-2.5-pro-preview-03-25",
-      "output": [
-        "API TIMED OUT",
-        "API TIMED OUT",
-        "API TIMED OUT"
-      ],
-      "thinking": [
-        null,
-        null,
-        null
-      ],
-      "timestamp": "2025-04-05T12:24:23.833729"
-    },
-    {
       "prompt_id": "upside_down_bucket",
       "prompt": "I have a 7 litre bucket that is missing a bottom, and the top was welded and sealed shut. How much water can I hold in it?",
       "llm": "gemini-2.5-pro-preview-03-25",
