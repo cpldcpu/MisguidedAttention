@@ -1,12 +1,20 @@
 {
   "llms": [
-    {
-      "name": "magistral-medium-2506-thinking",
-      "model": "mistralai/magistral-medium-2506:thinking",
-       "max_tokens": 40000,
-      "temperature": 0.7,
-      "top_p": 0.95,
-      "repetition_penalty": 1
-    }
+      {
+        "name": "o4-mini-high-long",
+        "model": "openai/o4-mini-high",
+        "max_tokens": 30000,
+        "temperature": 0.7,
+        "top_p": 1.0,
+        "repetition_penalty": 1,
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        }    
+      }
   ]
 }
+
+
+
+

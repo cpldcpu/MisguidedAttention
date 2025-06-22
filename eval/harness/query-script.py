@@ -1,10 +1,11 @@
 import argparse
 import json
-import requests
+import aiohttp
+import asyncio
 import os
 import time
 import re
-from tqdm import tqdm
+from tqdm.asyncio import tqdm
 from datetime import datetime
 import google.generativeai as genai
 
@@ -59,12 +60,12 @@ def extract_thinking_from_response(response_text):
 
     return cleaned_response, thinking_content
 
-def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retries=3, extract_thinking=False):
+async def query_llm_async(session, prompt, llm_config, temperature_override, cot_entry=None, max_retries=3, extract_thinking=False):
     OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
     DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
     OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
     GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")   
-    NOUS_API_KEY = os.environ.get("NOUS_API_KEY")  # Add Nous API key
+    NOUS_API_KEY = os.environ.get("NOUS_API_KEY")
 
     if OPENROUTER_API_KEY == None:
         OPENROUTER_API_KEY = OPENAI_API_KEY
@@ -83,7 +84,7 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
         messages.append({"role": "user", "content": prompt_text})
         return messages
 
-    # Handle Gemini API separately
+    # Handle Gemini API separately (still synchronous due to library limitations)
     if "g3mini" in llm_config["model"].lower():
         if not GEMINI_API_KEY:
             raise ValueError("GEMINI_API_KEY environment variable not set")
@@ -92,7 +93,7 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
         model = genai.GenerativeModel(llm_config["model"])
         
         # wait for 6s to avoid rate limiting
-        time.sleep(6)
+        await asyncio.sleep(6)
         try:
             response = model.generate_content(
                 prompt_text,
@@ -133,9 +134,10 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
             "model": llm_config["model"],
             "messages": messages,
             "temperature": temperature_override if temperature_override > 0 else llm_config.get("temperature", 1.0),
-            "max_tokens": llm_config.get("max_tokens", 4000)
+            "max_tokens": llm_config.get("max_tokens", 4000),
+            "usage" : True
         }
-    elif "deepseek" in llm_config["model"].lower():
+    elif "d33pseek" in llm_config["model"].lower():
         api_key = DEEPSEEK_API_KEY    
         base_url = "https://api.deepseek.com/v1/chat/completions"
         if not api_key:
@@ -161,8 +163,8 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
 
         headers = {
             "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-            "HTTP-Referer": "",  # Replace with your site URL
-            "X-Title": "MA_Eval"  # Replace with your app name
+            "HTTP-Referer": "",
+            "X-Title": "MA_Eval"
         }
 
         messages = prepare_messages(prompt_text, llm_config)
@@ -174,163 +176,266 @@ def query_llm(prompt, llm_config, temperature_override, cot_entry=None, max_retr
             "max_tokens": llm_config.get("max_tokens", 4000),
             "top_p": llm_config.get("top_p", 1),
             "min_p": llm_config.get("min_p", 0),
-            "top_k": llm_config.get("top_k", 0),  # Add top_k parameter with default 0
-            "include_reasoning": True,
+            "top_k": llm_config.get("top_k", 0),
             "frequency_penalty": llm_config.get("frequency_penalty", 0),
             "presence_penalty": llm_config.get("presence_penalty", 0),
-            "provider": {"order": [llm_config.get("provider", "")]} if llm_config.get("provider") else None
+            "provider": {"order": [llm_config.get("provider", "")]} if llm_config.get("provider") else None,
+             "usage": { "include": True}
         }
+
+        # Add reasoning object if it exists in the config
+        if "reasoning" in llm_config:
+            data["reasoning"] = llm_config["reasoning"]
+        else:
+            # Fallback for older configs or if reasoning is desired by default
+            data["include_reasoning"] = True
+
     for attempt in range(max_retries):
         try:
-            response = requests.post(
-                base_url,
-                headers=headers,
-                json=data
-            )
-            response.raise_for_status()
-            response_json = response.json()
+            async with session.post(base_url, headers=headers, json=data) as response:
+                response.raise_for_status()
+                response_json = await response.json()
 
-            # Check for error in response
-            if 'error' in response_json:
-                error = response_json['error']
-                if attempt < max_retries - 1:
-                    wait_time = (2 ** attempt) * 2  # Exponential backoff
-                    print(f"Error received: {error.get('message', 'Unknown API error')}. Retrying in {wait_time} seconds...")
-                    time.sleep(wait_time)
-                    continue
-                print(f"Error from provider after {max_retries} attempts: {error}")
-                return None
+                # Check for error in response
+                if 'error' in response_json:
+                    error = response_json['error']
+                    if attempt < max_retries - 1:
+                        wait_time = (2 ** attempt) * 2
+                        print(f"Error received: {error.get('message', 'Unknown API error')}. Retrying in {wait_time} seconds...")
+                        await asyncio.sleep(wait_time)
+                        continue
+                    print(f"Error from provider after {max_retries} attempts: {error}")
+                    return None
 
-            # Check for valid response structure
-            if 'choices' in response_json and len(response_json['choices']) > 0:
-                response_content = response_json['choices'][0]['message']['content']
-                thinking_content = None
-                
-                # Always check for <think> tags in the response content
-                if response_content and '<think>' in response_content:
-                    cleaned_response, extracted_thinking = extract_thinking_from_response(response_content)
-                    response_content = cleaned_response
-                    thinking_content = extracted_thinking
-                else:
-                    if 'reasoning' in response_json['choices'][0]['message']:
-                        thinking_content = response_json['choices'][0]['message']['reasoning']
-                    elif 'reasoning_content' in response_json['choices'][0]['message']:
-                        thinking_content = response_json['choices'][0]['message']['reasoning_content']
-                    elif 'thinking' in response_json['choices'][0]:
-                        thinking_content = response_json['choices'][0]['thinking']
-                
-                api_response_data = {
-                    'content': response_content,
-                    'thinking': thinking_content
-                }
-
-                # Add only tokens_completion if this was an OpenRouter call
-                if base_url == "https://openrouter.ai/api/v1/chat/completions":
-                    # Check for a 'data' field as in the example, otherwise use response_json root
-                    source_for_metadata = response_json.get('data') if isinstance(response_json.get('data'), dict) else response_json
+                # Check for valid response structure
+                if 'choices' in response_json and len(response_json['choices']) > 0:
+                    response_content = response_json['choices'][0]['message']['content']
+                    thinking_content = None
                     
-                    # Only get tokens_completion from usage or source_for_metadata
-                    if response_json.get('usage'):
-                        usage_data = response_json.get('usage', {})
-                        api_response_data['tokens_completion'] = usage_data.get('completion_tokens')
+                    # Always check for <think> tags in the response content
+                    if response_content and '<think>' in response_content:
+                        cleaned_response, extracted_thinking = extract_thinking_from_response(response_content)
+                        response_content = cleaned_response
+                        thinking_content = extracted_thinking
                     else:
-                        api_response_data['tokens_completion'] = source_for_metadata.get('tokens_completion')
-                
-                return api_response_data
-            else:
-                print(f"Unexpected response format: {response_json}")
-                return None
+                        if 'reasoning' in response_json['choices'][0]['message']:
+                            thinking_content = response_json['choices'][0]['message']['reasoning']
+                        elif 'reasoning_content' in response_json['choices'][0]['message']:
+                            thinking_content = response_json['choices'][0]['message']['reasoning_content']
+                        elif 'thinking' in response_json['choices'][0]:
+                            thinking_content = response_json['choices'][0]['thinking']
+                    
+                    api_response_data = {
+                        'content': response_content,
+                        'thinking': thinking_content
+                    }
 
-        except requests.exceptions.RequestException as e:
+                    # Add only tokens_completion if this was an OpenRouter call
+                    if base_url == "https://openrouter.ai/api/v1/chat/completions" or base_url == "https://inference-api.nousresearch.com/v1/chat/completions":
+                        source_for_metadata = response_json.get('data') if isinstance(response_json.get('data'), dict) else response_json
+                        
+                        if response_json.get('usage'):
+                            usage_data = response_json.get('usage', {})
+                            api_response_data['tokens_completion'] = usage_data.get('completion_tokens')
+                            api_response_data['completion_tokens_details'] = usage_data.get('completion_tokens_details')
+                        else:
+                            api_response_data['tokens_completion'] = source_for_metadata.get('tokens_completion')
+                            api_response_data['completion_tokens_details'] = source_for_metadata.get('completion_tokens_details')
+                    
+                    return api_response_data
+                else:
+                    print(f"Unexpected response format: {response_json}")
+                    return None
+
+        except Exception as e:
             if attempt < max_retries - 1:
                 wait_time = (2 ** attempt) * 2
                 print(f"Request failed ({type(e).__name__}): {e}. Retrying in {wait_time} seconds...")
-                time.sleep(wait_time)
+                await asyncio.sleep(wait_time)
             else:
                 print(f"Request failed after {max_retries} attempts ({type(e).__name__}): {e}")
                 return None
 
     return None
 
-def main(args):
-    config = load_json(args.config)
-    output = {"results": []}
+async def process_prompt_sample(session, semaphore, prompt, llm, sample_idx, args, cot_entries):
+    """Process a single sample for a prompt-LLM combination."""
+    async with semaphore:
+        if args.cotfile:
+            # Verify we have enough CoT entries
+            if sample_idx >= len(cot_entries):
+                raise ValueError(f"Not enough CoT entries for prompt {prompt['prompt_id']}. "
+                              f"Need {args.samples}, but only have {len(cot_entries)}")
+            cot_entry = cot_entries[sample_idx]
+        else:
+            cot_entry = None
 
+        if args.debug:
+            print(f"Querying {llm['name']} with prompt: {prompt['prompt']}")
+            if cot_entry:
+                print(f"Using CoT entry: {cot_entry[:200]}...")
+
+        response = await query_llm_async(session, prompt["prompt"], llm, args.temp, cot_entry, args.max_retries, args.think)
+        
+        if response is None:
+            print(f"Failed to get response for prompt {prompt['prompt_id']}")
+            return None, None, None, None
+        else:
+            if args.debug:
+                print(f"Answer: ...{response.get('content', '')[:200]}")
+                if response.get('thinking'):
+                    print(f"Thinking: ...{response.get('thinking', '')[:200]}")
+                if response.get('tokens_completion') is not None:
+                    print(f"  Tokens Completion: {response.get('tokens_completion')}")
+                if response.get('completion_tokens_details') is not None:
+                    print(f"  Completion Tokens Details: {response.get('completion_tokens_details')}")
+
+            return response.get('content'), response.get('thinking'), response.get('tokens_completion'), response.get('completion_tokens_details')
+
+async def process_prompt_llm_combination(session, semaphore, prompt, llm, args, cot_data, existing_results):
+    """Process all samples for a prompt-LLM combination."""
+    result_key = (prompt["prompt_id"], llm["name"])
+    
+    # Check if we have existing results for this combination
+    if result_key in existing_results:
+        existing_result = existing_results[result_key]
+        existing_samples = len(existing_result.get("output", []))
+        
+        if existing_samples >= args.samples:
+            if args.debug:
+                print(f"Skipping prompt: {prompt['prompt_id']} for {llm['name']} - already has {existing_samples}/{args.samples} samples")
+            return None
+        
+        # Calculate how many additional samples we need
+        samples_needed = args.samples - existing_samples
+        
+        if args.debug:
+            print(f"Adding {samples_needed} samples to existing {existing_samples} for prompt: {prompt['prompt_id']} ({llm['name']})")
+        
+        # Start with existing result data
+        result = existing_result.copy()
+        result["timestamp"] = datetime.now().isoformat()  # Update timestamp
+        
+        # Ensure all arrays exist and have the right length
+        if "output" not in result:
+            result["output"] = []
+        if "thinking" not in result:
+            result["thinking"] = []
+        if "tokens_completion" not in result:
+            result["tokens_completion"] = []
+        if "completion_tokens_details" not in result:
+            result["completion_tokens_details"] = []
+        
+        # Pad arrays to existing_samples length if needed (in case of inconsistent data)
+        while len(result["output"]) < existing_samples:
+            result["output"].append(None)
+        while len(result["thinking"]) < existing_samples:
+            result["thinking"].append(None)
+        while len(result["tokens_completion"]) < existing_samples:
+            result["tokens_completion"].append(None)
+        while len(result["completion_tokens_details"]) < existing_samples:
+            result["completion_tokens_details"].append(None)
+        
+        start_sample_idx = existing_samples
+    else:
+        # No existing results, process all samples
+        samples_needed = args.samples
+        start_sample_idx = 0
+        
+        result = {
+            "prompt_id": prompt["prompt_id"],
+            "prompt": prompt["prompt"],
+            "llm": llm["name"],
+            "output": [],
+            "thinking": [],
+            "timestamp": datetime.now().isoformat(),
+            "tokens_completion": [],
+            "completion_tokens_details": []
+        }
+
+    # Get CoT entries for this prompt if available
+    cot_entries = cot_data.get(prompt["prompt_id"], []) if cot_data else []
+    
+    # Process only the needed samples
+    tasks = []
+    for i in range(samples_needed):
+        sample_idx = start_sample_idx + i
+        task = process_prompt_sample(session, semaphore, prompt, llm, sample_idx, args, cot_entries)
+        tasks.append(task)
+    
+    # Execute all needed samples concurrently
+    if tasks:  # Only process if we have tasks
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        
+        for i, sample_result in enumerate(results):
+            if isinstance(sample_result, Exception):
+                print(f"Error processing sample {start_sample_idx + i} for prompt {prompt['prompt_id']}: {sample_result}")
+                result["output"].append(None)
+                result["thinking"].append(None)
+                result["tokens_completion"].append(None)
+                result["completion_tokens_details"].append(None)
+            else:
+                output, thinking, tokens, completion_tokens_details = sample_result
+                result["output"].append(output)
+                result["thinking"].append(thinking)
+                result["tokens_completion"].append(tokens)
+                result["completion_tokens_details"].append(completion_tokens_details)
+    
+    return result
+
+async def main_async(args):
+    config = load_json(args.config)
     existing_results = load_existing_results()
     prompts = load_prompts(args.dataset)
     results = existing_results.copy()
-    processed_count = 0
-
+    
     # Load CoT data if specified
     cot_data = load_cot_data(args.cotfile)
-
-    for llm in config["llms"]:
-        print(f"Querying {llm['name']}...")
-        for prompt in tqdm(prompts[:args.limit] if args.limit > 0 else prompts):
-            result_key = (prompt["prompt_id"], llm["name"])
-            if result_key not in results:
-                result = {
-                    "prompt_id": prompt["prompt_id"],
-                    "prompt": prompt["prompt"],
-                    "llm": llm["name"],
-                    "output": [],
-                    "thinking": [],  # New array for thinking tokens
-                    "timestamp": datetime.now().isoformat(),
-                    # Only keep tokens_completion
-                    "tokens_completion": []
-                }
-
-                # Get CoT entries for this prompt if available
-                cot_entries = cot_data.get(prompt["prompt_id"], []) if cot_data else []
-                
-                for i in range(args.samples):
-                    if args.cotfile:
-                        # Verify we have enough CoT entries
-                        if i >= len(cot_entries):
-                            raise ValueError(f"Not enough CoT entries for prompt {prompt['prompt_id']}. "
-                                          f"Need {args.samples}, but only have {len(cot_entries)}")
-                        cot_entry = cot_entries[i]
-                    else:
-                        cot_entry = None
-
-                    if args.debug:
-                        print(f"Querying {llm['name']} with prompt: {prompt['prompt']}")
-                        if cot_entry:
-                            print(f"Using CoT entry: {cot_entry[:200]}...")
-
-                    response = query_llm(prompt["prompt"], llm, args.temp, cot_entry, args.max_retries, args.think)
-                    if response is None:
-                        print(f"Failed to get response for prompt {prompt['prompt_id']}")
-                        result["output"].append(None)
-                        result["thinking"].append(None)
-                        result["tokens_completion"].append(None)
-                    else:
-                        if args.debug:
-                            print(f"Answer: ...{response.get('content', '')[:200]}")
-                            if response.get('thinking'):
-                                print(f"Thinking: ...{response.get('thinking', '')[:200]}")
-                            if response.get('tokens_completion') is not None:
-                                print(f"  Tokens Completion: {response.get('tokens_completion')}")
-
-                        result["output"].append(response.get('content'))
-                        result["thinking"].append(response.get('thinking'))
-                        result["tokens_completion"].append(response.get('tokens_completion'))
-                
-                results[result_key] = result
-                processed_count += 1
-                
-                # Save every three processed queries
-                if processed_count % 3 == 0:
-                    save_json({"results": list(results.values())}, args.output)
-                    print(f"Saved after processing {processed_count} queries")
-                
-                print(f"Processed prompt: {prompt['prompt_id']}")
-            else:
-                print(f"Skipping already processed prompt: {prompt['prompt_id']}")
+    
+    # Create semaphore for concurrency control
+    semaphore = asyncio.Semaphore(args.concurrency)
+    
+    # Create aiohttp session with timeout
+    timeout = aiohttp.ClientTimeout(total=300)  # 5 minute timeout
+    async with aiohttp.ClientSession(timeout=timeout) as session:
+        # Create tasks for all prompt-LLM combinations
+        tasks = []
+        for llm in config["llms"]:
+            print(f"Preparing tasks for {llm['name']}...")
+            for prompt in prompts[:args.limit] if args.limit > 0 else prompts:
+                task = process_prompt_llm_combination(session, semaphore, prompt, llm, args, cot_data, existing_results)
+                tasks.append(task)
+        
+        print(f"Processing {len(tasks)} prompt-LLM combinations with concurrency limit of {args.concurrency}...")
+        
+        # Process tasks with progress bar
+        processed_count = 0
+        completed_tasks = []
+        
+        # Process tasks in batches to enable periodic saving
+        batch_size = args.save_frequency
+        for i in range(0, len(tasks), batch_size):
+            batch_tasks = tasks[i:i + batch_size]
+            batch_results = await tqdm.gather(*batch_tasks, desc=f"Processing batch {i//batch_size + 1}")
+            
+            # Add non-None results to our results dict
+            for result in batch_results:
+                if result is not None:
+                    result_key = (result["prompt_id"], result["llm"])
+                    results[result_key] = result
+                    processed_count += 1
+            
+            # Save progress
+            save_json({"results": list(results.values())}, args.output)
+            print(f"Saved after processing {processed_count} queries")
 
     # Final save
     save_json({"results": list(results.values())}, args.output)
     print(f"Query complete. Results saved to {args.output}")
+
+def main(args):
+    # Run the async main function
+    asyncio.run(main_async(args))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate LLMs on a dataset of prompts")
@@ -344,6 +449,8 @@ if __name__ == "__main__":
     parser.add_argument("--max-retries", type=int, default=8, help="Maximum number of retries for failed requests")
     parser.add_argument("--cotfile", help="Path to the Chain of Thought input JSON file")
     parser.add_argument("--think", action="store_true", help="Extract content within <think> tags as thinking content")
+    parser.add_argument("--concurrency", type=int, default=5, help="Maximum number of concurrent requests")
+    parser.add_argument("--save-frequency", type=int, default=10, help="Save results every N processed combinations")
 
     args = parser.parse_args()
     main(args)

@@ -217,6 +217,79 @@
       "temperature": 0.7,
       "top_p": 0.95,
       "repetition_penalty": 1
-    }
+    },
+           {
+      "name": "gemini-2.5-pro-low",
+      "model": "google/gemini-2.5-pro",
+       "max_tokens": 30000,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "low",
+        "exclude": false
+      }
+    },
+        {
+      "name": "gemini-2.5-pro-high",
+      "model": "google/gemini-2.5-pro",
+       "max_tokens": 30000,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      }
+     }
+      ,
+      {
+      "name": "claude-4-sonnet-0522-thinking",
+      "model": "anthropic/claude-4-sonnet-20250522",
+       "max_tokens": 30000,
+      "temperature": 0.9,
+      "top_p": 0.9,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      }
+    },
+      {
+      "name": "gemini-2.5-flash-high",
+      "model": "google/gemini-2.5-flash",
+       "max_tokens": 30000,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      }    
+    },
+    {
+      "name": "grok-3-mini-think",
+      "model": "x-ai/grok-3-mini",
+       "max_tokens": 30000,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "repetition_penalty": 1,
+      "reasoning": {
+        "effort": "high",
+        "exclude": false
+      }    
+    },
+          {
+        "name": "o4-mini-high-long",
+        "model": "openai/o4-mini-high",
+        "max_tokens": 30000,
+        "temperature": 0.7,
+        "top_p": 1.0,
+        "repetition_penalty": 1,
+        "reasoning": {
+          "effort": "high",
+          "exclude": false
+        }    
+      }
   ]
 }

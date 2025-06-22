@@ -27,7 +27,8 @@ def make_api_call(messages, api_key, max_retries=3):
                     "X-Title": "MA_Eval"  
                 },
                 json={
-                    "model": "meta-llama/llama-3.3-70b-instruct",
+                    # "model": "meta-llama/llama-3.3-70b-instruct",
+                    "model": "google/gemini-2.5-flash",
                     "messages": messages,
                     "temperature": 0.0,
                     "max_tokens": 1000
