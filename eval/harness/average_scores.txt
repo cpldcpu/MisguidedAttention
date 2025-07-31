@@ -48,6 +48,7 @@ command-a-03-2025	0.301
 llama-4-maverick	0.295
 gemini-2.0-flash	0.282
 mistral-small-3	0.279
+horizon-alpha	0.271
 DeepSeek-V3	0.269
 gpt-4.1-nano	0.266
 mistral-small-3.1-2503	0.260
